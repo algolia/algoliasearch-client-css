@@ -1,0 +1,542 @@
+[
+  {
+    "short_name": "nicolas",
+    "name": "Nicolas Dessaigne",
+    "role": "Co-founder & CEO",
+    "funny_quote": "My wife once convinced me to do a 1-week fast!",
+    "emoji": "💦",
+    "order": 0,
+    "objectID": "nicolas"
+  },
+  {
+    "short_name": "julien",
+    "name": "Julien Lemoine",
+    "role": "Co-founder & CTO",
+    "funny_quote": "I was born in Dijon, and I love mustard and wine.",
+    "emoji": "🍷",
+    "order": 1,
+    "objectID": "julien"
+  },
+  {
+    "short_name": "sylvain",
+    "name": "Sylvain Utard",
+    "role": "VP of Engineering",
+    "funny_quote": "I dressed up as Super Mario for our last team building event.",
+    "emoji": "🍄",
+    "order": 2,
+    "objectID": "sylvain"
+  },
+  {
+    "short_name": "gaetan",
+    "name": "Gaëtan Gachet",
+    "role": "VP of Sales",
+    "funny_quote": "I'm an unconditional plant lover.",
+    "emoji": "🌿",
+    "order": 3,
+    "objectID": "gaetan"
+  },
+  {
+    "short_name": "xavier",
+    "name": "Xavier Grand",
+    "role": "Software Engineer",
+    "funny_quote": "I have slept at the office...twice!",
+    "emoji": "🛌",
+    "order": 4,
+    "objectID": "xavier"
+  },
+  {
+    "short_name": "kevin",
+    "name": "Kevin Granger",
+    "role": "UI/UX Designer",
+    "funny_quote": "I built a pizza oven (and use it).",
+    "emoji": "🍕",
+    "order": 5,
+    "objectID": "kevin"
+  },
+  {
+    "short_name": "alexandre",
+    "name": "Alexandre Collin",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I spent a full week driving a VAN across the Australian desert.",
+    "emoji": "🌵",
+    "order": 6,
+    "objectID": "alexandre"
+  },
+  {
+    "short_name": "adam",
+    "name": "Adam Surák",
+    "role": "DevOps Engineer",
+    "funny_quote": "I was the first non-French employee at Algolia.",
+    "emoji": "🇫🇷",
+    "order": 7,
+    "objectID": "adam"
+  },
+  {
+    "short_name": "jeremy",
+    "name": "Jeremy Ben Sadoun",
+    "role": "Account Executive",
+    "funny_quote": "I studied Chinese for a year but can't speak a single word of it.",
+    "emoji": "🇨🇳",
+    "order": 8,
+    "objectID": "jeremy"
+  },
+  {
+    "short_name": "vvo",
+    "name": "Vincent Voyer",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "I make the best crêpes in Western Europe.",
+    "emoji": "🍴",
+    "order": 9,
+    "objectID": "vvo"
+  },
+  {
+    "short_name": "alexandre-stanislawski",
+    "name": "Alexandre Stanislawski",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "When I can't make a decision, I toss a coin.",
+    "emoji": "💰",
+    "order": 10,
+    "objectID": "alexandre-stanislawski"
+  },
+  {
+    "short_name": "nicolas-2",
+    "name": "Nicolas Baissas",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I wanted to be a handball player.",
+    "emoji": "🏐",
+    "order": 11,
+    "objectID": "nicolas-2"
+  },
+  {
+    "short_name": "guillaume",
+    "name": "Guillaume Duvaux",
+    "role": "Account Executive",
+    "funny_quote": "I can spend 10 hours a week in H&M and Zara.",
+    "emoji": "👔",
+    "order": 12,
+    "objectID": "guillaume"
+  },
+  {
+    "short_name": "alexander",
+    "name": "Alex Kudelka",
+    "role": "Account Executive",
+    "funny_quote": "I have flat feet...like a platypus.",
+    "emoji": "😃",
+    "order": 13,
+    "objectID": "alexander"
+  },
+  {
+    "short_name": "maxime",
+    "name": "Maxime Locqueville",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "You should never ask me anything before lunch.",
+    "emoji": "🍔",
+    "order": 14,
+    "objectID": "maxime"
+  },
+  {
+    "short_name": "matthieu",
+    "name": "Matthieu Dumont",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "I can eat a kebab and then a full Chinese menu.",
+    "emoji": "🍛",
+    "order": 15,
+    "objectID": "matthieu"
+  },
+  {
+    "short_name": "rebecca",
+    "name": "Rebecca Lee",
+    "role": "Office Manager",
+    "funny_quote": "It's a secret, but I still watch cartoons on TV and love fairy tales. Shhh!",
+    "emoji": "🦄",
+    "order": 16,
+    "objectID": "rebecca"
+  },
+  {
+    "short_name": "tim",
+    "name": "Tim Carry",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.",
+    "emoji": "🌽",
+    "order": 17,
+    "objectID": "tim"
+  },
+  {
+    "short_name": "benjamin",
+    "name": "Benjamin Digne",
+    "role": "Account Executive",
+    "funny_quote": "I have a passion for fried chicken.",
+    "emoji": "🐓",
+    "order": 18,
+    "objectID": "benjamin"
+  },
+  {
+    "short_name": "olivier",
+    "name": "Olivier Poissonier",
+    "role": "Chief Financial Officer",
+    "funny_quote": "I am a fan of 80's pop culture.",
+    "emoji": "🍭",
+    "order": 20,
+    "objectID": "olivier"
+  },
+  {
+    "short_name": "yvonne",
+    "name": "Yvonne Chu",
+    "role": "People Operations",
+    "funny_quote": "I have Bieber fever.",
+    "emoji": "🌡",
+    "order": 21,
+    "objectID": "yvonne"
+  },
+  {
+    "short_name": "gianluca",
+    "name": "Gianluca Bargelli",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "I destroyed my first computer at the age of 8.",
+    "emoji": "🖥",
+    "order": 22,
+    "objectID": "gianluca"
+  },
+  {
+    "short_name": "olivier-2",
+    "name": "Olivier Lance",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I love technology and collect 60-year-old cameras.",
+    "emoji": "📸",
+    "order": 23,
+    "objectID": "olivier-2"
+  },
+  {
+    "short_name": "alexandremeunier",
+    "name": "Alexandre Meunier",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "I have been playing guitar since I was 5.",
+    "emoji": "🎸",
+    "order": 25,
+    "objectID": "alexandremeunier"
+  },
+  {
+    "short_name": "jen",
+    "name": "Jennifer Kim",
+    "role": "Recruiter",
+    "funny_quote": "I organize everything by color. It’s just prettier that way!",
+    "emoji": "🌈",
+    "order": 26,
+    "objectID": "jen"
+  },
+  {
+    "short_name": "dustincoates",
+    "name": "Dustin Coates",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I lived in a tent for three months...indoors.",
+    "emoji": "⛺",
+    "order": 27,
+    "objectID": "dustincoates"
+  },
+  {
+    "short_name": "rcs",
+    "name": "Rémy-Christophe Schermesser",
+    "role": "Software Engineer",
+    "funny_quote": "I like death metal and paintings done before the 20th century.",
+    "emoji": "🤘",
+    "order": 28,
+    "objectID": "rcs"
+  },
+  {
+    "short_name": "antoine",
+    "name": "Antoine Gauvain",
+    "role": "DevOps Engineer",
+    "funny_quote": "I am the only Algolia employee who doesn't own an Apple product.",
+    "emoji": "🍎",
+    "order": 29,
+    "objectID": "antoine"
+  },
+  {
+    "short_name": "marion",
+    "name": "Marion Aguirre",
+    "role": "Recruiter",
+    "funny_quote": "A lot of people say I look like Professor McGonagall.",
+    "emoji": "⚡",
+    "order": 30,
+    "objectID": "marion"
+  },
+  {
+    "short_name": "jeanedern",
+    "name": "Jean Edern Lorillon",
+    "role": "Sales Representative",
+    "funny_quote": "Until I was 4, my mother tongue was a local Cameroonian language.",
+    "emoji": "🇨🇲",
+    "order": 31,
+    "objectID": "jeanedern"
+  },
+  {
+    "short_name": "clement",
+    "name": "Clément Leprovost",
+    "role": "Software Engineer",
+    "funny_quote": "I'm a relentless globetrotter.",
+    "emoji": "🌎",
+    "order": 32,
+    "objectID": "clement"
+  },
+  {
+    "short_name": "gabriel",
+    "name": "Gabriel Dillon",
+    "role": "Account Executive",
+    "funny_quote": "I've climbed to 5,636 meters...and plan to climb higher.",
+    "emoji": "🗻",
+    "order": 34,
+    "objectID": "gabriel"
+  },
+  {
+    "short_name": "anthony",
+    "name": "Anthony Seure",
+    "role": "Software Engineer",
+    "funny_quote": "How do I learn piano? Very slowly.",
+    "emoji": "🎹",
+    "order": 35,
+    "objectID": "anthony"
+  },
+  {
+    "short_name": "leo",
+    "name": "Leo Ercolanelli",
+    "role": "Software Engineer",
+    "funny_quote": "I usually eat at the speed of light.",
+    "emoji": "🍔",
+    "order": 36,
+    "objectID": "leo"
+  },
+  {
+    "short_name": "lucas",
+    "name": "Lucas Bonomi",
+    "role": "Frontend Developer",
+    "funny_quote": "I wanted to be an inventor, and then I discovered the web.",
+    "emoji": "👌",
+    "order": 37,
+    "objectID": "lucas"
+  },
+  {
+    "short_name": "paul-louis",
+    "name": "Paul-Louis Nech",
+    "role": "Software Engineer",
+    "funny_quote": "I developed an app to introduce biology to everyone.",
+    "emoji": "🔬",
+    "order": 38,
+    "objectID": "paul-louis"
+  },
+  {
+    "short_name": "antoine-2",
+    "name": "Antoine Plu",
+    "role": "UI/UX Designer",
+    "funny_quote": "I’ll never have enough time to tell you what it’s like to attend Burning Man.",
+    "emoji": "🔥",
+    "order": 39,
+    "objectID": "antoine-2"
+  },
+  {
+    "short_name": "lucas-2",
+    "name": "Lucas Cerdan",
+    "role": "Product UX Specialist",
+    "funny_quote": "My girlfriend is mad at me for always wearing startup t-shirts.",
+    "emoji": "👕",
+    "order": 40,
+    "objectID": "lucas-2"
+  },
+  {
+    "short_name": "raphael",
+    "name": "Raphaël Terrier",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I’ve created a connected device to mix perfect cocktails at home.",
+    "emoji": "🍸",
+    "order": 41,
+    "objectID": "raphael"
+  },
+  {
+    "short_name": "martin",
+    "name": "Martin Sallé",
+    "role": "Sales Representative",
+    "funny_quote": "I crossed the steppes of Inner Mongolia riding a tiny pony.",
+    "emoji": "🐴",
+    "order": 43,
+    "objectID": "martin"
+  },
+  {
+    "short_name": "clement-2",
+    "name": "Clement Avignon",
+    "role": "Outbound Sales Representative",
+    "funny_quote": "I swear I'll go to the Moon before I die!",
+    "emoji": "🌙",
+    "order": 46,
+    "objectID": "clement-2"
+  },
+  {
+    "short_name": "baptiste",
+    "name": "Baptiste Coquelle",
+    "role": "Full-Stack Software Engineer",
+    "funny_quote": "In Vietnam, I ate worms and I liked it.",
+    "emoji": "🐛",
+    "order": 47,
+    "objectID": "baptiste"
+  },
+  {
+    "short_name": "sandy",
+    "name": "Sandy Kwon",
+    "role": "Sales Representative",
+    "funny_quote": "I once won a martial arts competition for being the only person to show up.",
+    "emoji": "👊",
+    "order": 48,
+    "objectID": "sandy"
+  },
+  {
+    "short_name": "honza",
+    "name": "Jan Petr",
+    "role": "Software Engineer",
+    "funny_quote": "People think I have a broken nose. That's not true, I was just born like that.",
+    "emoji": "👃",
+    "order": 49,
+    "objectID": "honza"
+  },
+  {
+    "short_name": "raymond",
+    "name": "Raymond Rutjes",
+    "role": "Software Engineer",
+    "funny_quote": "My parents called me Raymond because it was trendy in the Netherlands, then they decided to move to France...I will never forgive them.",
+    "emoji": "🇳🇱",
+    "order": 50,
+    "objectID": "raymond"
+  },
+  {
+    "short_name": "josh",
+    "name": "Josh Dzielak",
+    "role": "Developer Advocate",
+    "funny_quote": "I bought a modified electric rickshaw to give people rides at Burning Man.",
+    "emoji": "🏍",
+    "order": 51,
+    "objectID": "josh"
+  },
+  {
+    "short_name": "fanette",
+    "name": "Fanette Jobard",
+    "role": "Demand Generation Specialist",
+    "funny_quote": "I have secretly started a collection of weird t-shirts (the ones picturing cats, the galaxy, keyboards, pizza or burritos)",
+    "emoji": "🌯",
+    "order": 52,
+    "objectID": "fanette"
+  },
+  {
+    "short_name": "kumiko",
+    "name": "Kumiko Larroque",
+    "role": "Office Assistant",
+    "funny_quote": "I was a farmer in bourgogne!!! I miss my cows, sheep and farmer mates!",
+    "emoji": "🚜",
+    "order": 53,
+    "objectID": "kumiko"
+  },
+  {
+    "short_name": "neil",
+    "name": "Neil Richler",
+    "role": "Growth Marketing",
+    "funny_quote": "I have visited and lived on sustainable farms all over the world.",
+    "emoji": "🐄",
+    "order": 55,
+    "objectID": "neil"
+  },
+  {
+    "short_name": "allen",
+    "name": "Allen Janian",
+    "role": "Sales Representative",
+    "funny_quote": "I was nearly cast as an extra in Beverly Hills Cop 3!",
+    "emoji": "👮",
+    "order": 56,
+    "objectID": "allen"
+  },
+  {
+    "short_name": "liam",
+    "name": "Liam Boogar",
+    "role": "Brand Director",
+    "funny_quote": "I speak 4 languages, but two of them are dead languages (Latin & Ancient Greek).",
+    "emoji": "👍🏿",
+    "order": 57,
+    "objectID": "liam"
+  },
+  {
+    "short_name": "marie",
+    "name": "Marie-Laure Thuret",
+    "role": "Software Engineer",
+    "funny_quote": "I brew my coffee using a scale, a thermometer and spreadsheets!",
+    "emoji": "☕",
+    "order": 58,
+    "objectID": "marie"
+  },
+  {
+    "short_name": "jasmine",
+    "name": "Jasmine Mireshghi",
+    "role": "Sales Representative",
+    "funny_quote": "I studied Mandarin for four years in high school and I love Chinese karaoke",
+    "emoji": "🎤",
+    "order": 59,
+    "objectID": "jasmine"
+  },
+  {
+    "short_name": "emily",
+    "name": "Emily Hayman",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I've been to all the states in the contiguous US",
+    "emoji": "🇺🇸",
+    "order": 60,
+    "objectID": "emily"
+  },
+  {
+    "short_name": "chris",
+    "name": "Chris Wittman",
+    "role": "Customer Success Manager",
+    "funny_quote": "I spent 5 months during college living at a resort and planning weddings in Hawaii!",
+    "emoji": "🌴",
+    "order": 61,
+    "objectID": "chris"
+  },
+  {
+    "short_name": "anh",
+    "name": "Anh Thu Trinh",
+    "role": "General Accountant",
+    "funny_quote": "Most people have difficulties remembering my full name. A helpful tip: think about one, two, three (Anh Thu TRINH)",
+    "emoji": "🤔",
+    "order": 62,
+    "objectID": "anh"
+  },
+  {
+    "short_name": "alain",
+    "name": "Alain Mady-Fetherstone",
+    "role": "Director of Operations",
+    "funny_quote": "I love to scuba dive, I even spotted a hairy octopus (really rare and very exciting!)",
+    "emoji": "🐙",
+    "order": 63,
+    "objectID": "alain"
+  },
+  {
+    "short_name": "cory",
+    "name": "Cory Dobson",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I've played drums for over 10 years.",
+    "emoji": "🔟",
+    "order": 64,
+    "objectID": "cory"
+  },
+  {
+    "short_name": "sebastien",
+    "name": "Sébastien Navizet",
+    "role": "Creative Designer",
+    "funny_quote": " I learned to read and write at 5 because I wanted to re-create circus billboards...Yeah, my love of typography and lettering began really early!",
+    "emoji": "𝓢",
+    "order": 65,
+    "objectID": "sebastien"
+  },
+  {
+    "short_name": "paul",
+    "name": "Paul Friesen",
+    "role": "VP of Marketing",
+    "funny_quote": "I'm a Canadian who doesn't know what Canadian bacon is",
+    "emoji": "🇨🇦",
+    "order": 66,
+    "objectID": "paul"
+  }
+]

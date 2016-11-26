@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+require 'json'
+
+# Generate a CSS file with rules for finding team members
+class Generate
+  def initialize
+    @root = File.join(File.expand_path(File.dirname(__FILE__)), '..')
+    people = JSON.parse(File.open("#{@root}/data/members.json").read)
+    @people = people.map do |person|
+      {
+        name: person['name'],
+        image: "https://www.algolia.com/static_assets/images/about-#{person['short_name']}.jpg"
+      }
+    end
+  end
+
+  def run
+    css = ['.searchbar + div:before { font-weight: bold; }']
+    @people.each do |person|
+      name = person[:name].downcase
+      image = "https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/#{person[:image]}"
+      start = 0
+      max = name.length
+      while start < max
+        before = name[0..start]
+        after = name[start + 1..-1]
+
+        css << ".searchbar[value='#{before}'] + div { background-image: url(#{image}); }"
+        css << ".searchbar[value='#{before}'] + div:before { content: '#{before}'; }"
+        css << ".searchbar[value='#{before}'] + div:after { content: '#{after}'; }"
+        start += 1
+      end
+    end
+
+    File.write("#{@root}/generated.css", css.join("\n"))
+  end
+end
+Generate.new.run

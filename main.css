@@ -1,0 +1,35 @@
+.searchbar + div {
+  height: 40px;
+  line-height: 25px;
+  padding-left: 50px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 40px;
+}
+
+/**
+ * 
+ * <div><input></div>
+ * The div should look like an input. With borders, etc.
+ * The input should be transparent, with a text shadow so whatever is typed can
+ * be replicated at another position onscreen. It has to stay in the input
+ * boundaries because of overflow constraints, but by making the actual input
+ * big but visually small (through the parent div), we should be able to make
+ * it.
+ *
+ * :before/after
+ * By pre-generating a long list of classes, we should be able to display almost
+ * any results, including highlight.
+ * We just need something like
+ * <div class="search-luc"></div>
+ * <div><div></div></div>
+ *
+ * We do a .search-luc + div:nth-child(n) to select any of the following divs,
+ * and we can add content using before and after
+ *
+ *
+ * contenteditable
+ * We can make a <style> tag editable. By crafting it correctly (adding
+ * whitespace) and absolutly positionning stuff to hide some parts, we could
+ * trick the user into change some CSS parts instead of typing in a field.
+ * he could actually be changing

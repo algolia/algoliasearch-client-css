@@ -1,0 +1,21 @@
+{
+  "name": "algoliasearch-css-client",
+  "version": "0.0.1",
+  "description": "Algolia CSS API Client",
+  "author": "Algolia Team",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:algolia/algoliasearch-css-client.git"
+  },
+  "scripts": {
+    "deploy": "./scripts/deploy",
+    "generate": "./scripts/generate",
+    "serve": "./scripts/serve"
+  },
+  "devDependencies": {
+    "gh-pages": "0.8.0",
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {}
+}

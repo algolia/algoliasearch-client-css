@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+rm -rf node_modules/gh-pages/.cache
+gh-pages --dist public --branch gh-pages

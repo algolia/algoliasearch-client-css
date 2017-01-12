@@ -32,7 +32,7 @@ class Generate
       end
     end
 
-    File.write("#{@root}/generated.css", css.join("\n"))
+    File.write("#{@root}/public/generated.css", css.join("\n"))
   end
 end
 Generate.new.run

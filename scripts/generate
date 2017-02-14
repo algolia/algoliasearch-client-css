@@ -9,25 +9,43 @@ class Generate
     @people = people.map do |person|
       {
         name: person['name'],
-        image: "https://www.algolia.com/static_assets/images/about-#{person['short_name']}.jpg"
+        image: 'https://www.algolia.com/static_assets/images/' \
+               "about-#{person['short_name']}.jpg"
       }
     end
   end
 
+  def cloudinary_image(url)
+    'https://res.cloudinary.com/pixelastic-parisweb/image/fetch/' \
+    "w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/#{url}"
+  end
+
   def run
     css = ['.searchbar + div:before { font-weight: bold; }']
+
+    # Pre-loading all images
+    preloaded_images = []
+    @people.each do |person|
+      preloaded_images.push("url(#{cloudinary_image(person[:image])})")
+    end
+    css.push('body:before{content:""; display:none; '\
+             "background:#{preloaded_images.join(',')}}")
+
     @people.each do |person|
       name = person[:name].downcase
-      image = "https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/#{person[:image]}"
       start = 0
       max = name.length
       while start < max
         before = name[0..start]
         after = name[start + 1..-1]
+        image = cloudinary_image(person[:image])
 
-        css << ".searchbar[value='#{before}'] + div { background-image: url(#{image}); }"
-        css << ".searchbar[value='#{before}'] + div:before { content: '#{before}'; }"
-        css << ".searchbar[value='#{before}'] + div:after { content: '#{after}'; }"
+        css << ".searchbar[value='#{before}'] + div {"\
+               "background-image: url(#{image}); }"
+        css << ".searchbar[value='#{before}'] + div:before {"\
+               "content: '#{before}'; }"
+        css << ".searchbar[value='#{before}'] + div:after {"\
+               "content: '#{after}'; }"
         start += 1
       end
     end

@@ -65,7 +65,7 @@
   {
     "short_name": "adam",
     "name": "Adam Surák",
-    "role": "DevOps Engineer",
+    "role": "Director of Infrastructure",
     "funny_quote": "I was the first non-French employee at Algolia.",
     "emoji": "🇫🇷",
     "order": 7,
@@ -263,7 +263,7 @@
   {
     "short_name": "jeanedern",
     "name": "Jean Edern Lorillon",
-    "role": "Sales Representative",
+    "role": "Account Executive",
     "funny_quote": "Until I was 4, my mother tongue was a local Cameroonian language.",
     "emoji": "🇨🇲",
     "order": 31,
@@ -322,15 +322,6 @@
     "emoji": "🔬",
     "order": 38,
     "objectID": "paul-louis"
-  },
-  {
-    "short_name": "antoine-2",
-    "name": "Antoine Plu",
-    "role": "UI/UX Designer",
-    "funny_quote": "I’ll never have enough time to tell you what it’s like to attend Burning Man.",
-    "emoji": "🔥",
-    "order": 39,
-    "objectID": "antoine-2"
   },
   {
     "short_name": "lucas-2",
@@ -538,5 +529,50 @@
     "emoji": "🇨🇦",
     "order": 66,
     "objectID": "paul"
+  },
+  {
+    "short_name": "jonas",
+    "name": "Jonas Badalic",
+    "role": "Frontend Developer",
+    "funny_quote": "I built my first personal website when I was 12.",
+    "emoji": "🕸",
+    "order": 67,
+    "objectID": "jonas"
+  },
+  {
+    "short_name": "steven",
+    "name": "Steven Merlino",
+    "role": "Sales Representative",
+    "funny_quote": "Once I built a contemporary art exhibit made of wooden chairs.",
+    "emoji": "🎨",
+    "order": 68,
+    "objectID": "steven"
+  },
+  {
+    "short_name": "zo",
+    "name": "Zo Asmail",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I ran a marathon because I lost a bet. I didn't know I was running it until the day before the race.",
+    "emoji": "🏃",
+    "order": 69,
+    "objectID": "zo"
+  },
+  {
+    "short_name": "atanas",
+    "name": "Atanas Nalbantov",
+    "role": "Sales Representative",
+    "funny_quote": "Whenever I have the choice, I'd rather walk than drive.",
+    "emoji": "🚶",
+    "order": 70,
+    "objectID": "atanas"
+  },
+  {
+    "short_name": "julien-2",
+    "name": "Julien Paroche",
+    "role": "Customer Solutions Engineer",
+    "funny_quote": "I was born with blue eyes but one of them started to turn brown and stopped halfway. So I now have a bi-color eye!",
+    "emoji": "👀",
+    "order": 71,
+    "objectID": "julien-2"
   }
 ]

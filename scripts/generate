@@ -20,17 +20,18 @@ class Generate
     "w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/#{url}"
   end
 
-  def run
-    css = ['.searchbar + div:before { font-weight: bold; }']
-
-    # Pre-loading all images
+  # Preload all images by adding them as hidden background on body
+  def preload_images
     preloaded_images = []
     @people.each do |person|
       preloaded_images.push("url(#{cloudinary_image(person[:image])})")
     end
-    css.push('body:before{content:""; display:none; '\
-             "background:#{preloaded_images.join(',')}}")
+    'body:before{content:""; display:none; '\
+           "background:#{preloaded_images.join(',')}}"
+  end
 
+  def fulltext_find
+    css = []
     @people.each do |person|
       name = person[:name].downcase
       start = 0
@@ -48,6 +49,23 @@ class Generate
                "content: '#{after}'; }"
         start += 1
       end
+    end
+  end
+
+  def run
+    css = ['.searchbar + div:before { font-weight: bold; }']
+
+    # Pre-loading all images
+    css.push(preload_images)
+
+    # Finding in full text
+
+    # Finding in full text
+
+    # Finding in family name
+    @people.each do |person|
+      last_name = person[:name].split(' ')[1..-1].join(' ').downcase
+      ap last_name
     end
 
     File.write("#{@root}/public/generated.css", css.join("\n"))

@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'awesome_print', '~> 1.6'
+gem 'i18n'
 
 group :development do
   gem 'flay', '~> 2.6'

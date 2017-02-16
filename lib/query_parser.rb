@@ -1,4 +1,6 @@
 require 'awesome_print'
+require 'i18n'
+I18n.available_locales = [:en]
 
 # Converts records to structure-like object containing all the highlight
 # information
@@ -13,24 +15,26 @@ class QueryParser
     highlight_override = options[:highlight] || {}
 
     entry_list = {}
+
+
     length = keyword.length
     index = 0
     while index < length
       prefix = keyword[0..index]
       after = keyword[index + 1..-1]
 
-      # We allo overriding the highlight data to give some context
+      # We allow overriding the highlight data to give some context
       highlight = {
         keyword: keyword,
         highlight: prefix,
         after: after
       }.merge(highlight_override)
 
-      entry_list[prefix] = [] unless entry_list.key?(prefix)
-      entry_list[prefix].push(
-        record: record,
-        highlight: highlight
-      )
+      # If the keywords contain non-ascii chars, we also index the full-ascii
+      # version
+
+      add_to_entry_list(entry_list, prefix, record, highlight)
+
       index += 1
     end
 
@@ -39,21 +43,36 @@ class QueryParser
     split_words = keyword.split(' ')
     return entry_list if split_words.length == 1
 
-    # We also index each additional word
-    split_words[1..-1].each_with_index do |additional_word, word_index|
-      before = split_words[0..word_index].join(' ') + ' '
-      options = {
-        keyword: additional_word,
-        highlight: {
-          before: before
-        }
+    # We index each succession of words after the first one
+    before = split_words[0] + ' '
+    keyword_subset = split_words[1..-1].join(' ')
+    options = {
+      keyword: keyword_subset,
+      highlight: {
+        before: before
       }
-      entry_list = merge(entry_list, index(record, options))
+    }
+    entry_list = merge(entry_list, index(record, options))
+
+    entry_list
+  end
+
+  def self.add_to_entry_list(entry_list, prefix, record, highlight)
+    entry_list[prefix] = [] unless entry_list.key?(prefix)
+    entry_list[prefix].push(
+      record: record,
+      highlight: highlight
+    )
+
+    # If it contains special chars, we also save it in the normalized version
+    normalized_prefix = I18n.transliterate(prefix)
+    if normalized_prefix != prefix
+      entry_list[normalized_prefix] = [] unless entry_list.key?(normalized_prefix)
+      entry_list[normalized_prefix].push(
+        record: record,
+        highlight: highlight
+      )
     end
-
-    #TODO: We might also need to index consecutive suite of words after the
-    #first one?
-
 
     entry_list
   end

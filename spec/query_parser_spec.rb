@@ -101,6 +101,61 @@ describe(QueryParser) do
       expect(actual['car'][0][:highlight][:highlight]).to eq 'car'
       expect(actual['car'][0][:highlight][:after]).to eq 'ry'
     end
+
+    it 'should index without accentuated characters' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'gaëtan' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 'gae'
+      expect(actual).to include 'gaë'
+    end
+
+    it 'should keep the accents in the highlight' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'gaëtan' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual['gae'][0][:highlight][:keyword]).to eq 'gaëtan'
+    end
+
+    it 'should index without accentuated characters in the last name' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'adam surák' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 'adam surak'
+      expect(actual).to include 'adam surák'
+    end
+
+    it 'should find names with multiples words with each of them' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'jeremy ben sadoun' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 'jeremy'
+      expect(actual).to include 'ben'
+      expect(actual).to include 'sadoun'
+      expect(actual).to include 'jeremy ben'
+      expect(actual).to include 'jeremy ben sadoun'
+      expect(actual).to include 'ben sadoun'
+    end
   end
 
   describe 'merge' do

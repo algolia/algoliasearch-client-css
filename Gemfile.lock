@@ -31,6 +31,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    i18n (0.8.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -90,6 +91,7 @@ DEPENDENCIES
   flay (~> 2.6)
   flog (~> 4.3)
   guard-rspec (~> 4.6)
+  i18n
   rspec (~> 3.0)
   rubocop (= 0.42)
 

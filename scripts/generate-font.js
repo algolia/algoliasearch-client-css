@@ -9,14 +9,22 @@ import _ from 'lodash';
 import basename from 'basename';
 import mkdirp from 'mkdirp';
 
+function debug(message) {
+  return function (arg) {
+    console.info(message);
+    return arg;
+  }
+}
+
 const GenerateFont = {
   parseArguments(args) {
     args = _.slice(args, 2);
-    GenerateFont.boldFont = args[0];
+    GenerateFont.baseFont = args[0];
+    GenerateFont.boldFont = args[1];
 
-    if (_.isEmpty(GenerateFont.boldFont)) {
+    if (_.isEmpty(GenerateFont.baseFont) || _.isEmpty(GenerateFont.boldFont)) {
       console.info('Usage:');
-      console.info('yarn run generate-fonts ./path/to/bold/font.ttf');
+      console.info('yarn run generate-fonts ./path/to/base/font.ttf ./path/to/bold/font.ttf');
       process.exit(1);
     }
   },
@@ -41,13 +49,12 @@ const GenerateFont = {
   ttf2svg(filepath) {
     const output = `./tmp/${basename(filepath)}.svg`;
 
-    if (fs.existsSync(output)) {
-      return Promise.resolve(output);
-    }
+    // if (fs.existsSync(output)) {
+    //   return Promise.resolve(output);
+    // }
 
     return GenerateFont.readFile(filepath)
-      .then(buffer => GenerateFont.writeFile(output, new Buffer(ttf2svg(buffer, {})).buffer))
-      .then(() => { console.info('Converted to SVG'); })
+      .then(buffer => GenerateFont.writeFile(output, ttf2svg(buffer)))
       .then(() => output);
   },
 
@@ -55,13 +62,12 @@ const GenerateFont = {
   svg2ttf(filepath) {
     const output = filepath.replace('.svg', '.ttf');
 
-    if (fs.existsSync(output)) {
-      return Promise.resolve(output);
-    }
+    // if (fs.existsSync(output)) {
+    //   return Promise.resolve(output);
+    // }
 
     const svg = fs.readFileSync(filepath, 'utf-8');
     fs.writeFileSync(output, new Buffer(svg2ttf(svg).buffer));
-    console.info('Converted to TTF');
     return Promise.resolve(output);
   },
 
@@ -74,7 +80,6 @@ const GenerateFont = {
     return GenerateFont.mkdir(output)
       .then(() => {
         fontBlast(font, output);
-        console.info(`Extracted glyphs in ${output}`);
         return output;
       });
   },
@@ -94,20 +99,25 @@ const GenerateFont = {
       });
   },
 
-  createHighlightFont(fontPath) {
+  createHighlightFont(baseFont, boldFont) {
     return Promise.all([
-      GenerateFont.ttf2svg(fontPath)
-        .then(boldFontSVG => GenerateFont.explodeGlyphs(boldFontSVG)),
+      GenerateFont.ttf2svg(baseFont)
+        .then(baseFontSVG => GenerateFont.explodeGlyphs(baseFontSVG))
+        .then(debug(`Converted ${baseFont} to SVG and extracted files`)),
+      GenerateFont.ttf2svg(boldFont)
+        .then(boldFontSVG => GenerateFont.explodeGlyphs(boldFontSVG))
+        .then(debug(`Converted ${boldFont} to SVG and extracted files`)),
       GenerateFont.getAllNeededCharacters(),
     ]).then(results => {
-      const boldGlyphsDirectory = results[0];
-      const characters = results[1];
+      const baseGlyphsDirectory = results[0];
+      const boldGlyphsDirectory = results[1];
+      const characters = results[2];
 
       const outputPath = './public/fonts/Highlight.svg';
       const deferred = Promise.pending();
       const fontStream = svg2font({
         fontName: 'Highlight',
-        descent: -450
+        normalize: true
       });
       fontStream.pipe(fs.createWriteStream(outputPath))
                 .on('finish', () => { deferred.resolve(outputPath); })
@@ -117,26 +127,42 @@ const GenerateFont = {
       _.each(characters, char => {
         const baseCodePoint = char.charCodeAt(0);
         const baseUnicodeCodePoint = baseCodePoint.toString(16);
-        const glyphPath = `${boldGlyphsDirectory}svg/uni${baseUnicodeCodePoint}.svg`;
+        const baseGlyphPath = `${baseGlyphsDirectory}svg/uni${baseUnicodeCodePoint}.svg`;
+        if (!fs.existsSync(baseGlyphPath)) {
+          console.info(`⚠ No glyph for ${char} (${baseGlyphPath})`);
+          return;
+        }
 
-        if (!fs.existsSync(glyphPath)) {
-          console.info(`⚠ No glyph for ${char} (${glyphPath})`);
+        // Adding the regular character
+        const baseGlyphStream = fs.createReadStream(baseGlyphPath);
+        const baseGlyphName = `BASE_${char}`;
+
+        baseGlyphStream.metadata = {
+          name: baseGlyphName,
+          unicode: [char],
+        };
+        fontStream.write(baseGlyphStream);
+
+        // Adding the highlighted characters
+        const boldGlyphPath = `${boldGlyphsDirectory}svg/uni${baseUnicodeCodePoint}.svg`;
+        if (!fs.existsSync(boldGlyphPath)) {
+          console.info(`⚠ No glyph for ${char} (${boldGlyphPath})`);
           return;
         }
 
         const privateCodePoint = baseCodePoint + privateSpaceStart;
         const privateUnicodeCharacter = String.fromCodePoint(privateCodePoint);
 
-        const glyphStream = fs.createReadStream(glyphPath);
-        const glyphName = `HIGHLIGHT_${char}`;
+        const privateGlyphStream = fs.createReadStream(boldGlyphPath);
+        const privateGlyphName = `HIGHLIGHT_${char}`;
 
-        glyphStream.metadata = {
-          name: glyphName,
+        privateGlyphStream.metadata = {
+          name: privateGlyphName,
           unicode: [privateUnicodeCharacter],
         };
-
-        fontStream.write(glyphStream);
+        fontStream.write(privateGlyphStream);
       });
+
       fontStream.end();
 
       return deferred.promise;
@@ -156,7 +182,7 @@ const GenerateFont = {
   run(args) {
     GenerateFont.parseArguments(args);
 
-    GenerateFont.createHighlightFont(GenerateFont.boldFont);
+    GenerateFont.createHighlightFont(GenerateFont.baseFont, GenerateFont.boldFont);
   },
 };
 GenerateFont.run(process.argv);

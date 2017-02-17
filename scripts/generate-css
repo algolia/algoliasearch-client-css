@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+require 'json'
+require_relative '../lib/query_parser.rb'
+require_relative '../lib/css_writer.rb'
+
+# Generate a CSS file with rules for finding team members
+class Generate
+  def initialize
+    @root = File.join(File.expand_path(File.dirname(__FILE__)), '..')
+    people = JSON.parse(File.open("#{@root}/data/members.json").read)
+    @people = people.map do |person|
+      
+      image = 'https://www.algolia.com/static_assets/images/' \
+               "about-#{person['short_name']}.jpg"
+      person['image'] = CSSWriter.cloudinary(image)
+      person
+    end
+  end
+
+  def run
+    lookup_table = {}
+    @people.each do |person|
+      entry_table = QueryParser.index(person, keyword: person['name'])
+      lookup_table = QueryParser.merge(lookup_table, entry_table)
+    end
+
+    css = CSSWriter.base
+    css = CSSWriter.preload_images(css, @people)
+    ap css
+    lookup_table.each do |prefix, entry|
+      css.push(CSSWriter.rule(prefix, entry))
+    end
+
+
+    File.write("#{@root}/public/css/generated.css", css.join("\n"))
+  end
+end
+Generate.new.run

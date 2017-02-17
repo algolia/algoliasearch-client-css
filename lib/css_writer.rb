@@ -12,7 +12,6 @@ class CSSWriter
 
     css << "input[value='#{keyword}' i] + div {"
     css << "background-image: url(#{entry[:record]['image']});"
-    css << 'background-color: green;'
     css << '}'
     css << "input[value='#{keyword}' i] + div:before {"
     css << "content: '#{content}'"
@@ -26,10 +25,15 @@ class CSSWriter
     highlighted_text = ''
     text.split('').each do |char|
       char_code = char.ord
+      # There is no char for a space, so we keep it that way
+      if char_code == 32
+        highlighted_text += ' '
+        next
+      end
       private_char_code = char_code + 58_880
       css_char = private_char_code.to_s(16)
 
-      highlighted_text += '\\' + css_char
+      highlighted_text += '\\' + css_char + ' '
     end
     highlighted_text
   end
@@ -49,7 +53,7 @@ class CSSWriter
   def self.preload_images(css, records)
     preloaded_images = []
     records.each do |record|
-      preloaded_images.push("url(#{record[:image]})")
+      preloaded_images.push("url(#{record['image']})")
     end
     css.push('body:before{content:""; display:none; '\
            "background:#{preloaded_images.join(',')}}")

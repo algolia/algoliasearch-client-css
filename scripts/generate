@@ -16,31 +16,8 @@ class Generate
       person
     end
   end
-  #
-  # def fulltext_find
-  #   css = []
-  #   @people.each do |person|
-  #     name = person[:name].downcase
-  #     start = 0
-  #     max = name.length
-  #     while start < max
-  #       before = name[0..start]
-  #       after = name[start + 1..-1]
-  #       image = cloudinary_image(person[:image])
-  #
-  #       css << ".searchbar[value='#{before}'] + div {"\
-  #              "background-image: url(#{image}); }"
-  #       css << ".searchbar[value='#{before}'] + div:before {"\
-  #              "content: '#{before}'; }"
-  #       css << ".searchbar[value='#{before}'] + div:after {"\
-  #              "content: '#{after}'; }"
-  #       start += 1
-  #     end
-  #   end
-  # end
 
   def run
-    # lookup_table = 
     lookup_table = {}
     @people.each do |person|
       entry_table = QueryParser.index(person, keyword: person['name'])
@@ -54,7 +31,7 @@ class Generate
     end
 
 
-    File.write("#{@root}/public/generated.css", css.join("\n"))
+    File.write("#{@root}/public/css/generated.css", css.join("\n"))
   end
 end
 Generate.new.run

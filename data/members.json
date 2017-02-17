@@ -7,5 +7,14 @@
     "emoji": "🌽",
     "order": 17,
     "objectID": "tim"
+  },
+  {
+    "short_name": "nicolas",
+    "name": "Nicolas Dessaigne",
+    "role": "Co-founder & CEO",
+    "funny_quote": "My wife once convinced me to do a 1-week fast!",
+    "emoji": "💦",
+    "order": 0,
+    "objectID": "nicolas"
   }
 ]

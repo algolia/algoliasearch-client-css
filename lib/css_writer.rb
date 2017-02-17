@@ -7,10 +7,8 @@ class CSSWriter
     css = []
 
     entry = entry[0]
-    highlight = entry[:highlight]
-    content = "#{highlight[:before]}"\
-              "___#{highlight[:highlight]}___"\
-              "#{highlight[:after]}"
+    h = entry[:highlight]
+    content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
 
     css << "input[value='#{keyword}' i] + div {"
     css << "background-image: url(#{entry[:record]['image']});"
@@ -21,6 +19,19 @@ class CSSWriter
     css << '}'
 
     css.join("\n")
+  end
+
+  # Highlighting is done using characters in the private area of Unicode
+  def self.highlight(text)
+    highlighted_text = ''
+    text.split('').each do |char|
+      char_code = char.ord
+      private_char_code = char_code + 58_880
+      css_char = private_char_code.to_s(16)
+
+      highlighted_text += '\\' + css_char
+    end
+    highlighted_text
   end
 
   # Base CSS to be added to the search

@@ -1,0 +1,282 @@
+.searchbar + div:before { font-weight: bold; }
+body:before{content:""; display:none; background:url(),url()}
+input[value='T' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='T' i] + div:before {
+content: '\e654im Carry'
+}
+input[value='Ti' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Ti' i] + div:before {
+content: '\e654\e669m Carry'
+}
+input[value='Tim' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim' i] + div:before {
+content: '\e654\e669\e66d Carry'
+}
+input[value='Tim ' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim ' i] + div:before {
+content: '\e654\e669\e66d\e620Carry'
+}
+input[value='Tim C' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim C' i] + div:before {
+content: '\e654\e669\e66d\e620\e643arry'
+}
+input[value='Tim Ca' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim Ca' i] + div:before {
+content: '\e654\e669\e66d\e620\e643\e661rry'
+}
+input[value='Tim Car' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim Car' i] + div:before {
+content: '\e654\e669\e66d\e620\e643\e661\e672ry'
+}
+input[value='Tim Carr' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim Carr' i] + div:before {
+content: '\e654\e669\e66d\e620\e643\e661\e672\e672y'
+}
+input[value='Tim Carry' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Tim Carry' i] + div:before {
+content: '\e654\e669\e66d\e620\e643\e661\e672\e672\e679'
+}
+input[value='C' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='C' i] + div:before {
+content: 'Tim \e643arry'
+}
+input[value='Ca' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Ca' i] + div:before {
+content: 'Tim \e643\e661rry'
+}
+input[value='Car' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Car' i] + div:before {
+content: 'Tim \e643\e661\e672ry'
+}
+input[value='Carr' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Carr' i] + div:before {
+content: 'Tim \e643\e661\e672\e672y'
+}
+input[value='Carry' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+background-color: green;
+}
+input[value='Carry' i] + div:before {
+content: 'Tim \e643\e661\e672\e672\e679'
+}
+input[value='N' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='N' i] + div:before {
+content: '\e64eicolas Dessaigne'
+}
+input[value='Ni' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Ni' i] + div:before {
+content: '\e64e\e669colas Dessaigne'
+}
+input[value='Nic' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nic' i] + div:before {
+content: '\e64e\e669\e663olas Dessaigne'
+}
+input[value='Nico' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nico' i] + div:before {
+content: '\e64e\e669\e663\e66flas Dessaigne'
+}
+input[value='Nicol' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicol' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66cas Dessaigne'
+}
+input[value='Nicola' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicola' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661s Dessaigne'
+}
+input[value='Nicolas' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673 Dessaigne'
+}
+input[value='Nicolas ' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas ' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620Dessaigne'
+}
+input[value='Nicolas D' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas D' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644essaigne'
+}
+input[value='Nicolas De' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas De' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665ssaigne'
+}
+input[value='Nicolas Des' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Des' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673saigne'
+}
+input[value='Nicolas Dess' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Dess' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673\e673aigne'
+}
+input[value='Nicolas Dessa' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Dessa' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673\e673\e661igne'
+}
+input[value='Nicolas Dessai' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Dessai' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673\e673\e661\e669gne'
+}
+input[value='Nicolas Dessaig' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Dessaig' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673\e673\e661\e669\e667ne'
+}
+input[value='Nicolas Dessaign' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Dessaign' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673\e673\e661\e669\e667\e66ee'
+}
+input[value='Nicolas Dessaigne' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Nicolas Dessaigne' i] + div:before {
+content: '\e64e\e669\e663\e66f\e66c\e661\e673\e620\e644\e665\e673\e673\e661\e669\e667\e66e\e665'
+}
+input[value='D' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='D' i] + div:before {
+content: 'Nicolas \e644essaigne'
+}
+input[value='De' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='De' i] + div:before {
+content: 'Nicolas \e644\e665ssaigne'
+}
+input[value='Des' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Des' i] + div:before {
+content: 'Nicolas \e644\e665\e673saigne'
+}
+input[value='Dess' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Dess' i] + div:before {
+content: 'Nicolas \e644\e665\e673\e673aigne'
+}
+input[value='Dessa' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Dessa' i] + div:before {
+content: 'Nicolas \e644\e665\e673\e673\e661igne'
+}
+input[value='Dessai' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Dessai' i] + div:before {
+content: 'Nicolas \e644\e665\e673\e673\e661\e669gne'
+}
+input[value='Dessaig' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Dessaig' i] + div:before {
+content: 'Nicolas \e644\e665\e673\e673\e661\e669\e667ne'
+}
+input[value='Dessaign' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Dessaign' i] + div:before {
+content: 'Nicolas \e644\e665\e673\e673\e661\e669\e667\e66ee'
+}
+input[value='Dessaigne' i] + div {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+background-color: green;
+}
+input[value='Dessaigne' i] + div:before {
+content: 'Nicolas \e644\e665\e673\e673\e661\e669\e667\e66e\e665'
+}

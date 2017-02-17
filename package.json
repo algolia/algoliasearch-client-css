@@ -11,11 +11,29 @@
   "scripts": {
     "deploy": "./scripts/deploy",
     "generate": "./scripts/generate",
-    "serve": "./scripts/serve"
+    "generate-font": "babel-node ./scripts/generate-font.js",
+    "serve": "./scripts/serve",
+    "lint": "eslint ./scripts/*.js"
   },
   "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "basename": "^0.1.2",
+    "bluebird": "^3.4.7",
+    "eslint": "^3.15.0",
+    "eslint-config-algolia": "^6.0.1",
+    "font-blast": "^0.2.2",
+    "fontkit": "^1.5.2",
     "gh-pages": "0.8.0",
-    "live-server": "^1.2.0"
+    "glob": "^7.1.1",
+    "live-server": "^1.2.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "svg2ttf": "^4.0.2",
+    "svgicons2svgfont": "^5.0.0",
+    "ttf2svg": "^1.1.0"
   },
   "dependencies": {}
 }

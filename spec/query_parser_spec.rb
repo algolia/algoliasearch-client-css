@@ -235,4 +235,21 @@ describe(QueryParser) do
       expect(actual['t'].length).to eq 2
     end
   end
+
+  describe 'sort' do
+    it 'should remove duplicates for a given prefix' do
+      # Given
+      record_1 = { 'objectID' => 'A' }
+      record_2 = { 'objectID' => 'A' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'f')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'f')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2)
+
+      # When
+      actual = QueryParser.sort(lookup_table)
+
+      # Then
+      expect(actual['f'].length).to eq 1
+    end
+  end
 end

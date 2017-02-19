@@ -82,6 +82,15 @@ class QueryParser
         lookup_table[prefix].concat(data)
       end
     end
+
+    lookup_table
+  end
+
+  # Sort entries for each prefix
+  def self.sort(lookup_table)
+    lookup_table.each do |prefix, data|
+      lookup_table[prefix] = data.uniq { |x| x[:record]['objectID'] }
+    end
     lookup_table
   end
 end

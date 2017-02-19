@@ -3,19 +3,22 @@ require 'awesome_print'
 # Writes CSS rules that match a given LookupTable
 class CSSWriter
   # Given a prefix and an entry, should return the matching CSS rule
-  def self.rule(keyword, entry)
+  def self.rule(keyword, entries)
     css = []
 
-    entry = entry[0]
-    h = entry[:highlight]
-    content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
+    entries.each_with_index do |entry, i|
+      h = entry[:highlight]
+      content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
 
-    css << "input[value='#{keyword}' i] + div {"
-    css << "background-image: url(#{entry[:record]['image']});"
-    css << '}'
-    css << "input[value='#{keyword}' i] + div:before {"
-    css << "content: '#{content}'"
-    css << '}'
+      plus_selector = ' + div' * (i + 1)
+
+      css << "input[value='#{keyword}' i]#{plus_selector} {"
+      css << "background-image: url(#{entry[:record]['image']});"
+      css << '}'
+      css << "input[value='#{keyword}' i]#{plus_selector}:before {"
+      css << "content: '#{content}'"
+      css << '}'
+    end
 
     css.join("\n")
   end
@@ -40,7 +43,7 @@ class CSSWriter
 
   # Base CSS to be added to the search
   def self.base
-    ['.searchbar + div:before { font-weight: bold; }']
+    []
   end
 
   # Get the Cloudinary link to an image

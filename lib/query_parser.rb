@@ -16,7 +16,7 @@ class QueryParser
 
     entry_list = {}
 
-
+    # Generate an entry for each prefix
     length = keyword.length
     index = 0
     while index < length
@@ -30,26 +30,19 @@ class QueryParser
         after: after
       }.merge(highlight_override)
 
-      # If the keywords contain non-ascii chars, we also index the full-ascii
-      # version
-
       add_to_entry_list(entry_list, prefix, record, highlight)
 
       index += 1
     end
 
-    # If the SearchableAttribute has several words, we need to index them as
-    # well
-    split_words = keyword.split(' ')
-    return entry_list if split_words.length == 1
-
-    # We index each succession of words after the first one
-    before = split_words[0] + ' '
-    keyword_subset = split_words[1..-1].join(' ')
+    # If several words, we recursively apply the same principle to the subset
+    # that does not include the first word
+    matches = keyword.match(/^((.*?)([ -]))(.*)/)
+    return entry_list if matches.nil?
     options = {
-      keyword: keyword_subset,
+      keyword: matches[4],
       highlight: {
-        before: before
+        before: "#{highlight_override[:before]}#{matches[1]}"
       }
     }
     entry_list = merge(entry_list, index(record, options))
@@ -67,11 +60,14 @@ class QueryParser
     # If it contains special chars, we also save it in the normalized version
     normalized_prefix = I18n.transliterate(prefix)
     if normalized_prefix != prefix
-      entry_list[normalized_prefix] = [] unless entry_list.key?(normalized_prefix)
-      entry_list[normalized_prefix].push(
-        record: record,
-        highlight: highlight
-      )
+      add_to_entry_list(entry_list, normalized_prefix, record, highlight)
+    end
+
+    # If it contains separators, we also save the versions with separators
+    # replaced with spaces
+    normalized_prefix = prefix.tr('-', ' ')
+    if normalized_prefix != prefix
+      add_to_entry_list(entry_list, normalized_prefix, record, highlight)
     end
 
     entry_list
@@ -88,5 +84,4 @@ class QueryParser
     end
     lookup_table
   end
-
 end

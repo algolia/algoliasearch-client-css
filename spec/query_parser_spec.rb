@@ -102,7 +102,7 @@ describe(QueryParser) do
       expect(actual['car'][0][:highlight][:after]).to eq 'ry'
     end
 
-    it 'should index without accentuated characters' do
+    it 'should index without accented characters' do
       # Given
       record = { foo: 'bar' }
       options = { keyword: 'gaëtan' }
@@ -127,7 +127,7 @@ describe(QueryParser) do
       expect(actual['gae'][0][:highlight][:keyword]).to eq 'gaëtan'
     end
 
-    it 'should index without accentuated characters in the last name' do
+    it 'should index without accented characters in the last name' do
       # Given
       record = { foo: 'bar' }
       options = { keyword: 'adam surák' }
@@ -155,6 +155,47 @@ describe(QueryParser) do
       expect(actual).to include 'jeremy ben'
       expect(actual).to include 'jeremy ben sadoun'
       expect(actual).to include 'ben sadoun'
+    end
+
+    it 'should split words on dashes' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'paul-louis nech' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 'paul'
+      expect(actual).to include 'louis'
+      expect(actual).to include 'nech'
+      expect(actual['louis'][0][:highlight][:before]).to eq 'paul-'
+      expect(actual['nech'][0][:highlight][:before]).to eq 'paul-louis '
+    end
+
+    it 'should find composed words when typing dash' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'remy-christophe' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 'remy-christophe'
+    end
+
+    it 'should find composed words when typing space' do
+      # Given
+      record = { foo: 'bar' }
+      options = { keyword: 'remy-christophe' }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 'remy christophe'
+      expect(actual['remy christophe'][0][:highlight][:keyword]).to eq 'remy-christophe'
     end
   end
 

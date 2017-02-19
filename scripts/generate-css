@@ -26,7 +26,6 @@ class Generate
 
     css = CSSWriter.base
     css = CSSWriter.preload_images(css, @people)
-    ap css
     lookup_table.each do |prefix, entry|
       css.push(CSSWriter.rule(prefix, entry))
     end

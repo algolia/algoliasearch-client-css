@@ -13,7 +13,7 @@ function debug(message) {
   return function (arg) {
     console.info(message);
     return arg;
-  }
+  };
 }
 
 const GenerateFont = {

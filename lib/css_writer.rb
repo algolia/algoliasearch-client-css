@@ -9,14 +9,18 @@ class CSSWriter
     entries.each_with_index do |entry, i|
       h = entry[:highlight]
       content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
+      quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027')
 
-      plus_selector = ' + div' * (i + 1)
+      div_selector = " + div div:nth-child(#{i + 1})"
 
-      css << "input[value='#{keyword}' i]#{plus_selector} {"
+      css << "input[value='#{keyword}' i]#{div_selector} {"
       css << "background-image: url(#{entry[:record]['image']});"
       css << '}'
-      css << "input[value='#{keyword}' i]#{plus_selector}:before {"
-      css << "content: '#{content}'"
+      css << "input[value='#{keyword}' i]#{div_selector}:before {"
+      css << "content: '#{content}\\A #{entry[:record]['role']}'"
+      css << '}'
+      css << "input[value='#{keyword}' i]#{div_selector}:after {"
+      css << "content: '#{quote}'"
       css << '}'
     end
 
@@ -49,7 +53,7 @@ class CSSWriter
   # Get the Cloudinary link to an image
   def self.cloudinary(url)
     'https://res.cloudinary.com/pixelastic-parisweb/image/fetch/' \
-    "w_50,h_50,q_90,c_scale,r_max,f_auto,e_grayscale/#{url}"
+    "w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/#{url}"
   end
 
   # Preload all images by loading the images in the body background

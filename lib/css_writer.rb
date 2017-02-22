@@ -12,7 +12,7 @@ class CSSWriter
       content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
       quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
 
-      div_selector = " + div div:nth-child(#{i + 1})"
+      div_selector = " + div > div:nth-child(#{i + 1})"
 
       css << "input[value='#{keyword}' i]#{div_selector} {"
       css << "background-image: url(#{entry[:record]['image']});"

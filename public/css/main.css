@@ -59,7 +59,8 @@ input[type="text"] + div {
   margin-top: 1rem;
 }
 
-input[type="text"] + div div {
+input[type="text"] + div div,
+input[type="text"] + div a {
   display: none;
   flex: 1 1 300px;
   height: 300px;
@@ -112,3 +113,31 @@ input[type="text"] + div div:after {
 }
 input[type="text"] + div div:hover:after {
   opacity: 1;
+}
+
+/* Open positions link */
+input[type="text"] + div a {
+  display: block;
+  height: auto;
+  padding: 0;
+  color: #182359;
+  text-decoration: none;
+}
+input[type="text"] + div a div {
+  display: block;
+  margin: 0;
+  flex: none;
+  background-image:url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-you.jpg)
+}
+input[type="text"] + div a div:before {
+  content: 'We are hiring\A See open positions';
+  color: #00aeff;
+  font-style: normal;
+}
+input[type="text"] + div a div:first-line {
+  color: #182359;
+}
+input[type="text"] + div a:hover div:before {
+  color: #007ab3;
+  font-weight: bold;
+}

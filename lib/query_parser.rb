@@ -91,6 +91,16 @@ class QueryParser
     lookup_table.each do |prefix, data|
       lookup_table[prefix] = data.uniq { |x| x[:record]['objectID'] }
     end
+
+    # Making sure keywords with accents, also find results without
+    lookup_table.each do |prefix, _data|
+      normalized_prefix = I18n.transliterate(prefix)
+      next if normalized_prefix == prefix
+      count = lookup_table[prefix].length
+      normalized_count = lookup_table[normalized_prefix].length
+      next if count > normalized_count
+      lookup_table[prefix] = lookup_table[normalized_prefix]
+    end
     lookup_table
   end
 

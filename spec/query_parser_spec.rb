@@ -251,6 +251,22 @@ describe(QueryParser) do
       # Then
       expect(actual['f'].length).to eq 1
     end
+
+    it 'should make sure normalized and non-normalized version have the same results' do
+      # Given
+      record_1 = { 'objectID' => 'foo' }
+      record_2 = { 'objectID' => 'bar' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'clément')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'clement')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2)
+
+      # When
+      actual = QueryParser.sort(lookup_table)
+
+      # Then
+      expect(actual['clement'].length).to eq 2
+      expect(actual['clément'].length).to eq 2
+    end
   end
 
   describe 'empty_query' do

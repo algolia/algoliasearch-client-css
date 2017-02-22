@@ -10,7 +10,7 @@ class CSSWriter
     entries.each_with_index do |entry, i|
       h = entry[:highlight]
       content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
-      quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027')
+      quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
 
       div_selector = " + div div:nth-child(#{i + 1})"
 

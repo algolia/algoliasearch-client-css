@@ -18,7 +18,7 @@ class Generate
   end
 
   def run
-    lookup_table = {}
+    lookup_table = QueryParser.empty_query(@people, 'name')
     @people.each do |person|
       entry_table = QueryParser.index(person, keyword: person['name'])
       lookup_table = QueryParser.merge(lookup_table, entry_table)

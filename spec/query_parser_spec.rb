@@ -252,4 +252,54 @@ describe(QueryParser) do
       expect(actual['f'].length).to eq 1
     end
   end
+
+  describe 'empty_query' do
+    it 'should create an entry for the empty query with one entry per person' do
+      # Given
+      inputs = [
+        { 'name' => 'foo' },
+        { 'name' => 'bar' },
+        { 'name' => 'baz' }
+      ]
+
+      # When
+      actual = QueryParser.empty_query(inputs, 'name')
+
+      # Then
+      expect(actual).to include '__EMPTY_QUERY__'
+      expect(actual['__EMPTY_QUERY__'].length).to eq 3
+    end
+
+    it 'should contain the whole initial records' do
+      # Given
+      inputs = [
+        { 'name' => 'foo' },
+        { 'name' => 'bar' },
+        { 'name' => 'baz' }
+      ]
+
+      # When
+      actual = QueryParser.empty_query(inputs, 'name')
+
+      # Then
+      expect(actual['__EMPTY_QUERY__'][0][:record]['name']).to eq 'foo'
+    end
+
+    it 'should have the specified keyword highlighted' do
+      # Given
+      inputs = [
+        { 'name' => 'foo' },
+        { 'name' => 'bar' },
+        { 'name' => 'baz' }
+      ]
+
+      # When
+      actual = QueryParser.empty_query(inputs, 'name')
+
+      # Then
+      expect(actual['__EMPTY_QUERY__'][0][:highlight][:before]).to eq 'foo'
+      expect(actual['__EMPTY_QUERY__'][0][:highlight][:highlight]).to eq nil
+      expect(actual['__EMPTY_QUERY__'][0][:highlight][:after]).to eq nil
+    end
+  end
 end

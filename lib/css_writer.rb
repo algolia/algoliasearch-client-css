@@ -5,6 +5,7 @@ class CSSWriter
   # Given a prefix and an entry, should return the matching CSS rule
   def self.rule(keyword, entries)
     css = []
+    keyword = '' if keyword == '__EMPTY_QUERY__'
 
     entries.each_with_index do |entry, i|
       h = entry[:highlight]
@@ -29,6 +30,8 @@ class CSSWriter
 
   # Highlighting is done using characters in the private area of Unicode
   def self.highlight(text)
+    return '' if text.nil?
+
     highlighted_text = ''
     text.split('').each do |char|
       char_code = char.ord
@@ -66,4 +69,6 @@ class CSSWriter
            "background:#{preloaded_images.join(',')}}")
     css
   end
+
+  # Apply rules to display
 end

@@ -93,4 +93,20 @@ class QueryParser
     end
     lookup_table
   end
+
+  # Special entry for the empty query, that will contain all the records, with
+  # dummy highlight info
+  def self.empty_query(people, keyword_attribute)
+    table = { '__EMPTY_QUERY__' => [] }
+
+    people.each do |person|
+      table['__EMPTY_QUERY__'].push(
+        highlight: {
+          before: person[keyword_attribute]
+        },
+        record: person
+      )
+    end
+    table
+  end
 end

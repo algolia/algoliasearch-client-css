@@ -75,8 +75,66 @@ describe(CSSWriter) do
       actual = CSSWriter.rule(keyword, entries)
 
       # Then
-      expect(actual).to include "input[value='foo' i] + div {"
-      expect(actual).to include "input[value='foo' i] + div + div {"
+      expect(actual).to include "input[value='foo' i] + div div:nth-child(1) {"
+      expect(actual).to include "input[value='foo' i] + div div:nth-child(2) {"
+    end
+
+    it 'should handle the empty query special case' do
+      # Given
+      keyword = '__EMPTY_QUERY__'
+      entries = tim
+
+      # When
+      actual = CSSWriter.rule(keyword, entries)
+
+      # Then
+      expect(actual).to include "input[value='' i] + div div:nth-child(1) {"
+    end
+  end
+
+  describe 'highlight' do
+    it 'should change nothing if no highlight' do
+      # Given
+      input = ''
+
+      # When
+      actual = CSSWriter.highlight(input)
+
+      # Then
+      expect(actual).to eq ''
+    end
+
+    it 'should replace highlighted characters with private space unicode' do
+      # Given
+      input = 'foo'
+
+      # When
+      actual = CSSWriter.highlight(input)
+
+      # Then
+      expect(actual).to eq '\\e666 \\e66f \\e66f '
+    end
+
+    it 'should not highlight spaces' do
+      # Given
+      input = 'a b'
+
+      # When
+      actual = CSSWriter.highlight(input)
+
+      # Then
+      expect(actual).to eq '\\e661  \\e662 '
+    end
+
+    it 'should not highlight if nil' do
+      # Given
+      input = nil
+
+      # When
+      actual = CSSWriter.highlight(input)
+
+      # Then
+      expect(actual).to eq ''
     end
   end
 end

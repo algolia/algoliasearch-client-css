@@ -1,4 +1,580 @@
 body:before{content:""; display:none; background:url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sylvain.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gaetan.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kevin.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-adam.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-vvo.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas-2.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-maxime.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rebecca.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier-2.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandremeunier.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jen.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marion.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gabriel.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-leo.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas-2.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-raphael.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement-2.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sandy.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-raymond.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-josh.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-fanette.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kumiko.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-neil.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-liam.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marie.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jasmine.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anh.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alain.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-cory.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jonas.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-steven.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-zo.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-atanas.jpg),url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien-2.jpg)}
+input[value='' i] + div div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+}
+input[value='' i] + div div:nth-child(1):before {
+content: 'Nicolas Dessaigne\A Co-founder & CEO'
+}
+input[value='' i] + div div:nth-child(1):after {
+content: '💦\A My wife once convinced me to do a 1-week fast!'
+}
+input[value='' i] + div div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
+}
+input[value='' i] + div div:nth-child(2):before {
+content: 'Julien Lemoine\A Co-founder & CTO'
+}
+input[value='' i] + div div:nth-child(2):after {
+content: '🍷\A I was born in Dijon, and I love mustard and wine.'
+}
+input[value='' i] + div div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sylvain.jpg);
+}
+input[value='' i] + div div:nth-child(3):before {
+content: 'Sylvain Utard\A VP of Engineering'
+}
+input[value='' i] + div div:nth-child(3):after {
+content: '🍄\A I dressed up as Super Mario for our last team building event.'
+}
+input[value='' i] + div div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gaetan.jpg);
+}
+input[value='' i] + div div:nth-child(4):before {
+content: 'Gaëtan Gachet\A VP of Sales'
+}
+input[value='' i] + div div:nth-child(4):after {
+content: '🌿\A I\0027m an unconditional plant lover.'
+}
+input[value='' i] + div div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg);
+}
+input[value='' i] + div div:nth-child(5):before {
+content: 'Xavier Grand\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(5):after {
+content: '🛌\A I have slept at the office...twice!'
+}
+input[value='' i] + div div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kevin.jpg);
+}
+input[value='' i] + div div:nth-child(6):before {
+content: 'Kevin Granger\A UI/UX Designer'
+}
+input[value='' i] + div div:nth-child(6):after {
+content: '🍕\A I built a pizza oven (and use it).'
+}
+input[value='' i] + div div:nth-child(7) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg);
+}
+input[value='' i] + div div:nth-child(7):before {
+content: 'Alexandre Collin\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(7):after {
+content: '🌵\A I spent a full week driving a VAN across the Australian desert.'
+}
+input[value='' i] + div div:nth-child(8) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-adam.jpg);
+}
+input[value='' i] + div div:nth-child(8):before {
+content: 'Adam Surák\A Director of Infrastructure'
+}
+input[value='' i] + div div:nth-child(8):after {
+content: '🇫🇷\A I was the first non-French employee at Algolia.'
+}
+input[value='' i] + div div:nth-child(9) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
+}
+input[value='' i] + div div:nth-child(9):before {
+content: 'Jeremy Ben Sadoun\A Account Executive'
+}
+input[value='' i] + div div:nth-child(9):after {
+content: '🇨🇳\A I studied Chinese for a year but can\0027t speak a single word of it.'
+}
+input[value='' i] + div div:nth-child(10) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-vvo.jpg);
+}
+input[value='' i] + div div:nth-child(10):before {
+content: 'Vincent Voyer\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(10):after {
+content: '🍴\A I make the best crêpes in Western Europe.'
+}
+input[value='' i] + div div:nth-child(11) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg);
+}
+input[value='' i] + div div:nth-child(11):before {
+content: 'Alexandre Stanislawski\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(11):after {
+content: '💰\A When I can\0027t make a decision, I toss a coin.'
+}
+input[value='' i] + div div:nth-child(12) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas-2.jpg);
+}
+input[value='' i] + div div:nth-child(12):before {
+content: 'Nicolas Baissas\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(12):after {
+content: '🏐\A I wanted to be a handball player.'
+}
+input[value='' i] + div div:nth-child(13) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
+}
+input[value='' i] + div div:nth-child(13):before {
+content: 'Guillaume Duvaux\A Account Executive'
+}
+input[value='' i] + div div:nth-child(13):after {
+content: '👔\A I can spend 10 hours a week in H&M and Zara.'
+}
+input[value='' i] + div div:nth-child(14) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg);
+}
+input[value='' i] + div div:nth-child(14):before {
+content: 'Alex Kudelka\A Account Executive'
+}
+input[value='' i] + div div:nth-child(14):after {
+content: '😃\A I have flat feet...like a platypus.'
+}
+input[value='' i] + div div:nth-child(15) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-maxime.jpg);
+}
+input[value='' i] + div div:nth-child(15):before {
+content: 'Maxime Locqueville\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(15):after {
+content: '🍔\A You should never ask me anything before lunch.'
+}
+input[value='' i] + div div:nth-child(16) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+}
+input[value='' i] + div div:nth-child(16):before {
+content: 'Matthieu Dumont\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(16):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='' i] + div div:nth-child(17) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rebecca.jpg);
+}
+input[value='' i] + div div:nth-child(17):before {
+content: 'Rebecca Lee\A Office Manager'
+}
+input[value='' i] + div div:nth-child(17):after {
+content: '🦄\A It\0027s a secret, but I still watch cartoons on TV and love fairy tales. Shhh!'
+}
+input[value='' i] + div div:nth-child(18) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+}
+input[value='' i] + div div:nth-child(18):before {
+content: 'Tim Carry\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(18):after {
+content: '🌽\A I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.'
+}
+input[value='' i] + div div:nth-child(19) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
+}
+input[value='' i] + div div:nth-child(19):before {
+content: 'Benjamin Digne\A Account Executive'
+}
+input[value='' i] + div div:nth-child(19):after {
+content: '🐓\A I have a passion for fried chicken.'
+}
+input[value='' i] + div div:nth-child(20) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier.jpg);
+}
+input[value='' i] + div div:nth-child(20):before {
+content: 'Olivier Poissonier\A Chief Financial Officer'
+}
+input[value='' i] + div div:nth-child(20):after {
+content: '🍭\A I am a fan of 80\0027s pop culture.'
+}
+input[value='' i] + div div:nth-child(21) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg);
+}
+input[value='' i] + div div:nth-child(21):before {
+content: 'Yvonne Chu\A People Operations'
+}
+input[value='' i] + div div:nth-child(21):after {
+content: '🌡\A I have Bieber fever.'
+}
+input[value='' i] + div div:nth-child(22) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+}
+input[value='' i] + div div:nth-child(22):before {
+content: 'Gianluca Bargelli\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(22):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
+}
+input[value='' i] + div div:nth-child(23) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier-2.jpg);
+}
+input[value='' i] + div div:nth-child(23):before {
+content: 'Olivier Lance\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(23):after {
+content: '📸\A I love technology and collect 60-year-old cameras.'
+}
+input[value='' i] + div div:nth-child(24) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandremeunier.jpg);
+}
+input[value='' i] + div div:nth-child(24):before {
+content: 'Alexandre Meunier\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(24):after {
+content: '🎸\A I have been playing guitar since I was 5.'
+}
+input[value='' i] + div div:nth-child(25) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jen.jpg);
+}
+input[value='' i] + div div:nth-child(25):before {
+content: 'Jennifer Kim\A Recruiter'
+}
+input[value='' i] + div div:nth-child(25):after {
+content: '🌈\A I organize everything by color. It’s just prettier that way!'
+}
+input[value='' i] + div div:nth-child(26) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg);
+}
+input[value='' i] + div div:nth-child(26):before {
+content: 'Dustin Coates\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(26):after {
+content: '⛺\A I lived in a tent for three months...indoors.'
+}
+input[value='' i] + div div:nth-child(27) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+}
+input[value='' i] + div div:nth-child(27):before {
+content: 'Rémy-Christophe Schermesser\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(27):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='' i] + div div:nth-child(28) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+}
+input[value='' i] + div div:nth-child(28):before {
+content: 'Antoine Gauvain\A DevOps Engineer'
+}
+input[value='' i] + div div:nth-child(28):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027t own an Apple product.'
+}
+input[value='' i] + div div:nth-child(29) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marion.jpg);
+}
+input[value='' i] + div div:nth-child(29):before {
+content: 'Marion Aguirre\A Recruiter'
+}
+input[value='' i] + div div:nth-child(29):after {
+content: '⚡\A A lot of people say I look like Professor McGonagall.'
+}
+input[value='' i] + div div:nth-child(30) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg);
+}
+input[value='' i] + div div:nth-child(30):before {
+content: 'Jean Edern Lorillon\A Account Executive'
+}
+input[value='' i] + div div:nth-child(30):after {
+content: '🇨🇲\A Until I was 4, my mother tongue was a local Cameroonian language.'
+}
+input[value='' i] + div div:nth-child(31) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg);
+}
+input[value='' i] + div div:nth-child(31):before {
+content: 'Clément Leprovost\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(31):after {
+content: '🌎\A I\0027m a relentless globetrotter.'
+}
+input[value='' i] + div div:nth-child(32) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gabriel.jpg);
+}
+input[value='' i] + div div:nth-child(32):before {
+content: 'Gabriel Dillon\A Account Executive'
+}
+input[value='' i] + div div:nth-child(32):after {
+content: '🗻\A I\0027ve climbed to 5,636 meters...and plan to climb higher.'
+}
+input[value='' i] + div div:nth-child(33) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
+}
+input[value='' i] + div div:nth-child(33):before {
+content: 'Anthony Seure\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(33):after {
+content: '🎹\A How do I learn piano? Very slowly.'
+}
+input[value='' i] + div div:nth-child(34) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-leo.jpg);
+}
+input[value='' i] + div div:nth-child(34):before {
+content: 'Leo Ercolanelli\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(34):after {
+content: '🍔\A I usually eat at the speed of light.'
+}
+input[value='' i] + div div:nth-child(35) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas.jpg);
+}
+input[value='' i] + div div:nth-child(35):before {
+content: 'Lucas Bonomi\A Frontend Developer'
+}
+input[value='' i] + div div:nth-child(35):after {
+content: '👌\A I wanted to be an inventor, and then I discovered the web.'
+}
+input[value='' i] + div div:nth-child(36) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
+}
+input[value='' i] + div div:nth-child(36):before {
+content: 'Paul-Louis Nech\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(36):after {
+content: '🔬\A I developed an app to introduce biology to everyone.'
+}
+input[value='' i] + div div:nth-child(37) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas-2.jpg);
+}
+input[value='' i] + div div:nth-child(37):before {
+content: 'Lucas Cerdan\A Product UX Specialist'
+}
+input[value='' i] + div div:nth-child(37):after {
+content: '👕\A My girlfriend is mad at me for always wearing startup t-shirts.'
+}
+input[value='' i] + div div:nth-child(38) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-raphael.jpg);
+}
+input[value='' i] + div div:nth-child(38):before {
+content: 'Raphaël Terrier\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(38):after {
+content: '🍸\A I’ve created a connected device to mix perfect cocktails at home.'
+}
+input[value='' i] + div div:nth-child(39) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg);
+}
+input[value='' i] + div div:nth-child(39):before {
+content: 'Martin Sallé\A Sales Representative'
+}
+input[value='' i] + div div:nth-child(39):after {
+content: '🐴\A I crossed the steppes of Inner Mongolia riding a tiny pony.'
+}
+input[value='' i] + div div:nth-child(40) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement-2.jpg);
+}
+input[value='' i] + div div:nth-child(40):before {
+content: 'Clement Avignon\A Outbound Sales Representative'
+}
+input[value='' i] + div div:nth-child(40):after {
+content: '🌙\A I swear I\0027ll go to the Moon before I die!'
+}
+input[value='' i] + div div:nth-child(41) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg);
+}
+input[value='' i] + div div:nth-child(41):before {
+content: 'Baptiste Coquelle\A Full-Stack Software Engineer'
+}
+input[value='' i] + div div:nth-child(41):after {
+content: '🐛\A In Vietnam, I ate worms and I liked it.'
+}
+input[value='' i] + div div:nth-child(42) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sandy.jpg);
+}
+input[value='' i] + div div:nth-child(42):before {
+content: 'Sandy Kwon\A Sales Representative'
+}
+input[value='' i] + div div:nth-child(42):after {
+content: '👊\A I once won a martial arts competition for being the only person to show up.'
+}
+input[value='' i] + div div:nth-child(43) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
+}
+input[value='' i] + div div:nth-child(43):before {
+content: 'Jan Petr\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(43):after {
+content: '👃\A People think I have a broken nose. That\0027s not true, I was just born like that.'
+}
+input[value='' i] + div div:nth-child(44) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-raymond.jpg);
+}
+input[value='' i] + div div:nth-child(44):before {
+content: 'Raymond Rutjes\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(44):after {
+content: '🇳🇱\A My parents called me Raymond because it was trendy in the Netherlands, then they decided to move to France...I will never forgive them.'
+}
+input[value='' i] + div div:nth-child(45) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-josh.jpg);
+}
+input[value='' i] + div div:nth-child(45):before {
+content: 'Josh Dzielak\A Developer Advocate'
+}
+input[value='' i] + div div:nth-child(45):after {
+content: '🏍\A I bought a modified electric rickshaw to give people rides at Burning Man.'
+}
+input[value='' i] + div div:nth-child(46) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-fanette.jpg);
+}
+input[value='' i] + div div:nth-child(46):before {
+content: 'Fanette Jobard\A Demand Generation Specialist'
+}
+input[value='' i] + div div:nth-child(46):after {
+content: '🌯\A I have secretly started a collection of weird t-shirts (the ones picturing cats, the galaxy, keyboards, pizza or burritos)'
+}
+input[value='' i] + div div:nth-child(47) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kumiko.jpg);
+}
+input[value='' i] + div div:nth-child(47):before {
+content: 'Kumiko Larroque\A Office Assistant'
+}
+input[value='' i] + div div:nth-child(47):after {
+content: '🚜\A I was a farmer in bourgogne!!! I miss my cows, sheep and farmer mates!'
+}
+input[value='' i] + div div:nth-child(48) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-neil.jpg);
+}
+input[value='' i] + div div:nth-child(48):before {
+content: 'Neil Richler\A Growth Marketing'
+}
+input[value='' i] + div div:nth-child(48):after {
+content: '🐄\A I have visited and lived on sustainable farms all over the world.'
+}
+input[value='' i] + div div:nth-child(49) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg);
+}
+input[value='' i] + div div:nth-child(49):before {
+content: 'Allen Janian\A Sales Representative'
+}
+input[value='' i] + div div:nth-child(49):after {
+content: '👮\A I was nearly cast as an extra in Beverly Hills Cop 3!'
+}
+input[value='' i] + div div:nth-child(50) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-liam.jpg);
+}
+input[value='' i] + div div:nth-child(50):before {
+content: 'Liam Boogar\A Brand Director'
+}
+input[value='' i] + div div:nth-child(50):after {
+content: '👍🏿\A I speak 4 languages, but two of them are dead languages (Latin & Ancient Greek).'
+}
+input[value='' i] + div div:nth-child(51) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marie.jpg);
+}
+input[value='' i] + div div:nth-child(51):before {
+content: 'Marie-Laure Thuret\A Software Engineer'
+}
+input[value='' i] + div div:nth-child(51):after {
+content: '☕\A I brew my coffee using a scale, a thermometer and spreadsheets!'
+}
+input[value='' i] + div div:nth-child(52) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jasmine.jpg);
+}
+input[value='' i] + div div:nth-child(52):before {
+content: 'Jasmine Mireshghi\A Sales Representative'
+}
+input[value='' i] + div div:nth-child(52):after {
+content: '🎤\A I studied Mandarin for four years in high school and I love Chinese karaoke'
+}
+input[value='' i] + div div:nth-child(53) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+}
+input[value='' i] + div div:nth-child(53):before {
+content: 'Emily Hayman\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(53):after {
+content: '🇺🇸\A I\0027ve been to all the states in the contiguous US'
+}
+input[value='' i] + div div:nth-child(54) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
+}
+input[value='' i] + div div:nth-child(54):before {
+content: 'Chris Wittman\A Customer Success Manager'
+}
+input[value='' i] + div div:nth-child(54):after {
+content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
+}
+input[value='' i] + div div:nth-child(55) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anh.jpg);
+}
+input[value='' i] + div div:nth-child(55):before {
+content: 'Anh Thu Trinh\A General Accountant'
+}
+input[value='' i] + div div:nth-child(55):after {
+content: '🤔\A Most people have difficulties remembering my full name. A helpful tip: think about one, two, three (Anh Thu TRINH)'
+}
+input[value='' i] + div div:nth-child(56) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alain.jpg);
+}
+input[value='' i] + div div:nth-child(56):before {
+content: 'Alain Mady-Fetherstone\A Director of Operations'
+}
+input[value='' i] + div div:nth-child(56):after {
+content: '🐙\A I love to scuba dive, I even spotted a hairy octopus (really rare and very exciting!)'
+}
+input[value='' i] + div div:nth-child(57) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-cory.jpg);
+}
+input[value='' i] + div div:nth-child(57):before {
+content: 'Cory Dobson\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(57):after {
+content: '🔟\A I\0027ve played drums for over 10 years.'
+}
+input[value='' i] + div div:nth-child(58) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg);
+}
+input[value='' i] + div div:nth-child(58):before {
+content: 'Sébastien Navizet\A Creative Designer'
+}
+input[value='' i] + div div:nth-child(58):after {
+content: '𝓢\A  I learned to read and write at 5 because I wanted to re-create circus billboards...Yeah, my love of typography and lettering began really early!'
+}
+input[value='' i] + div div:nth-child(59) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul.jpg);
+}
+input[value='' i] + div div:nth-child(59):before {
+content: 'Paul Friesen\A VP of Marketing'
+}
+input[value='' i] + div div:nth-child(59):after {
+content: '🇨🇦\A I\0027m a Canadian who doesn\0027t know what Canadian bacon is'
+}
+input[value='' i] + div div:nth-child(60) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jonas.jpg);
+}
+input[value='' i] + div div:nth-child(60):before {
+content: 'Jonas Badalic\A Frontend Developer'
+}
+input[value='' i] + div div:nth-child(60):after {
+content: '🕸\A I built my first personal website when I was 12.'
+}
+input[value='' i] + div div:nth-child(61) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-steven.jpg);
+}
+input[value='' i] + div div:nth-child(61):before {
+content: 'Steven Merlino\A Sales Representative'
+}
+input[value='' i] + div div:nth-child(61):after {
+content: '🎨\A Once I built a contemporary art exhibit made of wooden chairs.'
+}
+input[value='' i] + div div:nth-child(62) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-zo.jpg);
+}
+input[value='' i] + div div:nth-child(62):before {
+content: 'Zo Asmail\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(62):after {
+content: '🏃\A I ran a marathon because I lost a bet. I didn\0027t know I was running it until the day before the race.'
+}
+input[value='' i] + div div:nth-child(63) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-atanas.jpg);
+}
+input[value='' i] + div div:nth-child(63):before {
+content: 'Atanas Nalbantov\A Sales Representative'
+}
+input[value='' i] + div div:nth-child(63):after {
+content: '🚶\A Whenever I have the choice, I\0027d rather walk than drive.'
+}
+input[value='' i] + div div:nth-child(64) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien-2.jpg);
+}
+input[value='' i] + div div:nth-child(64):before {
+content: 'Julien Paroche\A Customer Solutions Engineer'
+}
+input[value='' i] + div div:nth-child(64):after {
+content: '👀\A I was born with blue eyes but one of them started to turn brown and stopped halfway. So I now have a bi-color eye!'
+}
 input[value='N' i] + div div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
 }

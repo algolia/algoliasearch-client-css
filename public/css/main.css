@@ -60,6 +60,7 @@ input[type="text"] + div {
 }
 
 input[type="text"] + div div {
+  display: none;
   flex: 1 1 300px;
   height: 300px;
   margin: 0 0 1rem 1rem;;

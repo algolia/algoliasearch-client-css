@@ -16,6 +16,7 @@ class CSSWriter
 
       css << "input[value='#{keyword}' i]#{div_selector} {"
       css << "background-image: url(#{entry[:record]['image']});"
+      css << 'display: block;'
       css << '}'
       css << "input[value='#{keyword}' i]#{div_selector}:before {"
       css << "content: '#{content}\\A #{entry[:record]['role']}'"

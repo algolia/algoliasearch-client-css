@@ -86,8 +86,8 @@ class QueryParser
     lookup_table
   end
 
-  # Sort entries for each prefix
-  def self.sort(lookup_table, custom_ranking = nil)
+  # Remove duplicates
+  def self.uniq(lookup_table)
     lookup_table.each do |prefix, data|
       lookup_table[prefix] = data.uniq { |x| x[:record]['objectID'] }
     end
@@ -102,6 +102,11 @@ class QueryParser
       lookup_table[prefix] = lookup_table[normalized_prefix]
     end
 
+    lookup_table
+  end
+
+  # Sort entries for each prefix
+  def self.sort(lookup_table, custom_ranking = nil)
     # Sort results, by putting match at the start of the name first
     lookup_table.each do |prefix, data|
       lookup_table[prefix] = data.sort do |a, b|

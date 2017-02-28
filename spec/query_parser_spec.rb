@@ -236,7 +236,7 @@ describe(QueryParser) do
     end
   end
 
-  describe 'sort' do
+  describe 'uniq' do
     it 'should remove duplicates for a given prefix' do
       # Given
       record_1 = { 'objectID' => 'A' }
@@ -246,7 +246,7 @@ describe(QueryParser) do
       lookup_table = QueryParser.merge(entry_table_1, entry_table_2)
 
       # When
-      actual = QueryParser.sort(lookup_table)
+      actual = QueryParser.uniq(lookup_table)
 
       # Then
       expect(actual['f'].length).to eq 1
@@ -261,13 +261,15 @@ describe(QueryParser) do
       lookup_table = QueryParser.merge(entry_table_1, entry_table_2)
 
       # When
-      actual = QueryParser.sort(lookup_table)
+      actual = QueryParser.uniq(lookup_table)
 
       # Then
       expect(actual['clement'].length).to eq 2
       expect(actual['clément'].length).to eq 2
     end
+  end
 
+  describe 'sort' do
     it 'should order results based on match on first name / last name' do
       # Given
       record_1 = { 'objectID' => 1, 'name' => 'paul-louis nech' }

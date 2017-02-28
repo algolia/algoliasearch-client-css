@@ -16819,14 +16819,14 @@ content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e6
 input[value='jersk' i] + div > div:nth-child(1):after {
 content: '🍛\A I can eat a kebab and then a full Chinese menu.'
 }
-input[value='jerksa' i] + div > div:nth-child(1) {
+input[value='jerska' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
 display: block;
 }
-input[value='jerksa' i] + div > div:nth-child(1):before {
+input[value='jerska' i] + div > div:nth-child(1):before {
 content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e66f \e66e \e674 \A Full-Stack Software Engineer'
 }
-input[value='jerksa' i] + div > div:nth-child(1):after {
+input[value='jerska' i] + div > div:nth-child(1):after {
 content: '🍛\A I can eat a kebab and then a full Chinese menu.'
 }
 input[value='cs' i] + div > div:nth-child(1) {

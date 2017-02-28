@@ -87,7 +87,7 @@ class QueryParser
   end
 
   # Sort entries for each prefix
-  def self.sort(lookup_table)
+  def self.sort(lookup_table, custom_ranking = nil)
     lookup_table.each do |prefix, data|
       lookup_table[prefix] = data.uniq { |x| x[:record]['objectID'] }
     end
@@ -101,6 +101,22 @@ class QueryParser
       next if count > normalized_count
       lookup_table[prefix] = lookup_table[normalized_prefix]
     end
+
+    # Sort results, by putting match at the start of the name first
+    lookup_table.each do |prefix, data|
+      lookup_table[prefix] = data.sort do |a, b|
+        has_a_before = a[:highlight][:before].nil?
+        has_b_before = b[:highlight][:before].nil?
+        next -1 if has_a_before && !has_b_before
+        next 1 if has_b_before && !has_a_before
+
+        unless custom_ranking.nil?
+          next a[:record][custom_ranking] - b[:record][custom_ranking]
+        end
+        next 0
+      end
+    end
+
     lookup_table
   end
 

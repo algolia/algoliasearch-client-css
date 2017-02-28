@@ -660,24 +660,24 @@ input[value='N' i] + div > div:nth-child(2):after {
 content: '🏐\A I wanted to be a handball player.'
 }
 input[value='N' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
-display: block;
-}
-input[value='N' i] + div > div:nth-child(3):before {
-content: 'Paul-Louis \e64e ech\A Software Engineer'
-}
-input[value='N' i] + div > div:nth-child(3):after {
-content: '🔬\A I developed an app to introduce biology to everyone.'
-}
-input[value='N' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-neil.jpg);
 display: block;
 }
-input[value='N' i] + div > div:nth-child(4):before {
+input[value='N' i] + div > div:nth-child(3):before {
 content: '\e64e eil Richler\A Growth Marketing'
 }
-input[value='N' i] + div > div:nth-child(4):after {
+input[value='N' i] + div > div:nth-child(3):after {
 content: '🐄\A I have visited and lived on sustainable farms all over the world.'
+}
+input[value='N' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
+display: block;
+}
+input[value='N' i] + div > div:nth-child(4):before {
+content: 'Paul-Louis \e64e ech\A Software Engineer'
+}
+input[value='N' i] + div > div:nth-child(4):after {
+content: '🔬\A I developed an app to introduce biology to everyone.'
 }
 input[value='N' i] + div > div:nth-child(5) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg);
@@ -930,54 +930,54 @@ input[value='Nicolas Dessaigne' i] + div > div:nth-child(1):after {
 content: '💦\A My wife once convinced me to do a 1-week fast!'
 }
 input[value='D' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
-display: block;
-}
-input[value='D' i] + div > div:nth-child(1):before {
-content: 'Nicolas \e644 essaigne\A Co-founder & CEO'
-}
-input[value='D' i] + div > div:nth-child(1):after {
-content: '💦\A My wife once convinced me to do a 1-week fast!'
-}
-input[value='D' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
-display: block;
-}
-input[value='D' i] + div > div:nth-child(2):before {
-content: 'Guillaume \e644 uvaux\A Account Executive'
-}
-input[value='D' i] + div > div:nth-child(2):after {
-content: '👔\A I can spend 10 hours a week in H&M and Zara.'
-}
-input[value='D' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
-display: block;
-}
-input[value='D' i] + div > div:nth-child(3):before {
-content: 'Matthieu \e644 umont\A Full-Stack Software Engineer'
-}
-input[value='D' i] + div > div:nth-child(3):after {
-content: '🍛\A I can eat a kebab and then a full Chinese menu.'
-}
-input[value='D' i] + div > div:nth-child(4) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
-display: block;
-}
-input[value='D' i] + div > div:nth-child(4):before {
-content: 'Benjamin \e644 igne\A Account Executive'
-}
-input[value='D' i] + div > div:nth-child(4):after {
-content: '🐓\A I have a passion for fried chicken.'
-}
-input[value='D' i] + div > div:nth-child(5) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg);
 display: block;
 }
-input[value='D' i] + div > div:nth-child(5):before {
+input[value='D' i] + div > div:nth-child(1):before {
 content: '\e644 ustin Coates\A Customer Solutions Engineer'
 }
-input[value='D' i] + div > div:nth-child(5):after {
+input[value='D' i] + div > div:nth-child(1):after {
 content: '⛺\A I lived in a tent for three months...indoors.'
+}
+input[value='D' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas.jpg);
+display: block;
+}
+input[value='D' i] + div > div:nth-child(2):before {
+content: 'Nicolas \e644 essaigne\A Co-founder & CEO'
+}
+input[value='D' i] + div > div:nth-child(2):after {
+content: '💦\A My wife once convinced me to do a 1-week fast!'
+}
+input[value='D' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
+display: block;
+}
+input[value='D' i] + div > div:nth-child(3):before {
+content: 'Guillaume \e644 uvaux\A Account Executive'
+}
+input[value='D' i] + div > div:nth-child(3):after {
+content: '👔\A I can spend 10 hours a week in H&M and Zara.'
+}
+input[value='D' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='D' i] + div > div:nth-child(4):before {
+content: 'Matthieu \e644 umont\A Full-Stack Software Engineer'
+}
+input[value='D' i] + div > div:nth-child(4):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='D' i] + div > div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
+display: block;
+}
+input[value='D' i] + div > div:nth-child(5):before {
+content: 'Benjamin \e644 igne\A Account Executive'
+}
+input[value='D' i] + div > div:nth-child(5):after {
+content: '🐓\A I have a passion for fried chicken.'
 }
 input[value='D' i] + div > div:nth-child(6) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gabriel.jpg);
@@ -1150,54 +1150,54 @@ input[value='J' i] + div > div:nth-child(6):after {
 content: '🏍\A I bought a modified electric rickshaw to give people rides at Burning Man.'
 }
 input[value='J' i] + div > div:nth-child(7) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-fanette.jpg);
-display: block;
-}
-input[value='J' i] + div > div:nth-child(7):before {
-content: 'Fanette \e64a obard\A Demand Generation Specialist'
-}
-input[value='J' i] + div > div:nth-child(7):after {
-content: '🌯\A I have secretly started a collection of weird t-shirts (the ones picturing cats, the galaxy, keyboards, pizza or burritos)'
-}
-input[value='J' i] + div > div:nth-child(8) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg);
-display: block;
-}
-input[value='J' i] + div > div:nth-child(8):before {
-content: 'Allen \e64a anian\A Sales Representative'
-}
-input[value='J' i] + div > div:nth-child(8):after {
-content: '👮\A I was nearly cast as an extra in Beverly Hills Cop 3!'
-}
-input[value='J' i] + div > div:nth-child(9) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jasmine.jpg);
 display: block;
 }
-input[value='J' i] + div > div:nth-child(9):before {
+input[value='J' i] + div > div:nth-child(7):before {
 content: '\e64a asmine Mireshghi\A Sales Representative'
 }
-input[value='J' i] + div > div:nth-child(9):after {
+input[value='J' i] + div > div:nth-child(7):after {
 content: '🎤\A I studied Mandarin for four years in high school and I love Chinese karaoke'
 }
-input[value='J' i] + div > div:nth-child(10) {
+input[value='J' i] + div > div:nth-child(8) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jonas.jpg);
 display: block;
 }
-input[value='J' i] + div > div:nth-child(10):before {
+input[value='J' i] + div > div:nth-child(8):before {
 content: '\e64a onas Badalic\A Frontend Developer'
 }
-input[value='J' i] + div > div:nth-child(10):after {
+input[value='J' i] + div > div:nth-child(8):after {
 content: '🕸\A I built my first personal website when I was 12.'
 }
-input[value='J' i] + div > div:nth-child(11) {
+input[value='J' i] + div > div:nth-child(9) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien-2.jpg);
 display: block;
 }
-input[value='J' i] + div > div:nth-child(11):before {
+input[value='J' i] + div > div:nth-child(9):before {
 content: '\e64a ulien Paroche\A Customer Solutions Engineer'
 }
-input[value='J' i] + div > div:nth-child(11):after {
+input[value='J' i] + div > div:nth-child(9):after {
 content: '👀\A I was born with blue eyes but one of them started to turn brown and stopped halfway. So I now have a bi-color eye!'
+}
+input[value='J' i] + div > div:nth-child(10) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-fanette.jpg);
+display: block;
+}
+input[value='J' i] + div > div:nth-child(10):before {
+content: 'Fanette \e64a obard\A Demand Generation Specialist'
+}
+input[value='J' i] + div > div:nth-child(10):after {
+content: '🌯\A I have secretly started a collection of weird t-shirts (the ones picturing cats, the galaxy, keyboards, pizza or burritos)'
+}
+input[value='J' i] + div > div:nth-child(11) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg);
+display: block;
+}
+input[value='J' i] + div > div:nth-child(11):before {
+content: 'Allen \e64a anian\A Sales Representative'
+}
+input[value='J' i] + div > div:nth-child(11):after {
+content: '👮\A I was nearly cast as an extra in Beverly Hills Cop 3!'
 }
 input[value='Ju' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
@@ -1390,124 +1390,124 @@ input[value='Julien Lemoine' i] + div > div:nth-child(1):after {
 content: '🍷\A I was born in Dijon, and I love mustard and wine.'
 }
 input[value='L' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(1):before {
-content: 'Julien \e64c emoine\A Co-founder & CTO'
-}
-input[value='L' i] + div > div:nth-child(1):after {
-content: '🍷\A I was born in Dijon, and I love mustard and wine.'
-}
-input[value='L' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-maxime.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(2):before {
-content: 'Maxime \e64c ocqueville\A Full-Stack Software Engineer'
-}
-input[value='L' i] + div > div:nth-child(2):after {
-content: '🍔\A You should never ask me anything before lunch.'
-}
-input[value='L' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rebecca.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(3):before {
-content: 'Rebecca \e64c ee\A Office Manager'
-}
-input[value='L' i] + div > div:nth-child(3):after {
-content: '🦄\A It\0027 s a secret, but I still watch cartoons on TV and love fairy tales. Shhh!'
-}
-input[value='L' i] + div > div:nth-child(4) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier-2.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(4):before {
-content: 'Olivier \e64c ance\A Customer Solutions Engineer'
-}
-input[value='L' i] + div > div:nth-child(4):after {
-content: '📸\A I love technology and collect 60-year-old cameras.'
-}
-input[value='L' i] + div > div:nth-child(5) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(5):before {
-content: 'Jean Edern \e64c orillon\A Account Executive'
-}
-input[value='L' i] + div > div:nth-child(5):after {
-content: '🇨🇲\A Until I was 4, my mother tongue was a local Cameroonian language.'
-}
-input[value='L' i] + div > div:nth-child(6) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(6):before {
-content: 'Clément \e64c eprovost\A Software Engineer'
-}
-input[value='L' i] + div > div:nth-child(6):after {
-content: '🌎\A I\0027 m a relentless globetrotter.'
-}
-input[value='L' i] + div > div:nth-child(7) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-leo.jpg);
 display: block;
 }
-input[value='L' i] + div > div:nth-child(7):before {
+input[value='L' i] + div > div:nth-child(1):before {
 content: '\e64c eo Ercolanelli\A Software Engineer'
 }
-input[value='L' i] + div > div:nth-child(7):after {
+input[value='L' i] + div > div:nth-child(1):after {
 content: '🍔\A I usually eat at the speed of light.'
 }
-input[value='L' i] + div > div:nth-child(8) {
+input[value='L' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas.jpg);
 display: block;
 }
-input[value='L' i] + div > div:nth-child(8):before {
+input[value='L' i] + div > div:nth-child(2):before {
 content: '\e64c ucas Bonomi\A Frontend Developer'
 }
-input[value='L' i] + div > div:nth-child(8):after {
+input[value='L' i] + div > div:nth-child(2):after {
 content: '👌\A I wanted to be an inventor, and then I discovered the web.'
 }
-input[value='L' i] + div > div:nth-child(9) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(9):before {
-content: 'Paul-\e64c ouis Nech\A Software Engineer'
-}
-input[value='L' i] + div > div:nth-child(9):after {
-content: '🔬\A I developed an app to introduce biology to everyone.'
-}
-input[value='L' i] + div > div:nth-child(10) {
+input[value='L' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas-2.jpg);
 display: block;
 }
-input[value='L' i] + div > div:nth-child(10):before {
+input[value='L' i] + div > div:nth-child(3):before {
 content: '\e64c ucas Cerdan\A Product UX Specialist'
 }
-input[value='L' i] + div > div:nth-child(10):after {
+input[value='L' i] + div > div:nth-child(3):after {
 content: '👕\A My girlfriend is mad at me for always wearing startup t-shirts.'
 }
-input[value='L' i] + div > div:nth-child(11) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kumiko.jpg);
-display: block;
-}
-input[value='L' i] + div > div:nth-child(11):before {
-content: 'Kumiko \e64c arroque\A Office Assistant'
-}
-input[value='L' i] + div > div:nth-child(11):after {
-content: '🚜\A I was a farmer in bourgogne!!! I miss my cows, sheep and farmer mates!'
-}
-input[value='L' i] + div > div:nth-child(12) {
+input[value='L' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-liam.jpg);
 display: block;
 }
-input[value='L' i] + div > div:nth-child(12):before {
+input[value='L' i] + div > div:nth-child(4):before {
 content: '\e64c iam Boogar\A Brand Director'
 }
-input[value='L' i] + div > div:nth-child(12):after {
+input[value='L' i] + div > div:nth-child(4):after {
 content: '👍🏿\A I speak 4 languages, but two of them are dead languages (Latin & Ancient Greek).'
+}
+input[value='L' i] + div > div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(5):before {
+content: 'Julien \e64c emoine\A Co-founder & CTO'
+}
+input[value='L' i] + div > div:nth-child(5):after {
+content: '🍷\A I was born in Dijon, and I love mustard and wine.'
+}
+input[value='L' i] + div > div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-maxime.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(6):before {
+content: 'Maxime \e64c ocqueville\A Full-Stack Software Engineer'
+}
+input[value='L' i] + div > div:nth-child(6):after {
+content: '🍔\A You should never ask me anything before lunch.'
+}
+input[value='L' i] + div > div:nth-child(7) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rebecca.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(7):before {
+content: 'Rebecca \e64c ee\A Office Manager'
+}
+input[value='L' i] + div > div:nth-child(7):after {
+content: '🦄\A It\0027 s a secret, but I still watch cartoons on TV and love fairy tales. Shhh!'
+}
+input[value='L' i] + div > div:nth-child(8) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier-2.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(8):before {
+content: 'Olivier \e64c ance\A Customer Solutions Engineer'
+}
+input[value='L' i] + div > div:nth-child(8):after {
+content: '📸\A I love technology and collect 60-year-old cameras.'
+}
+input[value='L' i] + div > div:nth-child(9) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(9):before {
+content: 'Jean Edern \e64c orillon\A Account Executive'
+}
+input[value='L' i] + div > div:nth-child(9):after {
+content: '🇨🇲\A Until I was 4, my mother tongue was a local Cameroonian language.'
+}
+input[value='L' i] + div > div:nth-child(10) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(10):before {
+content: 'Clément \e64c eprovost\A Software Engineer'
+}
+input[value='L' i] + div > div:nth-child(10):after {
+content: '🌎\A I\0027 m a relentless globetrotter.'
+}
+input[value='L' i] + div > div:nth-child(11) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(11):before {
+content: 'Paul-\e64c ouis Nech\A Software Engineer'
+}
+input[value='L' i] + div > div:nth-child(11):after {
+content: '🔬\A I developed an app to introduce biology to everyone.'
+}
+input[value='L' i] + div > div:nth-child(12) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kumiko.jpg);
+display: block;
+}
+input[value='L' i] + div > div:nth-child(12):before {
+content: 'Kumiko \e64c arroque\A Office Assistant'
+}
+input[value='L' i] + div > div:nth-child(12):after {
+content: '🚜\A I was a farmer in bourgogne!!! I miss my cows, sheep and farmer mates!'
 }
 input[value='L' i] + div > div:nth-child(13) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marie.jpg);
@@ -1520,44 +1520,44 @@ input[value='L' i] + div > div:nth-child(13):after {
 content: '☕\A I brew my coffee using a scale, a thermometer and spreadsheets!'
 }
 input[value='Le' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
-display: block;
-}
-input[value='Le' i] + div > div:nth-child(1):before {
-content: 'Julien \e64c \e665 moine\A Co-founder & CTO'
-}
-input[value='Le' i] + div > div:nth-child(1):after {
-content: '🍷\A I was born in Dijon, and I love mustard and wine.'
-}
-input[value='Le' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rebecca.jpg);
-display: block;
-}
-input[value='Le' i] + div > div:nth-child(2):before {
-content: 'Rebecca \e64c \e665 e\A Office Manager'
-}
-input[value='Le' i] + div > div:nth-child(2):after {
-content: '🦄\A It\0027 s a secret, but I still watch cartoons on TV and love fairy tales. Shhh!'
-}
-input[value='Le' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg);
-display: block;
-}
-input[value='Le' i] + div > div:nth-child(3):before {
-content: 'Clément \e64c \e665 provost\A Software Engineer'
-}
-input[value='Le' i] + div > div:nth-child(3):after {
-content: '🌎\A I\0027 m a relentless globetrotter.'
-}
-input[value='Le' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-leo.jpg);
 display: block;
 }
-input[value='Le' i] + div > div:nth-child(4):before {
+input[value='Le' i] + div > div:nth-child(1):before {
 content: '\e64c \e665 o Ercolanelli\A Software Engineer'
 }
-input[value='Le' i] + div > div:nth-child(4):after {
+input[value='Le' i] + div > div:nth-child(1):after {
 content: '🍔\A I usually eat at the speed of light.'
+}
+input[value='Le' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
+display: block;
+}
+input[value='Le' i] + div > div:nth-child(2):before {
+content: 'Julien \e64c \e665 moine\A Co-founder & CTO'
+}
+input[value='Le' i] + div > div:nth-child(2):after {
+content: '🍷\A I was born in Dijon, and I love mustard and wine.'
+}
+input[value='Le' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rebecca.jpg);
+display: block;
+}
+input[value='Le' i] + div > div:nth-child(3):before {
+content: 'Rebecca \e64c \e665 e\A Office Manager'
+}
+input[value='Le' i] + div > div:nth-child(3):after {
+content: '🦄\A It\0027 s a secret, but I still watch cartoons on TV and love fairy tales. Shhh!'
+}
+input[value='Le' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg);
+display: block;
+}
+input[value='Le' i] + div > div:nth-child(4):before {
+content: 'Clément \e64c \e665 provost\A Software Engineer'
+}
+input[value='Le' i] + div > div:nth-child(4):after {
+content: '🌎\A I\0027 m a relentless globetrotter.'
 }
 input[value='Lem' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien.jpg);
@@ -1620,94 +1620,94 @@ input[value='S' i] + div > div:nth-child(1):after {
 content: '🍄\A I dressed up as Super Mario for our last team building event.'
 }
 input[value='S' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-adam.jpg);
-display: block;
-}
-input[value='S' i] + div > div:nth-child(2):before {
-content: 'Adam \e653 urák\A Director of Infrastructure'
-}
-input[value='S' i] + div > div:nth-child(2):after {
-content: '🇫🇷\A I was the first non-French employee at Algolia.'
-}
-input[value='S' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
-display: block;
-}
-input[value='S' i] + div > div:nth-child(3):before {
-content: 'Jeremy Ben \e653 adoun\A Account Executive'
-}
-input[value='S' i] + div > div:nth-child(3):after {
-content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
-}
-input[value='S' i] + div > div:nth-child(4) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg);
-display: block;
-}
-input[value='S' i] + div > div:nth-child(4):before {
-content: 'Alexandre \e653 tanislawski\A Full-Stack Software Engineer'
-}
-input[value='S' i] + div > div:nth-child(4):after {
-content: '💰\A When I can\0027 t make a decision, I toss a coin.'
-}
-input[value='S' i] + div > div:nth-child(5) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
-display: block;
-}
-input[value='S' i] + div > div:nth-child(5):before {
-content: 'Rémy-Christophe \e653 chermesser\A Software Engineer'
-}
-input[value='S' i] + div > div:nth-child(5):after {
-content: '🤘\A I like death metal and paintings done before the 20th century.'
-}
-input[value='S' i] + div > div:nth-child(6) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
-display: block;
-}
-input[value='S' i] + div > div:nth-child(6):before {
-content: 'Anthony \e653 eure\A Software Engineer'
-}
-input[value='S' i] + div > div:nth-child(6):after {
-content: '🎹\A How do I learn piano? Very slowly.'
-}
-input[value='S' i] + div > div:nth-child(7) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg);
-display: block;
-}
-input[value='S' i] + div > div:nth-child(7):before {
-content: 'Martin \e653 allé\A Sales Representative'
-}
-input[value='S' i] + div > div:nth-child(7):after {
-content: '🐴\A I crossed the steppes of Inner Mongolia riding a tiny pony.'
-}
-input[value='S' i] + div > div:nth-child(8) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sandy.jpg);
 display: block;
 }
-input[value='S' i] + div > div:nth-child(8):before {
+input[value='S' i] + div > div:nth-child(2):before {
 content: '\e653 andy Kwon\A Sales Representative'
 }
-input[value='S' i] + div > div:nth-child(8):after {
+input[value='S' i] + div > div:nth-child(2):after {
 content: '👊\A I once won a martial arts competition for being the only person to show up.'
 }
-input[value='S' i] + div > div:nth-child(9) {
+input[value='S' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg);
 display: block;
 }
-input[value='S' i] + div > div:nth-child(9):before {
+input[value='S' i] + div > div:nth-child(3):before {
 content: '\e653 ébastien Navizet\A Creative Designer'
 }
-input[value='S' i] + div > div:nth-child(9):after {
+input[value='S' i] + div > div:nth-child(3):after {
 content: '𝓢\A  I learned to read and write at 5 because I wanted to re-create circus billboards...Yeah, my love of typography and lettering began really early!'
 }
-input[value='S' i] + div > div:nth-child(10) {
+input[value='S' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-steven.jpg);
 display: block;
 }
-input[value='S' i] + div > div:nth-child(10):before {
+input[value='S' i] + div > div:nth-child(4):before {
 content: '\e653 teven Merlino\A Sales Representative'
 }
-input[value='S' i] + div > div:nth-child(10):after {
+input[value='S' i] + div > div:nth-child(4):after {
 content: '🎨\A Once I built a contemporary art exhibit made of wooden chairs.'
+}
+input[value='S' i] + div > div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-adam.jpg);
+display: block;
+}
+input[value='S' i] + div > div:nth-child(5):before {
+content: 'Adam \e653 urák\A Director of Infrastructure'
+}
+input[value='S' i] + div > div:nth-child(5):after {
+content: '🇫🇷\A I was the first non-French employee at Algolia.'
+}
+input[value='S' i] + div > div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
+display: block;
+}
+input[value='S' i] + div > div:nth-child(6):before {
+content: 'Jeremy Ben \e653 adoun\A Account Executive'
+}
+input[value='S' i] + div > div:nth-child(6):after {
+content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
+}
+input[value='S' i] + div > div:nth-child(7) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg);
+display: block;
+}
+input[value='S' i] + div > div:nth-child(7):before {
+content: 'Alexandre \e653 tanislawski\A Full-Stack Software Engineer'
+}
+input[value='S' i] + div > div:nth-child(7):after {
+content: '💰\A When I can\0027 t make a decision, I toss a coin.'
+}
+input[value='S' i] + div > div:nth-child(8) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='S' i] + div > div:nth-child(8):before {
+content: 'Rémy-Christophe \e653 chermesser\A Software Engineer'
+}
+input[value='S' i] + div > div:nth-child(8):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='S' i] + div > div:nth-child(9) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
+display: block;
+}
+input[value='S' i] + div > div:nth-child(9):before {
+content: 'Anthony \e653 eure\A Software Engineer'
+}
+input[value='S' i] + div > div:nth-child(9):after {
+content: '🎹\A How do I learn piano? Very slowly.'
+}
+input[value='S' i] + div > div:nth-child(10) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg);
+display: block;
+}
+input[value='S' i] + div > div:nth-child(10):before {
+content: 'Martin \e653 allé\A Sales Representative'
+}
+input[value='S' i] + div > div:nth-child(10):after {
+content: '🐴\A I crossed the steppes of Inner Mongolia riding a tiny pony.'
 }
 input[value='Sy' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sylvain.jpg);
@@ -1890,64 +1890,64 @@ input[value='G' i] + div > div:nth-child(1):after {
 content: '🌿\A I\0027 m an unconditional plant lover.'
 }
 input[value='G' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg);
-display: block;
-}
-input[value='G' i] + div > div:nth-child(2):before {
-content: 'Xavier \e647 rand\A Software Engineer'
-}
-input[value='G' i] + div > div:nth-child(2):after {
-content: '🛌\A I have slept at the office...twice!'
-}
-input[value='G' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kevin.jpg);
-display: block;
-}
-input[value='G' i] + div > div:nth-child(3):before {
-content: 'Kevin \e647 ranger\A UI/UX Designer'
-}
-input[value='G' i] + div > div:nth-child(3):after {
-content: '🍕\A I built a pizza oven (and use it).'
-}
-input[value='G' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
 display: block;
 }
-input[value='G' i] + div > div:nth-child(4):before {
+input[value='G' i] + div > div:nth-child(2):before {
 content: '\e647 uillaume Duvaux\A Account Executive'
 }
-input[value='G' i] + div > div:nth-child(4):after {
+input[value='G' i] + div > div:nth-child(2):after {
 content: '👔\A I can spend 10 hours a week in H&M and Zara.'
 }
-input[value='G' i] + div > div:nth-child(5) {
+input[value='G' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
 display: block;
 }
-input[value='G' i] + div > div:nth-child(5):before {
+input[value='G' i] + div > div:nth-child(3):before {
 content: '\e647 ianluca Bargelli\A Full-Stack Software Engineer'
 }
-input[value='G' i] + div > div:nth-child(5):after {
+input[value='G' i] + div > div:nth-child(3):after {
 content: '🖥\A I destroyed my first computer at the age of 8.'
 }
-input[value='G' i] + div > div:nth-child(6) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
-display: block;
-}
-input[value='G' i] + div > div:nth-child(6):before {
-content: 'Antoine \e647 auvain\A DevOps Engineer'
-}
-input[value='G' i] + div > div:nth-child(6):after {
-content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
-}
-input[value='G' i] + div > div:nth-child(7) {
+input[value='G' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gabriel.jpg);
 display: block;
 }
-input[value='G' i] + div > div:nth-child(7):before {
+input[value='G' i] + div > div:nth-child(4):before {
 content: '\e647 abriel Dillon\A Account Executive'
 }
-input[value='G' i] + div > div:nth-child(7):after {
+input[value='G' i] + div > div:nth-child(4):after {
 content: '🗻\A I\0027 ve climbed to 5,636 meters...and plan to climb higher.'
+}
+input[value='G' i] + div > div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg);
+display: block;
+}
+input[value='G' i] + div > div:nth-child(5):before {
+content: 'Xavier \e647 rand\A Software Engineer'
+}
+input[value='G' i] + div > div:nth-child(5):after {
+content: '🛌\A I have slept at the office...twice!'
+}
+input[value='G' i] + div > div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kevin.jpg);
+display: block;
+}
+input[value='G' i] + div > div:nth-child(6):before {
+content: 'Kevin \e647 ranger\A UI/UX Designer'
+}
+input[value='G' i] + div > div:nth-child(6):after {
+content: '🍕\A I built a pizza oven (and use it).'
+}
+input[value='G' i] + div > div:nth-child(7) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+display: block;
+}
+input[value='G' i] + div > div:nth-child(7):before {
+content: 'Antoine \e647 auvain\A DevOps Engineer'
+}
+input[value='G' i] + div > div:nth-child(7):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
 }
 input[value='Ga' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gaetan.jpg);
@@ -1960,24 +1960,24 @@ input[value='Ga' i] + div > div:nth-child(1):after {
 content: '🌿\A I\0027 m an unconditional plant lover.'
 }
 input[value='Ga' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
-display: block;
-}
-input[value='Ga' i] + div > div:nth-child(2):before {
-content: 'Antoine \e647 \e661 uvain\A DevOps Engineer'
-}
-input[value='Ga' i] + div > div:nth-child(2):after {
-content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
-}
-input[value='Ga' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gabriel.jpg);
 display: block;
 }
-input[value='Ga' i] + div > div:nth-child(3):before {
+input[value='Ga' i] + div > div:nth-child(2):before {
 content: '\e647 \e661 briel Dillon\A Account Executive'
 }
-input[value='Ga' i] + div > div:nth-child(3):after {
+input[value='Ga' i] + div > div:nth-child(2):after {
 content: '🗻\A I\0027 ve climbed to 5,636 meters...and plan to climb higher.'
+}
+input[value='Ga' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+display: block;
+}
+input[value='Ga' i] + div > div:nth-child(3):before {
+content: 'Antoine \e647 \e661 uvain\A DevOps Engineer'
+}
+input[value='Ga' i] + div > div:nth-child(3):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
 }
 input[value='Gaë' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gaetan.jpg);
@@ -2440,44 +2440,44 @@ input[value='K' i] + div > div:nth-child(1):after {
 content: '🍕\A I built a pizza oven (and use it).'
 }
 input[value='K' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg);
-display: block;
-}
-input[value='K' i] + div > div:nth-child(2):before {
-content: 'Alex \e64b udelka\A Account Executive'
-}
-input[value='K' i] + div > div:nth-child(2):after {
-content: '😃\A I have flat feet...like a platypus.'
-}
-input[value='K' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jen.jpg);
-display: block;
-}
-input[value='K' i] + div > div:nth-child(3):before {
-content: 'Jennifer \e64b im\A Recruiter'
-}
-input[value='K' i] + div > div:nth-child(3):after {
-content: '🌈\A I organize everything by color. It’s just prettier that way!'
-}
-input[value='K' i] + div > div:nth-child(4) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sandy.jpg);
-display: block;
-}
-input[value='K' i] + div > div:nth-child(4):before {
-content: 'Sandy \e64b won\A Sales Representative'
-}
-input[value='K' i] + div > div:nth-child(4):after {
-content: '👊\A I once won a martial arts competition for being the only person to show up.'
-}
-input[value='K' i] + div > div:nth-child(5) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kumiko.jpg);
 display: block;
 }
-input[value='K' i] + div > div:nth-child(5):before {
+input[value='K' i] + div > div:nth-child(2):before {
 content: '\e64b umiko Larroque\A Office Assistant'
 }
-input[value='K' i] + div > div:nth-child(5):after {
+input[value='K' i] + div > div:nth-child(2):after {
 content: '🚜\A I was a farmer in bourgogne!!! I miss my cows, sheep and farmer mates!'
+}
+input[value='K' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg);
+display: block;
+}
+input[value='K' i] + div > div:nth-child(3):before {
+content: 'Alex \e64b udelka\A Account Executive'
+}
+input[value='K' i] + div > div:nth-child(3):after {
+content: '😃\A I have flat feet...like a platypus.'
+}
+input[value='K' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jen.jpg);
+display: block;
+}
+input[value='K' i] + div > div:nth-child(4):before {
+content: 'Jennifer \e64b im\A Recruiter'
+}
+input[value='K' i] + div > div:nth-child(4):after {
+content: '🌈\A I organize everything by color. It’s just prettier that way!'
+}
+input[value='K' i] + div > div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sandy.jpg);
+display: block;
+}
+input[value='K' i] + div > div:nth-child(5):before {
+content: 'Sandy \e64b won\A Sales Representative'
+}
+input[value='K' i] + div > div:nth-child(5):after {
+content: '👊\A I once won a martial arts competition for being the only person to show up.'
 }
 input[value='Ke' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kevin.jpg);
@@ -2690,84 +2690,84 @@ input[value='A' i] + div > div:nth-child(6):after {
 content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
 }
 input[value='A' i] + div > div:nth-child(7) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marion.jpg);
-display: block;
-}
-input[value='A' i] + div > div:nth-child(7):before {
-content: 'Marion \e641 guirre\A Recruiter'
-}
-input[value='A' i] + div > div:nth-child(7):after {
-content: '⚡\A A lot of people say I look like Professor McGonagall.'
-}
-input[value='A' i] + div > div:nth-child(8) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
 display: block;
 }
-input[value='A' i] + div > div:nth-child(8):before {
+input[value='A' i] + div > div:nth-child(7):before {
 content: '\e641 nthony Seure\A Software Engineer'
 }
-input[value='A' i] + div > div:nth-child(8):after {
+input[value='A' i] + div > div:nth-child(7):after {
 content: '🎹\A How do I learn piano? Very slowly.'
 }
-input[value='A' i] + div > div:nth-child(9) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement-2.jpg);
-display: block;
-}
-input[value='A' i] + div > div:nth-child(9):before {
-content: 'Clement \e641 vignon\A Outbound Sales Representative'
-}
-input[value='A' i] + div > div:nth-child(9):after {
-content: '🌙\A I swear I\0027 ll go to the Moon before I die!'
-}
-input[value='A' i] + div > div:nth-child(10) {
+input[value='A' i] + div > div:nth-child(8) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg);
 display: block;
 }
-input[value='A' i] + div > div:nth-child(10):before {
+input[value='A' i] + div > div:nth-child(8):before {
 content: '\e641 llen Janian\A Sales Representative'
 }
-input[value='A' i] + div > div:nth-child(10):after {
+input[value='A' i] + div > div:nth-child(8):after {
 content: '👮\A I was nearly cast as an extra in Beverly Hills Cop 3!'
 }
-input[value='A' i] + div > div:nth-child(11) {
+input[value='A' i] + div > div:nth-child(9) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anh.jpg);
 display: block;
 }
-input[value='A' i] + div > div:nth-child(11):before {
+input[value='A' i] + div > div:nth-child(9):before {
 content: '\e641 nh Thu Trinh\A General Accountant'
 }
-input[value='A' i] + div > div:nth-child(11):after {
+input[value='A' i] + div > div:nth-child(9):after {
 content: '🤔\A Most people have difficulties remembering my full name. A helpful tip: think about one, two, three (Anh Thu TRINH)'
 }
-input[value='A' i] + div > div:nth-child(12) {
+input[value='A' i] + div > div:nth-child(10) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alain.jpg);
 display: block;
 }
-input[value='A' i] + div > div:nth-child(12):before {
+input[value='A' i] + div > div:nth-child(10):before {
 content: '\e641 lain Mady-Fetherstone\A Director of Operations'
 }
-input[value='A' i] + div > div:nth-child(12):after {
+input[value='A' i] + div > div:nth-child(10):after {
 content: '🐙\A I love to scuba dive, I even spotted a hairy octopus (really rare and very exciting!)'
 }
-input[value='A' i] + div > div:nth-child(13) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-zo.jpg);
-display: block;
-}
-input[value='A' i] + div > div:nth-child(13):before {
-content: 'Zo \e641 smail\A Customer Solutions Engineer'
-}
-input[value='A' i] + div > div:nth-child(13):after {
-content: '🏃\A I ran a marathon because I lost a bet. I didn\0027 t know I was running it until the day before the race.'
-}
-input[value='A' i] + div > div:nth-child(14) {
+input[value='A' i] + div > div:nth-child(11) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-atanas.jpg);
 display: block;
 }
-input[value='A' i] + div > div:nth-child(14):before {
+input[value='A' i] + div > div:nth-child(11):before {
 content: '\e641 tanas Nalbantov\A Sales Representative'
 }
-input[value='A' i] + div > div:nth-child(14):after {
+input[value='A' i] + div > div:nth-child(11):after {
 content: '🚶\A Whenever I have the choice, I\0027 d rather walk than drive.'
+}
+input[value='A' i] + div > div:nth-child(12) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marion.jpg);
+display: block;
+}
+input[value='A' i] + div > div:nth-child(12):before {
+content: 'Marion \e641 guirre\A Recruiter'
+}
+input[value='A' i] + div > div:nth-child(12):after {
+content: '⚡\A A lot of people say I look like Professor McGonagall.'
+}
+input[value='A' i] + div > div:nth-child(13) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement-2.jpg);
+display: block;
+}
+input[value='A' i] + div > div:nth-child(13):before {
+content: 'Clement \e641 vignon\A Outbound Sales Representative'
+}
+input[value='A' i] + div > div:nth-child(13):after {
+content: '🌙\A I swear I\0027 ll go to the Moon before I die!'
+}
+input[value='A' i] + div > div:nth-child(14) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-zo.jpg);
+display: block;
+}
+input[value='A' i] + div > div:nth-child(14):before {
+content: 'Zo \e641 smail\A Customer Solutions Engineer'
+}
+input[value='A' i] + div > div:nth-child(14):after {
+content: '🏃\A I ran a marathon because I lost a bet. I didn\0027 t know I was running it until the day before the race.'
 }
 input[value='Al' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg);
@@ -3150,154 +3150,154 @@ input[value='Alexandre Collin' i] + div > div:nth-child(1):after {
 content: '🌵\A I spent a full week driving a VAN across the Australian desert.'
 }
 input[value='C' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(1):before {
-content: 'Alexandre \e643 ollin\A Customer Solutions Engineer'
-}
-input[value='C' i] + div > div:nth-child(1):after {
-content: '🌵\A I spent a full week driving a VAN across the Australian desert.'
-}
-input[value='C' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(2):before {
-content: 'Tim \e643 arry\A Full-Stack Software Engineer'
-}
-input[value='C' i] + div > div:nth-child(2):after {
-content: '🌽\A I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.'
-}
-input[value='C' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(3):before {
-content: 'Yvonne \e643 hu\A People Operations'
-}
-input[value='C' i] + div > div:nth-child(3):after {
-content: '🌡\A I have Bieber fever.'
-}
-input[value='C' i] + div > div:nth-child(4) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(4):before {
-content: 'Dustin \e643 oates\A Customer Solutions Engineer'
-}
-input[value='C' i] + div > div:nth-child(4):after {
-content: '⛺\A I lived in a tent for three months...indoors.'
-}
-input[value='C' i] + div > div:nth-child(5) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(5):before {
-content: 'Rémy-\e643 hristophe Schermesser\A Software Engineer'
-}
-input[value='C' i] + div > div:nth-child(5):after {
-content: '🤘\A I like death metal and paintings done before the 20th century.'
-}
-input[value='C' i] + div > div:nth-child(6) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement.jpg);
 display: block;
 }
-input[value='C' i] + div > div:nth-child(6):before {
+input[value='C' i] + div > div:nth-child(1):before {
 content: '\e643 lément Leprovost\A Software Engineer'
 }
-input[value='C' i] + div > div:nth-child(6):after {
+input[value='C' i] + div > div:nth-child(1):after {
 content: '🌎\A I\0027 m a relentless globetrotter.'
 }
-input[value='C' i] + div > div:nth-child(7) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas-2.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(7):before {
-content: 'Lucas \e643 erdan\A Product UX Specialist'
-}
-input[value='C' i] + div > div:nth-child(7):after {
-content: '👕\A My girlfriend is mad at me for always wearing startup t-shirts.'
-}
-input[value='C' i] + div > div:nth-child(8) {
+input[value='C' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-clement-2.jpg);
 display: block;
 }
-input[value='C' i] + div > div:nth-child(8):before {
+input[value='C' i] + div > div:nth-child(2):before {
 content: '\e643 lement Avignon\A Outbound Sales Representative'
 }
-input[value='C' i] + div > div:nth-child(8):after {
+input[value='C' i] + div > div:nth-child(2):after {
 content: '🌙\A I swear I\0027 ll go to the Moon before I die!'
 }
-input[value='C' i] + div > div:nth-child(9) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg);
-display: block;
-}
-input[value='C' i] + div > div:nth-child(9):before {
-content: 'Baptiste \e643 oquelle\A Full-Stack Software Engineer'
-}
-input[value='C' i] + div > div:nth-child(9):after {
-content: '🐛\A In Vietnam, I ate worms and I liked it.'
-}
-input[value='C' i] + div > div:nth-child(10) {
+input[value='C' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
 display: block;
 }
-input[value='C' i] + div > div:nth-child(10):before {
+input[value='C' i] + div > div:nth-child(3):before {
 content: '\e643 hris Wittman\A Customer Success Manager'
 }
-input[value='C' i] + div > div:nth-child(10):after {
+input[value='C' i] + div > div:nth-child(3):after {
 content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
 }
-input[value='C' i] + div > div:nth-child(11) {
+input[value='C' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-cory.jpg);
 display: block;
 }
-input[value='C' i] + div > div:nth-child(11):before {
+input[value='C' i] + div > div:nth-child(4):before {
 content: '\e643 ory Dobson\A Customer Solutions Engineer'
 }
-input[value='C' i] + div > div:nth-child(11):after {
+input[value='C' i] + div > div:nth-child(4):after {
 content: '🔟\A I\0027 ve played drums for over 10 years.'
 }
-input[value='Co' i] + div > div:nth-child(1) {
+input[value='C' i] + div > div:nth-child(5) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg);
 display: block;
 }
-input[value='Co' i] + div > div:nth-child(1):before {
-content: 'Alexandre \e643 \e66f llin\A Customer Solutions Engineer'
+input[value='C' i] + div > div:nth-child(5):before {
+content: 'Alexandre \e643 ollin\A Customer Solutions Engineer'
 }
-input[value='Co' i] + div > div:nth-child(1):after {
+input[value='C' i] + div > div:nth-child(5):after {
 content: '🌵\A I spent a full week driving a VAN across the Australian desert.'
 }
-input[value='Co' i] + div > div:nth-child(2) {
+input[value='C' i] + div > div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+display: block;
+}
+input[value='C' i] + div > div:nth-child(6):before {
+content: 'Tim \e643 arry\A Full-Stack Software Engineer'
+}
+input[value='C' i] + div > div:nth-child(6):after {
+content: '🌽\A I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.'
+}
+input[value='C' i] + div > div:nth-child(7) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg);
+display: block;
+}
+input[value='C' i] + div > div:nth-child(7):before {
+content: 'Yvonne \e643 hu\A People Operations'
+}
+input[value='C' i] + div > div:nth-child(7):after {
+content: '🌡\A I have Bieber fever.'
+}
+input[value='C' i] + div > div:nth-child(8) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg);
 display: block;
 }
-input[value='Co' i] + div > div:nth-child(2):before {
-content: 'Dustin \e643 \e66f ates\A Customer Solutions Engineer'
+input[value='C' i] + div > div:nth-child(8):before {
+content: 'Dustin \e643 oates\A Customer Solutions Engineer'
 }
-input[value='Co' i] + div > div:nth-child(2):after {
+input[value='C' i] + div > div:nth-child(8):after {
 content: '⛺\A I lived in a tent for three months...indoors.'
 }
-input[value='Co' i] + div > div:nth-child(3) {
+input[value='C' i] + div > div:nth-child(9) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='C' i] + div > div:nth-child(9):before {
+content: 'Rémy-\e643 hristophe Schermesser\A Software Engineer'
+}
+input[value='C' i] + div > div:nth-child(9):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='C' i] + div > div:nth-child(10) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas-2.jpg);
+display: block;
+}
+input[value='C' i] + div > div:nth-child(10):before {
+content: 'Lucas \e643 erdan\A Product UX Specialist'
+}
+input[value='C' i] + div > div:nth-child(10):after {
+content: '👕\A My girlfriend is mad at me for always wearing startup t-shirts.'
+}
+input[value='C' i] + div > div:nth-child(11) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg);
 display: block;
 }
-input[value='Co' i] + div > div:nth-child(3):before {
-content: 'Baptiste \e643 \e66f quelle\A Full-Stack Software Engineer'
+input[value='C' i] + div > div:nth-child(11):before {
+content: 'Baptiste \e643 oquelle\A Full-Stack Software Engineer'
 }
-input[value='Co' i] + div > div:nth-child(3):after {
+input[value='C' i] + div > div:nth-child(11):after {
 content: '🐛\A In Vietnam, I ate worms and I liked it.'
 }
-input[value='Co' i] + div > div:nth-child(4) {
+input[value='Co' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-cory.jpg);
 display: block;
 }
-input[value='Co' i] + div > div:nth-child(4):before {
+input[value='Co' i] + div > div:nth-child(1):before {
 content: '\e643 \e66f ry Dobson\A Customer Solutions Engineer'
 }
-input[value='Co' i] + div > div:nth-child(4):after {
+input[value='Co' i] + div > div:nth-child(1):after {
 content: '🔟\A I\0027 ve played drums for over 10 years.'
+}
+input[value='Co' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg);
+display: block;
+}
+input[value='Co' i] + div > div:nth-child(2):before {
+content: 'Alexandre \e643 \e66f llin\A Customer Solutions Engineer'
+}
+input[value='Co' i] + div > div:nth-child(2):after {
+content: '🌵\A I spent a full week driving a VAN across the Australian desert.'
+}
+input[value='Co' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg);
+display: block;
+}
+input[value='Co' i] + div > div:nth-child(3):before {
+content: 'Dustin \e643 \e66f ates\A Customer Solutions Engineer'
+}
+input[value='Co' i] + div > div:nth-child(3):after {
+content: '⛺\A I lived in a tent for three months...indoors.'
+}
+input[value='Co' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg);
+display: block;
+}
+input[value='Co' i] + div > div:nth-child(4):before {
+content: 'Baptiste \e643 \e66f quelle\A Full-Stack Software Engineer'
+}
+input[value='Co' i] + div > div:nth-child(4):after {
+content: '🐛\A In Vietnam, I ate worms and I liked it.'
 }
 input[value='Col' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre.jpg);
@@ -3690,64 +3690,64 @@ input[value='Jeremy Ben Sadoun' i] + div > div:nth-child(1):after {
 content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
 }
 input[value='B' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
-display: block;
-}
-input[value='B' i] + div > div:nth-child(1):before {
-content: 'Jeremy \e642 en Sadoun\A Account Executive'
-}
-input[value='B' i] + div > div:nth-child(1):after {
-content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
-}
-input[value='B' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas-2.jpg);
-display: block;
-}
-input[value='B' i] + div > div:nth-child(2):before {
-content: 'Nicolas \e642 aissas\A Customer Solutions Engineer'
-}
-input[value='B' i] + div > div:nth-child(2):after {
-content: '🏐\A I wanted to be a handball player.'
-}
-input[value='B' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
 display: block;
 }
-input[value='B' i] + div > div:nth-child(3):before {
+input[value='B' i] + div > div:nth-child(1):before {
 content: '\e642 enjamin Digne\A Account Executive'
 }
-input[value='B' i] + div > div:nth-child(3):after {
+input[value='B' i] + div > div:nth-child(1):after {
 content: '🐓\A I have a passion for fried chicken.'
 }
-input[value='B' i] + div > div:nth-child(4) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
-display: block;
-}
-input[value='B' i] + div > div:nth-child(4):before {
-content: 'Gianluca \e642 argelli\A Full-Stack Software Engineer'
-}
-input[value='B' i] + div > div:nth-child(4):after {
-content: '🖥\A I destroyed my first computer at the age of 8.'
-}
-input[value='B' i] + div > div:nth-child(5) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas.jpg);
-display: block;
-}
-input[value='B' i] + div > div:nth-child(5):before {
-content: 'Lucas \e642 onomi\A Frontend Developer'
-}
-input[value='B' i] + div > div:nth-child(5):after {
-content: '👌\A I wanted to be an inventor, and then I discovered the web.'
-}
-input[value='B' i] + div > div:nth-child(6) {
+input[value='B' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg);
 display: block;
 }
-input[value='B' i] + div > div:nth-child(6):before {
+input[value='B' i] + div > div:nth-child(2):before {
 content: '\e642 aptiste Coquelle\A Full-Stack Software Engineer'
 }
-input[value='B' i] + div > div:nth-child(6):after {
+input[value='B' i] + div > div:nth-child(2):after {
 content: '🐛\A In Vietnam, I ate worms and I liked it.'
+}
+input[value='B' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
+display: block;
+}
+input[value='B' i] + div > div:nth-child(3):before {
+content: 'Jeremy \e642 en Sadoun\A Account Executive'
+}
+input[value='B' i] + div > div:nth-child(3):after {
+content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
+}
+input[value='B' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas-2.jpg);
+display: block;
+}
+input[value='B' i] + div > div:nth-child(4):before {
+content: 'Nicolas \e642 aissas\A Customer Solutions Engineer'
+}
+input[value='B' i] + div > div:nth-child(4):after {
+content: '🏐\A I wanted to be a handball player.'
+}
+input[value='B' i] + div > div:nth-child(5) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+display: block;
+}
+input[value='B' i] + div > div:nth-child(5):before {
+content: 'Gianluca \e642 argelli\A Full-Stack Software Engineer'
+}
+input[value='B' i] + div > div:nth-child(5):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
+}
+input[value='B' i] + div > div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-lucas.jpg);
+display: block;
+}
+input[value='B' i] + div > div:nth-child(6):before {
+content: 'Lucas \e642 onomi\A Frontend Developer'
+}
+input[value='B' i] + div > div:nth-child(6):after {
+content: '👌\A I wanted to be an inventor, and then I discovered the web.'
 }
 input[value='B' i] + div > div:nth-child(7) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-liam.jpg);
@@ -3770,44 +3770,44 @@ input[value='B' i] + div > div:nth-child(8):after {
 content: '🕸\A I built my first personal website when I was 12.'
 }
 input[value='Be' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
 display: block;
 }
 input[value='Be' i] + div > div:nth-child(1):before {
-content: 'Jeremy \e642 \e665 n Sadoun\A Account Executive'
-}
-input[value='Be' i] + div > div:nth-child(1):after {
-content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
-}
-input[value='Be' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
-display: block;
-}
-input[value='Be' i] + div > div:nth-child(2):before {
 content: '\e642 \e665 njamin Digne\A Account Executive'
 }
-input[value='Be' i] + div > div:nth-child(2):after {
+input[value='Be' i] + div > div:nth-child(1):after {
 content: '🐓\A I have a passion for fried chicken.'
 }
-input[value='Ben' i] + div > div:nth-child(1) {
+input[value='Be' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
 display: block;
 }
-input[value='Ben' i] + div > div:nth-child(1):before {
-content: 'Jeremy \e642 \e665 \e66e  Sadoun\A Account Executive'
+input[value='Be' i] + div > div:nth-child(2):before {
+content: 'Jeremy \e642 \e665 n Sadoun\A Account Executive'
 }
-input[value='Ben' i] + div > div:nth-child(1):after {
+input[value='Be' i] + div > div:nth-child(2):after {
 content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
 }
-input[value='Ben' i] + div > div:nth-child(2) {
+input[value='Ben' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-benjamin.jpg);
 display: block;
 }
-input[value='Ben' i] + div > div:nth-child(2):before {
+input[value='Ben' i] + div > div:nth-child(1):before {
 content: '\e642 \e665 \e66e jamin Digne\A Account Executive'
 }
-input[value='Ben' i] + div > div:nth-child(2):after {
+input[value='Ben' i] + div > div:nth-child(1):after {
 content: '🐓\A I have a passion for fried chicken.'
+}
+input[value='Ben' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
+display: block;
+}
+input[value='Ben' i] + div > div:nth-child(2):before {
+content: 'Jeremy \e642 \e665 \e66e  Sadoun\A Account Executive'
+}
+input[value='Ben' i] + div > div:nth-child(2):after {
+content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
 }
 input[value='Ben ' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
@@ -3880,34 +3880,34 @@ input[value='Ben Sadoun' i] + div > div:nth-child(1):after {
 content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
 }
 input[value='Sa' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
-display: block;
-}
-input[value='Sa' i] + div > div:nth-child(1):before {
-content: 'Jeremy Ben \e653 \e661 doun\A Account Executive'
-}
-input[value='Sa' i] + div > div:nth-child(1):after {
-content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
-}
-input[value='Sa' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg);
-display: block;
-}
-input[value='Sa' i] + div > div:nth-child(2):before {
-content: 'Martin \e653 \e661 llé\A Sales Representative'
-}
-input[value='Sa' i] + div > div:nth-child(2):after {
-content: '🐴\A I crossed the steppes of Inner Mongolia riding a tiny pony.'
-}
-input[value='Sa' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sandy.jpg);
 display: block;
 }
-input[value='Sa' i] + div > div:nth-child(3):before {
+input[value='Sa' i] + div > div:nth-child(1):before {
 content: '\e653 \e661 ndy Kwon\A Sales Representative'
 }
-input[value='Sa' i] + div > div:nth-child(3):after {
+input[value='Sa' i] + div > div:nth-child(1):after {
 content: '👊\A I once won a martial arts competition for being the only person to show up.'
+}
+input[value='Sa' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
+display: block;
+}
+input[value='Sa' i] + div > div:nth-child(2):before {
+content: 'Jeremy Ben \e653 \e661 doun\A Account Executive'
+}
+input[value='Sa' i] + div > div:nth-child(2):after {
+content: '🇨🇳\A I studied Chinese for a year but can\0027 t speak a single word of it.'
+}
+input[value='Sa' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg);
+display: block;
+}
+input[value='Sa' i] + div > div:nth-child(3):before {
+content: 'Martin \e653 \e661 llé\A Sales Representative'
+}
+input[value='Sa' i] + div > div:nth-child(3):after {
+content: '🐴\A I crossed the steppes of Inner Mongolia riding a tiny pony.'
 }
 input[value='Sad' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeremy.jpg);
@@ -4240,24 +4240,24 @@ input[value='Alexandre Stanislawski' i] + div > div:nth-child(1):after {
 content: '💰\A When I can\0027 t make a decision, I toss a coin.'
 }
 input[value='St' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg);
-display: block;
-}
-input[value='St' i] + div > div:nth-child(1):before {
-content: 'Alexandre \e653 \e674 anislawski\A Full-Stack Software Engineer'
-}
-input[value='St' i] + div > div:nth-child(1):after {
-content: '💰\A When I can\0027 t make a decision, I toss a coin.'
-}
-input[value='St' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-steven.jpg);
 display: block;
 }
-input[value='St' i] + div > div:nth-child(2):before {
+input[value='St' i] + div > div:nth-child(1):before {
 content: '\e653 \e674 even Merlino\A Sales Representative'
 }
-input[value='St' i] + div > div:nth-child(2):after {
+input[value='St' i] + div > div:nth-child(1):after {
 content: '🎨\A Once I built a contemporary art exhibit made of wooden chairs.'
+}
+input[value='St' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg);
+display: block;
+}
+input[value='St' i] + div > div:nth-child(2):before {
+content: 'Alexandre \e653 \e674 anislawski\A Full-Stack Software Engineer'
+}
+input[value='St' i] + div > div:nth-child(2):after {
+content: '💰\A When I can\0027 t make a decision, I toss a coin.'
 }
 input[value='Sta' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandre-stanislawski.jpg);
@@ -4430,34 +4430,34 @@ input[value='Nicolas Baissas' i] + div > div:nth-child(1):after {
 content: '🏐\A I wanted to be a handball player.'
 }
 input[value='Ba' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas-2.jpg);
-display: block;
-}
-input[value='Ba' i] + div > div:nth-child(1):before {
-content: 'Nicolas \e642 \e661 issas\A Customer Solutions Engineer'
-}
-input[value='Ba' i] + div > div:nth-child(1):after {
-content: '🏐\A I wanted to be a handball player.'
-}
-input[value='Ba' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
-display: block;
-}
-input[value='Ba' i] + div > div:nth-child(2):before {
-content: 'Gianluca \e642 \e661 rgelli\A Full-Stack Software Engineer'
-}
-input[value='Ba' i] + div > div:nth-child(2):after {
-content: '🖥\A I destroyed my first computer at the age of 8.'
-}
-input[value='Ba' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-baptiste.jpg);
 display: block;
 }
-input[value='Ba' i] + div > div:nth-child(3):before {
+input[value='Ba' i] + div > div:nth-child(1):before {
 content: '\e642 \e661 ptiste Coquelle\A Full-Stack Software Engineer'
 }
-input[value='Ba' i] + div > div:nth-child(3):after {
+input[value='Ba' i] + div > div:nth-child(1):after {
 content: '🐛\A In Vietnam, I ate worms and I liked it.'
+}
+input[value='Ba' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-nicolas-2.jpg);
+display: block;
+}
+input[value='Ba' i] + div > div:nth-child(2):before {
+content: 'Nicolas \e642 \e661 issas\A Customer Solutions Engineer'
+}
+input[value='Ba' i] + div > div:nth-child(2):after {
+content: '🏐\A I wanted to be a handball player.'
+}
+input[value='Ba' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+display: block;
+}
+input[value='Ba' i] + div > div:nth-child(3):before {
+content: 'Gianluca \e642 \e661 rgelli\A Full-Stack Software Engineer'
+}
+input[value='Ba' i] + div > div:nth-child(3):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
 }
 input[value='Ba' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jonas.jpg);
@@ -4670,34 +4670,34 @@ input[value='Guillaume Duvaux' i] + div > div:nth-child(1):after {
 content: '👔\A I can spend 10 hours a week in H&M and Zara.'
 }
 input[value='Du' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
-display: block;
-}
-input[value='Du' i] + div > div:nth-child(1):before {
-content: 'Guillaume \e644 \e675 vaux\A Account Executive'
-}
-input[value='Du' i] + div > div:nth-child(1):after {
-content: '👔\A I can spend 10 hours a week in H&M and Zara.'
-}
-input[value='Du' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
-display: block;
-}
-input[value='Du' i] + div > div:nth-child(2):before {
-content: 'Matthieu \e644 \e675 mont\A Full-Stack Software Engineer'
-}
-input[value='Du' i] + div > div:nth-child(2):after {
-content: '🍛\A I can eat a kebab and then a full Chinese menu.'
-}
-input[value='Du' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-dustincoates.jpg);
 display: block;
 }
-input[value='Du' i] + div > div:nth-child(3):before {
+input[value='Du' i] + div > div:nth-child(1):before {
 content: '\e644 \e675 stin Coates\A Customer Solutions Engineer'
 }
-input[value='Du' i] + div > div:nth-child(3):after {
+input[value='Du' i] + div > div:nth-child(1):after {
 content: '⛺\A I lived in a tent for three months...indoors.'
+}
+input[value='Du' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
+display: block;
+}
+input[value='Du' i] + div > div:nth-child(2):before {
+content: 'Guillaume \e644 \e675 vaux\A Account Executive'
+}
+input[value='Du' i] + div > div:nth-child(2):after {
+content: '👔\A I can spend 10 hours a week in H&M and Zara.'
+}
+input[value='Du' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='Du' i] + div > div:nth-child(3):before {
+content: 'Matthieu \e644 \e675 mont\A Full-Stack Software Engineer'
+}
+input[value='Du' i] + div > div:nth-child(3):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
 }
 input[value='Duv' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-guillaume.jpg);
@@ -4820,24 +4820,24 @@ input[value='Alex Kudelka' i] + div > div:nth-child(1):after {
 content: '😃\A I have flat feet...like a platypus.'
 }
 input[value='Ku' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg);
-display: block;
-}
-input[value='Ku' i] + div > div:nth-child(1):before {
-content: 'Alex \e64b \e675 delka\A Account Executive'
-}
-input[value='Ku' i] + div > div:nth-child(1):after {
-content: '😃\A I have flat feet...like a platypus.'
-}
-input[value='Ku' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-kumiko.jpg);
 display: block;
 }
-input[value='Ku' i] + div > div:nth-child(2):before {
+input[value='Ku' i] + div > div:nth-child(1):before {
 content: '\e64b \e675 miko Larroque\A Office Assistant'
 }
-input[value='Ku' i] + div > div:nth-child(2):after {
+input[value='Ku' i] + div > div:nth-child(1):after {
 content: '🚜\A I was a farmer in bourgogne!!! I miss my cows, sheep and farmer mates!'
+}
+input[value='Ku' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg);
+display: block;
+}
+input[value='Ku' i] + div > div:nth-child(2):before {
+content: 'Alex \e64b \e675 delka\A Account Executive'
+}
+input[value='Ku' i] + div > div:nth-child(2):after {
+content: '😃\A I have flat feet...like a platypus.'
 }
 input[value='Kud' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexander.jpg);
@@ -4910,44 +4910,44 @@ input[value='M' i] + div > div:nth-child(2):after {
 content: '🍛\A I can eat a kebab and then a full Chinese menu.'
 }
 input[value='M' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandremeunier.jpg);
-display: block;
-}
-input[value='M' i] + div > div:nth-child(3):before {
-content: 'Alexandre \e64d eunier\A Full-Stack Software Engineer'
-}
-input[value='M' i] + div > div:nth-child(3):after {
-content: '🎸\A I have been playing guitar since I was 5.'
-}
-input[value='M' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marion.jpg);
 display: block;
 }
-input[value='M' i] + div > div:nth-child(4):before {
+input[value='M' i] + div > div:nth-child(3):before {
 content: '\e64d arion Aguirre\A Recruiter'
 }
-input[value='M' i] + div > div:nth-child(4):after {
+input[value='M' i] + div > div:nth-child(3):after {
 content: '⚡\A A lot of people say I look like Professor McGonagall.'
 }
-input[value='M' i] + div > div:nth-child(5) {
+input[value='M' i] + div > div:nth-child(4) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-martin.jpg);
 display: block;
 }
-input[value='M' i] + div > div:nth-child(5):before {
+input[value='M' i] + div > div:nth-child(4):before {
 content: '\e64d artin Sallé\A Sales Representative'
 }
-input[value='M' i] + div > div:nth-child(5):after {
+input[value='M' i] + div > div:nth-child(4):after {
 content: '🐴\A I crossed the steppes of Inner Mongolia riding a tiny pony.'
 }
-input[value='M' i] + div > div:nth-child(6) {
+input[value='M' i] + div > div:nth-child(5) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-marie.jpg);
 display: block;
 }
-input[value='M' i] + div > div:nth-child(6):before {
+input[value='M' i] + div > div:nth-child(5):before {
 content: '\e64d arie-Laure Thuret\A Software Engineer'
 }
-input[value='M' i] + div > div:nth-child(6):after {
+input[value='M' i] + div > div:nth-child(5):after {
 content: '☕\A I brew my coffee using a scale, a thermometer and spreadsheets!'
+}
+input[value='M' i] + div > div:nth-child(6) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-alexandremeunier.jpg);
+display: block;
+}
+input[value='M' i] + div > div:nth-child(6):before {
+content: 'Alexandre \e64d eunier\A Full-Stack Software Engineer'
+}
+input[value='M' i] + div > div:nth-child(6):after {
+content: '🎸\A I have been playing guitar since I was 5.'
 }
 input[value='M' i] + div > div:nth-child(7) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jasmine.jpg);
@@ -6240,44 +6240,44 @@ input[value='Olivier Poissonier' i] + div > div:nth-child(1):after {
 content: '🍭\A I am a fan of 80\0027 s pop culture.'
 }
 input[value='P' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier.jpg);
-display: block;
-}
-input[value='P' i] + div > div:nth-child(1):before {
-content: 'Olivier \e650 oissonier\A Chief Financial Officer'
-}
-input[value='P' i] + div > div:nth-child(1):after {
-content: '🍭\A I am a fan of 80\0027 s pop culture.'
-}
-input[value='P' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
 display: block;
 }
-input[value='P' i] + div > div:nth-child(2):before {
+input[value='P' i] + div > div:nth-child(1):before {
 content: '\e650 aul-Louis Nech\A Software Engineer'
 }
-input[value='P' i] + div > div:nth-child(2):after {
+input[value='P' i] + div > div:nth-child(1):after {
 content: '🔬\A I developed an app to introduce biology to everyone.'
 }
-input[value='P' i] + div > div:nth-child(3) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
-display: block;
-}
-input[value='P' i] + div > div:nth-child(3):before {
-content: 'Jan \e650 etr\A Software Engineer'
-}
-input[value='P' i] + div > div:nth-child(3):after {
-content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
-}
-input[value='P' i] + div > div:nth-child(4) {
+input[value='P' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul.jpg);
 display: block;
 }
-input[value='P' i] + div > div:nth-child(4):before {
+input[value='P' i] + div > div:nth-child(2):before {
 content: '\e650 aul Friesen\A VP of Marketing'
 }
-input[value='P' i] + div > div:nth-child(4):after {
+input[value='P' i] + div > div:nth-child(2):after {
 content: '🇨🇦\A I\0027 m a Canadian who doesn\0027 t know what Canadian bacon is'
+}
+input[value='P' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-olivier.jpg);
+display: block;
+}
+input[value='P' i] + div > div:nth-child(3):before {
+content: 'Olivier \e650 oissonier\A Chief Financial Officer'
+}
+input[value='P' i] + div > div:nth-child(3):after {
+content: '🍭\A I am a fan of 80\0027 s pop culture.'
+}
+input[value='P' i] + div > div:nth-child(4) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
+display: block;
+}
+input[value='P' i] + div > div:nth-child(4):before {
+content: 'Jan \e650 etr\A Software Engineer'
+}
+input[value='P' i] + div > div:nth-child(4):after {
+content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
 }
 input[value='P' i] + div > div:nth-child(5) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-julien-2.jpg);
@@ -6480,34 +6480,34 @@ input[value='Yvonne Chu' i] + div > div:nth-child(1):after {
 content: '🌡\A I have Bieber fever.'
 }
 input[value='Ch' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg);
-display: block;
-}
-input[value='Ch' i] + div > div:nth-child(1):before {
-content: 'Yvonne \e643 \e668 u\A People Operations'
-}
-input[value='Ch' i] + div > div:nth-child(1):after {
-content: '🌡\A I have Bieber fever.'
-}
-input[value='Ch' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
-display: block;
-}
-input[value='Ch' i] + div > div:nth-child(2):before {
-content: 'Rémy-\e643 \e668 ristophe Schermesser\A Software Engineer'
-}
-input[value='Ch' i] + div > div:nth-child(2):after {
-content: '🤘\A I like death metal and paintings done before the 20th century.'
-}
-input[value='Ch' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
 display: block;
 }
-input[value='Ch' i] + div > div:nth-child(3):before {
+input[value='Ch' i] + div > div:nth-child(1):before {
 content: '\e643 \e668 ris Wittman\A Customer Success Manager'
 }
-input[value='Ch' i] + div > div:nth-child(3):after {
+input[value='Ch' i] + div > div:nth-child(1):after {
 content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
+}
+input[value='Ch' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg);
+display: block;
+}
+input[value='Ch' i] + div > div:nth-child(2):before {
+content: 'Yvonne \e643 \e668 u\A People Operations'
+}
+input[value='Ch' i] + div > div:nth-child(2):after {
+content: '🌡\A I have Bieber fever.'
+}
+input[value='Ch' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='Ch' i] + div > div:nth-child(3):before {
+content: 'Rémy-\e643 \e668 ristophe Schermesser\A Software Engineer'
+}
+input[value='Ch' i] + div > div:nth-child(3):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
 }
 input[value='Chu' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-yvonne.jpg);
@@ -8240,64 +8240,64 @@ input[value='Rémy Christophe Schermesser' i] + div > div:nth-child(1):after {
 content: '🤘\A I like death metal and paintings done before the 20th century.'
 }
 input[value='Chr' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
 display: block;
 }
 input[value='Chr' i] + div > div:nth-child(1):before {
-content: 'Rémy-\e643 \e668 \e672 istophe Schermesser\A Software Engineer'
+content: '\e643 \e668 \e672 is Wittman\A Customer Success Manager'
 }
 input[value='Chr' i] + div > div:nth-child(1):after {
-content: '🤘\A I like death metal and paintings done before the 20th century.'
+content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
 }
 input[value='Chr' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
 display: block;
 }
 input[value='Chr' i] + div > div:nth-child(2):before {
-content: '\e643 \e668 \e672 is Wittman\A Customer Success Manager'
+content: 'Rémy-\e643 \e668 \e672 istophe Schermesser\A Software Engineer'
 }
 input[value='Chr' i] + div > div:nth-child(2):after {
-content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
+content: '🤘\A I like death metal and paintings done before the 20th century.'
 }
 input[value='Chri' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
 display: block;
 }
 input[value='Chri' i] + div > div:nth-child(1):before {
-content: 'Rémy-\e643 \e668 \e672 \e669 stophe Schermesser\A Software Engineer'
-}
-input[value='Chri' i] + div > div:nth-child(1):after {
-content: '🤘\A I like death metal and paintings done before the 20th century.'
-}
-input[value='Chri' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
-display: block;
-}
-input[value='Chri' i] + div > div:nth-child(2):before {
 content: '\e643 \e668 \e672 \e669 s Wittman\A Customer Success Manager'
 }
-input[value='Chri' i] + div > div:nth-child(2):after {
+input[value='Chri' i] + div > div:nth-child(1):after {
 content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
 }
-input[value='Chris' i] + div > div:nth-child(1) {
+input[value='Chri' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
 display: block;
 }
-input[value='Chris' i] + div > div:nth-child(1):before {
-content: 'Rémy-\e643 \e668 \e672 \e669 \e673 tophe Schermesser\A Software Engineer'
+input[value='Chri' i] + div > div:nth-child(2):before {
+content: 'Rémy-\e643 \e668 \e672 \e669 stophe Schermesser\A Software Engineer'
 }
-input[value='Chris' i] + div > div:nth-child(1):after {
+input[value='Chri' i] + div > div:nth-child(2):after {
 content: '🤘\A I like death metal and paintings done before the 20th century.'
 }
-input[value='Chris' i] + div > div:nth-child(2) {
+input[value='Chris' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-chris.jpg);
 display: block;
 }
-input[value='Chris' i] + div > div:nth-child(2):before {
+input[value='Chris' i] + div > div:nth-child(1):before {
 content: '\e643 \e668 \e672 \e669 \e673  Wittman\A Customer Success Manager'
 }
-input[value='Chris' i] + div > div:nth-child(2):after {
+input[value='Chris' i] + div > div:nth-child(1):after {
 content: '🌴\A I spent 5 months during college living at a resort and planning weddings in Hawaii!'
+}
+input[value='Chris' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='Chris' i] + div > div:nth-child(2):before {
+content: 'Rémy-\e643 \e668 \e672 \e669 \e673 tophe Schermesser\A Software Engineer'
+}
+input[value='Chris' i] + div > div:nth-child(2):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
 }
 input[value='Christ' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
@@ -9170,34 +9170,34 @@ input[value='Jean Edern Lorillon' i] + div > div:nth-child(1):after {
 content: '🇨🇲\A Until I was 4, my mother tongue was a local Cameroonian language.'
 }
 input[value='E' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg);
-display: block;
-}
-input[value='E' i] + div > div:nth-child(1):before {
-content: 'Jean \e645 dern Lorillon\A Account Executive'
-}
-input[value='E' i] + div > div:nth-child(1):after {
-content: '🇨🇲\A Until I was 4, my mother tongue was a local Cameroonian language.'
-}
-input[value='E' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-leo.jpg);
-display: block;
-}
-input[value='E' i] + div > div:nth-child(2):before {
-content: 'Leo \e645 rcolanelli\A Software Engineer'
-}
-input[value='E' i] + div > div:nth-child(2):after {
-content: '🍔\A I usually eat at the speed of light.'
-}
-input[value='E' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
 display: block;
 }
-input[value='E' i] + div > div:nth-child(3):before {
+input[value='E' i] + div > div:nth-child(1):before {
 content: '\e645 mily Hayman\A Customer Solutions Engineer'
 }
-input[value='E' i] + div > div:nth-child(3):after {
+input[value='E' i] + div > div:nth-child(1):after {
 content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}
+input[value='E' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg);
+display: block;
+}
+input[value='E' i] + div > div:nth-child(2):before {
+content: 'Jean \e645 dern Lorillon\A Account Executive'
+}
+input[value='E' i] + div > div:nth-child(2):after {
+content: '🇨🇲\A Until I was 4, my mother tongue was a local Cameroonian language.'
+}
+input[value='E' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-leo.jpg);
+display: block;
+}
+input[value='E' i] + div > div:nth-child(3):before {
+content: 'Leo \e645 rcolanelli\A Software Engineer'
+}
+input[value='E' i] + div > div:nth-child(3):after {
+content: '🍔\A I usually eat at the speed of light.'
 }
 input[value='Ed' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jeanedern.jpg);
@@ -10160,24 +10160,24 @@ input[value='Anthony Seure' i] + div > div:nth-child(1):after {
 content: '🎹\A How do I learn piano? Very slowly.'
 }
 input[value='Se' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
-display: block;
-}
-input[value='Se' i] + div > div:nth-child(1):before {
-content: 'Anthony \e653 \e665 ure\A Software Engineer'
-}
-input[value='Se' i] + div > div:nth-child(1):after {
-content: '🎹\A How do I learn piano? Very slowly.'
-}
-input[value='Se' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg);
 display: block;
 }
-input[value='Se' i] + div > div:nth-child(2):before {
+input[value='Se' i] + div > div:nth-child(1):before {
 content: '\e653 \e6e9 bastien Navizet\A Creative Designer'
 }
-input[value='Se' i] + div > div:nth-child(2):after {
+input[value='Se' i] + div > div:nth-child(1):after {
 content: '𝓢\A  I learned to read and write at 5 because I wanted to re-create circus billboards...Yeah, my love of typography and lettering began really early!'
+}
+input[value='Se' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
+display: block;
+}
+input[value='Se' i] + div > div:nth-child(2):before {
+content: 'Anthony \e653 \e665 ure\A Software Engineer'
+}
+input[value='Se' i] + div > div:nth-child(2):after {
+content: '🎹\A How do I learn piano? Very slowly.'
 }
 input[value='Seu' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
@@ -11040,24 +11040,24 @@ input[value='Louis Nech' i] + div > div:nth-child(1):after {
 content: '🔬\A I developed an app to introduce biology to everyone.'
 }
 input[value='Ne' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
-display: block;
-}
-input[value='Ne' i] + div > div:nth-child(1):before {
-content: 'Paul-Louis \e64e \e665 ch\A Software Engineer'
-}
-input[value='Ne' i] + div > div:nth-child(1):after {
-content: '🔬\A I developed an app to introduce biology to everyone.'
-}
-input[value='Ne' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-neil.jpg);
 display: block;
 }
-input[value='Ne' i] + div > div:nth-child(2):before {
+input[value='Ne' i] + div > div:nth-child(1):before {
 content: '\e64e \e665 il Richler\A Growth Marketing'
 }
-input[value='Ne' i] + div > div:nth-child(2):after {
+input[value='Ne' i] + div > div:nth-child(1):after {
 content: '🐄\A I have visited and lived on sustainable farms all over the world.'
+}
+input[value='Ne' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
+display: block;
+}
+input[value='Ne' i] + div > div:nth-child(2):before {
+content: 'Paul-Louis \e64e \e665 ch\A Software Engineer'
+}
+input[value='Ne' i] + div > div:nth-child(2):after {
+content: '🔬\A I developed an app to introduce biology to everyone.'
 }
 input[value='Nec' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
@@ -12100,24 +12100,24 @@ input[value='Ja' i] + div > div:nth-child(1):after {
 content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
 }
 input[value='Ja' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg);
-display: block;
-}
-input[value='Ja' i] + div > div:nth-child(2):before {
-content: 'Allen \e64a \e661 nian\A Sales Representative'
-}
-input[value='Ja' i] + div > div:nth-child(2):after {
-content: '👮\A I was nearly cast as an extra in Beverly Hills Cop 3!'
-}
-input[value='Ja' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jasmine.jpg);
 display: block;
 }
-input[value='Ja' i] + div > div:nth-child(3):before {
+input[value='Ja' i] + div > div:nth-child(2):before {
 content: '\e64a \e661 smine Mireshghi\A Sales Representative'
 }
-input[value='Ja' i] + div > div:nth-child(3):after {
+input[value='Ja' i] + div > div:nth-child(2):after {
 content: '🎤\A I studied Mandarin for four years in high school and I love Chinese karaoke'
+}
+input[value='Ja' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-allen.jpg);
+display: block;
+}
+input[value='Ja' i] + div > div:nth-child(3):before {
+content: 'Allen \e64a \e661 nian\A Sales Representative'
+}
+input[value='Ja' i] + div > div:nth-child(3):after {
+content: '👮\A I was nearly cast as an extra in Beverly Hills Cop 3!'
 }
 input[value='Jan' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
@@ -12400,24 +12400,24 @@ input[value='Jo' i] + div > div:nth-child(1):after {
 content: '🏍\A I bought a modified electric rickshaw to give people rides at Burning Man.'
 }
 input[value='Jo' i] + div > div:nth-child(2) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-fanette.jpg);
-display: block;
-}
-input[value='Jo' i] + div > div:nth-child(2):before {
-content: 'Fanette \e64a \e66f bard\A Demand Generation Specialist'
-}
-input[value='Jo' i] + div > div:nth-child(2):after {
-content: '🌯\A I have secretly started a collection of weird t-shirts (the ones picturing cats, the galaxy, keyboards, pizza or burritos)'
-}
-input[value='Jo' i] + div > div:nth-child(3) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-jonas.jpg);
 display: block;
 }
-input[value='Jo' i] + div > div:nth-child(3):before {
+input[value='Jo' i] + div > div:nth-child(2):before {
 content: '\e64a \e66f nas Badalic\A Frontend Developer'
 }
-input[value='Jo' i] + div > div:nth-child(3):after {
+input[value='Jo' i] + div > div:nth-child(2):after {
 content: '🕸\A I built my first personal website when I was 12.'
+}
+input[value='Jo' i] + div > div:nth-child(3) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-fanette.jpg);
+display: block;
+}
+input[value='Jo' i] + div > div:nth-child(3):before {
+content: 'Fanette \e64a \e66f bard\A Demand Generation Specialist'
+}
+input[value='Jo' i] + div > div:nth-child(3):after {
+content: '🌯\A I have secretly started a collection of weird t-shirts (the ones picturing cats, the galaxy, keyboards, pizza or burritos)'
 }
 input[value='Jos' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-josh.jpg);
@@ -15420,24 +15420,24 @@ input[value='Dobson' i] + div > div:nth-child(1):after {
 content: '🔟\A I\0027 ve played drums for over 10 years.'
 }
 input[value='Sé' i] + div > div:nth-child(1) {
-background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
-display: block;
-}
-input[value='Sé' i] + div > div:nth-child(1):before {
-content: 'Anthony \e653 \e665 ure\A Software Engineer'
-}
-input[value='Sé' i] + div > div:nth-child(1):after {
-content: '🎹\A How do I learn piano? Very slowly.'
-}
-input[value='Sé' i] + div > div:nth-child(2) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg);
 display: block;
 }
-input[value='Sé' i] + div > div:nth-child(2):before {
+input[value='Sé' i] + div > div:nth-child(1):before {
 content: '\e653 \e6e9 bastien Navizet\A Creative Designer'
 }
-input[value='Sé' i] + div > div:nth-child(2):after {
+input[value='Sé' i] + div > div:nth-child(1):after {
 content: '𝓢\A  I learned to read and write at 5 because I wanted to re-create circus billboards...Yeah, my love of typography and lettering began really early!'
+}
+input[value='Sé' i] + div > div:nth-child(2) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-anthony.jpg);
+display: block;
+}
+input[value='Sé' i] + div > div:nth-child(2):before {
+content: 'Anthony \e653 \e665 ure\A Software Engineer'
+}
+input[value='Sé' i] + div > div:nth-child(2):after {
+content: '🎹\A How do I learn piano? Very slowly.'
 }
 input[value='Séb' i] + div > div:nth-child(1) {
 background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-sebastien.jpg);

@@ -23,7 +23,7 @@ class Generate
       entry_table = QueryParser.index(person, keyword: person['name'])
       lookup_table = QueryParser.merge(lookup_table, entry_table)
     end
-    lookup_table = QueryParser.sort(lookup_table)
+    lookup_table = QueryParser.sort(lookup_table, 'order')
 
     css = CSSWriter.base
     css = CSSWriter.preload_images(css, @people)

@@ -267,6 +267,43 @@ describe(QueryParser) do
       expect(actual['clement'].length).to eq 2
       expect(actual['clément'].length).to eq 2
     end
+
+    it 'should order results based on match on first name / last name' do
+      # Given
+      record_1 = { 'objectID' => 1, 'name' => 'paul-louis nech' }
+      record_2 = { 'objectID' => 2, 'name' => 'neil richler' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'paul-louis nech')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'neil richler')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2)
+
+      # When
+      actual = QueryParser.sort(lookup_table)
+
+      # Then
+      expect(actual['ne'].length).to eq 2
+      expect(actual['ne'][0][:record]['name']).to eq 'neil richler'
+      expect(actual['ne'][1][:record]['name']).to eq 'paul-louis nech'
+    end
+
+    it 'should order equalities based on the specified customRanking' do
+      # Given
+      record_1 = { 'objectID' => 'foo', 'order' => 12, 'name' => 'clément leprovost' }
+      record_2 = { 'objectID' => 'bar', 'order' => 6, 'name' => 'dustin coates' }
+      record_3 = { 'objectID' => 'baz', 'order' => 3, 'name' => 'tim carry' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'clément leprovost')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'dustin coates')
+      entry_table_3 = QueryParser.index(record_3, keyword: 'tim carry')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2, entry_table_3)
+
+      # When
+      actual = QueryParser.sort(lookup_table, 'order')
+
+      # Then
+      expect(actual['c'].length).to eq 3
+      expect(actual['c'][0][:record]['name']).to eq 'clément leprovost'
+      expect(actual['c'][1][:record]['name']).to eq 'tim carry'
+      expect(actual['c'][2][:record]['name']).to eq 'dustin coates'
+    end
   end
 
   describe 'empty_query' do

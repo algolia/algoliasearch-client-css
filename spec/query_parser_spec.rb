@@ -306,6 +306,58 @@ describe(QueryParser) do
     end
   end
 
+  describe 'add_synonyms' do
+    it 'should add entries if original word is found' do
+      # Given
+      record = { 'objectID' => 'foo', 'name' => 'Rémy-Christophe' }
+      entry_table = QueryParser.index(record, keyword: 'Rémy-Christophe')
+      lookup_table = QueryParser.sort(entry_table)
+      synonyms = {
+        'Rémy-Christophe' => %w(rcs scala)
+      }
+
+      # When
+      actual = QueryParser.add_synonyms(lookup_table, synonyms)
+
+      # Then
+      expect(actual).to include 'rcs'
+      expect(actual).to include 'scala'
+    end
+
+    it 'should not add entries if original word not is found' do
+      # Given
+      record = { 'objectID' => 'foo', 'name' => 'Rémy-Christophe' }
+      entry_table = QueryParser.index(record, keyword: 'Rémy-Christophe')
+      lookup_table = QueryParser.sort(entry_table)
+      synonyms = {
+        'foo' => %w(rcs scala)
+      }
+
+      # When
+      actual = QueryParser.add_synonyms(lookup_table, synonyms)
+
+      # Then
+      expect(actual).to_not include 'rcs'
+    end
+
+    it 'should replace highlight with synonym' do
+      # Given
+      record = { 'objectID' => 'foo', 'name' => 'Rémy-Christophe' }
+      entry_table = QueryParser.index(record, keyword: 'Rémy-Christophe')
+      lookup_table = QueryParser.sort(entry_table)
+      synonyms = {
+        'Rémy-Christophe' => %w(rcs scala)
+      }
+
+      # When
+      actual = QueryParser.add_synonyms(lookup_table, synonyms)
+
+      # Then
+      expect(actual['rcs'][0][:highlight][:keyword]).to eq 'Rémy-Christophe'
+      expect(actual['rcs'][0][:highlight][:is_synonym]).to eq true
+    end
+  end
+
   describe 'empty_query' do
     it 'should create an entry for the empty query with one entry per person' do
       # Given

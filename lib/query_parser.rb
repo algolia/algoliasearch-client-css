@@ -120,6 +120,26 @@ class QueryParser
     lookup_table
   end
 
+  # Duplicate entries with ther synonyms
+  def self.add_synonyms(lookup_table, synonyms)
+    tmp_table = {}
+    lookup_table.each do |prefix, data|
+      # No synonym defined for this prefix
+      next unless synonyms.key?(prefix)
+
+      # Creating new entries for each synonym
+      synonyms[prefix].each do |synonym|
+        tmp_table[synonym] = data.map do |entry|
+          new_entry = Marshal.load(Marshal.dump(entry))
+          new_entry[:highlight][:is_synonym] = true
+          new_entry
+        end
+      end
+    end
+
+    merge(lookup_table, tmp_table)
+  end
+
   # Special entry for the empty query, that will contain all the records, with
   # dummy highlight info
   def self.empty_query(people, keyword_attribute)

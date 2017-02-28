@@ -16749,3 +16749,363 @@ content: 'Julien \e650 \e661 \e672 \e66f \e663 \e668 \e665 \A Customer Solutions
 input[value='Paroche' i] + div > div:nth-child(1):after {
 content: '👀\A I was born with blue eyes but one of them started to turn brown and stopped halfway. So I now have a bi-color eye!'
 }
+input[value='be' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg);
+display: block;
+}
+input[value='be' i] + div > div:nth-child(1):before {
+content: '\e658 \e661 \e676 \e669 \e665 \e672  \e647 \e672 \e661 \e66e \e664 \A Software Engineer'
+}
+input[value='be' i] + div > div:nth-child(1):after {
+content: '🛌\A I have slept at the office...twice!'
+}
+input[value='bee' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg);
+display: block;
+}
+input[value='bee' i] + div > div:nth-child(1):before {
+content: '\e658 \e661 \e676 \e669 \e665 \e672  \e647 \e672 \e661 \e66e \e664 \A Software Engineer'
+}
+input[value='bee' i] + div > div:nth-child(1):after {
+content: '🛌\A I have slept at the office...twice!'
+}
+input[value='beer' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-xavier.jpg);
+display: block;
+}
+input[value='beer' i] + div > div:nth-child(1):before {
+content: '\e658 \e661 \e676 \e669 \e665 \e672  \e647 \e672 \e661 \e66e \e664 \A Software Engineer'
+}
+input[value='beer' i] + div > div:nth-child(1):after {
+content: '🛌\A I have slept at the office...twice!'
+}
+input[value='je' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='je' i] + div > div:nth-child(1):before {
+content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e66f \e66e \e674 \A Full-Stack Software Engineer'
+}
+input[value='je' i] + div > div:nth-child(1):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='jer' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='jer' i] + div > div:nth-child(1):before {
+content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e66f \e66e \e674 \A Full-Stack Software Engineer'
+}
+input[value='jer' i] + div > div:nth-child(1):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='jers' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='jers' i] + div > div:nth-child(1):before {
+content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e66f \e66e \e674 \A Full-Stack Software Engineer'
+}
+input[value='jers' i] + div > div:nth-child(1):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='jersk' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='jersk' i] + div > div:nth-child(1):before {
+content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e66f \e66e \e674 \A Full-Stack Software Engineer'
+}
+input[value='jersk' i] + div > div:nth-child(1):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='jerksa' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-matthieu.jpg);
+display: block;
+}
+input[value='jerksa' i] + div > div:nth-child(1):before {
+content: '\e64d \e661 \e674 \e674 \e668 \e669 \e665 \e675  \e644 \e675 \e66d \e66f \e66e \e674 \A Full-Stack Software Engineer'
+}
+input[value='jerksa' i] + div > div:nth-child(1):after {
+content: '🍛\A I can eat a kebab and then a full Chinese menu.'
+}
+input[value='cs' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+display: block;
+}
+input[value='cs' i] + div > div:nth-child(1):before {
+content: '\e654 \e669 \e66d  \e643 \e661 \e672 \e672 \e679 \A Full-Stack Software Engineer'
+}
+input[value='cs' i] + div > div:nth-child(1):after {
+content: '🌽\A I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.'
+}
+input[value='css' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-tim.jpg);
+display: block;
+}
+input[value='css' i] + div > div:nth-child(1):before {
+content: '\e654 \e669 \e66d  \e643 \e661 \e672 \e672 \e679 \A Full-Stack Software Engineer'
+}
+input[value='css' i] + div > div:nth-child(1):after {
+content: '🌽\A I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.'
+}
+input[value='pi' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+display: block;
+}
+input[value='pi' i] + div > div:nth-child(1):before {
+content: '\e647 \e669 \e661 \e66e \e66c \e675 \e663 \e661  \e642 \e661 \e672 \e667 \e665 \e66c \e66c \e669 \A Full-Stack Software Engineer'
+}
+input[value='pi' i] + div > div:nth-child(1):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
+}
+input[value='piz' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+display: block;
+}
+input[value='piz' i] + div > div:nth-child(1):before {
+content: '\e647 \e669 \e661 \e66e \e66c \e675 \e663 \e661  \e642 \e661 \e672 \e667 \e665 \e66c \e66c \e669 \A Full-Stack Software Engineer'
+}
+input[value='piz' i] + div > div:nth-child(1):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
+}
+input[value='pizz' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+display: block;
+}
+input[value='pizz' i] + div > div:nth-child(1):before {
+content: '\e647 \e669 \e661 \e66e \e66c \e675 \e663 \e661  \e642 \e661 \e672 \e667 \e665 \e66c \e66c \e669 \A Full-Stack Software Engineer'
+}
+input[value='pizz' i] + div > div:nth-child(1):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
+}
+input[value='pizza' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-gianluca.jpg);
+display: block;
+}
+input[value='pizza' i] + div > div:nth-child(1):before {
+content: '\e647 \e669 \e661 \e66e \e66c \e675 \e663 \e661  \e642 \e661 \e672 \e667 \e665 \e66c \e66c \e669 \A Full-Stack Software Engineer'
+}
+input[value='pizza' i] + div > div:nth-child(1):after {
+content: '🖥\A I destroyed my first computer at the age of 8.'
+}
+input[value='rc' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='rc' i] + div > div:nth-child(1):before {
+content: '\e652 \e6e9 \e66d \e679 \e62d \e643 \e668 \e672 \e669 \e673 \e674 \e66f \e670 \e668 \e665  \e653 \e663 \e668 \e665 \e672 \e66d \e665 \e673 \e673 \e665 \e672 \A Software Engineer'
+}
+input[value='rc' i] + div > div:nth-child(1):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='rcs' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='rcs' i] + div > div:nth-child(1):before {
+content: '\e652 \e6e9 \e66d \e679 \e62d \e643 \e668 \e672 \e669 \e673 \e674 \e66f \e670 \e668 \e665  \e653 \e663 \e668 \e665 \e672 \e66d \e665 \e673 \e673 \e665 \e672 \A Software Engineer'
+}
+input[value='rcs' i] + div > div:nth-child(1):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='sc' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='sc' i] + div > div:nth-child(1):before {
+content: '\e652 \e6e9 \e66d \e679 \e62d \e643 \e668 \e672 \e669 \e673 \e674 \e66f \e670 \e668 \e665  \e653 \e663 \e668 \e665 \e672 \e66d \e665 \e673 \e673 \e665 \e672 \A Software Engineer'
+}
+input[value='sc' i] + div > div:nth-child(1):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='sca' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='sca' i] + div > div:nth-child(1):before {
+content: '\e652 \e6e9 \e66d \e679 \e62d \e643 \e668 \e672 \e669 \e673 \e674 \e66f \e670 \e668 \e665  \e653 \e663 \e668 \e665 \e672 \e66d \e665 \e673 \e673 \e665 \e672 \A Software Engineer'
+}
+input[value='sca' i] + div > div:nth-child(1):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='scal' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='scal' i] + div > div:nth-child(1):before {
+content: '\e652 \e6e9 \e66d \e679 \e62d \e643 \e668 \e672 \e669 \e673 \e674 \e66f \e670 \e668 \e665  \e653 \e663 \e668 \e665 \e672 \e66d \e665 \e673 \e673 \e665 \e672 \A Software Engineer'
+}
+input[value='scal' i] + div > div:nth-child(1):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='scala' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-rcs.jpg);
+display: block;
+}
+input[value='scala' i] + div > div:nth-child(1):before {
+content: '\e652 \e6e9 \e66d \e679 \e62d \e643 \e668 \e672 \e669 \e673 \e674 \e66f \e670 \e668 \e665  \e653 \e663 \e668 \e665 \e672 \e66d \e665 \e673 \e673 \e665 \e672 \A Software Engineer'
+}
+input[value='scala' i] + div > div:nth-child(1):after {
+content: '🤘\A I like death metal and paintings done before the 20th century.'
+}
+input[value='dr' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+display: block;
+}
+input[value='dr' i] + div > div:nth-child(1):before {
+content: '\e641 \e66e \e674 \e66f \e669 \e66e \e665  \e647 \e661 \e675 \e676 \e661 \e669 \e66e \A DevOps Engineer'
+}
+input[value='dr' i] + div > div:nth-child(1):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
+}
+input[value='drl' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+display: block;
+}
+input[value='drl' i] + div > div:nth-child(1):before {
+content: '\e641 \e66e \e674 \e66f \e669 \e66e \e665  \e647 \e661 \e675 \e676 \e661 \e669 \e66e \A DevOps Engineer'
+}
+input[value='drl' i] + div > div:nth-child(1):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
+}
+input[value='drlk' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+display: block;
+}
+input[value='drlk' i] + div > div:nth-child(1):before {
+content: '\e641 \e66e \e674 \e66f \e669 \e66e \e665  \e647 \e661 \e675 \e676 \e661 \e669 \e66e \A DevOps Engineer'
+}
+input[value='drlk' i] + div > div:nth-child(1):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
+}
+input[value='drlkf' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-antoine.jpg);
+display: block;
+}
+input[value='drlkf' i] + div > div:nth-child(1):before {
+content: '\e641 \e66e \e674 \e66f \e669 \e66e \e665  \e647 \e661 \e675 \e676 \e661 \e669 \e66e \A DevOps Engineer'
+}
+input[value='drlkf' i] + div > div:nth-child(1):after {
+content: '🍎\A I am the only Algolia employee who doesn\0027 t own an Apple product.'
+}
+input[value='pl' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
+display: block;
+}
+input[value='pl' i] + div > div:nth-child(1):before {
+content: '\e650 \e661 \e675 \e66c \e62d \e64c \e66f \e675 \e669 \e673  \e64e \e665 \e663 \e668 \A Software Engineer'
+}
+input[value='pl' i] + div > div:nth-child(1):after {
+content: '🔬\A I developed an app to introduce biology to everyone.'
+}
+input[value='pln' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-paul-louis.jpg);
+display: block;
+}
+input[value='pln' i] + div > div:nth-child(1):before {
+content: '\e650 \e661 \e675 \e66c \e62d \e64c \e66f \e675 \e669 \e673  \e64e \e665 \e663 \e668 \A Software Engineer'
+}
+input[value='pln' i] + div > div:nth-child(1):after {
+content: '🔬\A I developed an app to introduce biology to everyone.'
+}
+input[value='ho' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
+display: block;
+}
+input[value='ho' i] + div > div:nth-child(1):before {
+content: '\e64a \e661 \e66e  \e650 \e665 \e674 \e672 \A Software Engineer'
+}
+input[value='ho' i] + div > div:nth-child(1):after {
+content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
+}
+input[value='hon' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
+display: block;
+}
+input[value='hon' i] + div > div:nth-child(1):before {
+content: '\e64a \e661 \e66e  \e650 \e665 \e674 \e672 \A Software Engineer'
+}
+input[value='hon' i] + div > div:nth-child(1):after {
+content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
+}
+input[value='honz' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
+display: block;
+}
+input[value='honz' i] + div > div:nth-child(1):before {
+content: '\e64a \e661 \e66e  \e650 \e665 \e674 \e672 \A Software Engineer'
+}
+input[value='honz' i] + div > div:nth-child(1):after {
+content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
+}
+input[value='honza' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-honza.jpg);
+display: block;
+}
+input[value='honza' i] + div > div:nth-child(1):before {
+content: '\e64a \e661 \e66e  \e650 \e665 \e674 \e672 \A Software Engineer'
+}
+input[value='honza' i] + div > div:nth-child(1):after {
+content: '👃\A People think I have a broken nose. That\0027 s not true, I was just born like that.'
+}
+input[value='fl' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+display: block;
+}
+input[value='fl' i] + div > div:nth-child(1):before {
+content: '\e645 \e66d \e669 \e66c \e679  \e648 \e661 \e679 \e66d \e661 \e66e \A Customer Solutions Engineer'
+}
+input[value='fl' i] + div > div:nth-child(1):after {
+content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}
+input[value='fle' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+display: block;
+}
+input[value='fle' i] + div > div:nth-child(1):before {
+content: '\e645 \e66d \e669 \e66c \e679  \e648 \e661 \e679 \e66d \e661 \e66e \A Customer Solutions Engineer'
+}
+input[value='fle' i] + div > div:nth-child(1):after {
+content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}
+input[value='flex' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+display: block;
+}
+input[value='flex' i] + div > div:nth-child(1):before {
+content: '\e645 \e66d \e669 \e66c \e679  \e648 \e661 \e679 \e66d \e661 \e66e \A Customer Solutions Engineer'
+}
+input[value='flex' i] + div > div:nth-child(1):after {
+content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}
+input[value='flexb' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+display: block;
+}
+input[value='flexb' i] + div > div:nth-child(1):before {
+content: '\e645 \e66d \e669 \e66c \e679  \e648 \e661 \e679 \e66d \e661 \e66e \A Customer Solutions Engineer'
+}
+input[value='flexb' i] + div > div:nth-child(1):after {
+content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}
+input[value='flexbo' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+display: block;
+}
+input[value='flexbo' i] + div > div:nth-child(1):before {
+content: '\e645 \e66d \e669 \e66c \e679  \e648 \e661 \e679 \e66d \e661 \e66e \A Customer Solutions Engineer'
+}
+input[value='flexbo' i] + div > div:nth-child(1):after {
+content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}
+input[value='flexbox' i] + div > div:nth-child(1) {
+background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-emily.jpg);
+display: block;
+}
+input[value='flexbox' i] + div > div:nth-child(1):before {
+content: '\e645 \e66d \e669 \e66c \e679  \e648 \e661 \e679 \e66d \e661 \e66e \A Customer Solutions Engineer'
+}
+input[value='flexbox' i] + div > div:nth-child(1):after {
+content: '🇺🇸\A I\0027 ve been to all the states in the contiguous US'
+}

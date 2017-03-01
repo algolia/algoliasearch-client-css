@@ -83,16 +83,28 @@ class CSSWriter
       facets.each do |facet_name, values|
         counts[prefix].push(name: facet_name, count: values.length)
       end
+      counts[prefix] = counts[prefix].sort_by { |facet| facet[:count] }.reverse
     end
 
-    # Create the CSS rules
+    # We first add all the facets, considering the empty query as the default
+    facet_to_position = {}
+    counts['__EMPTY_QUERY__'].each.with_index do |facet, i|
+      facet_to_position[facet[:name]] = i
+      # Filling in the default name and count
+      base_selector = "input[type='text'] ~ aside > label:nth-child(#{i + 1})"
+      css << "#{base_selector}:before { content: '#{facet[:name]}'; }"
+      css << "#{base_selector}:after { content: '#{facet[:count]}'; }"
+      # All displaying them all for the empty query
+      css << 'input[value=""] ~ aside > label { display: block; }'
+    end
+
+    # For specific queries, show only the one that match
     counts.each do |prefix, facets|
-      prefix = '' if prefix == '__EMPTY_QUERY__'
-      facets = facets.sort_by { |facet| facet[:count] }.reverse
-      facets.each.with_index do |facet, i|
-        base_selector = "input[value='#{prefix}' i] ~ aside > label:nth-child(#{i + 1})"
-        css << "#{base_selector} { display: block; }"
-        css << "#{base_selector}:before { content: '#{facet[:name]}'; }"
+      next if prefix == '__EMPTY_QUERY__'
+      facets.each.with_index do |facet, facet_order|
+        label_index = facet_to_position[facet[:name]]
+        base_selector = "input[value='#{prefix}' i] ~ aside > label:nth-child(#{label_index + 1})"
+        css << "#{base_selector} { display: block; order: #{facet_order}; }"
         css << "#{base_selector}:after { content: '#{facet[:count]}'; }"
       end
     end

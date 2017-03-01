@@ -192,6 +192,4 @@ input[type="text"] ~ aside label:after {
   font-weight: bold;
   text-align: center;
   background: #9D9DBD;
-
-  /* background:  */
 }

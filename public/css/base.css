@@ -148,6 +148,7 @@ input[type="text"] ~ section a:hover div:before {
 }
 
 /* Facets */
+input[type="radio"] { display: none; }
 input[type="text"] ~ aside {
   display: flex;
   flex-flow: row wrap;
@@ -192,4 +193,13 @@ input[type="text"] ~ aside label:after {
   font-weight: bold;
   text-align: center;
   background: #9D9DBD;
+}
+input[type="text"] ~ aside label[for="\e666"] { 
+  background: #3369E7;
+  color: white;
+  border-color: #3369E7;
+  display: none; 
+}
+input[type="text"] ~ aside label[for="\e666"]:after { 
+  background: #3369E7;
 }

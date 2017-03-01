@@ -42,6 +42,7 @@ class CSSWriter
         next
       end
       private_char_code = char_code + 58_880
+      
       css_char = private_char_code.to_s(16)
 
       highlighted_text += '\\' + css_char + ' '
@@ -88,17 +89,23 @@ class CSSWriter
 
     # We first add all the facets, considering the empty query as the default
     facet_to_position = {}
+    position_to_facet = {}
     counts['__EMPTY_QUERY__'].each.with_index do |facet, i|
       facet_to_position[facet[:name]] = i
+      position_to_facet[i] = facet[:name]
+
       # Filling in the default name and count
       base_selector = "input[type='text'] ~ aside > label:nth-child(#{i + 1})"
+      css << "#{base_selector} { order: #{i + 1}; }"
       css << "#{base_selector}:before { content: '#{facet[:name]}'; }"
       css << "#{base_selector}:after { content: '#{facet[:count]}'; }"
-      # All displaying them all for the empty query
-      css << 'input[value=""] ~ aside > label { display: block; }'
     end
 
-    # For specific queries, show only the one that match
+    # And displaying them all for the empty query
+    css << 'input[value=""] ~ aside > label { display: block; }'
+
+    # For specific queries, show only the one that match, and put them in the
+    # correct order
     counts.each do |prefix, facets|
       next if prefix == '__EMPTY_QUERY__'
       facets.each.with_index do |facet, facet_order|
@@ -109,6 +116,27 @@ class CSSWriter
       end
     end
 
+    # Clicking on a facet should hide the facet will activate the
+    # corresponding radio. We will hide the matching label, and display
+    # a placeholder mimicking the one that was just clicked, and display it as
+    # "selected". Clicking on it will actually select nothing, acting as if we
+    # unselected the current one
+    facet_count = facet_to_position.keys.length
+    facet_count.times do |index|
+      utf8 = [(58_944 + index).to_s(16).hex].pack('U')
+      # Hide the original one
+      css << "##{utf8}:checked ~ aside label[for='#{utf8}'] { display:none; }"
+      # Show the "fake" one
+      facet_name = position_to_facet[index]
+      facet_count = all_facets['__EMPTY_QUERY__'][facet_name].length
+      css << "##{utf8}:checked ~ aside label[for=''] { display:block; order: #{index + 1}; }"
+      css << "##{utf8}:checked ~ aside label[for='']:before { content: '#{facet_name}'; }"
+      css << "##{utf8}:checked ~ aside label[for='']:after { content: '#{facet_count}'; }"
+    end
+
     css
+  end
+
+  def self.add_facet_results(css, all_facets)
   end
 end

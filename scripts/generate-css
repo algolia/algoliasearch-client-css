@@ -38,7 +38,7 @@ class Generate
 
     lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.add_synonyms(lookup_table, @synonyms)
-    lookup_table = QueryParser.add_typos(lookup_table)
+    # lookup_table = QueryParser.add_typos(lookup_table)
     lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.sort(lookup_table, 'order')
 

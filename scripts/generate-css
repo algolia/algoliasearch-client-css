@@ -39,6 +39,7 @@ class Generate
     lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.add_synonyms(lookup_table, @synonyms)
     lookup_table = QueryParser.add_typos(lookup_table)
+    lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.sort(lookup_table, 'order')
 
     css = CSSWriter.base
@@ -47,7 +48,11 @@ class Generate
       css.push(CSSWriter.rule(prefix, entry))
     end
 
-    File.write("#{@root}/public/css/generated.css", css.join("\n"))
+    main_css = File.read("#{@root}/public/css/base.css")
+    final_css = main_css + css.join('')
+
+
+    File.write("#{@root}/public/css/main.css", final_css)
   end
 end
 Generate.new.run

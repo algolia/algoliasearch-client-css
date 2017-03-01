@@ -26,7 +26,7 @@ class CSSWriter
       css << '}'
     end
 
-    css.join("\n")
+    css.join('')
   end
 
   # Highlighting is done using characters in the private area of Unicode

@@ -178,4 +178,29 @@ class QueryParser
     end
     table
   end
+
+  # Generate a hash of facets for each prefix and specified facet
+  def self.generate_facets(lookup_table, facet_name, dataset = [])
+    facets = { '__EMPTY_QUERY__' => {} }
+    lookup_table.each do |prefix, entries|
+      facet = {}
+      entries.each do |entry|
+        facet_value = entry[:record][facet_name]
+        facet[facet_value] = [] unless facet.key? facet_value
+        facet[facet_value].push(entry[:record]['objectID'])
+      end
+      facets[prefix] = facet
+    end
+
+    # Adding the empty query
+    facet_empty = {}
+    dataset.each do |data|
+      facet_value = data[facet_name]
+      facet_empty[facet_value] = [] unless facet_empty.key? facet_value
+      facet_empty[facet_value].push(data['objectID'])
+    end
+    facets['__EMPTY_QUERY__'] = facet_empty
+
+    facets
+  end
 end

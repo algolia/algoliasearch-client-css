@@ -57,15 +57,15 @@ input[type="text"] {
   font: inherit;
 }
 
-input[type="text"] + div {
+input[type="text"] ~ section {
   display: flex;
   flex-flow: row wrap;
   margin: 1rem auto 0 auto;
   max-width: 1240px;
 }
 
-input[type="text"] + div div,
-input[type="text"] + div a {
+input[type="text"] ~ section div,
+input[type="text"] ~ section a {
   display: none;
   flex: 1 1 300px;
   height: 300px;
@@ -78,7 +78,7 @@ input[type="text"] + div a {
   padding-top: 220px;
   position: relative;
 }
-input[type="text"] + div div:before {
+input[type="text"] ~ section div:before {
   text-align:center;
   display: block;
   white-space: pre;
@@ -88,14 +88,14 @@ input[type="text"] + div div:before {
   font-family: 'Raleway';
 }
 /* Name (overriding role) */
-input[type="text"] + div div:first-line {
+input[type="text"] ~ section div:first-line {
   font-style: normal;
   font-weight:bold;
   font-size: 1.2rem;
   line-height: 2rem;
   font-family: 'Highlight';
 }
-input[type="text"] + div div:after {
+input[type="text"] ~ section div:after {
   display: flex;
   height: 200px;
   width: 180px;
@@ -116,33 +116,82 @@ input[type="text"] + div div:after {
   opacity: 0;
   transition: opacity 0.12s ease-in;
 }
-input[type="text"] + div div:hover:after {
+input[type="text"] ~ section div:hover:after {
   opacity: 1;
 }
 
 /* Open positions link */
-input[type="text"] + div a {
+input[type="text"] ~ section a {
   display: block;
   height: auto;
   padding: 0;
   color: #182359;
   text-decoration: none;
 }
-input[type="text"] + div a div {
+input[type="text"] ~ section a div {
   display: block;
   margin: 0;
   flex: none;
   background-image:url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-you.jpg)
 }
-input[type="text"] + div a div:before {
+input[type="text"] ~ section a div:before {
   content: 'We are hiring\A See open positions';
   color: #00aeff;
   font-style: normal;
 }
-input[type="text"] + div a div:first-line {
+input[type="text"] ~ section a div:first-line {
   color: #182359;
 }
-input[type="text"] + div a:hover div:before {
+input[type="text"] ~ section a:hover div:before {
   color: #007ab3;
   font-weight: bold;
+}
+
+/* Facets */
+input[type="text"] ~ aside {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem auto 0 auto;
+  max-width: 1240px;
+  justify-content: center;
+}
+input[type="text"] ~ aside label {
+  position: relative;
+  display: none;
+  flex: 1 1 content;
+  margin: 0 0 10px 10px;
+  border: 2px solid #9d9dbd;
+  border-right: none;
+  border-radius: 9999px;
+  padding: 0 35px 0 .5rem;
+  height: 2rem;
+  line-height: 2rem;
+  color: #182359;
+  cursor: pointer;
+  overflow: hidden;
+}
+input[type="text"] ~ aside label:hover {
+  background: #00AEFF;
+  color: white;
+  border-color: #00AEFF;
+}
+input[type="text"] ~ aside label:hover:after {
+  background: #00AEFF;
+}
+input[type="text"] ~ aside label:before {
+}
+input[type="text"] ~ aside label:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 0px;
+  width: 30px;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: #9D9DBD;
+
+  /* background:  */
 }

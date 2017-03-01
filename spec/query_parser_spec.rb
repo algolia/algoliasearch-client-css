@@ -427,4 +427,46 @@ describe(QueryParser) do
       expect(actual).to include 'Dutin'
     end
   end
+
+  describe 'generate_facets' do
+    it 'should generate a for each prefix with the facets and objectID' do
+      # Given
+      record_1 = { 'objectID' => 'foo', 'team' => 'Community' }
+      record_2 = { 'objectID' => 'bar', 'team' => 'Sales' }
+      record_3 = { 'objectID' => 'baz', 'team' => 'Sales' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'foo')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'bar')
+      entry_table_3 = QueryParser.index(record_3, keyword: 'baz')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2, entry_table_3)
+
+      # When
+      actual = QueryParser.generate_facets(lookup_table, 'team')
+
+      # Then
+      expect(actual).to include 'f'
+      expect(actual['f']).to include 'Community'
+      expect(actual['f']['Community']).to include 'foo'
+      expect(actual['b']['Sales']).to include 'bar'
+      expect(actual['b']['Sales']).to include 'baz'
+    end
+
+    it 'should generate facets for the empty query' do
+      # Given
+      inputs = [
+        { 'objectID' => 'foo', 'team' => 'Community' },
+        { 'objectID' => 'bar', 'team' => 'Sales' },
+        { 'objectID' => 'baz', 'team' => 'Sales' }
+      ]
+
+      # When
+      actual = QueryParser.generate_facets({}, 'team', inputs)
+
+      # Then
+      expect(actual).to include '__EMPTY_QUERY__'
+      expect(actual['__EMPTY_QUERY__']).to include 'Community'
+      expect(actual['__EMPTY_QUERY__']['Community']).to include 'foo'
+      expect(actual['__EMPTY_QUERY__']['Sales']).to include 'bar'
+      expect(actual['__EMPTY_QUERY__']['Sales']).to include 'baz'
+    end
+  end
 end

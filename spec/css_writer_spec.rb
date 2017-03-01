@@ -75,8 +75,8 @@ describe(CSSWriter) do
       actual = CSSWriter.rule(keyword, entries)
 
       # Then
-      expect(actual).to include "input[value='foo' i] + div div:nth-child(1) {"
-      expect(actual).to include "input[value='foo' i] + div div:nth-child(2) {"
+      expect(actual).to include "input[value='foo' i] + div > div:nth-child(1) {"
+      expect(actual).to include "input[value='foo' i] + div > div:nth-child(2) {"
     end
 
     it 'should handle the empty query special case' do
@@ -88,7 +88,7 @@ describe(CSSWriter) do
       actual = CSSWriter.rule(keyword, entries)
 
       # Then
-      expect(actual).to include "input[value='' i] + div div:nth-child(1) {"
+      expect(actual).to include "input[value='' i] + div > div:nth-child(1) {"
     end
   end
 

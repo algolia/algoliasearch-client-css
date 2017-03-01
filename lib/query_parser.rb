@@ -145,6 +145,24 @@ class QueryParser
     merge(lookup_table, tmp_table)
   end
 
+  # Add entries for common typos
+  def self.add_typos(lookup_table)
+    min_length = 4
+    tmp_table = {}
+    lookup_table.each do |prefix, data|
+      length = prefix.length
+      next if length < min_length
+      next if prefix.include? ' '
+
+      (1..length - 2).each do |index|
+        typoed_prefix = "#{prefix[0..index-1]}#{prefix[index+1..-1]}"
+        tmp_table[typoed_prefix] = data
+      end
+    end
+
+    merge(lookup_table, tmp_table)
+  end
+
   # Special entry for the empty query, that will contain all the records, with
   # dummy highlight info
   def self.empty_query(people, keyword_attribute)

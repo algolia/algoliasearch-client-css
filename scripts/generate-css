@@ -15,19 +15,8 @@ class Generate
       person['image'] = CSSWriter.cloudinary(image)
       person
     end
-  end
 
-  def run
-    lookup_table = QueryParser.empty_query(@people, 'name')
-    @people.each do |person|
-      entry_table = QueryParser.index(person, keyword: person['name'])
-      lookup_table = QueryParser.merge(lookup_table, entry_table)
-    end
-
-    lookup_table = QueryParser.uniq(lookup_table)
-
-    # Adding synonyms
-    synonyms = {
+    @synonyms = {
       'Paul-Louis Nech' => %w(pl pln),
       'Matthieu Dumont' => %w(je jer jers jersk jerska),
       'Gianluca Bargelli' => %w(pi piz pizz pizza),
@@ -38,10 +27,19 @@ class Generate
       'Emily Hayman' => %w(fl fle flex flexb flexbo flexbox),
       'Rémy-Christophe Schermesser' => %w(rc rcs sc sca scal scala)
     }
-    lookup_table = QueryParser.add_synonyms(lookup_table, synonyms)
-    
-    lookup_table = QueryParser.sort(lookup_table, 'order')
+  end
 
+  def run
+    lookup_table = QueryParser.empty_query(@people, 'name')
+    @people.each do |person|
+      entry_table = QueryParser.index(person, keyword: person['name'])
+      lookup_table = QueryParser.merge(lookup_table, entry_table)
+    end
+
+    lookup_table = QueryParser.uniq(lookup_table)
+    lookup_table = QueryParser.add_synonyms(lookup_table, @synonyms)
+    lookup_table = QueryParser.add_typos(lookup_table)
+    lookup_table = QueryParser.sort(lookup_table, 'order')
 
     css = CSSWriter.base
     css = CSSWriter.preload_images(css, @people)

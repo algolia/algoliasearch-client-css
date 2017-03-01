@@ -56,8 +56,11 @@ class CSSWriter
 
   # Get the Cloudinary link to an image
   def self.cloudinary(url)
-    'https://res.cloudinary.com/pixelastic-parisweb/image/fetch/' \
-    "w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/#{url}"
+    # Our cloudinary account is mappting the /team virtual directory to the
+    # asset directory of algolia.com
+    # t_looflirpa is the name of the named transformation
+    'https://res.cloudinary.com/hilnmyskv/image/upload/t_looflirpa/team/' \
+      + url.split('/')[-1]
   end
 
   # Preload all images by loading the images in the body background

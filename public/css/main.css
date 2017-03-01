@@ -56,7 +56,8 @@ input[type="text"] {
 input[type="text"] + div {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 1rem;
+  margin: 1rem auto 0 auto;
+  max-width: 1240px;
 }
 
 input[type="text"] + div div,
@@ -65,7 +66,7 @@ input[type="text"] + div a {
   flex: 1 1 300px;
   height: 300px;
   max-width: 300px;
-  margin: 0 0 1rem 1rem;;
+  margin: 0 0 10px 10px;
   background-repeat: no-repeat;
   background-position: 50% 0px;
   background-size: 200px;

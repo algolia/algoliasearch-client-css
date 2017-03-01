@@ -409,4 +409,22 @@ describe(QueryParser) do
       expect(actual['__EMPTY_QUERY__'][0][:highlight][:after]).to eq nil
     end
   end
+
+  describe 'add_typos' do
+    it 'should add typos of missing previous to last character' do
+      record = { 'objectID' => 'foo' }
+      entry_table = QueryParser.index(record, keyword: 'Dustin')
+      lookup_table = QueryParser.sort(entry_table)
+
+      # When
+      actual = QueryParser.add_typos(lookup_table)
+
+      # Then
+      expect(actual).to include 'Dustin'
+      expect(actual).to include 'Dut'
+      expect(actual).to include 'Dusi'
+      expect(actual).to include 'Dustn'
+      expect(actual).to include 'Dutin'
+    end
+  end
 end

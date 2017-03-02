@@ -428,12 +428,31 @@ describe(QueryParser) do
     end
   end
 
-  describe 'generate_facets' do
-    it 'should generate a for each prefix with the facets and objectID' do
+  fdescribe 'generate_facets' do
+    it 'should generate an entry with potential facets for each prefix' do
       # Given
-      record_1 = { 'objectID' => 'foo', 'team' => 'Community' }
-      record_2 = { 'objectID' => 'bar', 'team' => 'Sales' }
-      record_3 = { 'objectID' => 'baz', 'team' => 'Sales' }
+      record_1 = { 'objectID' => 0, 'team' => 'Community' }
+      record_2 = { 'objectID' => 1, 'team' => 'Sales' }
+      record_3 = { 'objectID' => 2, 'team' => 'Marketing' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'aaa')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'abb')
+      entry_table_3 = QueryParser.index(record_3, keyword: 'abc')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2, entry_table_3)
+
+      # When
+      actual = QueryParser.generate_facets(lookup_table, 'team')
+
+      # Then
+      expect(actual['a'].length).to eq 3
+      expect(actual['ab'].length).to eq 2
+      expect(actual['abc'].length).to eq 1
+    end
+
+    it 'should have the facet name, count and items' do
+      # Given
+      record_1 = { 'objectID' => 0, 'team' => 'Community' }
+      record_2 = { 'objectID' => 1, 'team' => 'Sales' }
+      record_3 = { 'objectID' => 2, 'team' => 'Sales' }
       entry_table_1 = QueryParser.index(record_1, keyword: 'foo')
       entry_table_2 = QueryParser.index(record_2, keyword: 'bar')
       entry_table_3 = QueryParser.index(record_3, keyword: 'baz')
@@ -443,19 +462,36 @@ describe(QueryParser) do
       actual = QueryParser.generate_facets(lookup_table, 'team')
 
       # Then
-      expect(actual).to include 'f'
-      expect(actual['f']).to include 'Community'
-      expect(actual['f']['Community']).to include 'foo'
-      expect(actual['b']['Sales']).to include 'bar'
-      expect(actual['b']['Sales']).to include 'baz'
+      expect(actual['ba'][0][:name]).to eq 'Sales'
+      expect(actual['ba'][0][:count]).to eq 2
+      expect(actual['ba'][0][:items]).to include 1
+      expect(actual['ba'][0][:items]).to include 2
+    end
+
+    it 'should sort facets by count' do
+      # Given
+      record_1 = { 'objectID' => 0, 'team' => 'Community' }
+      record_2 = { 'objectID' => 1, 'team' => 'Sales' }
+      record_3 = { 'objectID' => 2, 'team' => 'Sales' }
+      entry_table_1 = QueryParser.index(record_1, keyword: 'aaa')
+      entry_table_2 = QueryParser.index(record_2, keyword: 'abb')
+      entry_table_3 = QueryParser.index(record_3, keyword: 'abc')
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2, entry_table_3)
+
+      # When
+      actual = QueryParser.generate_facets(lookup_table, 'team')
+
+      # Then
+      expect(actual['a'][0][:name]).to eq 'Sales'
+      expect(actual['a'][1][:name]).to eq 'Community'
     end
 
     it 'should generate facets for the empty query' do
       # Given
       inputs = [
-        { 'objectID' => 'foo', 'team' => 'Community' },
-        { 'objectID' => 'bar', 'team' => 'Sales' },
-        { 'objectID' => 'baz', 'team' => 'Sales' }
+        { 'objectID' => 0, 'team' => 'Community' },
+        { 'objectID' => 1, 'team' => 'Sales' },
+        { 'objectID' => 2, 'team' => 'Sales' }
       ]
 
       # When
@@ -463,10 +499,9 @@ describe(QueryParser) do
 
       # Then
       expect(actual).to include '__EMPTY_QUERY__'
-      expect(actual['__EMPTY_QUERY__']).to include 'Community'
-      expect(actual['__EMPTY_QUERY__']['Community']).to include 'foo'
-      expect(actual['__EMPTY_QUERY__']['Sales']).to include 'bar'
-      expect(actual['__EMPTY_QUERY__']['Sales']).to include 'baz'
+      expect(actual['__EMPTY_QUERY__'].length).to eq 2
+      expect(actual['__EMPTY_QUERY__'][0][:name]).to eq 'Sales'
+      expect(actual['__EMPTY_QUERY__'][1][:name]).to eq 'Community'
     end
   end
 end

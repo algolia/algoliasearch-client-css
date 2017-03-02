@@ -75,63 +75,62 @@ class CSSWriter
     css
   end
 
+  # Return a selector for the input with a specific query
+  def self.input(query)
+    "#i[value='#{query}' i]"
+  end
+
+
+
   # Apply facet counts
   def self.add_facet_counts(css, all_facets)
-    # Create an array with the name and count of each
-    counts = {}
+    # We start by pre-filling all the labels already in the page with their
+    # default names (they won't still have the correct count nor position, this
+    # will be handled on a prefix-by-prefix basis afterward).
+    # We also remember the radio and label selectors for ease of use afterward
+    facet_to_selectors = {}
+    all_facets['__EMPTY_QUERY__'].each.with_index do |facet, index|
+      facet_name = facet[:name]
+      label_selector = "label[for='f#{index}']"
+      radio_selector = "#f#{index}"
+
+      facet_to_selectors[facet_name] = {
+        label: label_selector,
+        radio: radio_selector
+      }
+
+      # Filling the labels with the names
+      css << "#{label_selector}:before { content: '#{facet_name}'; }"
+
+      # When clicking on any facet, we hide it, and display the placeholder with
+      # the new name instead
+      base_checked_selector = "#{radio_selector}:checked ~ aside "
+      css << "#{base_checked_selector} label[for=fx] { display: block; }"
+      css << "#{base_checked_selector} label[for=fx]:before { content: '#{facet_name}' }"
+    end
+    
+    # For each prefix, we will display the matching facets, and update their
+    # position and count
     all_facets.each do |prefix, facets|
-      counts[prefix] = [] unless counts.key? prefix
-      facets.each do |facet_name, values|
-        counts[prefix].push(name: facet_name, count: values.length)
+      prefix = '' if prefix == '__EMPTY_QUERY__'
+
+      facets.each.with_index do |facet, order|
+        facet_name = facet[:name]
+        facet_count = facet[:count]
+        label_selector = facet_to_selectors[facet_name][:label]
+        radio_selector = facet_to_selectors[facet_name][:radio]
+
+        selector = "#{input(prefix)} ~ aside #{label_selector}"
+        css << "#{selector} { display: block; order: #{order}; }"
+        css << "#{selector}:after { content: '#{facet_count}'; }"
+
+        # If a specific facet is selected, we hide it, but reflect the count and
+        # position in the placeholder
+        base_checked_selector = "#{radio_selector}:checked ~ #{input(prefix)} ~ aside "
+        css << "#{base_checked_selector} #{label_selector} { display: none; }"
+        css << "#{base_checked_selector} label[for=fx] { order: #{order}; }"
+        css << "#{base_checked_selector} label[for=fx]:after { content: '#{facet_count}'; }"
       end
-      counts[prefix] = counts[prefix].sort_by { |facet| facet[:count] }.reverse
-    end
-
-    # We first add all the facets, considering the empty query as the default
-    facet_to_position = {}
-    position_to_facet = {}
-    counts['__EMPTY_QUERY__'].each.with_index do |facet, i|
-      facet_to_position[facet[:name]] = i
-      position_to_facet[i] = facet[:name]
-
-      # Filling in the default name and count
-      base_selector = "input[type='text'] ~ aside > label:nth-child(#{i + 1})"
-      css << "#{base_selector} { order: #{i + 1}; }"
-      css << "#{base_selector}:before { content: '#{facet[:name]}'; }"
-      css << "#{base_selector}:after { content: '#{facet[:count]}'; }"
-    end
-
-    # And displaying them all for the empty query
-    css << 'input[value=""] ~ aside > label { display: block; }'
-
-    # For specific queries, show only the one that match, and put them in the
-    # correct order
-    counts.each do |prefix, facets|
-      next if prefix == '__EMPTY_QUERY__'
-      facets.each.with_index do |facet, facet_order|
-        label_index = facet_to_position[facet[:name]]
-        base_selector = "input[value='#{prefix}' i] ~ aside > label:nth-child(#{label_index + 1})"
-        css << "#{base_selector} { display: block; order: #{facet_order}; }"
-        css << "#{base_selector}:after { content: '#{facet[:count]}'; }"
-      end
-    end
-
-    # Clicking on a facet should hide the facet will activate the
-    # corresponding radio. We will hide the matching label, and display
-    # a placeholder mimicking the one that was just clicked, and display it as
-    # "selected". Clicking on it will actually select nothing, acting as if we
-    # unselected the current one
-    facet_count = facet_to_position.keys.length
-    facet_count.times do |index|
-      utf8 = [(58_944 + index).to_s(16).hex].pack('U')
-      # Hide the original one
-      css << "##{utf8}:checked ~ aside label[for='#{utf8}'] { display:none; }"
-      # Show the "fake" one
-      facet_name = position_to_facet[index]
-      facet_count = all_facets['__EMPTY_QUERY__'][facet_name].length
-      css << "##{utf8}:checked ~ aside label[for=''] { display:block; order: #{index + 1}; }"
-      css << "##{utf8}:checked ~ aside label[for='']:before { content: '#{facet_name}'; }"
-      css << "##{utf8}:checked ~ aside label[for='']:after { content: '#{facet_count}'; }"
     end
 
     css

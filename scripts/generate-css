@@ -53,7 +53,7 @@ class Generate
     end
 
     main_css = File.read("#{@root}/public/css/base.css")
-    final_css = main_css + css.join('')
+    final_css = main_css + css.join("\n")
 
 
     File.write("#{@root}/public/css/main.css", final_css)

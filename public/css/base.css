@@ -147,16 +147,21 @@ input[type="text"] ~ section a:hover div:before {
   font-weight: bold;
 }
 
-/* Facets */
-input[type="radio"] { display: none; }
-input[type="text"] ~ aside {
+
+/* input[type="radio"] { display: none; } */
+
+/**
+ * Facet labels are contained in an aside, and have a class from f0 to f6, with
+ * fx being special and used to display the currently selected facet
+ **/
+aside {
   display: flex;
   flex-flow: row wrap;
   margin: 1rem auto 0 auto;
   max-width: 1240px;
   justify-content: center;
 }
-input[type="text"] ~ aside label {
+label[for^=f] {
   position: relative;
   display: none;
   flex: 1 1 content;
@@ -171,17 +176,7 @@ input[type="text"] ~ aside label {
   cursor: pointer;
   overflow: hidden;
 }
-input[type="text"] ~ aside label:hover {
-  background: #00AEFF;
-  color: white;
-  border-color: #00AEFF;
-}
-input[type="text"] ~ aside label:hover:after {
-  background: #00AEFF;
-}
-input[type="text"] ~ aside label:before {
-}
-input[type="text"] ~ aside label:after {
+label[for^=f]:after {
   position: absolute;
   top: 0px;
   bottom: 0;
@@ -194,12 +189,25 @@ input[type="text"] ~ aside label:after {
   text-align: center;
   background: #9D9DBD;
 }
-input[type="text"] ~ aside label[for="\e666"] { 
+label[for^=f]:hover {
+  background: #00AEFF;
+  color: white;
+  border-color: #00AEFF;
+}
+label[for^=f]:hover:after {
+  background: #00AEFF;
+}
+/**
+ * This label is used to display the currently selected facet. Because it is
+ * linked to an "unused" radio button, users can "unselect" the facet by
+ * clicking on it
+ **/
+label[for=fx] { 
   background: #3369E7;
   color: white;
   border-color: #3369E7;
   display: none; 
 }
-input[type="text"] ~ aside label[for="\e666"]:after { 
+label[for=fx]:after { 
   background: #3369E7;
 }

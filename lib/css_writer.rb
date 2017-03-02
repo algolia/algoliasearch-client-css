@@ -3,27 +3,20 @@ require 'awesome_print'
 # Writes CSS rules that match a given LookupTable
 class CSSWriter
   # Given a prefix and an entry, should return the matching CSS rule
-  def self.rule(keyword, entries)
+  def self.rule(prefix, entries)
     css = []
-    keyword = '' if keyword == '__EMPTY_QUERY__'
+    prefix = '' if prefix == '__EMPTY_QUERY__'
 
     entries.each_with_index do |entry, i|
       h = entry[:highlight]
       content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
       quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
 
-      div_selector = " ~ section > div:nth-child(#{i + 1})"
+      base_selector = "#{input(prefix)} ~ section > div:nth-child(#{i + 1})"
 
-      css << "input[value='#{keyword}' i]#{div_selector} {"
-      css << "background-image: url(#{entry[:record]['image']});"
-      css << 'display: block;'
-      css << '}'
-      css << "input[value='#{keyword}' i]#{div_selector}:before {"
-      css << "content: '#{content}\\A #{entry[:record]['role']}'"
-      css << '}'
-      css << "input[value='#{keyword}' i]#{div_selector}:after {"
-      css << "content: '#{quote}'"
-      css << '}'
+      css << "#{base_selector} { display: block; background-image: url(#{entry[:record]['image']}); display: block; }"
+      css << "#{base_selector}:before { content: '#{content}\\A #{entry[:record]['role']}'; }"
+      css << "#{base_selector}:after { content: '#{quote}'; }"
     end
 
     css.join('')
@@ -42,7 +35,7 @@ class CSSWriter
         next
       end
       private_char_code = char_code + 58_880
-      
+
       css_char = private_char_code.to_s(16)
 
       highlighted_text += '\\' + css_char + ' '
@@ -79,8 +72,6 @@ class CSSWriter
   def self.input(query)
     "#i[value='#{query}' i]"
   end
-
-
 
   # Apply facet counts
   def self.add_facet_counts(css, all_facets)

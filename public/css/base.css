@@ -26,6 +26,8 @@ small {
   display: block;
   text-align: center;
 }
+a { color: #00AEFF; }
+img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 auto; display: block;}
 @font-face {
   font-family: 'Raleway';
   src: url('../fonts/Raleway.ttf') format('truetype');

@@ -155,6 +155,7 @@ class CSSWriter
 
         # We hide the results if the selected facet is not the facet of the
         # result
+        next unless all_facets.key? prefix
         all_facets[prefix].each do |facet|
           facet_name = facet[:name]
           attribute = facet[:attribute]

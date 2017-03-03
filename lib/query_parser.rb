@@ -212,6 +212,7 @@ class QueryParser
       facets.each do |facet_name, items|
         facet_list.push(
           name: facet_name,
+          attribute: attribute_for_facetting,
           items: items,
           count: items.length
         )

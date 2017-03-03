@@ -428,7 +428,7 @@ describe(QueryParser) do
     end
   end
 
-  fdescribe 'generate_facets' do
+  describe 'generate_facets' do
     it 'should generate an entry with potential facets for each prefix' do
       # Given
       record_1 = { 'objectID' => 0, 'team' => 'Community' }

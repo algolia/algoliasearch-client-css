@@ -4,22 +4,6 @@ require 'awesome_print'
 class CSSWriter
   # Given a prefix and an entry, should return the matching CSS rule
   def self.rule(prefix, entries)
-    css = []
-    prefix = '' if prefix == '__EMPTY_QUERY__'
-
-    entries.each_with_index do |entry, i|
-      h = entry[:highlight]
-      content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
-      quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
-
-      base_selector = "#{input(prefix)} ~ section > div:nth-child(#{i + 1})"
-
-      css << "#{base_selector} { display: block; background-image: url(#{entry[:record]['image']}); display: block; }"
-      css << "#{base_selector}:before { content: '#{content}\\A #{entry[:record]['role']}'; }"
-      css << "#{base_selector}:after { content: '#{quote}'; }"
-    end
-
-    css.join('')
   end
 
   # Highlighting is done using characters in the private area of Unicode
@@ -73,14 +57,11 @@ class CSSWriter
     "#i[value='#{query}' i]"
   end
 
-  # Apply facet counts
-  def self.add_facet_counts(css, all_facets)
-    # We start by pre-filling all the labels already in the page with their
-    # default names (they won't still have the correct count nor position, this
-    # will be handled on a prefix-by-prefix basis afterward).
-    # We also remember the radio and label selectors for ease of use afterward
+  # Create a hash table of the list of all facets, and the way to target the
+  # corresponding radio or label
+  def self.facet_selectors(empty_query_facet)
     facet_to_selectors = {}
-    all_facets['__EMPTY_QUERY__'].each.with_index do |facet, index|
+    empty_query_facet.each.with_index do |facet, index|
       facet_name = facet[:name]
       label_selector = "label[for='f#{index}']"
       radio_selector = "#f#{index}"
@@ -89,6 +70,22 @@ class CSSWriter
         label: label_selector,
         radio: radio_selector
       }
+    end
+
+    facet_to_selectors
+  end
+
+  # Apply facet counts
+  def self.add_facet_counts(css, all_facets)
+    # We start by pre-filling all the labels already in the page with their
+    # default names (they won't still have the correct count nor position, this
+    # will be handled on a prefix-by-prefix basis afterward).
+    # We also remember the radio and label selectors for ease of use afterward
+    facet_to_selectors = facet_selectors(all_facets['__EMPTY_QUERY__'])
+    all_facets['__EMPTY_QUERY__'].each.with_index do |facet, index|
+      facet_name = facet[:name]
+      label_selector = facet_to_selectors[facet_name][:label]
+      radio_selector = facet_to_selectors[facet_name][:radio]
 
       # Filling the labels with the names
       css << "#{label_selector}:before { content: '#{facet_name}'; }"
@@ -104,9 +101,11 @@ class CSSWriter
     # position and count
     all_facets.each do |prefix, facets|
       prefix = '' if prefix == '__EMPTY_QUERY__'
+      available_facets = []
 
       facets.each.with_index do |facet, order|
         facet_name = facet[:name]
+        available_facets.push(facet_name)
         facet_count = facet[:count]
         label_selector = facet_to_selectors[facet_name][:label]
         radio_selector = facet_to_selectors[facet_name][:radio]
@@ -122,11 +121,58 @@ class CSSWriter
         css << "#{base_checked_selector} label[for=fx] { order: #{order}; }"
         css << "#{base_checked_selector} label[for=fx]:after { content: '#{facet_count}'; }"
       end
+
+      # If a facet is currently selected, but this facet is not available for
+      # this query, we need to specify that we want to hide it
+      facet_to_selectors.each do |facet_name, selectors|
+        next if available_facets.include? facet_name
+        css << "#{selectors[:radio]}:checked ~ #{input(prefix)} ~ aside label[for=fx] { display: none; }"
+      end
     end
 
     css
   end
 
-  def self.add_facet_results(css, all_facets)
+  def self.add_results(css, lookup_table, all_facets)
+    facet_to_selectors = facet_selectors(all_facets['__EMPTY_QUERY__'])
+
+    # Adding results for each prefix
+    lookup_table.each do |prefix, entries|
+      prefix_selector = prefix
+      prefix_selector = '' if prefix == '__EMPTY_QUERY__'
+
+      entries.each.with_index do |entry, i|
+        h = entry[:highlight]
+        content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
+        quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
+
+        base_selector = "#{input(prefix_selector)} ~ section > div:nth-child(#{i + 1})"
+
+        # We display the results for the prefix
+        css << "#{base_selector} { display: block; background-image: url(#{entry[:record]['image']}); display: block; }"
+        css << "#{base_selector}:before { content: '#{content}\\A #{entry[:record]['role']}'; }"
+        css << "#{base_selector}:after { content: '#{quote}'; }"
+
+        # We hide the results if the selected facet is not the facet of the
+        # result
+        all_facets[prefix].each do |facet|
+          facet_name = facet[:name]
+          attribute = facet[:attribute]
+          entry_facet_value = entry[:record][attribute]
+
+          # We skip if the selected facet is equal to the facet of this result
+          next if facet_name == entry_facet_value
+
+          # We hide the result that match an unselected facet
+          radio_selector = facet_to_selectors[facet_name][:radio]
+          checked_base_selector = "#{radio_selector}:checked ~ #{base_selector}"
+          css << "#{checked_base_selector} { display: none; }"
+        end
+
+      end
+    end
+
+
+    css
   end
 end

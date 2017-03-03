@@ -38,7 +38,7 @@ class Generate
 
     lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.add_synonyms(lookup_table, @synonyms)
-    # lookup_table = QueryParser.add_typos(lookup_table)
+    lookup_table = QueryParser.add_typos(lookup_table)
     lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.sort(lookup_table, 'order')
 
@@ -47,10 +47,7 @@ class Generate
     css = CSSWriter.base
     css = CSSWriter.preload_images(css, @people)
     css = CSSWriter.add_facet_counts(css, facets)
-
-    lookup_table.each do |prefix, entry|
-      css.push(CSSWriter.rule(prefix, entry))
-    end
+    css = CSSWriter.add_results(css, lookup_table, facets)
 
     main_css = File.read("#{@root}/public/css/base.css")
     final_css = main_css + css.join("\n")

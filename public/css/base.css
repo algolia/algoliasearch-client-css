@@ -1,13 +1,10 @@
-
 * { box-sizing: border-box; }
-
 body {
   color: #182359;
   background-color: #f6fffe;
   padding: 0rem 2rem;
   font-family: Raleway;
 }
-
 h1 {
   font-family: Raleway;
   position: relative;
@@ -25,12 +22,10 @@ h1:after {
   display: block;
   background-color: #2dde98;
 }
-
 small {
   display: block;
   text-align: center;
 }
-
 @font-face {
   font-family: 'Raleway';
   src: url('../fonts/Raleway.ttf') format('truetype');
@@ -43,8 +38,7 @@ small {
   font-weight: normal;
   font-style: normal;
 }
-
-input[type="text"] {
+#i {
   width: 50%;
   margin: 1rem 25% 1rem 25%;
   padding-left: .5rem;
@@ -57,15 +51,15 @@ input[type="text"] {
   font: inherit;
 }
 
-input[type="text"] ~ section {
+#i ~ section {
   display: flex;
   flex-flow: row wrap;
   margin: 1rem auto 0 auto;
   max-width: 1240px;
 }
 
-input[type="text"] ~ section div,
-input[type="text"] ~ section a {
+#i ~ section div,
+#i ~ section a {
   display: none;
   flex: 1 1 300px;
   height: 300px;
@@ -78,7 +72,7 @@ input[type="text"] ~ section a {
   padding-top: 220px;
   position: relative;
 }
-input[type="text"] ~ section div:before {
+#i ~ section div:before {
   text-align:center;
   display: block;
   white-space: pre;
@@ -88,14 +82,14 @@ input[type="text"] ~ section div:before {
   font-family: 'Raleway';
 }
 /* Name (overriding role) */
-input[type="text"] ~ section div:first-line {
+#i ~ section div:first-line {
   font-style: normal;
   font-weight:bold;
   font-size: 1.2rem;
   line-height: 2rem;
   font-family: 'Highlight';
 }
-input[type="text"] ~ section div:after {
+#i ~ section div:after {
   display: flex;
   height: 200px;
   width: 180px;
@@ -116,39 +110,39 @@ input[type="text"] ~ section div:after {
   opacity: 0;
   transition: opacity 0.12s ease-in;
 }
-input[type="text"] ~ section div:hover:after {
+#i ~ section div:hover:after {
   opacity: 1;
 }
 
 /* Open positions link */
-input[type="text"] ~ section a {
+#i ~ section a {
   display: block;
   height: auto;
   padding: 0;
   color: #182359;
   text-decoration: none;
 }
-input[type="text"] ~ section a div {
+#i ~ section a div {
   display: block;
   margin: 0;
   flex: none;
   background-image:url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-you.jpg)
 }
-input[type="text"] ~ section a div:before {
+#i ~ section a div:before {
   content: 'We are hiring\A See open positions';
   color: #00aeff;
   font-style: normal;
 }
-input[type="text"] ~ section a div:first-line {
+#i ~ section a div:first-line {
   color: #182359;
 }
-input[type="text"] ~ section a:hover div:before {
+#i ~ section a:hover div:before {
   color: #007ab3;
   font-weight: bold;
 }
 
 
-/* input[type="radio"] { display: none; } */
+input[type="radio"] { display: none; }
 
 /**
  * Facet labels are contained in an aside, and have a class from f0 to f6, with

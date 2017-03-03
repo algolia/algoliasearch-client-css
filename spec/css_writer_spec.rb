@@ -29,69 +29,6 @@ describe(CSSWriter) do
   end
   let(:multiple) { [tim[0], pln[0]] }
 
-  describe 'rule' do
-    it 'should have a rule for the exact word' do
-      # Given
-      keyword = 'foo'
-      entry = tim
-
-      # When
-      actual = CSSWriter.rule(keyword, entry)
-
-      # Then
-      expect(actual).to include "[value='foo'"
-    end
-
-    it 'should match in case-insensitive fashion' do
-      # Given
-      keyword = 'foo'
-      entry = tim
-
-      # When
-      actual = CSSWriter.rule(keyword, entry)
-
-      # Then
-      expect(actual).to include "[value='foo' i]"
-    end
-
-    it 'should have the image as background' do
-      # Given
-      keyword = 'foo'
-      entry = tim
-
-      # When
-      actual = CSSWriter.rule(keyword, entry)
-
-      # Then
-      expect(actual).to include 'background-image: url(foo)'
-    end
-
-    it 'should define multiple rules for multiple entries' do
-      # Given
-      keyword = 'foo'
-      entries = multiple
-
-      # When
-      actual = CSSWriter.rule(keyword, entries)
-
-      # Then
-      expect(actual).to include "input[value='foo' i] + div > div:nth-child(1) {"
-      expect(actual).to include "input[value='foo' i] + div > div:nth-child(2) {"
-    end
-
-    it 'should handle the empty query special case' do
-      # Given
-      keyword = '__EMPTY_QUERY__'
-      entries = tim
-
-      # When
-      actual = CSSWriter.rule(keyword, entries)
-
-      # Then
-      expect(actual).to include "input[value='' i] + div > div:nth-child(1) {"
-    end
-  end
-
   describe 'highlight' do
     it 'should change nothing if no highlight' do
       # Given

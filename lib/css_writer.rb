@@ -2,29 +2,27 @@ require 'awesome_print'
 
 # Writes CSS rules that match a given LookupTable
 class CSSWriter
-  # Given a prefix and an entry, should return the matching CSS rule
-  def self.rule(prefix, entries)
-  end
-
-  # Highlighting is done using characters in the private area of Unicode
-  def self.highlight(text)
-    return '' if text.nil?
-
-    highlighted_text = ''
-    text.split('').each do |char|
+  # From an highlight hash, return a string, replacing highlighted text with
+  # private unicode
+  def self.highlight(data)
+    # Highlighting the middle part
+    middle = data[:highlight] || ''
+    highlight = ''
+    middle.split('').each do |char|
       char_code = char.ord
       # There is no char for a space, so we keep it that way
       if char_code == 32
-        highlighted_text += ' '
+        highlight += ' '
         next
       end
       private_char_code = char_code + 58_880
 
       css_char = private_char_code.to_s(16)
 
-      highlighted_text += '\\' + css_char + ' '
+      highlight += '\\' + css_char + ' '
     end
-    highlighted_text
+
+    "#{data[:before]}#{highlight}#{data[:after]}"
   end
 
   # Base CSS to be added to the search
@@ -37,7 +35,7 @@ class CSSWriter
     # Our cloudinary account is mappting the /team virtual directory to the
     # asset directory of algolia.com
     # t_looflirpa is the name of the named transformation
-    'https://res.cloudinary.com/hilnmyskv/image/upload/t_looflirpa/team/' \
+    'https://res.cloudinary.com/hilnmyskv/image/upload/t_looflirpa,f_auto/team/' \
       + url.split('/')[-1]
   end
 
@@ -142,15 +140,18 @@ class CSSWriter
       prefix_selector = '' if prefix == '__EMPTY_QUERY__'
 
       entries.each.with_index do |entry, i|
-        h = entry[:highlight]
-        content = "#{h[:before]}#{highlight(h[:highlight])}#{h[:after]}"
+        name = entry[:record]['name']
+        name = highlight(entry[:highlights]['name']) if entry[:highlights].key? 'name'
+        role = entry[:record]['role']
+        role = highlight(entry[:highlights]['role']) if entry[:highlights].key? 'role'
+
         quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
 
         base_selector = "#{input(prefix_selector)} ~ section > div:nth-child(#{i + 1})"
 
         # We display the results for the prefix
         css << "#{base_selector} { display: block; background-image: url(#{entry[:record]['image']}); display: block; }"
-        css << "#{base_selector}:before { content: '#{content}\\A #{entry[:record]['role']}'; }"
+        css << "#{base_selector}:before { content: '#{name}\\A #{role}'; }"
         css << "#{base_selector}:after { content: '#{quote}'; }"
 
         # We hide the results if the selected facet is not the facet of the

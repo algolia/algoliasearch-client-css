@@ -17,9 +17,6 @@
     For this year April 1st, I coded a fake Algolia API client in CSS.
   </p>
   <p>
-    <img src="./screencast.gif" />
-  </p>
-  <p>
     It is not a real API client, but a carefully crafted CSS file that
     gives the illusion of search. There is no call to the API at all, everything is handled through CSS selectors (using and abusing
     <code>input[value='xxx']</code> selectors).
@@ -36,10 +33,22 @@
     You'll find below several versions with an increasing number of features but also increased file size. Let me know which one is the sweet spot for you.
   </p>
   <p>
-    Keep in mind that this is not to be used in production. It's an April's fool, but is also a nice playground for educational content and
-    explain how search works.
+    <a href="./facets.html"><img src="./screencast.gif" /></a>
   </p>
-  <h2>#1: <a href="./basic.html">Basic search</a> (CSS Filesize: 800Kb)</h2>
+  <ul>
+    <li><a href="./basic.html">Simple search</a> (800Kb)</li> 
+    <li><a href="./roles.html">Simple search + search in job title</a> (2.2Mb)</li> 
+    <li><a href="./facets.html">Simple search + facetting</a> (2.3Mb)</li> 
+    <li><a href="./typos.html">Simple search + 1-letter typos</a> (2.2Mb)</li> 
+    <li><a href="./facets-roles.html">Simple search + search in job title + facetting</a> (4.4Mb)</li> 
+    <li><a href="./roles-typos.html">Simple search + search in job title + typos</a> (5.0Mb)</li> 
+    <li><a href="./facets-typos.html">Simple search + facetting + typos</a> (5.7Mb)</li> 
+    <li><a href="./full.html">Simple search + search in job titles + facetting + typos</a> (11Mb 😭)</li>
+  </ul>
+  <p>
+    Each new feature add more weight to the CSS file, up to a point where you feel your browser is actually having trouble parsing them all.
+  </p>
+  <h2>#1: <a href="./basic.html">Basic search</a></h2>
   <ul>
     <li>Fun fact on hover of results</li>
     <li>Highlight</li>
@@ -50,7 +59,13 @@
     <li>Handles composed words (try Marie or Laure)</li>
     <li>Handles synonyms (try rcs, pizza or flexbox)</li>
   </ul>
-  <h2>#2: <a href="./facets.html">Facetting</a> (CSS Filesize: 2Mb)</h2>
+  <h2>#2: <a href="./roles.html">Job titles</a></h2>
+  <ul>
+    <li>Same features as #1</li>
+    <li>Search in job titles</li>
+    <li>Results found in name are ranking higher than those found in job title</li>
+  </ul>
+  <h2>#3: <a href="./facets.html">Facetting</a></h2>
   <ul>
     <li>Same features as #1</li>
     <li>List of teams, along with count</li>
@@ -59,17 +74,12 @@
     <li>One facet can be selected and it will update the results</li>
     <li>Can unselect a facet</li>
   </ul>
-  <h2>#3: <a href="./typos.html">Typo-tolerance</a> (CSS Filesize: 2Mb)</h2>
+  <h2>#4: <a href="./typos.html">Typo-tolerance</a></h2>
   <ul>
-    <li>Same features as #1 (no facetting)</li>
+    <li>Same features as #1</li>
     <li>Handles typos with one missing letter (try niolas or jnas)</li>
     <li>Still correctly highlight the typos</li>
-    <li>⚠ UI is slightly slower</li>
-  </ul>
-  <h2>#4: <a href="./facets-and-typos.html">Facetting and typo-tolerance</a> (CSS Filesize: 5.7Mb)</h2>
-  <ul>
-    <li>Same features as #1, #2 and #3</li>
-    <li>⚠ UI is sluggish</li>
+    <li>⚠ UI is perceivably slower</li>
   </ul>
 </body>
 

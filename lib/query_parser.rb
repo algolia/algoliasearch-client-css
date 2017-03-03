@@ -8,66 +8,89 @@ class QueryParser
   # Will take a hash as input, and return an EntryList, with all the matches
   # that will yield this record
   # Options:
-  #   - keyword: What query should match this document
-  #   - highlight: Hash to us to override the highlight data
+  #   - matches: And array of hashes
+  #     - attribute: What attribute should be highlighted
+  #     - keyword: What query should match it
+  #   - _highlights: Hash to use to override the highlight data
   def self.index(record, options)
-    keyword = options[:keyword]
-    highlight_override = options[:highlight] || {}
+    # Allowed options
+    matches = options[:matches]
+    matches = [matches] unless matches.is_a? Array
+    hl_override = options[:highlights] || {}
 
     entry_list = {}
+    matches.each do |match|
+      attribute = match[:attribute]
+      keyword = match[:keyword]
+      length = keyword.length
+      index = 0
+      while index < length
+        prefix = keyword[0..index]
+        after = keyword[index + 1..-1]
 
-    # Generate an entry for each prefix
-    length = keyword.length
-    index = 0
-    while index < length
-      prefix = keyword[0..index]
-      after = keyword[index + 1..-1]
+        highlights = {}
+        highlights[attribute] = {
+          keyword: keyword,
+          before: nil,
+          highlight: prefix,
+          after: after
+        }
+        # We allow overriding the highlight data to give some context
+        if hl_override.key? attribute
+          highlights[attribute].merge!(hl_override[attribute])
+        end
 
-      # We allow overriding the highlight data to give some context
-      highlight = {
-        keyword: keyword,
-        highlight: prefix,
-        after: after
-      }.merge(highlight_override)
+        add_to_entry_list(entry_list, prefix, record, highlights)
 
-      add_to_entry_list(entry_list, prefix, record, highlight)
+        index += 1
+      end
 
-      index += 1
-    end
+      # If there are several words in the attribute, we remove the first one and
+      # index the rest. This will be applied recursively.
+      word_split = keyword.match(/^((.*?)([ -]))(.*)/)
+      next if word_split.nil?
 
-    # If several words, we recursively apply the same principle to the subset
-    # that does not include the first word
-    matches = keyword.match(/^((.*?)([ -]))(.*)/)
-    return entry_list if matches.nil?
-    options = {
-      keyword: matches[4],
-      highlight: {
-        before: "#{highlight_override[:before]}#{matches[1]}"
+      highlights = {}
+      hl_prefix = hl_override[attribute][:before] if hl_override.key? attribute
+      highlights[attribute] = {
+        before: "#{hl_prefix}#{word_split[1]}"
       }
-    }
-    entry_list = merge(entry_list, index(record, options))
+      options = {
+        matches: { attribute: attribute, keyword: word_split[4] },
+        highlights: highlights
+      }
+      entry_list = merge(entry_list, index(record, options))
+    end
 
     entry_list
   end
 
-  def self.add_to_entry_list(entry_list, prefix, record, highlight)
+  def self.add_to_entry_list(entry_list, prefix, record, highlights)
     entry_list[prefix] = [] unless entry_list.key?(prefix)
-    entry_list[prefix].push(
-      record: record,
-      highlight: highlight
-    )
+    
+    # Checking if we already have a record saved for this prefix
+    existing_record = entry_list[prefix].find do |checked_record|
+      checked_record[:record]['objectID'] == record['objectID']
+    end
+
+    # If not in the list, we add it, otherwise we just merge the highlights
+    if existing_record.nil?
+      entry_list[prefix].push(record: record, highlights: highlights)
+    else
+      existing_record[:highlights].merge!(highlights)
+    end
 
     # If it contains special chars, we also save it in the normalized version
     normalized_prefix = I18n.transliterate(prefix)
     if normalized_prefix != prefix
-      add_to_entry_list(entry_list, normalized_prefix, record, highlight)
+      add_to_entry_list(entry_list, normalized_prefix, record, highlights)
     end
 
     # If it contains separators, we also save the versions with separators
     # replaced with spaces
     normalized_prefix = prefix.tr('-', ' ')
     if normalized_prefix != prefix
-      add_to_entry_list(entry_list, normalized_prefix, record, highlight)
+      add_to_entry_list(entry_list, normalized_prefix, record, highlights)
     end
 
     entry_list
@@ -106,26 +129,58 @@ class QueryParser
   end
 
   # Sort entries for each prefix
-  def self.sort(lookup_table, custom_ranking = nil)
+  def self.sort(lookup_table, ranking = {})
+    searchable_attributes = ranking[:searchable_attributes]
+    custom_ranking = ranking[:custom_ranking]
+
     # Sort results, by putting match at the start of the name first
     lookup_table.each do |prefix, data|
       lookup_table[prefix] = data.sort do |a, b|
-        has_a_before = a[:highlight][:before].nil?
-        has_b_before = b[:highlight][:before].nil?
-        next -1 if has_a_before && !has_b_before
-        next 1 if has_b_before && !has_a_before
+        # Sort by searchable attribute
+        score_attribute_a = score_attributes(a[:highlights], searchable_attributes)
+        score_attribute_b = score_attributes(b[:highlights], searchable_attributes)
+        next -1 if score_attribute_a > score_attribute_b
+        next 1 if score_attribute_a < score_attribute_b
 
-        unless custom_ranking.nil?
-          next a[:record][custom_ranking] - b[:record][custom_ranking]
-        end
-        next 0
+        # Sorting by position
+        matching_attribute = a[:highlights].keys.first
+        position_a = score_position(a[:highlights][matching_attribute])
+        position_b = score_position(b[:highlights][matching_attribute])
+        next -1 if position_a < position_b
+        next 1 if position_a > position_b
+
+        # Sorting by custom ranking
+        ranking_value_a = a[:record][custom_ranking]
+        ranking_value_b = b[:record][custom_ranking]
+        next -1 if ranking_value_a < ranking_value_b
+        next 1 if ranking_value_a > ranking_value_b
+
+        0
       end
     end
 
     lookup_table
   end
 
-  # Duplicate entries with ther synonyms
+  # Return a score based on the highlights and the specified attribute. If the
+  # match is in one of the first searchable attributes, the score will be higher
+  # than if it's one of the last attributes
+  def self.score_attributes(highlights, attributes)
+    lowest_position = attributes.length
+    highlights.keys.each do |attribute|
+      next unless attributes.include? attribute
+      position = attributes.index(attribute)
+      lowest_position = position if position < lowest_position
+    end
+    attributes.length - lowest_position
+  end
+
+  def self.score_position(highlight)
+    return 1 if highlight[:before].nil?
+    highlight[:before].count(' -') + 1
+  end
+
+  # Duplicate entries with their synonyms
   def self.add_synonyms(lookup_table, synonyms)
     tmp_table = {}
     lookup_table.each do |prefix, data|
@@ -136,7 +191,6 @@ class QueryParser
       synonyms[prefix].each do |synonym|
         tmp_table[synonym] = data.map do |entry|
           new_entry = Marshal.load(Marshal.dump(entry))
-          new_entry[:highlight][:is_synonym] = true
           new_entry
         end
       end
@@ -155,7 +209,7 @@ class QueryParser
       next if prefix.include? ' '
 
       (1..length - 2).each do |index|
-        typoed_prefix = "#{prefix[0..index-1]}#{prefix[index+1..-1]}"
+        typoed_prefix = "#{prefix[0..index - 1]}#{prefix[index + 1..-1]}"
         tmp_table[typoed_prefix] = data
       end
     end
@@ -165,16 +219,27 @@ class QueryParser
 
   # Special entry for the empty query, that will contain all the records, with
   # dummy highlight info
-  def self.empty_query(people, keyword_attribute)
+  def self.empty_query(people, searchable_attributes)
+    searchable_attributes = [searchable_attributes] unless searchable_attributes.is_a?(Array)
     table = { '__EMPTY_QUERY__' => [] }
 
+    # Adding each record
     people.each do |person|
-      table['__EMPTY_QUERY__'].push(
-        highlight: {
-          before: person[keyword_attribute]
-        },
+      entry = {
         record: person
-      )
+      }
+      highlights = {}
+      # Adding a highlight for each searchable attribute, but making it not
+      # highlighted
+      searchable_attributes.each do |attribute|
+        highlights[attribute] = {
+          before: person[attribute],
+          highlight: nil,
+          after: nil
+        }
+      end
+      entry[:highlights] = highlights
+      table['__EMPTY_QUERY__'].push(entry)
     end
     table
   end
@@ -213,7 +278,6 @@ class QueryParser
         facet_list.push(
           name: facet_name,
           attribute: attribute_for_facetting,
-          items: items,
           count: items.length
         )
       end

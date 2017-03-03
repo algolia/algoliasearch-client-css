@@ -89,8 +89,8 @@ const GenerateFont = {
     return GenerateFont.readFile('./data/members.json')
       .then(content => JSON.parse(content))
       .then(members => {
-        const namesAggregate = _.reduce(members, (aggregate, member) => `${aggregate}${member.name}`, '');
-        const uniqueChars = _.uniq(namesAggregate.split('').sort()).join('');
+        const highlightAggregate = _.reduce(members, (aggregate, member) => `${aggregate}${member.name}${member.role}`, '');
+        const uniqueChars = _.uniq(highlightAggregate.split('').sort()).join('');
         return uniqueChars;
       })
       .then(chars => {

@@ -81,7 +81,7 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   /* Role */
   font-style: italic;
   font-size: .9rem;
-  font-family: 'Raleway';
+  font-family: 'Highlight';
 }
 /* Name (overriding role) */
 #i ~ section div:first-line {
@@ -89,7 +89,6 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   font-weight:bold;
   font-size: 1.2rem;
   line-height: 2rem;
-  font-family: 'Highlight';
 }
 #i ~ section div:after {
   display: flex;

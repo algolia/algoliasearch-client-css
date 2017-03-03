@@ -5,7 +5,11 @@ require_relative '../lib/css_writer.rb'
 
 # Generate a CSS file with rules for finding team members
 class Generate
-  def initialize
+  def initialize(args)
+    @with_typos = args.include?('--with-typos')
+    @with_facets = args.include?('--with-facets')
+    @with_roles = args.include?('--with-roles')
+
     @root = File.join(File.expand_path(File.dirname(__FILE__)), '..')
     people = JSON.parse(File.open("#{@root}/data/members.json").read)
     @people = people.map do |person|
@@ -22,20 +26,20 @@ class Generate
       'Gianluca Bargelli' => %w(pi piz pizz pizza),
       'Antoine Gauvain' => %w(dr drl drlk drlkf),
       'Jan Petr' => %w(ho hon honz honza),
-      'Tim Carry' => %w(cs css),
-      'Xavier Grand' => %w(be bee beer),
       'Emily Hayman' => %w(fl fle flex flexb flexbo flexbox),
-      'Rémy-Christophe Schermesser' => %w(rc rcs sc sca scal scala)
+      'Rémy-Christophe Schermesser' => %w(rc rcs sc sca scal scala),
+      'Customer Solutions Engineer' => %w(cse)
     }
 
-    @with_typos = true
-    @with_facets = true
   end
 
   def run
-    lookup_table = QueryParser.empty_query(@people, 'name')
+    lookup_table = QueryParser.empty_query(@people, %w(name role))
     @people.each do |person|
-      entry_table = QueryParser.index(person, keyword: person['name'])
+      matches = [{ attribute: 'name', keyword: person['name'] }]
+      matches.push(attribute: 'role', keyword: person['role']) if @with_roles
+
+      entry_table = QueryParser.index(person, matches: matches)
       lookup_table = QueryParser.merge(lookup_table, entry_table)
     end
 
@@ -43,7 +47,13 @@ class Generate
     lookup_table = QueryParser.add_synonyms(lookup_table, @synonyms)
     lookup_table = QueryParser.add_typos(lookup_table) if @with_typos
     lookup_table = QueryParser.uniq(lookup_table)
-    lookup_table = QueryParser.sort(lookup_table, 'order')
+
+    options = {
+      custom_ranking: 'order',
+      searchable_attributes: %w(name)
+    }
+    options[:searchable_attributes].push('role') if @with_roles
+    lookup_table = QueryParser.sort(lookup_table, options)
 
     facets = { '__EMPTY_QUERY__' => [] }
     facets = QueryParser.generate_facets(lookup_table, 'team', @people) if @with_facets
@@ -57,12 +67,15 @@ class Generate
     final_css = main_css + css.join("\n")
 
     final_name = 'basic.css'
-    final_name = 'with-typos.css' if @with_typos
-    final_name = 'with-facets.css' if @with_facets
-    final_name = 'full.css' if @with_typos && @with_facets
-
+    final_name = 'typos.css' if @with_typos
+    final_name = 'facets.css' if @with_facets
+    final_name = 'roles.css' if @with_roles
+    final_name = 'facets-typos.css' if @with_typos && @with_facets
+    final_name = 'roles-typos.css' if @with_typos && @with_roles
+    final_name = 'facets-roles.css' if @with_facets && @with_roles
+    final_name = 'full.css' if @with_typos && @with_facets && @with_roles
 
     File.write("#{@root}/public/css/#{final_name}", final_css)
   end
 end
-Generate.new.run
+Generate.new(ARGV).run

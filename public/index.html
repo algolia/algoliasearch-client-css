@@ -26,60 +26,22 @@
     generate all the <code>n-grams</code>, and generated a CSS file from that.
   </p>
   <p>
-    I've tried to replicate as many features from the engine as I could, but was quickly limited by the size of the generated CSS file
-    (generating all potential typos quickly exploded the filesize).
-  </p>
-  <p>
-    You'll find below several versions with an increasing number of features but also increased file size. Let me know which one is the sweet spot for you.
-  </p>
-  <p>
-    <a href="./facets.html"><img src="./screencast.gif" /></a>
+    <a href="./full.html"><img src="./screencast.gif" /></a>
   </p>
   <ul>
-    <li><a href="./basic.html">Simple search</a> (800Kb)</li> 
-    <li><a href="./roles.html">Simple search + search in job title</a> (2.2Mb)</li> 
-    <li><a href="./facets.html">Simple search + facetting</a> (2.3Mb)</li> 
-    <li><a href="./typos.html">Simple search + 1-letter typos</a> (2.2Mb)</li> 
-    <li><a href="./facets-roles.html">Simple search + search in job title + facetting</a> (4.4Mb)</li> 
-    <li><a href="./roles-typos.html">Simple search + search in job title + typos</a> (5.0Mb)</li> 
-    <li><a href="./facets-typos.html">Simple search + facetting + typos</a> (5.7Mb)</li> 
-    <li><a href="./full.html">Simple search + search in job titles + facetting + typos</a> (11Mb 😭)</li>
-  </ul>
-  <p>
-    Each new feature add more weight to the CSS file, up to a point where you feel your browser is actually having trouble parsing them all.
-  </p>
-  <h2>#1: <a href="./basic.html">Basic search</a></h2>
-  <ul>
-    <li>Fun fact on hover of results</li>
-    <li>Highlight</li>
-    <li>Case insensitive search</li>
-    <li>Search in first name or last name (hits in first name returned first)</li>
-    <li>Ranking by arrival date</li>
-    <li>Handles accented characters (try Clement or Clément)</li>
+    <li>As-you-type experience</li>
+    <li>No call to the API, no JavaScript dependencies</li>
+    <li>Works offline™</li>
+    <li>Dynamic faceting, with counts</li>
+    <li>Search in name and job title</li>
+    <li>Highlighting</li>
+    <li>Synonyms (try rcs, pizza or flexbox)</li>
+    <li>Typo-tolerance (try niolas or jnas)</li>
+    <li>Handles accented characters (try clément or clement)</li>
     <li>Handles composed words (try Marie or Laure)</li>
-    <li>Handles synonyms (try rcs, pizza or flexbox)</li>
-  </ul>
-  <h2>#2: <a href="./roles.html">Job titles</a></h2>
-  <ul>
-    <li>Same features as #1</li>
-    <li>Search in job titles</li>
-    <li>Results found in name are ranking higher than those found in job title</li>
-  </ul>
-  <h2>#3: <a href="./facets.html">Facetting</a></h2>
-  <ul>
-    <li>Same features as #1</li>
-    <li>List of teams, along with count</li>
-    <li>Facet count updated as-you-type</li>
-    <li>Facets ordered by count</li>
-    <li>One facet can be selected and it will update the results</li>
-    <li>Can unselect a facet</li>
-  </ul>
-  <h2>#4: <a href="./typos.html">Typo-tolerance</a></h2>
-  <ul>
-    <li>Same features as #1</li>
-    <li>Handles typos with one missing letter (try niolas or jnas)</li>
-    <li>Still correctly highlight the typos</li>
-    <li>⚠ UI is perceivably slower</li>
+    <li>Ranking formula: a match in the name is returned before a match in the job title</li>
+    <li>Custom ranking: in case of ties, results are sorted by arrival date</li>
+
   </ul>
 </body>
 

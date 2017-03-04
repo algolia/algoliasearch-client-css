@@ -91,7 +91,7 @@ class CSSWriter
       # When clicking on any facet, we hide it, and display the placeholder with
       # the new name instead
       base_checked_selector = "#{radio_selector}:checked ~ aside "
-      css << "#{base_checked_selector} label[for=fx] { display: block; }"
+      css << "#{base_checked_selector} #{label_selector} { display: none !important; }"
       css << "#{base_checked_selector} label[for=fx]:before { content: '#{facet_name}' }"
     end
     
@@ -112,19 +112,11 @@ class CSSWriter
         css << "#{selector} { display: block; order: #{order}; }"
         css << "#{selector}:after { content: '#{facet_count}'; }"
 
-        # If a specific facet is selected, we hide it, but reflect the count and
+        # If a specific facet is selected we  reflect the count and
         # position in the placeholder
         base_checked_selector = "#{radio_selector}:checked ~ #{input(prefix)} ~ aside "
-        css << "#{base_checked_selector} #{label_selector} { display: none; }"
-        css << "#{base_checked_selector} label[for=fx] { order: #{order}; }"
+        css << "#{base_checked_selector} label[for=fx] { display: block; order: #{order}; }"
         css << "#{base_checked_selector} label[for=fx]:after { content: '#{facet_count}'; }"
-      end
-
-      # If a facet is currently selected, but this facet is not available for
-      # this query, we need to specify that we want to hide it
-      facet_to_selectors.each do |facet_name, selectors|
-        next if available_facets.include? facet_name
-        css << "#{selectors[:radio]}:checked ~ #{input(prefix)} ~ aside label[for=fx] { display: none; }"
       end
     end
 
@@ -133,26 +125,45 @@ class CSSWriter
 
   def self.add_results(css, lookup_table, all_facets)
     facet_to_selectors = facet_selectors(all_facets['__EMPTY_QUERY__'])
+    record_to_selector = {}
 
-    # Adding results for each prefix
+    # We pre-fill all the results with the results of the empty query
+    lookup_table['__EMPTY_QUERY__'].each.with_index do |entry, index|
+      object_id = entry[:record]['objectID']
+      record_to_selector[object_id] = "#h#{index}"
+
+      selector = "#i ~ section #h#{index}"
+      quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
+
+      css << "#{selector} { background-image: url(#{entry[:record]['image']}); }"
+      css << "#{selector}:after { content: '#{quote}'; }"
+    end
+
+    # For each prefix, we display the results that match, update their name and
+    # position
     lookup_table.each do |prefix, entries|
       prefix_selector = prefix
       prefix_selector = '' if prefix == '__EMPTY_QUERY__'
 
-      entries.each.with_index do |entry, i|
+      # We had a counter
+      count = entries.length
+      css << "#{input(prefix_selector)} ~ #r:before { content: '#{count}'; }"
+      if count == 1
+        css << "#{input(prefix_selector)} ~ #r:after { content: ' result'; }"
+      end
+
+      entries.each.with_index do |entry, order|
         name = entry[:record]['name']
         name = highlight(entry[:highlights]['name']) if entry[:highlights].key? 'name'
         role = entry[:record]['role']
         role = highlight(entry[:highlights]['role']) if entry[:highlights].key? 'role'
 
-        quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
-
-        base_selector = "#{input(prefix_selector)} ~ section > div:nth-child(#{i + 1})"
+        hit_selector = record_to_selector[entry[:record]['objectID']]
+        base_selector = "#{input(prefix_selector)} ~ section #{hit_selector}"
 
         # We display the results for the prefix
-        css << "#{base_selector} { display: block; background-image: url(#{entry[:record]['image']}); display: block; }"
+        css << "#{base_selector} { display: block; order: #{order}; }"
         css << "#{base_selector}:before { content: '#{name}\\A #{role}'; }"
-        css << "#{base_selector}:after { content: '#{quote}'; }"
 
         # We hide the results if the selected facet is not the facet of the
         # result
@@ -170,7 +181,6 @@ class CSSWriter
           checked_base_selector = "#{radio_selector}:checked ~ #{base_selector}"
           css << "#{checked_base_selector} { display: none; }"
         end
-
       end
     end
 

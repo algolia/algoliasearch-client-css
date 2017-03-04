@@ -42,7 +42,7 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
 }
 #i {
   width: 50%;
-  margin: 1rem 25% 1rem 25%;
+  margin: 1rem 25% 0 25%;
   padding-left: .5rem;
   height: 2.5rem;
   border-width: .125rem;
@@ -122,6 +122,7 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   padding: 0;
   color: #182359;
   text-decoration: none;
+  order: 9999;
 }
 #i ~ section a div {
   display: block;
@@ -142,6 +143,18 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   font-weight: bold;
 }
 
+/* Result count */
+#r {
+  display: block;
+  margin: 0 25%;
+  font-size: .9rem;
+  font-style: italic;
+  padding-left: 1rem;
+  text-align: right;
+}
+#r:after { content: " results"; }
+#r:before { content: "0"; }
+
 
 input[type="radio"] { display: none; }
 
@@ -155,8 +168,9 @@ aside {
   margin: 1rem auto 0 auto;
   max-width: 1240px;
   justify-content: center;
+  position: relative;
 }
-label[for^=f] {
+aside label {
   position: relative;
   display: none;
   flex: 1 1 content;
@@ -171,7 +185,7 @@ label[for^=f] {
   cursor: pointer;
   overflow: hidden;
 }
-label[for^=f]:after {
+aside label:after {
   position: absolute;
   top: 0px;
   bottom: 0;
@@ -184,12 +198,12 @@ label[for^=f]:after {
   text-align: center;
   background: #9D9DBD;
 }
-label[for^=f]:hover {
+aside label:hover {
   background: #00AEFF;
   color: white;
   border-color: #00AEFF;
 }
-label[for^=f]:hover:after {
+aside label:hover:after {
   background: #00AEFF;
 }
 /**

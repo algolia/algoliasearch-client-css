@@ -69,7 +69,7 @@ class CSSWriter
     # will be handled on a prefix-by-prefix basis afterward).
     # We also remember the radio and label selectors for ease of use afterward
     facet_to_selectors = facet_selectors(all_facets['__EMPTY_QUERY__'])
-    all_facets['__EMPTY_QUERY__'].each.with_index do |facet, index|
+    all_facets['__EMPTY_QUERY__'].each do |facet|
       facet_name = facet[:name]
       label_selector = facet_to_selectors[facet_name][:label]
       radio_selector = facet_to_selectors[facet_name][:radio]
@@ -83,7 +83,7 @@ class CSSWriter
       css << "#{base_checked_selector} #{label_selector} { display: none !important; }"
       css << "#{base_checked_selector} label[for=fx]:before { content: '#{facet_name}' }"
     end
-    
+
     # For each prefix, we will display the matching facets, and update their
     # position and count
     all_facets.each do |prefix, facets|
@@ -172,7 +172,6 @@ class CSSWriter
         end
       end
     end
-
 
     css
   end

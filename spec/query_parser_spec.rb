@@ -655,6 +655,7 @@ describe(QueryParser) do
 
   describe 'add_typos' do
     it 'should add typos for one missing letter (except first and last)' do
+      # Given
       record = { 'name' => 'Dustin' }
       options = { matches: [{ attribute: 'name', keyword: 'Dustin' }] }
       entry_table = QueryParser.index(record, options)
@@ -669,6 +670,22 @@ describe(QueryParser) do
       expect(actual).to include 'Dusi'
       expect(actual).to include 'Dustn'
       expect(actual).to include 'Dutin'
+    end
+
+    it 'should not generate typos for the empty query' do
+      # Given
+      inputs = [
+        { 'name' => 'foo' },
+        { 'name' => 'bar' },
+        { 'name' => 'baz' }
+      ]
+      lookup_table = QueryParser.empty_query(inputs, ['name'])
+
+      # When
+      actual = QueryParser.add_typos(lookup_table)
+
+      # Then
+      expect(actual).to_not include '__EMTY_QUERY__'
     end
   end
 

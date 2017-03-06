@@ -204,6 +204,7 @@ class QueryParser
     min_length = 4
     tmp_table = {}
     lookup_table.each do |prefix, data|
+      next if prefix == '__EMPTY_QUERY__'
       length = prefix.length
       next if length < min_length
       next if prefix.include? ' '

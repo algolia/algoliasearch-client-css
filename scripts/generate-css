@@ -59,7 +59,6 @@ class Generate
     facets = QueryParser.generate_facets(lookup_table, 'team', @people) if @with_facets
 
     css = CSSWriter.base
-    css = CSSWriter.preload_images(css, @people)
     css = CSSWriter.add_facet_counts(css, facets) if @with_facets
     css = CSSWriter.add_results(css, lookup_table, facets)
 

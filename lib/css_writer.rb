@@ -39,17 +39,6 @@ class CSSWriter
       + url.split('/')[-1]
   end
 
-  # Preload all images by loading the images in the body background
-  def self.preload_images(css, records)
-    preloaded_images = []
-    records.each do |record|
-      preloaded_images.push("url(#{record['image']})")
-    end
-    css.push('body:before{content:""; display:none; '\
-           "background:#{preloaded_images.join(',')}}")
-    css
-  end
-
   # Return a selector for the input with a specific query
   def self.input(query)
     "#i[value='#{query}' i]"
@@ -90,7 +79,7 @@ class CSSWriter
 
       # When clicking on any facet, we hide it, and display the placeholder with
       # the new name instead
-      base_checked_selector = "#{radio_selector}:checked ~ aside "
+      base_checked_selector = "#{radio_selector}:checked ~ aside"
       css << "#{base_checked_selector} #{label_selector} { display: none !important; }"
       css << "#{base_checked_selector} label[for=fx]:before { content: '#{facet_name}' }"
     end

@@ -61,7 +61,7 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
 }
 
 #i ~ section div,
-#i ~ section a {
+#l {
   display: none;
   flex: 1 1 300px;
   height: 300px;
@@ -116,7 +116,7 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
 }
 
 /* Open positions link */
-#i ~ section a {
+#l {
   display: block;
   height: auto;
   padding: 0;
@@ -124,21 +124,21 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   text-decoration: none;
   order: 9999;
 }
-#i ~ section a div {
+#l div {
   display: block;
   margin: 0;
   flex: none;
   background-image:url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-you.jpg)
 }
-#i ~ section a div:before {
+#l div:before {
   content: 'We are hiring\A See open positions';
   color: #00aeff;
   font-style: normal;
 }
-#i ~ section a div:first-line {
+#l div:first-line {
   color: #182359;
 }
-#i ~ section a:hover div:before {
+#l:hover div:before {
   color: #007ab3;
   font-weight: bold;
 }

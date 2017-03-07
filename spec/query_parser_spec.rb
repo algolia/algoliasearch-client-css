@@ -546,60 +546,73 @@ describe(QueryParser) do
   end
 
   describe 'add_synonyms' do
-    it 'should add entries if original word is found' do
+    it 'should add an entry for the synonym' do
       # Given
-      record = { 'objectID' => 'foo', 'name' => 'Rémy-Christophe' }
-      options = { matches: [{ attribute: 'name', keyword: 'Rémy-Christophe' }] }
-      entry_table = QueryParser.index(record, options)
-      lookup_table = QueryParser.sort(entry_table)
-      synonyms = {
-        'Rémy-Christophe' => %w(rcs scala)
-      }
+      records = [
+        { 'name' => 'Rémy-Christophe Schermesser' }
+      ]
+      synonyms = [
+        {
+          'attribute' => 'name',
+          'original' => 'Rémy-Christophe Schermesser',
+          'replace' => 'RCS'
+        }
+      ]
 
       # When
-      actual = QueryParser.add_synonyms(lookup_table, synonyms)
+      actual = QueryParser.add_synonyms({}, records, synonyms)
 
       # Then
-      expect(actual).to include 'rcs'
-      expect(actual['rcs'][0][:record]['name']).to eq 'Rémy-Christophe'
-      expect(actual).to include 'scala'
-      expect(actual['scala'][0][:record]['name']).to eq 'Rémy-Christophe'
+      expect(actual).to include 'RCS'
     end
 
-    it 'should not add entries if original word not is found' do
+    it 'should not add entries for non-existent words' do
       # Given
-      record = { 'objectID' => 'foo', 'name' => 'Rémy-Christophe' }
-      options = { matches: [{ attribute: 'name', keyword: 'Rémy-Christophe' }] }
-      entry_table = QueryParser.index(record, options)
-      lookup_table = QueryParser.sort(entry_table)
-      synonyms = {
-        'foo' => %w(rcs scala)
-      }
+      records = [
+        { 'name' => 'Paul-Louis Nech' }
+      ]
+      synonyms = [
+        {
+          'attribute' => 'name',
+          'original' => 'Rémy-Christophe Schermesser',
+          'replace' => 'RCS'
+        }
+      ]
 
       # When
-      actual = QueryParser.add_synonyms(lookup_table, synonyms)
+      actual = QueryParser.add_synonyms({}, records, synonyms)
 
       # Then
-      expect(actual).to_not include 'rcs'
+      expect(actual).to_not include 'RCS'
     end
 
-    it 'should replace highlight with synonym' do
+    it 'should highlight part of the synonym' do
       # Given
-      # Given
-      record = { 'objectID' => 'foo', 'name' => 'Rémy-Christophe' }
-      options = { matches: [{ attribute: 'name', keyword: 'Rémy-Christophe' }] }
-      entry_table = QueryParser.index(record, options)
-      lookup_table = QueryParser.sort(entry_table)
-      synonyms = {
-        'Rémy-Christophe' => %w(rcs scala)
-      }
+      records = [
+        { 'name' => 'Matthieu Dumont' },
+        { 'role' => 'Customer Success Engineer' }
+      ]
+      synonyms = [
+        {
+          'attribute' => 'name',
+          'original' => 'Matthieu Dumont',
+          'replace' => 'Jerska'
+        },
+        {
+          'attribute' => 'role',
+          'original' => 'Customer Success Engineer',
+          'replace' => 'CSE'
+        }
+      ]
 
       # When
-      actual = QueryParser.add_synonyms(lookup_table, synonyms)
+      actual = QueryParser.add_synonyms({}, records, synonyms)
 
       # Then
-      expect(actual['rcs'][0][:highlights]['name'][:keyword]).to eq 'Rémy-Christophe'
-      expect(actual['rcs'][0][:highlights]['name'][:highlight]).to eq 'Rémy-Christophe'
+      expect(actual['Jer'][0][:highlights]['name'][:highlight]).to eq 'Jer'
+      expect(actual['Jer'][0][:highlights]['name'][:after]).to eq 'ska'
+      expect(actual['CS'][0][:highlights]['role'][:highlight]).to eq 'CS'
+      expect(actual['CS'][0][:highlights]['role'][:after]).to eq 'E'
     end
   end
 

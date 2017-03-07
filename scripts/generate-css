@@ -20,17 +20,28 @@ class Generate
       person
     end
 
-    @synonyms = {
-      'Paul-Louis Nech' => %w(pl pln),
-      'Matthieu Dumont' => %w(je jer jers jersk jerska),
-      'Gianluca Bargelli' => %w(pi piz pizz pizza),
-      'Antoine Gauvain' => %w(dr drl drlk drlkf),
-      'Jan Petr' => %w(ho hon honz honza),
-      'Emily Hayman' => %w(fl fle flex flexb flexbo flexbox),
-      'Rémy-Christophe Schermesser' => %w(rc rcs sc sca scal scala),
-      'Customer Solutions Engineer' => %w(cse)
-    }
-
+    @synonyms = [
+      { 'attribute' => 'name', 'original' => 'Paul-Louis Nech', 'replace' => 'PLN' },
+      { 'attribute' => 'name', 'original' => 'Rémy-Christophe Schermesser', 'replace' => 'RCS' },
+      { 'attribute' => 'name', 'original' => 'Rémy-Christophe Schermesser', 'replace' => 'Scala Schermesser' },
+      { 'attribute' => 'name', 'original' => 'Gianluca Bargelli', 'replace' => 'Pizza Master Bargelli' },
+      { 'attribute' => 'name', 'original' => 'Gianluca Bargelli', 'replace' => 'Proudlygeek' },
+      { 'attribute' => 'name', 'original' => 'Jan Petr', 'replace' => 'Honza' },
+      { 'attribute' => 'name', 'original' => 'Matthieu Dumont', 'replace' => 'Jerska' },
+      { 'attribute' => 'name', 'original' => 'Julien Lemoine', 'replace' => 'Speedblue' },
+      { 'attribute' => 'name', 'original' => 'Sylvain Utard', 'replace' => 'Redox' },
+      { 'attribute' => 'name', 'original' => 'Kevin Granger', 'replace' => 'Shipow' },
+      { 'attribute' => 'name', 'original' => 'Josh Dzielak', 'replace' => 'Dzello' },
+      { 'attribute' => 'name', 'original' => 'Alexandre Collin', 'replace' => 'Seafoox' },
+      { 'attribute' => 'name', 'original' => 'Alexandre Stanislawski', 'replace' => 'Bobylito' },
+      { 'attribute' => 'name', 'original' => 'Vincent Voyer', 'replace' => 'Vvo' },
+      { 'attribute' => 'name', 'original' => 'Maxime Locqueville', 'replace' => 'Maxiloc' },
+      { 'attribute' => 'name', 'original' => 'Marion Aguirre', 'replace' => 'Minerva McGonagall' },
+      { 'attribute' => 'name', 'original' => 'Emily Hayman', 'replace' => 'Flexbox girl' },
+      { 'attribute' => 'name', 'original' => 'Tim Carry', 'replace' => 'pixelastic' },
+      { 'attribute' => 'name', 'original' => 'Antoine Gauvain', 'replace' => 'drlkf' },
+      { 'attribute' => 'role', 'original' => 'Customer Solutions Engineer', 'replace' => 'CSE' }
+    ]
   end
 
   def run
@@ -44,7 +55,7 @@ class Generate
     end
 
     lookup_table = QueryParser.uniq(lookup_table)
-    lookup_table = QueryParser.add_synonyms(lookup_table, @synonyms)
+    lookup_table = QueryParser.add_synonyms(lookup_table, @people, @synonyms)
     lookup_table = QueryParser.add_typos(lookup_table) if @with_typos
     lookup_table = QueryParser.uniq(lookup_table)
 

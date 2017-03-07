@@ -182,22 +182,24 @@ class QueryParser
   end
 
   # Duplicate entries with their synonyms
-  def self.add_synonyms(lookup_table, synonyms)
-    tmp_table = {}
-    lookup_table.each do |prefix, data|
-      # No synonym defined for this prefix
-      next unless synonyms.key?(prefix)
+  def self.add_synonyms(lookup_table, records, synonyms)
+    records.each do |record|
+      synonyms.each do |synonym|
+        attribute = synonym['attribute']
+        value = record[attribute]
+        original = synonym['original']
+        next unless value == original
 
-      # Creating new entries for each synonym
-      synonyms[prefix].each do |synonym|
-        tmp_table[synonym] = data.map do |entry|
-          new_entry = Marshal.load(Marshal.dump(entry))
-          new_entry
-        end
+        replacement = synonym['replace']
+        record_copy = Marshal.load(Marshal.dump(record))
+        record_copy[original] = replacement
+
+        matches = [{ attribute: attribute, keyword: replacement }]
+        entry_table = QueryParser.index(record, matches: matches)
+        lookup_table = QueryParser.merge(lookup_table, entry_table)
       end
     end
-
-    merge(lookup_table, tmp_table)
+    lookup_table
   end
 
   # Add entries for common typos

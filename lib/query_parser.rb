@@ -134,8 +134,8 @@ class QueryParser
     custom_ranking = ranking[:custom_ranking]
 
     # Sort results, by putting match at the start of the name first
-    lookup_table.each do |prefix, data|
-      lookup_table[prefix] = data.sort do |a, b|
+    lookup_table.each do |prefix, entries|
+      lookup_table[prefix] = entries.sort do |a, b|
         # Sort by searchable attribute
         score_attribute_a = score_attributes(a[:highlights], searchable_attributes)
         score_attribute_b = score_attributes(b[:highlights], searchable_attributes)
@@ -176,6 +176,7 @@ class QueryParser
   end
 
   def self.score_position(highlight)
+    return 0 if highlight[:highlight].nil?
     return 1 if highlight[:before].nil?
     highlight[:before].count(' -') + 1
   end

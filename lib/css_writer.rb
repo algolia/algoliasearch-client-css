@@ -121,6 +121,7 @@ class CSSWriter
       object_id = entry[:record]['objectID']
       record_to_selector[object_id] = "#h#{index}"
 
+      # TODO: Simplify selector
       selector = "#i ~ section #h#{index}"
       quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
 

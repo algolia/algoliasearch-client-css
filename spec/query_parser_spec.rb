@@ -415,6 +415,21 @@ describe(QueryParser) do
       # Then
       expect(actual).to eq 3
     end
+
+    it 'should return 0 if there is not highlight (empty query)' do
+      # Given
+      highlight = {
+        before: 'jeremy ben sadoun',
+        highlight: nil,
+        after: nil
+      }
+
+      # When
+      actual = QueryParser.score_position(highlight)
+
+      # Then
+      expect(actual).to eq 0
+    end
   end
 
   describe 'sort' do
@@ -468,9 +483,9 @@ describe(QueryParser) do
 
     it 'should return match in word 2 before match in word 3' do
       # Given
-      record_1 = { name: 'jeremy ben sadoun' }
-      record_2 = { name: 'martin sallé' }
-      options_1 = { matches: [{ attribute: 'name', keyword: 'jeremy ben sadou' }] }
+      record_1 = { 'name' => 'jeremy ben sadoun' }
+      record_2 = { 'name' => 'martin sallé' }
+      options_1 = { matches: [{ attribute: 'name', keyword: 'jeremy ben sadoun' }] }
       options_2 = { matches: [{ attribute: 'name', keyword: 'martin sallé' }] }
       entry_table_1 = QueryParser.index(record_1, options_1)
       entry_table_2 = QueryParser.index(record_2, options_2)
@@ -483,14 +498,14 @@ describe(QueryParser) do
       actual = QueryParser.sort(lookup_table, ranking)
 
       # Then
-      expect(actual['sa'][0][:record][:name]).to eq 'martin sallé'
-      expect(actual['sa'][1][:record][:name]).to eq 'jeremy ben sadoun'
+      expect(actual['sa'][0][:record]['name']).to eq 'martin sallé'
+      expect(actual['sa'][1][:record]['name']).to eq 'jeremy ben sadoun'
     end
 
     it 'should return hits found with a higher custom ranking first' do
       # Given
-      record_1 = { name: 'nicolas baissas', 'order' => 12 }
-      record_2 = { name: 'nicolas dessaigne', 'order' => 1 }
+      record_1 = { 'name' => 'nicolas baissas', 'order' => 12 }
+      record_2 = { 'name' => 'nicolas dessaigne', 'order' => 1 }
       options_1 = { matches: [{ attribute: 'name', keyword: 'nicolas baissas' }] }
       options_2 = { matches: [{ attribute: 'name', keyword: 'nicolas dessaigne' }] }
       entry_table_1 = QueryParser.index(record_1, options_1)
@@ -505,8 +520,28 @@ describe(QueryParser) do
       actual = QueryParser.sort(lookup_table, ranking)
 
       # Then
-      expect(actual['nicolas'][0][:record][:name]).to eq 'nicolas dessaigne'
-      expect(actual['nicolas'][1][:record][:name]).to eq 'nicolas baissas'
+      expect(actual['nicolas'][0][:record]['name']).to eq 'nicolas dessaigne'
+      expect(actual['nicolas'][1][:record]['name']).to eq 'nicolas baissas'
+    end
+
+    it 'should correctly sort by order even with composed names' do
+      # Given
+      records = [
+        { 'name' => 'jeremy ben sadoun', 'order' => 6 },
+        { 'name' => 'julien paroche', 'order' => 50 }
+      ]
+      lookup_table = QueryParser.empty_query(records, 'name')
+
+      # When
+      ranking = {
+        searchable_attributes: %w(name),
+        custom_ranking: 'order'
+      }
+      actual = QueryParser.sort(lookup_table, ranking)
+
+      # Then
+      expect(actual['__EMPTY_QUERY__'][0][:record]['name']).to eq 'jeremy ben sadoun'
+      expect(actual['__EMPTY_QUERY__'][1][:record]['name']).to eq 'julien paroche'
     end
   end
 

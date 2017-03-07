@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 npm run generate-font ./fonts/Raleway-Regular.ttf ./fonts/Raleway-Bold.ttf
-npm run generate-css
+npm run generate-css --with-facets --with-roles --with-typos

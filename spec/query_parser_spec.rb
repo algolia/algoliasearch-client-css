@@ -31,6 +31,21 @@ describe(QueryParser) do
       expect(actual['tim']).to be_an Array
     end
 
+    it 'should create entries in downcase format' do
+      # Given
+      record = { name: 'Tim' }
+      options = { matches: [{ attribute: 'name', keyword: 'Tim' }] }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual).to include 't'
+      expect(actual).to include 'ti'
+      expect(actual).to include 'tim'
+      expect(actual).to_not include 'Tim'
+    end
+
     it 'should have highlight information for one attribute' do
       # Given
       record = { name: 'tim' }
@@ -107,8 +122,8 @@ describe(QueryParser) do
 
     it 'should keep the record data linked to each EntryList' do
       # Given
-      record = { name: 'tim' }
-      options = { matches: { attribute: 'name', keyword: 'tim' } }
+      record = { name: 'Tim' }
+      options = { matches: { attribute: 'name', keyword: 'Tim' } }
 
       # When
       actual = QueryParser.index(record, options)
@@ -190,6 +205,19 @@ describe(QueryParser) do
 
       # Then
       expect(actual['gae'][0][:highlights]['name'][:keyword]).to eq 'gaëtan'
+    end
+
+    it 'should keep the case sensitivity in the highlight' do
+      # Given
+      record = { name: 'Tim' }
+      options = { matches: { attribute: 'name', keyword: 'Tim' } }
+
+      # When
+      actual = QueryParser.index(record, options)
+
+      # Then
+      expect(actual['t'][0][:highlights]['name'][:keyword]).to eq 'Tim'
+      expect(actual['t'][0][:highlights]['name'][:highlight]).to eq 'T'
     end
 
     it 'should index without accented characters in the last name' do
@@ -460,6 +488,33 @@ describe(QueryParser) do
       expect(actual['mar'][1][:record][:name]).to eq 'neil'
     end
 
+    it 'should find in last name before in role' do
+      # Given
+      record_1 = { name: 'Nicolas Dessaigne', role: 'Co-founder & CEO' }
+      record_2 = { name: 'Lucas Cerdan', role: 'Product UX Specialist' }
+      options_1 = { matches: [
+        { attribute: 'name', keyword: 'Nicolas Dessaigne' },
+        { attribute: 'role', keyword: 'Co-founder & CEO' }
+      ] }
+      options_2 = { matches: [
+        { attribute: 'name', keyword: 'Lucas Cerdan' },
+        { attribute: 'role', keyword: 'Product UX Specialist' }
+      ] }
+      entry_table_1 = QueryParser.index(record_1, options_1)
+      entry_table_2 = QueryParser.index(record_2, options_2)
+      lookup_table = QueryParser.merge(entry_table_1, entry_table_2)
+
+      # When
+      ranking = {
+        searchable_attributes: %w(name role)
+      }
+      actual = QueryParser.sort(lookup_table, ranking)
+
+      # Then
+      expect(actual['ce'][0][:record][:name]).to eq 'Lucas Cerdan'
+      expect(actual['ce'][1][:record][:name]).to eq 'Nicolas Dessaigne'
+    end
+
     it 'should return hits found at start of attribute before found at end of attributes' do
       # Given
       record_1 = { name: 'alexandre collin' }
@@ -563,7 +618,7 @@ describe(QueryParser) do
       actual = QueryParser.add_synonyms({}, records, synonyms)
 
       # Then
-      expect(actual).to include 'RCS'
+      expect(actual).to include 'rcs'
     end
 
     it 'should not add entries for non-existent words' do
@@ -609,10 +664,10 @@ describe(QueryParser) do
       actual = QueryParser.add_synonyms({}, records, synonyms)
 
       # Then
-      expect(actual['Jer'][0][:highlights]['name'][:highlight]).to eq 'Jer'
-      expect(actual['Jer'][0][:highlights]['name'][:after]).to eq 'ska'
-      expect(actual['CS'][0][:highlights]['role'][:highlight]).to eq 'CS'
-      expect(actual['CS'][0][:highlights]['role'][:after]).to eq 'E'
+      expect(actual['jer'][0][:highlights]['name'][:highlight]).to eq 'Jer'
+      expect(actual['jer'][0][:highlights]['name'][:after]).to eq 'ska'
+      expect(actual['cs'][0][:highlights]['role'][:highlight]).to eq 'CS'
+      expect(actual['cs'][0][:highlights]['role'][:after]).to eq 'E'
     end
   end
 
@@ -713,11 +768,11 @@ describe(QueryParser) do
       actual = QueryParser.add_typos(lookup_table)
 
       # Then
-      expect(actual).to include 'Dustin'
-      expect(actual).to include 'Dut'
-      expect(actual).to include 'Dusi'
-      expect(actual).to include 'Dustn'
-      expect(actual).to include 'Dutin'
+      expect(actual).to include 'dustin'
+      expect(actual).to include 'dut'
+      expect(actual).to include 'dusi'
+      expect(actual).to include 'dustn'
+      expect(actual).to include 'dutin'
     end
 
     it 'should not generate typos for the empty query' do
@@ -761,7 +816,7 @@ describe(QueryParser) do
       actual = QueryParser.generate_facets(lookup_table, 'team')
 
       # Then
-      expect(actual['Alex'].length).to eq 3
+      expect(actual['alex'].length).to eq 3
     end
 
     it 'should order facets by count desc' do

@@ -66,6 +66,7 @@ class QueryParser
   end
 
   def self.add_to_entry_list(entry_list, prefix, record, highlights)
+    prefix = prefix.downcase
     entry_list[prefix] = [] unless entry_list.key?(prefix)
     
     # Checking if we already have a record saved for this prefix
@@ -136,6 +137,7 @@ class QueryParser
     # Sort results, by putting match at the start of the name first
     lookup_table.each do |prefix, entries|
       lookup_table[prefix] = entries.sort do |a, b|
+        next 0 if a[:record] == b[:record]
         # Sort by searchable attribute
         score_attribute_a = score_attributes(a[:highlights], searchable_attributes)
         score_attribute_b = score_attributes(b[:highlights], searchable_attributes)
@@ -192,13 +194,14 @@ class QueryParser
 
         replacement = synonym['replace']
         record_copy = Marshal.load(Marshal.dump(record))
-        record_copy[original] = replacement
+        record_copy[attribute] = replacement
 
         matches = [{ attribute: attribute, keyword: replacement }]
-        entry_table = QueryParser.index(record, matches: matches)
+        entry_table = QueryParser.index(record_copy, matches: matches)
         lookup_table = QueryParser.merge(lookup_table, entry_table)
       end
     end
+
     lookup_table
   end
 

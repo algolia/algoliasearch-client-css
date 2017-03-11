@@ -62,7 +62,7 @@
   {
     "short_name": "alexandre",
     "name": "Alexandre Collin",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I spent a full week driving a VAN across the Australian desert.",
     "emoji": "🌵",
     "order": 6,
@@ -112,7 +112,7 @@
   {
     "short_name": "nicolas-2",
     "name": "Nicolas Baissas",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I wanted to be a handball player.",
     "emoji": "🏐",
     "order": 11,
@@ -222,7 +222,7 @@
   {
     "short_name": "olivier-2",
     "name": "Olivier Lance",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I love technology and collect 60-year-old cameras.",
     "emoji": "📸",
     "order": 23,
@@ -252,7 +252,7 @@
   {
     "short_name": "dustincoates",
     "name": "Dustin Coates",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I lived in a tent for three months...indoors.",
     "emoji": "⛺",
     "order": 27,
@@ -372,7 +372,7 @@
   {
     "short_name": "raphael",
     "name": "Raphaël Terrier",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I’ve created a connected device to mix perfect cocktails at home.",
     "emoji": "🍸",
     "order": 41,
@@ -522,7 +522,7 @@
   {
     "short_name": "emily",
     "name": "Emily Hayman",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I've been to all the states in the contiguous US",
     "emoji": "🇺🇸",
     "order": 60,
@@ -562,7 +562,7 @@
   {
     "short_name": "cory",
     "name": "Cory Dobson",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I've played drums for over 10 years.",
     "emoji": "🔟",
     "order": 64,
@@ -612,7 +612,7 @@
   {
     "short_name": "zo",
     "name": "Zo Asmail",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I ran a marathon because I lost a bet. I didn't know I was running it until the day before the race.",
     "emoji": "🏃",
     "order": 69,
@@ -632,12 +632,281 @@
   {
     "short_name": "julien-2",
     "name": "Julien Paroche",
-    "role": "Customer Solutions Engineer",
+    "role": "Solutions Engineer",
     "funny_quote": "I was born with blue eyes but one of them started to turn brown and stopped halfway. So I now have a bi-color eye!",
     "emoji": "👀",
     "order": 71,
     "team": "Customer Success",
     "objectID": "julien-2"
+  },
+  {
+    "short_name": "fred-mcferran",
+    "role": "Account Executive ",
+    "order": 74,
+    "team": "Sales",
+    "name": "Fred McFerran",
+    "gravatar_url": "https://gravatar.com/avatar/e1198a0012ef57fdb02ceba807f426bf",
+    "funny_quote": "The actress Tea Leoni was my babysitter growing up for a couple weeks.",
+    "emoji": "🍼",
+    "objectID": "fred-mcferran"
+  },
+  {
+    "short_name": "maxime-prades",
+    "role": "VP of Product",
+    "team": "Customer Success",
+    "order": 75,
+    "name": "Maxime Prades",
+    "gravatar_url": "https://gravatar.com/avatar/c1b52a74ed2aafc0dc6679081a9880fe",
+    "objectID": "maxime-prades"
+  },
+  {
+    "short_name": "nicolas-gerard",
+    "role": "Sales Representative",
+    "order": 76,
+    "team": "Sales",
+    "name": "Nicolas Gerard",
+    "gravatar_url": "https://gravatar.com/avatar/2c5d90bb49352e6e87a78a66ab87b0c4",
+    "funny_quote": "Harry Potter is all I have ever read for the first 20 years of my life!",
+    "emoji": "📚",
+    "objectID": "nicolas-gerard"
+  },
+  {
+    "short_name": "ryan-reed",
+    "role": "Sales Development Representative",
+    "order": 77,
+    "team": "Sales",
+    "name": "Ryan Reed",
+    "funny_quote": "Fun Fact: I once played a trumpet concerto with Chris Martin.",
+    "emoji": "🙃",
+    "objectID": "ryan-reed"
+  },
+  {
+    "short_name": "sam-matson",
+    "role": "OB Sales Representative",
+    "order": 78,
+    "team": "Sales",
+    "name": "Sam Matson",
+    "gravatar_url": "https://gravatar.com/avatar/11eaa3c3a5a575f35b487f68d5fe80ed",
+    "objectID": "sam-matson"
+  },
+  {
+    "short_name": "yawei-liang",
+    "role": "Director of Sales & Marketing Ops",
+    "order": 79,
+    "team": "Sales",
+    "name": "Yawei Liang",
+    "gravatar_url": "https://gravatar.com/avatar/4053ed0fd39fcf46d404ac6bb841a53b",
+    "objectID": "yawei-liang"
+  },
+  {
+    "short_name": "kim-jenny-dinh",
+    "role": "Customer Success Manager",
+    "order": 80,
+    "team": "Customer Success",
+    "name": "Kim-Jenny Dinh",
+    "funny_quote": "I love cactuses because I'm so bad on taking care of plants!",
+    "emoji": "🌵",
+    "objectID": "kim-jenny-dinh"
+  },
+  {
+    "short_name": "kyle-rego",
+    "role": "Solutions Engineer",
+    "order": 81,
+    "team": "Customer Success",
+    "name": "Kyle Rego",
+    "gravatar_url": "https://gravatar.com/avatar/d4840f20c8c12ad6b16d5ff4f59291ae",
+    "funny_quote": "Ever been goldfish racing? I have.",
+    "emoji": "🐠",
+    "objectID": "kyle-rego"
+  },
+  {
+    "short_name": "michael-sokol",
+    "role": "Solutions Engineer",
+    "order": 82,
+    "team": "Customer Success",
+    "name": "Michael Sokol",
+    "gravatar_url": "https://gravatar.com/avatar/9ad3c5126837a483531735cf5f117d61",
+    "funny_quote": "I bought a violin, thinking I could learn to play it through online tutorials.",
+    "emoji": "🎻",
+    "objectID": "michael-sokol"
+  },
+  {
+    "short_name": "guy-daher",
+    "role": "Software Engineer",
+    "team": "Engineering",
+    "order": 83,
+    "name": "Guy Daher",
+    "gravatar_url": "https://gravatar.com/avatar/048f2a8c3c8a8561a20a6329196603b5",
+    "funny_quote": "I speak 3 languages in the same sentence with friends without even noticing!",
+    "emoji": "🇱🇧",
+    "objectID": "guy-daher"
+  },
+  {
+    "short_name": "julie-reboul",
+    "role": "Junior Marketer",
+    "order": 84,
+    "team": "Sales",
+    "name": "Julie Reboul",
+    "gravatar_url": "https://gravatar.com/avatar/5eed08bac5b2e9c0b46293d0cdf2faf6",
+    "funny_quote": "I took a selfie with Twitter's previous CEO, and it was fun!",
+    "emoji": "🐦",
+    "objectID": "julie-reboul"
+  },
+  {
+    "short_name": "christelle-dexet",
+    "role": "Event Marketing Manager",
+    "order": 85,
+    "team": "Sales",
+    "name": "Christelle Dexet",
+    "gravatar_url": "https://gravatar.com/avatar/c23aa2be34d1fc3fb022459797c202f1",
+    "funny_quote": "I never really learned to read time on a watch, I have to think about it for a moment.",
+    "emoji": "⌚️",
+    "objectID": "christelle-dexet"
+  },
+  {
+    "short_name": "will-paulus",
+    "role": "Head of US Sales",
+    "team": "Sales",
+    "order": 86,
+    "name": "Will Paulus",
+    "gravatar_url": "https://gravatar.com/avatar/8201cfe18fada94fb5a971934bfaa84c",
+    "funny_quote": "I play drums in a DJ group called Wait What, and at the peak of our popularity, we opened for Lil' Wayne at Meadowlands Stadium (home of the NY Giants)!",
+    "emoji": "🏟",
+    "objectID": "will-paulus"
+  },
+  {
+    "short_name": "haroen-viaene",
+    "role": "Empowerment Intern",
+    "team": "Engineering",
+    "order": 87,
+    "name": "Haroen Viaene",
+    "funny_quote": "I helped making a space shuttle simulator.",
+    "emoji": "🛰",
+    "objectID": "haroen-viaene"
+  },
+  {
+    "short_name": "david-strader",
+    "role": "Customer Success Manager",
+    "order": 88,
+    "team": "Customer Success",
+    "name": "David Strader",
+    "gravatar_url": "https://gravatar.com/avatar/d7b94175bf79005ad4a46890a3ac910f",
+    "objectID": "1838520342"
+  },
+  {
+    "short_name": "jeremy-venezia",
+    "role": "Software Engineer",
+    "order": 89,
+    "team": "Engineering",
+    "name": "Jeremy Venezia",
+    "gravatar_url": "https://gravatar.com/avatar/f1c40fa1a6240dfd13a92f8669927c41",
+    "objectID": "jeremy-venezia"
+  },
+  {
+    "short_name": "jack-hoge",
+    "role": "Solutions Engineer",
+    "order": 90,
+    "team": "Customer Success",
+    "name": "Jack Hoge",
+    "funny_quote": "I only wear clothing from UNIQLO.",
+    "emoji": "👕",
+    "objectID": "jack-hoge"
+  },
+  {
+    "short_name": "chip-lewis",
+    "role": "Account Executive",
+    "order": 91,
+    "team": "Sales",
+    "name": "Chip Lewis",
+    "gravatar_url": "https://gravatar.com/avatar/607b32158dc4281cade5363983c0001f",
+    "objectID": "chip-lewis"
+  },
+  {
+    "short_name": "chris-chan",
+    "role": "Senior Recruiter",
+    "order": 92,
+    "team": "G&A",
+    "name": "Chris Chan",
+    "gravatar_url": "https://gravatar.com/avatar/c7df876f315524ecd697b6dacf3f26b7",
+    "objectID": "chris-chan"
+  },
+  {
+    "short_name": "tomas-pereira",
+    "role": "Outbound SDR - Strategic Accounts",
+    "order": 93,
+    "team": "Sales",
+    "name": "Tomas Pereira",
+    "gravatar_url": "https://gravatar.com/avatar/e3b8aa5503f4f9ec4052ac38deaf5789",
+    "objectID": "tomas-pereira"
+  },
+  {
+    "short_name": "jason-harris",
+    "role": "Developer Advocate",
+    "team": "Community",
+    "order": 94,
+    "name": "Jason Harris",
+    "gravatar_url": "https://gravatar.com/avatar/a0afd70a440899174387474bc9573a23",
+    "funny_quote": "In addition to being a community builder I'm also a long-time tech blogger, I published beer snob and I'm a nationally-syndicated radio show tech correspondent.",
+    "emoji": "🍺",
+    "objectID": "jason-harris"
+  },
+  {
+    "short_name": "maxime-janton",
+    "role": "Software Engineer",
+    "order": 95,
+    "team": "Engineering",
+    "name": "Janton Maxime",
+    "gravatar_url": "https://gravatar.com/avatar/6581c41e2cdbf479076a57f89fbfedc7",
+    "objectID": "maxime-janton"
+  },
+  {
+    "short_name": "julien-bourdeau",
+    "role": "Software Engineer",
+    "order": 96,
+    "team": "Engineering",
+    "name": "Julien Bourdeau",
+    "gravatar_url": "https://gravatar.com/avatar/6163f2a1af373d957715bcebee188ba3",
+    "objectID": "julien-bourdeau"
+  },
+  {
+    "short_name": "maryann-holmes",
+    "role": "Executive Assistant",
+    "team": "G&A",
+    "order": 97,
+    "name": "Maryann Holmes",
+    "funny_quote": "I went on a dive trip in Cancun for 3 days, and didn't come back for a year.",
+    "emoji": "🏝",
+    "objectID": "maryann-holmes"
+  },
+  {
+    "short_name": "aurora-pleguezuelo",
+    "role": "UI/UX Designer",
+    "team": "Design",
+    "order": 98,
+    "name": "Aurora Pleguezuelo",
+    "funny_quote": "I’m working on the perfect meal: Chicken-wing & Kale burrito!",
+    "emoji": "🌯",
+    "objectID": "aurora-pleguezuelo"
+  },
+  {
+    "short_name": "mike-bahnan",
+    "role": "Customer Success Manager",
+    "order": 99,
+    "team": "Customer Success",
+    "name": "Mike Bahnan",
+    "gravatar_url": "https://gravatar.com/avatar/14b077958716b963f81bdc12dce34308",
+    "funny_quote": "Knowing left from right quickly is an issue that runs in the family. Luckily i know i write with my right hand...or do I?",
+    "emoji": "🤔",
+    "objectID": "mike-bahnan"
+  },
+  {
+    "short_name": "alex-avritch",
+    "role": "Event Marketing Manager",
+    "team": "Marketing",
+    "order": 100,
+    "name": "Alex Avritch",
+    "gravatar_url": "https://gravatar.com/avatar/a98f295411465162d964fec3e1114912",
+    "objectID": "alex-avritch"
   }
 ]
 

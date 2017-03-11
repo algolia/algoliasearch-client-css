@@ -13,10 +13,14 @@ class Generate
     @root = File.join(File.expand_path(File.dirname(__FILE__)), '..')
     people = JSON.parse(File.open("#{@root}/data/members.json").read)
     @people = people.map do |person|
-      
-      image = 'https://www.algolia.com/static_assets/images/' \
-               "about-#{person['short_name']}.jpg"
-      person['image'] = CSSWriter.cloudinary(image)
+      if person.key? 'gravatar_url'
+        image = "#{person['gravatar_url']}%3Fs=300%26&d=https://www.algolia.com/static_assets/images/about-you.jpg"
+        person['image'] = CSSWriter.cloudinary(image, fetch: true)
+      else
+        image = 'https://www.algolia.com/static_assets/images/' \
+             "about-#{person['short_name']}.jpg"
+        person['image'] = CSSWriter.cloudinary(image)
+      end
       person
     end
 

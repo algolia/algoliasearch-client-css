@@ -31,12 +31,17 @@ class CSSWriter
   end
 
   # Get the Cloudinary link to an image
-  def self.cloudinary(url)
-    # Our cloudinary account is mappting the /team virtual directory to the
-    # asset directory of algolia.com
-    # t_looflirpa is the name of the named transformation
-    'https://res.cloudinary.com/hilnmyskv/image/upload/t_looflirpa,f_auto/team/' \
-      + url.split('/')[-1]
+  def self.cloudinary(url, fetch: false)
+    base = 'http://res.cloudinary.com/hilnmyskv/image'
+    unless fetch
+      # Our cloudinary account is mappting the /team virtual directory to the
+      # asset directory of algolia.com
+      # t_looflirpa is the name of the named transformation
+      return "#{base}/upload/t_looflirpa,f_auto/team/#{url.split('/')[-1]}"
+    end
+
+    transformations = 'c_scale,e_grayscale,f_auto,h_220,q_90,r_max,w_220'
+    return "#{base}/fetch/#{transformations}/#{url}"
   end
 
   # Return a selector for the input with a specific query

@@ -41,7 +41,7 @@ class CSSWriter
     end
 
     transformations = 'c_scale,e_grayscale,f_auto,h_220,q_90,r_max,w_220'
-    return "#{base}/fetch/#{transformations}/#{url}"
+    "#{base}/fetch/#{transformations}/#{url}"
   end
 
   # Return a selector for the input with a specific query
@@ -55,7 +55,7 @@ class CSSWriter
     facet_to_selectors = {}
     empty_query_facet.each.with_index do |facet, index|
       facet_name = facet[:name]
-      label_selector = "label[for='f#{index}']"
+      label_selector = "#l#{index}"
       radio_selector = "#f#{index}"
 
       facet_to_selectors[facet_name] = {
@@ -68,7 +68,7 @@ class CSSWriter
   end
 
   # Apply facet counts
-  def self.add_facet_counts(css, all_facets)
+  def self.add_facets(css, all_facets, records)
     # We start by pre-filling all the labels already in the page with their
     # default names (they won't still have the correct count nor position, this
     # will be handled on a prefix-by-prefix basis afterward).
@@ -84,9 +84,19 @@ class CSSWriter
 
       # When clicking on any facet, we hide it, and display the placeholder with
       # the new name instead
-      base_checked_selector = "#{radio_selector}:checked ~ aside"
-      css << "#{base_checked_selector} #{label_selector} { display: none !important; }"
-      css << "#{base_checked_selector} label[for=fx]:before { content: '#{facet_name}' }"
+      css << "#{radio_selector}[id]:checked ~ #f #{label_selector} { display: none; }"
+      css << "#{radio_selector}:checked ~ #f label[for=fx]:before { content: '#{facet_name}' }"
+
+      # When selecting this facet, we hide all results that are not part of this
+      # facet.
+      facet_attribute = facet[:attribute]
+      records.each.with_index do |record, index|
+        facet_value = record[facet_attribute]
+        next if facet_value == facet_name
+        # Using [id] is a trick to increase the specificity without using
+        # !important (it uses less characters)
+        css << "#{radio_selector}[id]:checked ~ #h #h#{index} { display: none; }"
+      end
     end
 
     # For each prefix, we will display the matching facets, and update their
@@ -102,23 +112,22 @@ class CSSWriter
         label_selector = facet_to_selectors[facet_name][:label]
         radio_selector = facet_to_selectors[facet_name][:radio]
 
-        selector = "#{input(prefix)} ~ aside #{label_selector}"
+        selector = "#{input(prefix)} ~ #f #{label_selector}"
         css << "#{selector} { display: block; order: #{order}; }"
         css << "#{selector}:after { content: '#{facet_count}'; }"
 
         # If a specific facet is selected we  reflect the count and
         # position in the placeholder
-        base_checked_selector = "#{radio_selector}:checked ~ #{input(prefix)} ~ aside "
-        css << "#{base_checked_selector} label[for=fx] { display: block; order: #{order}; }"
-        css << "#{base_checked_selector} label[for=fx]:after { content: '#{facet_count}'; }"
+        base_checked_selector = "#{radio_selector}:checked ~ #{input(prefix)} ~ #f "
+        css << "#{base_checked_selector} #lx { display: block; order: #{order}; }"
+        css << "#{base_checked_selector} #lx:after { content: '#{facet_count}'; }"
       end
     end
 
     css
   end
 
-  def self.add_results(css, lookup_table, all_facets)
-    facet_to_selectors = facet_selectors(all_facets['__EMPTY_QUERY__'])
+  def self.add_results(css, lookup_table)
     record_to_selector = {}
 
     # We pre-fill all the results with the results of the empty query
@@ -153,28 +162,11 @@ class CSSWriter
         role = highlight(entry[:highlights]['role']) if entry[:highlights].key? 'role'
 
         hit_selector = record_to_selector[entry[:record]['objectID']]
-        base_selector = "#{input(prefix_selector)} ~ section #{hit_selector}"
+        base_selector = "#{input(prefix_selector)} ~ #h #{hit_selector}"
 
         # We display the results for the prefix
         css << "#{base_selector} { display: block; order: #{order}; }"
         css << "#{base_selector}:before { content: '#{name}\\A #{role}'; }"
-
-        # We hide the results if the selected facet is not the facet of the
-        # result
-        next unless all_facets.key? prefix
-        all_facets[prefix].each do |facet|
-          facet_name = facet[:name]
-          attribute = facet[:attribute]
-          entry_facet_value = entry[:record][attribute]
-
-          # We skip if the selected facet is equal to the facet of this result
-          next if facet_name == entry_facet_value
-
-          # We hide the result that match an unselected facet
-          radio_selector = facet_to_selectors[facet_name][:radio]
-          checked_base_selector = "#{radio_selector}:checked ~ #{base_selector}"
-          css << "#{checked_base_selector} { display: none; }"
-        end
       end
     end
 

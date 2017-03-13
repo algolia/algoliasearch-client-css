@@ -53,15 +53,14 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   font: inherit;
 }
 
-#i ~ section {
+#h {
   display: flex;
   flex-flow: row wrap;
   margin: 1rem auto 0 auto;
   max-width: 1240px;
 }
 
-#i ~ section div,
-#l {
+#h div {
   display: none;
   flex: 1 1 300px;
   height: 300px;
@@ -74,7 +73,7 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   padding-top: 220px;
   position: relative;
 }
-#i ~ section div:before {
+#h div:before {
   text-align:center;
   display: block;
   white-space: pre;
@@ -84,13 +83,13 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   font-family: 'Highlight';
 }
 /* Name (overriding role) */
-#i ~ section div:first-line {
+#h div:first-line {
   font-style: normal;
   font-weight:bold;
   font-size: 1.2rem;
   line-height: 2rem;
 }
-#i ~ section div:after {
+#h div:after {
   display: flex;
   height: 200px;
   width: 180px;
@@ -111,21 +110,25 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
   opacity: 0;
   transition: opacity 0.12s ease-in;
 }
-#i ~ section div:hover:after {
+#h div:hover:after {
   opacity: 1;
 }
 
 /* Open positions link */
 #l {
-  display: block;
+  display: flex;
+  flex: 1 1 300px;
+  max-width: 300px;
+  margin: 0 0 10px 10px;
   height: auto;
   padding: 0;
   color: #182359;
   text-decoration: none;
   order: 9999;
 }
-#l[id] div {
+#l div {
   display: block;
+  width: 300px;
   margin: 0;
   flex: none;
   background-image: url(https://res.cloudinary.com/hilnmyskv/image/upload/t_looflirpa,f_auto/team/about-you.jpg)
@@ -159,10 +162,10 @@ img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 au
 input[type="radio"] { display: none; }
 
 /**
- * Facet labels are contained in an aside, and have a class from f0 to f6, with
+ * Facet labels are contained in an #f, and have a class from f0 to f6, with
  * fx being special and used to display the currently selected facet
  **/
-aside {
+#f {
   display: flex;
   flex-flow: row wrap;
   margin: 1rem auto 0 auto;
@@ -170,7 +173,7 @@ aside {
   justify-content: center;
   position: relative;
 }
-aside label {
+#f label {
   position: relative;
   display: none;
   flex: 1 1 content;
@@ -185,7 +188,7 @@ aside label {
   cursor: pointer;
   overflow: hidden;
 }
-aside label:after {
+#f label:after {
   position: absolute;
   top: 0px;
   bottom: 0;
@@ -198,12 +201,12 @@ aside label:after {
   text-align: center;
   background: #9D9DBD;
 }
-aside label:hover {
+#f label:hover {
   background: #00AEFF;
   color: white;
   border-color: #00AEFF;
 }
-aside label:hover:after {
+#f label:hover:after {
   background: #00AEFF;
 }
 /**
@@ -211,12 +214,12 @@ aside label:hover:after {
  * linked to an "unused" radio button, users can "unselect" the facet by
  * clicking on it
  **/
-label[for=fx] { 
+#f #lx { 
   background: #3369E7;
   color: white;
   border-color: #3369E7;
   display: none; 
 }
-label[for=fx]:after { 
+#f #lx:after { 
   background: #3369E7;
 }

@@ -2,3 +2,6 @@
 
 npm run generate-font ./fonts/Raleway-Regular.ttf ./fonts/Raleway-Bold.ttf
 npm run generate-css --with-facets --with-roles --with-typos
+# Minification is not yet ready. The generated file is smaller, but takes longer
+# to parse and has some display glitches
+# npm run minify

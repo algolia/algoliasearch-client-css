@@ -74,8 +74,8 @@ class Generate
     facets = QueryParser.generate_facets(lookup_table, 'team', @people) if @with_facets
 
     css = CSSWriter.base
-    css = CSSWriter.add_facet_counts(css, facets) if @with_facets
-    css = CSSWriter.add_results(css, lookup_table, facets)
+    css = CSSWriter.add_facets(css, facets, @people) if @with_facets
+    css = CSSWriter.add_results(css, lookup_table)
 
     main_css = File.read("#{@root}/public/css/base.css")
     final_css = main_css + css.join("\n")

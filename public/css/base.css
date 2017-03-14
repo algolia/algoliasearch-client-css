@@ -1,222 +1,321 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
+
 body {
-  color: #182359;
-  background-color: #f6fffe;
-  padding: 0rem 2rem;
-  font-family: Raleway;
+    color: #2e3134;
+    background-color: #f5f4f4;
+    font-family: Raleway;
+    cursor: default;
+    margin: 0;
+    background-image: linear-gradient(140deg, #0c69ac 10%, #182359 90%);
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+    text-align: center;
 }
+
 h1 {
-  font-family: Raleway;
-  position: relative;
-  text-align: center;
-  font-size: 2.2rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 0;
 }
-h1:after {
-  content: "";
-  position: absolute;
-  bottom: -.5rem;
-  width: 30px;
-  height: 2px;
-  left: 50%;
-  margin-left: -15px;
-  display: block;
-  background-color: #2dde98;
+
+h2 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0;
 }
-small {
-  display: block;
-  text-align: center;
+
+a {
+    color: #00AEFF;
 }
-a { color: #00AEFF; }
-img { width: 800px; border: 2px solid #357edd; border-radius: 10px; margin: 0 auto; display: block;}
+
+img {
+    width: 800px;
+    border: 2px solid #357edd;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.header-container {
+    padding: 70px 20px 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'Highlight';
-  src: url('../fonts/Highlight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Highlight';
+    src: url('../fonts/Highlight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
 #i {
-  width: 50%;
-  margin: 1rem 25% 0 25%;
-  padding-left: .5rem;
-  height: 2.5rem;
-  border-width: .125rem;
-  border-radius: .25rem;
-  border-color: #357edd;
-  border-style: solid;
-  outline: 0;
-  font: inherit;
+    outline: 0;
+    font-family: "Open Sans";
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, .7);
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-size: .9rem;
+    margin-top: 50px;
+    width: calc(100% - 40px);
+    max-width: 800px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #i ~ section {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 1rem auto 0 auto;
-  max-width: 1240px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px auto 0 auto;
+    max-width: 1240px;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+    padding: 40px 20px 0 20px;
+    border-radius: 4px;
 }
 
 #i ~ section div,
 #l {
-  display: none;
-  flex: 1 1 300px;
-  height: 300px;
-  max-width: 300px;
-  margin: 0 0 10px 10px;
-  background-repeat: no-repeat;
-  background-position: 50% 0px;
-  background-size: 200px;
-  font-family: 'Highlight';
-  padding-top: 220px;
-  position: relative;
+    display: none;
+    flex: 1 1 25%;
+    margin-bottom: 60px;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-size: 200px;
+    font-family: 'Highlight';
+    padding-top: 220px;
+    position: relative;
 }
+
 #i ~ section div:before {
-  text-align:center;
-  display: block;
-  white-space: pre;
-  /* Role */
-  font-style: italic;
-  font-size: .9rem;
-  font-family: 'Highlight';
+    text-align: center;
+    display: block;
+    white-space: pre;
+    /* Role */
+    font-size: .9rem;
+    font-family: 'Highlight';
+    letter-spacing: .04rem;
+    font-weight: 300;
+    color: #182359;
 }
+
+
 /* Name (overriding role) */
+
 #i ~ section div:first-line {
-  font-style: normal;
-  font-weight:bold;
-  font-size: 1.2rem;
-  line-height: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: .06rem;
 }
+
 #i ~ section div:after {
-  display: flex;
-  height: 200px;
-  width: 180px;
-  padding: 0 10px;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -100px;
-  background: rgba(24,35,89,0.6);
-  border-radius: 50%;
-  white-space: pre-line;
-  color: white;
-  line-height: 1.5rem;
-  font-family: 'Raleway';
-  opacity: 0;
-  transition: opacity 0.12s ease-in;
+    display: flex;
+    height: 200px;
+    width: 180px;
+    padding: 0 10px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    background-image: linear-gradient(140deg, rgba(12, 105, 172, 0.75) 10%, rgba(24, 35, 89, 0.75) 90%);
+    border-radius: 50%;
+    white-space: pre-line;
+    color: white;
+    line-height: 1.5rem;
+    font-family: 'Open Sans';
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
 }
+
 #i ~ section div:hover:after {
-  opacity: 1;
+    opacity: 1;
 }
+
 
 /* Open positions link */
+
 #l {
-  display: block;
-  height: auto;
-  padding: 0;
-  color: #182359;
-  text-decoration: none;
-  order: 9999;
+    display: block;
+    height: auto;
+    padding: 0;
+    color: #182359;
+    text-decoration: none;
+    order: 9999;
 }
+
 #l div {
-  display: block;
-  margin: 0;
-  flex: none;
-  background-image:url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-you.jpg)
+    display: block!important;
+    margin-bottom: 0!important;
+    flex: none;
+    background-image: url(https://res.cloudinary.com/pixelastic-parisweb/image/fetch/w_220,h_220,q_90,c_scale,r_max,f_auto,e_grayscale/https://www.algolia.com/static_assets/images/about-you.jpg)
 }
+
 #l div:before {
-  content: 'We are hiring\A See open positions';
-  color: #00aeff;
-  font-style: normal;
+    content: 'We are hiring\A See open positions';
+    color: #00aeff;
+    font-style: normal;
 }
+
 #l div:first-line {
-  color: #182359;
+    color: #182359;
 }
+
 #l:hover div:before {
-  color: #007ab3;
-  font-weight: bold;
+    color: #007ab3;
+    font-weight: bold;
 }
+
 
 /* Result count */
+
 #r {
-  display: block;
-  margin: 0 25%;
-  font-size: .9rem;
-  font-style: italic;
-  padding-left: 1rem;
-  text-align: right;
+    display: block;
+    margin: 10px auto;
+    font-size: .9rem;
+    text-align: right;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 800px;
 }
-#r:after { content: " results"; }
-#r:before { content: "0"; }
 
+#r:after {
+    content: " results";
+}
 
-input[type="radio"] { display: none; }
+#r:before {
+    content: "0";
+}
+
+input[type="radio"] {
+    display: none;
+}
+
 
 /**
  * Facet labels are contained in an aside, and have a class from f0 to f6, with
  * fx being special and used to display the currently selected facet
  **/
+
 aside {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 1rem auto 0 auto;
-  max-width: 1240px;
-  justify-content: center;
-  position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 60px auto 0 auto;
+    max-width: 1240px;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+    padding: 30px 20px 16px 6px;
+    background-color: #fff;
+    border-radius: 4px;
 }
+
 aside label {
-  position: relative;
-  display: none;
-  flex: 1 1 content;
-  margin: 0 0 10px 10px;
-  border: 2px solid #9d9dbd;
-  border-right: none;
-  border-radius: 9999px;
-  padding: 0 35px 0 .5rem;
-  height: 2rem;
-  line-height: 2rem;
-  color: #182359;
-  cursor: pointer;
-  overflow: hidden;
+    position: relative;
+    display: none;
+    margin: 0 0 14px 14px;
+    border: 2px solid #f0f0f5;
+    border-right: none;
+    border-radius: 9999px;
+    padding: 0 45px 0 16px;
+    line-height: 2.3rem;
+    color: #182359;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    transition: ease-in .18s;
 }
+
 aside label:after {
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  right: 0px;
-  width: 30px;
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  background: #9D9DBD;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0px;
+    width: 34px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    color: #182359;
+    font-weight: bold;
+    text-align: center;
+    background: #f0f0f5;
 }
-aside label:hover {
-  background: #00AEFF;
-  color: white;
-  border-color: #00AEFF;
+
+aside label:not([for=fx]):hover {
+    background: rgba(240, 240, 245, .5);
 }
-aside label:hover:after {
-  background: #00AEFF;
-}
+
+
 /**
  * This label is used to display the currently selected facet. Because it is
  * linked to an "unused" radio button, users can "unselect" the facet by
  * clicking on it
  **/
-label[for=fx] { 
-  background: #3369E7;
-  color: white;
-  border-color: #3369E7;
-  display: none; 
+
+label[for=fx] {
+    background-image: linear-gradient(284deg, #1cc7d0, #2dde98);
+    color: white;
+    display: none;
 }
-label[for=fx]:after { 
-  background: #3369E7;
+
+label[for=fx]:after {
+    background-color: transparent;
+    color: #fff;
+}
+
+@media (max-width: 1240px) {
+    #i ~ section,
+    aside {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 972px) {
+    #i ~ section div,
+    #l {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 865px) {
+    #r {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    #i ~ section div,
+    #l {
+        flex-basis: 100%;
+    }
 }

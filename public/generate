@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-(65..90).each do |i|
-  puts "<div id=\"h#{i}\"></div>"
-end

@@ -27,6 +27,7 @@ class Generate
       { 'attribute' => 'name', 'original' => 'Gianluca Bargelli', 'replace' => 'Pizza Master Bargelli' },
       { 'attribute' => 'name', 'original' => 'Gianluca Bargelli', 'replace' => 'Proudlygeek' },
       { 'attribute' => 'name', 'original' => 'Jan Petr', 'replace' => 'Honza' },
+      { 'attribute' => 'name', 'original' => 'Clément Leprovost', 'replace' => 'Grumpy Leprovost' },
       { 'attribute' => 'name', 'original' => 'Matthieu Dumont', 'replace' => 'Jerska' },
       { 'attribute' => 'name', 'original' => 'Julien Lemoine', 'replace' => 'Speedblue' },
       { 'attribute' => 'name', 'original' => 'Sylvain Utard', 'replace' => 'Redox' },

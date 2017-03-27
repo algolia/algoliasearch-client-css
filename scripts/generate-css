@@ -5,11 +5,7 @@ require_relative '../lib/css_writer.rb'
 
 # Generate a CSS file with rules for finding team members
 class Generate
-  def initialize(args)
-    @with_typos = args.include?('--with-typos')
-    @with_facets = args.include?('--with-facets')
-    @with_roles = args.include?('--with-roles')
-
+  def initialize
     @root = File.join(File.expand_path(File.dirname(__FILE__)), '..')
     people = JSON.parse(File.open("#{@root}/data/members.json").read)
     @people = people.map do |person|
@@ -51,8 +47,10 @@ class Generate
   def run
     lookup_table = QueryParser.empty_query(@people, %w(name role))
     @people.each do |person|
-      matches = [{ attribute: 'name', keyword: person['name'] }]
-      matches.push(attribute: 'role', keyword: person['role']) if @with_roles
+      matches = [
+        { attribute: 'name', keyword: person['name'] },
+        { attribute: 'role', keyword: person['role'] }
+      ]
 
       entry_table = QueryParser.index(person, matches: matches)
       lookup_table = QueryParser.merge(lookup_table, entry_table)
@@ -60,36 +58,25 @@ class Generate
 
     lookup_table = QueryParser.uniq(lookup_table)
     lookup_table = QueryParser.add_synonyms(lookup_table, @people, @synonyms)
-    lookup_table = QueryParser.add_typos(lookup_table) if @with_typos
+    lookup_table = QueryParser.add_typos(lookup_table)
     lookup_table = QueryParser.uniq(lookup_table)
 
     options = {
       custom_ranking: 'order',
-      searchable_attributes: %w(name)
+      searchable_attributes: %w(name role)
     }
-    options[:searchable_attributes].push('role') if @with_roles
     lookup_table = QueryParser.sort(lookup_table, options)
 
-    facets = { '__EMPTY_QUERY__' => [] }
-    facets = QueryParser.generate_facets(lookup_table, 'team', @people) if @with_facets
+    facets = QueryParser.generate_facets(lookup_table, 'team', @people)
 
     css = CSSWriter.base
-    css = CSSWriter.add_facets(css, facets, @people) if @with_facets
+    css = CSSWriter.add_facets(css, facets, @people)
     css = CSSWriter.add_results(css, lookup_table)
 
     main_css = File.read("#{@root}/public/css/base.css")
     final_css = main_css + css.join("\n")
 
-    final_name = 'basic.css'
-    final_name = 'typos.css' if @with_typos
-    final_name = 'facets.css' if @with_facets
-    final_name = 'roles.css' if @with_roles
-    final_name = 'facets-typos.css' if @with_typos && @with_facets
-    final_name = 'roles-typos.css' if @with_typos && @with_roles
-    final_name = 'facets-roles.css' if @with_facets && @with_roles
-    final_name = 'full.css' if @with_typos && @with_facets && @with_roles
-
-    File.write("#{@root}/public/css/#{final_name}", final_css)
+    File.write("#{@root}/public/css/search.css", final_css)
   end
 end
-Generate.new(ARGV).run
+Generate.new.run

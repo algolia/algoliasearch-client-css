@@ -56,8 +56,8 @@ const Minify = {
 
   run(args) {
     args = _.slice(args, 2);
-    const inputFile = args[0] || './public/css/full.css';
-    const outputFile = args[1] || './public/css/full.min.css';
+    const inputFile = args[0] || './public/css/search.css';
+    const outputFile = args[1] || './public/css/search.min.css';
 
     const input = fs.readFileSync(inputFile, 'utf-8');
 

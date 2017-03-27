@@ -11,7 +11,7 @@
   "scripts": {
     "deploy": "./scripts/deploy",
     "generate": "./scripts/generate",
-    "generate-css": "./scripts/generate-css --with-facets --with-typos --with-roles",
+    "generate-css": "./scripts/generate-css",
     "generate-font": "babel-node ./scripts/generate-font.js",
     "minify": "babel-node ./scripts/minify.js",
     "serve": "./scripts/serve",

@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-cleancss \
-   --format 'breaks:betweenSelectors=on,afterRuleEnds=on' \
-   -O1 \
-   -O2 'all:off;restructureRules:on' \
-   -o tmp/full.min.css \
-   public/css/full.css

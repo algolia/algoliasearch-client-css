@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+# 846.times do |i|
+#   puts "#i[value='bar'i]~#f #l0:after,"
+# end
+
+340.times do |i|
+  puts "#f0:checked~#i[value='bar' i]~#f #lx:after,"
+end

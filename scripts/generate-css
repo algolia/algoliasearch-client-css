@@ -40,7 +40,7 @@ class Generate
       { 'attribute' => 'name', 'original' => 'Emily Hayman', 'replace' => 'Flexbox girl' },
       { 'attribute' => 'name', 'original' => 'Tim Carry', 'replace' => 'pixelastic' },
       { 'attribute' => 'name', 'original' => 'Antoine Gauvain', 'replace' => 'drlkf' },
-      { 'attribute' => 'role', 'original' => 'Customer Solutions Engineer', 'replace' => 'CSE' }
+      { 'attribute' => 'role', 'original' => 'Solutions Engineer', 'replace' => 'SE' }
     ]
   end
 
@@ -77,6 +77,12 @@ class Generate
     final_css = main_css + css.join("\n")
 
     File.write("#{@root}/public/css/search.css", final_css)
+
+    # We'll generate several random orders for the empty query
+    10.times do |count|
+      random_order = CSSWriter.random_empty_query_order(lookup_table)
+      File.write("#{@root}/public/css/random/#{count}.css", random_order.join("\n"))
+    end
   end
 end
 Generate.new.run

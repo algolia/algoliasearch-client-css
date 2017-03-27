@@ -127,15 +127,24 @@ class CSSWriter
     css
   end
 
-  def self.add_results(css, lookup_table)
+
+  def self.record_to_selector_hash(lookup_table)
     record_to_selector = {}
+    lookup_table['__EMPTY_QUERY__'].each.with_index do |entry, index|
+      object_id = entry[:record]['objectID']
+      record_to_selector[object_id] = "#h#{index}"
+    end
+    record_to_selector
+  end
+
+  def self.add_results(css, lookup_table)
+    record_to_selector = record_to_selector_hash(lookup_table)
 
     # We pre-fill all the results with the results of the empty query
     lookup_table['__EMPTY_QUERY__'].each.with_index do |entry, index|
       object_id = entry[:record]['objectID']
-      record_to_selector[object_id] = "#h#{index}"
 
-      selector = "#h#{index}"
+      selector = record_to_selector[object_id]
       quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
 
       css << "#{selector} { background-image: url(#{entry[:record]['image']}); }"
@@ -148,7 +157,7 @@ class CSSWriter
       prefix_selector = prefix
       prefix_selector = '' if prefix == '__EMPTY_QUERY__'
 
-      # We had a counter
+      # We add a counter
       count = entries.length
       css << "#{input(prefix_selector)} ~ #r:before { content: '#{count}'; }"
       if count == 1
@@ -164,10 +173,27 @@ class CSSWriter
         hit_selector = record_to_selector[entry[:record]['objectID']]
         base_selector = "#{input(prefix_selector)} ~ #h #{hit_selector}"
 
-        # We display the results for the prefix
-        css << "#{base_selector} { display: block; order: #{order}; }"
+        # For this specific query, we display the matching result...
+        css << "#{base_selector} { display: block; }"
+        # ...in the specific order (empty query is handled through random)...
+        css << "#{base_selector} { order: #{order}; }" unless prefix_selector == ''
+        # ... and we set the content with the specific highlight
         css << "#{base_selector}:before { content: '#{name}\\A #{role}'; }"
       end
+    end
+
+    css
+  end
+
+  # Generate the CSS to display the empty query in a random order
+  def self.random_empty_query_order(lookup_table)
+    record_to_selector = record_to_selector_hash(lookup_table)
+    empty_query = lookup_table['__EMPTY_QUERY__'].shuffle
+    css = []
+
+    empty_query.each.with_index do |entry, order|
+      hit_selector = record_to_selector[entry[:record]['objectID']]
+      css << "#{input('')} ~ #h #{hit_selector} { order: #{order} }"
     end
 
     css

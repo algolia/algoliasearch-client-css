@@ -186,16 +186,16 @@ class CSSWriter
   end
 
   # Generate the CSS to display the empty query in a random order
-  def self.random_empty_query_order(lookup_table)
-    record_to_selector = record_to_selector_hash(lookup_table)
-    empty_query = lookup_table['__EMPTY_QUERY__'].shuffle
-    css = []
-
-    empty_query.each.with_index do |entry, order|
-      hit_selector = record_to_selector[entry[:record]['objectID']]
-      css << "#{input('')} ~ #h #{hit_selector} { order: #{order} }"
-    end
-
-    css
-  end
+  # def self.random_empty_query_order(lookup_table)
+  #   record_to_selector = record_to_selector_hash(lookup_table)
+  #   empty_query = lookup_table['__EMPTY_QUERY__'].shuffle
+  #   css = []
+  #
+  #   empty_query.each.with_index do |entry, order|
+  #     hit_selector = record_to_selector[entry[:record]['objectID']]
+  #     css << "#{input('')} ~ #h #{hit_selector} { order: #{order} }"
+  #   end
+  #
+  #   css
+  # end
 end

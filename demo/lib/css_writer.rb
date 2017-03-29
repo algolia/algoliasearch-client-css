@@ -127,7 +127,6 @@ class CSSWriter
     css
   end
 
-
   def self.record_to_selector_hash(lookup_table)
     record_to_selector = {}
     lookup_table['__EMPTY_QUERY__'].each.with_index do |entry, index|
@@ -141,7 +140,7 @@ class CSSWriter
     record_to_selector = record_to_selector_hash(lookup_table)
 
     # We pre-fill all the results with the results of the empty query
-    lookup_table['__EMPTY_QUERY__'].each.with_index do |entry, index|
+    lookup_table['__EMPTY_QUERY__'].each do |entry|
       object_id = entry[:record]['objectID']
 
       selector = record_to_selector[object_id]

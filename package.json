@@ -9,13 +9,16 @@
     "url": "ssh://git@github.com:algolia/algoliasearch-css-client.git"
   },
   "scripts": {
-    "deploy": "./scripts/deploy",
-    "generate": "./scripts/generate",
-    "generate-css": "./scripts/generate-css",
-    "generate-font": "babel-node ./scripts/generate-font.js",
-    "minify": "babel-node ./scripts/minify.js",
+    "demo-generate-all": "./scripts/demo/generate",
+    "demo-generate-font": "babel-node ./scripts/demo/generate-font.js",
+    "demo-generate-css": "./scripts/demo/generate-css",
+    "demo-minify": "babel-node ./scripts/demo/minify.js",
+    "demo-test": "./scripts/demo/test",
+    "demo-test-watch": "./scripts/demo/test-watch",
+    "demo-lint": "./scripts/demo/lint",
+    "lint": "./scripts/lint",
     "serve": "./scripts/serve",
-    "lint": "eslint ./scripts/*.js"
+    "deploy": "./scripts/deploy"
   },
   "devDependencies": {
     "babel": "^5.8.29",

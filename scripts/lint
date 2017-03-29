@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+set -eu
 cd "$(dirname "$BASH_SOURCE")"/..
 
-bundle exec rubocop && \
-  yarn run lint
+eslint ./scripts/*.js
+yarn run demo-lint
+

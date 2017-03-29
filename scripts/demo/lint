@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Do not commit any focused or excluded tests
+if grep --color -r 'demo/spec' -E -e '^( |\t)*(fit|fdescribe|xit|xdescribe)'; then
+  echo '✘ You have focused and/or skipped tests'
+  exit 1
+fi
+
+rubocop -F './demo/lib/' './demo/spec'

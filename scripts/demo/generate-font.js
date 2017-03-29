@@ -47,11 +47,7 @@ const GenerateFont = {
 
   // Convert a ttf file to an svg one
   ttf2svg(filepath) {
-    const output = `./tmp/${basename(filepath)}.svg`;
-
-    // if (fs.existsSync(output)) {
-    //   return Promise.resolve(output);
-    // }
+    const output = `./demo/tmp/${basename(filepath)}.svg`;
 
     return GenerateFont.readFile(filepath)
       .then(buffer => GenerateFont.writeFile(output, ttf2svg(buffer)))
@@ -62,10 +58,6 @@ const GenerateFont = {
   svg2ttf(filepath) {
     const output = filepath.replace('.svg', '.ttf');
 
-    // if (fs.existsSync(output)) {
-    //   return Promise.resolve(output);
-    // }
-
     const svg = fs.readFileSync(filepath, 'utf-8');
     fs.writeFileSync(output, new Buffer(svg2ttf(svg).buffer));
     return Promise.resolve(output);
@@ -73,7 +65,7 @@ const GenerateFont = {
 
   // Explode a font into a list of all its glyphs
   explodeGlyphs(font) {
-    const output = `./tmp/${basename(font)}/`;
+    const output = `./demo/tmp/${basename(font)}/`;
     if (fs.existsSync(output)) {
       return Promise.resolve(output);
     }
@@ -86,7 +78,7 @@ const GenerateFont = {
 
   // Gets all characters that could be used for highlighting
   getAllNeededCharacters() {
-    return GenerateFont.readFile('./data/members.json')
+    return GenerateFont.readFile('./demo/data/members.json')
       .then(content => JSON.parse(content))
       .then(members => {
         const highlightAggregate = _.reduce(members, (aggregate, member) => `${aggregate}${member.name}${member.role}`, '');
@@ -113,7 +105,7 @@ const GenerateFont = {
       const boldGlyphsDirectory = results[1];
       const characters = results[2];
 
-      const outputPath = './public/fonts/Highlight.svg';
+      const outputPath = './public/demo/fonts/Highlight.svg';
       const deferred = Promise.pending();
       const fontStream = svg2font({
         fontName: 'Highlight',

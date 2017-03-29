@@ -68,7 +68,7 @@ class QueryParser
   def self.add_to_entry_list(entry_list, prefix, record, highlights)
     prefix = prefix.downcase
     entry_list[prefix] = [] unless entry_list.key?(prefix)
-    
+
     # Checking if we already have a record saved for this prefix
     existing_record = entry_list[prefix].find do |checked_record|
       checked_record[:record]['objectID'] == record['objectID']

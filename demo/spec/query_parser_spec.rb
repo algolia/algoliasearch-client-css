@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe(QueryParser) do
-
   describe 'index' do
     it 'should create an EntryList for each prefix' do
       # Given
@@ -113,7 +112,6 @@ describe(QueryParser) do
       # When
       actual = QueryParser.index(record, options)
 
-
       # Then
       expect(actual).to include 'mar'
       expect(actual['mar'][0][:highlights]).to include 'name'
@@ -170,7 +168,6 @@ describe(QueryParser) do
       # Given
       record = { name: 'tim carry' }
       options = { matches: { attribute: 'name', keyword: 'tim carry' } }
-
 
       # When
       actual = QueryParser.index(record, options)
@@ -410,7 +407,6 @@ describe(QueryParser) do
       # Then
       expect(actual).to eq 2
     end
-
   end
 
   describe 'score_position' do

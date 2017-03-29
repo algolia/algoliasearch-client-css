@@ -22,7 +22,7 @@ const Minify = {
     };
     const instance = new CleanCSS(options);
     // clean-css 4.0.10 does not allow updating it from the options directly
-    instance.options.compatibility.selectors.mergeLimit = 100;
+    instance.options.compatibility.selectors.mergeLimit = 1000;
     return instance.minify(input).styles;
   },
 
@@ -60,10 +60,11 @@ const Minify = {
     const outputFile = args[1] || './public/css/search.min.css';
 
     const input = fs.readFileSync(inputFile, 'utf-8');
+    console.info('Minifying... this can take up to one minute');
 
     let minified = Minify.restructureRules(input);
     // minified = Minify.mergeNonAdjacent(minified);
-    minified = Minify.format(minified);
+    // minified = Minify.format(minified);
     console.info('Write output to file');
     Minify.writeFile(outputFile, minified);
   },

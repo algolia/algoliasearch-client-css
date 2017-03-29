@@ -16,8 +16,10 @@
     "demo-test": "./scripts/demo/test",
     "demo-test-watch": "./scripts/demo/test-watch",
     "demo-lint": "./scripts/demo/lint",
+    "demo-serve": "./scripts/demo/serve",
+    "website-serve": "./scripts/website/serve",
+    "website-build": "./scripts/website/build",
     "lint": "./scripts/lint",
-    "serve": "./scripts/serve",
     "deploy": "./scripts/deploy"
   },
   "devDependencies": {

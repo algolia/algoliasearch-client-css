@@ -10,10 +10,11 @@
     <title><%= current_page.data.title || "Middleman" %></title>
 
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
   </head>
 
   <body class="<%= page_classes %>">
     <%= yield %>
+    <%= javascript_include_tag "jquery-3.2.0.min" %>
+    <%= javascript_include_tag "site" %>
   </body>
 </html>

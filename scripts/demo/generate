@@ -2,5 +2,5 @@
 set -eu
 
 npm run demo-generate-font ./demo/fonts/Raleway-Regular.ttf ./demo/fonts/Raleway-Bold.ttf
-npm run generate-css
-npm run minify
+npm run demo-generate-css
+npm run demo-minify

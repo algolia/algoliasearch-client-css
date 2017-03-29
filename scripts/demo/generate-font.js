@@ -105,7 +105,7 @@ const GenerateFont = {
       const boldGlyphsDirectory = results[1];
       const characters = results[2];
 
-      const outputPath = './public/demo/fonts/Highlight.svg';
+      const outputPath = './demo/public/fonts/Highlight.svg';
       const deferred = Promise.pending();
       const fontStream = svg2font({
         fontName: 'Highlight',

@@ -1,0 +1,62 @@
+
+.cta-free-trial
+  margin-top: -16px
+  padding: 160px 0
+  width: 100%
+  color: $white
+  background-image: url('../images/algolia-fast-bg.svg')
+  background-size: cover
+  position: relative
+
+  .container
+    z-index: 10
+
+  @include diagonal(-6deg, $white, 128px, before)
+    top: -64px
+    left: 0
+    z-index: 0
+
+    @media (min-width: 2000px)
+      top: -260px
+    @media (max-width: $screen-sm)
+      display: none
+
+
+  h3
+    font-size: 32px
+    color: $white
+    font-weight: 300
+    line-height: 32px
+  p
+    font-size: 18px
+    line-height: 28px
+    color: $white
+    font-weight: $regular
+
+  .btn
+    float: right
+    clear: both
+
+  .spacer24,
+  .spacer8
+    display: inline-block
+
+  .link
+    clear: both
+    padding: 8px 0 0
+    float: right
+    color: rgba($titan-white,.8)
+    border-bottom: 1px dashed rgba(255,255,255,.6)
+
+    &:hover
+      text-decoration: none
+      color: $titan-white
+
+  @media (max-width: $screen-md)
+    text-align: center
+
+    .btn
+      float: none !important
+
+    .link
+      float: none !important

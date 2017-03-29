@@ -1,0 +1,29 @@
+.hero
+  min-height: 700px
+  background:
+    image: url('../images/hero-cover.svg'), linear-gradient(to bottom right, #4B2E91, #3369E6 )
+    position: center bottom, top left
+    repeat: no-repeat, no-repeat
+    size: contain, cover
+    blend-mode: overlay
+
+  @media (max-width: $screen-md)
+    background-size: 140%, cover
+    background-position: left 15% bottom, center center
+
+
+
+  @include diagonal(16deg, $white, 250px, before)
+    bottom: -250px
+    left: 0
+    z-index: 0
+
+  @include diagonal(-16deg, $white, 250px, after)
+    bottom: -250px
+    left: 0
+    z-index: 0
+
+  .project-logo
+    max-width: 200px
+
+

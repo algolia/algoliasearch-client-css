@@ -1,0 +1,16 @@
+
+@mixin diagonal($rotation, $background, $height, $pos: after)
+  &:#{$pos}
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: $height
+    background: #{$background}
+    transform: skewY($rotation)
+    z-index: 0
+
+    @media (min-width: $screen-lg)
+      transform: skewY($rotation/2)
+
+    @content

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "algolia-frontend-components": "^0.0.20"
+  }
+}

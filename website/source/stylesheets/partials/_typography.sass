@@ -1,0 +1,74 @@
+
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscaled
+  text-rendering: optimizeLegibility
+
+b, strong
+  font-weight: $bold !important
+
+pre
+  margin: 16px 0
+  border: none !important
+
+h1, .h1
+  font-size: $font-size-h1
+  font-weight: $bold
+  text-align: center
+  line-height: 48px
+
+h2, .h2
+  font-weight: $light
+  line-height: 58px
+  position: relative
+  color: $bunting
+  &.underlined
+    text-align: center
+    margin-bottom: 32px
+    &:after
+      content: ''
+      position: absolute
+      bottom: -.5em
+      left: 50%
+      height: 2px
+      width: 30px
+      margin-left: -15px
+      display: block
+      background-color: $shamrock
+
+h3, .h3
+  font-weight: $medium
+  line-height: 24px
+
+  &.bold
+    font-size: 48px
+    font-weight: bold
+    line-height: 58px
+
+h4, .h4
+  font-weight: $bold
+  margin: 1em 0
+  color: $logan
+  text-transform: uppercase
+  letter-spacing: .1em
+
+h5, .h5, h6, .h6
+  margin: 1em 0
+
+p
+  font-family: $font-family-base
+  font-size: 20px
+  line-height: 40px
+  color: rgba($bunting, 0.4)
+
+.subtitle-white
+  font-size: 22px
+  line-height: 28px
+  color: rgba($white,.75)
+  margin-bottom: 40px
+
+.lead
+  opacity: .8
+  font-size: 18px
+  line-height: 24px
+

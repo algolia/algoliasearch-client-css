@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans')
+
+
+/**
+ * Intro section
+ */
+.introduction
+  .card
+    margin: 0 1em
+    width: calc(33.33% - 2em)
+
+    @media (max-width: $screen-sm)
+      width: 100%
+      margin: 0 auto 1em
+
+/**
+ * Demo section
+ */
+.demo
+  .pos-abt img,
+  .m100p svg
+    max-width: 980px
+    height: 100%
+    width: 100%
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+
+  .pos-abt img
+    height: auto
+    max-width: 800px
+    width: 100%
+    bottom: 0
+
+  .pos-abt
+    bottom: 0
+    left: 0
+
+    @media (max-width: $screen-sm)
+      width: 100%
+
+  .m100p
+    display: block
+    height: 100%
+    margin: auto
+    width: 100%
+
+  @media (max-width: $screen-sm)
+    height: 300px !important
+    min-height: 300px !important
+    .pos-abt img
+      max-width: 320px
+
+    .m100p svg
+      top: 40%
+      transform: translateY(-50%)
+
+    .btn
+      top: -160px
+      max-width: 80%
+      margin: auto
+      left: 0
+      right: 0
+      float: none
+      display: block
+
+
+/**
+ * Features section
+ */
+.features
+  figure
+    background: $titan-white
+    display: inline-block
+    width: 268px
+    height: 268px
+    padding: 0
+    margin: 0
+    border-radius: 50%
+    line-height: 268px
+
+    img
+      width: 40%
+
+/**
+ * API Section
+ */
+.api
+  .row.text-center
+    max-width: 80%
+    margin: auto
+
+  figure
+    background: $titan-white
+    display: inline-block
+    width: 128px
+    height: 128px
+    padding: 0
+    margin: 0
+    border-radius: 50%
+    line-height: 128px

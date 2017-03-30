@@ -21,6 +21,8 @@
     <meta content=500 property="og:image:height">
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "tags" %>
+
   </head>
 
   <body class="<%= page_classes %>">
@@ -29,5 +31,8 @@
     <%= javascript_include_tag "jquery-3.2.0.min" %>
     <%= javascript_include_tag "favico.js" %>
     <%= javascript_include_tag "site" %>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8JP8G"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </body>
 </html>

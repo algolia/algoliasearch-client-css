@@ -9,7 +9,7 @@ $(function() {
   modal.classList.add('modal', 'elevation1', 'z-10');
   let modalTemplate = `
   <div class="modal--inner">
-    <a href="#" class="modal--close btn btn-static-primary">x</a>
+    <a href="#" class="modal--close btn btn-static-secondary" onclick="this.parentNode.parentNode.remove()"><span class="icon icon-cancel"></span></a>
     <header>
       <h2>Happy April Fools day!</h2>
     </header>
@@ -97,7 +97,6 @@ $(function() {
 
     var nextMessage = messages.shift();
     if (!nextMessage) {
-      $(this).hide();
       document.body.appendChild(modal)
       return;
     }

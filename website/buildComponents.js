@@ -5,16 +5,20 @@ const output = algoliaComponents.communityHeader({
   menu: {
     project: {
       label: "Algolia CSS Client",
-      url: "https://community.algolia.com/magento/"
+      url: "https://community.algolia.com/algoliasearch-client-css/"
     }
   },
   sideMenu: [
-    { name: "Blog", url: "" },
-    { name: "Discourse", url: "" }
+    { name: "Live demo", url: "./demo" },
+    { name: "Blog", url: "https://blog.algolia.com/introducing-our-css-api-client", target: '_blank' },
+    { name: "Community forum", url: "https://discourse.algolia.com", target: '_blank'},
+    { image: '<img src="./images/github.svg" />', url: "https://github.com/algolia/algoliasearch-client-css", target: '_blank' }
   ],
   mobileMenu: [
-    { name: "Blog", url: "" },
-    { name: "Discourse", url: "" }
+    { name: "Live demo", url: "./demo" },
+    { name: "Blog", url: "https://blog.algolia.com/introducing-our-css-api-client", target: '_blank' },
+    { name: "Community forum", url: "https://discourse.algolia.com", target: '_blank' },
+    { image: '<img src="./images/github.svg" />', url: "https://github.com/algolia/algoliasearch-client-css", target: '_blank' }
   ],
   docSearch: null
 });

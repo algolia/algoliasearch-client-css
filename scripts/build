@@ -7,6 +7,8 @@ rm -rf ./gh-pages/*
 
 # Building website
 cd ./website
+yarn upgrade algolia-frontend-components
+node ./buildComponents.js
 middleman build
 mv -fun ./build/* ../gh-pages
 rm ../gh-pages/images/.keep

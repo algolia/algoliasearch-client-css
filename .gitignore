@@ -6,5 +6,5 @@ node_modules
 npm-debug.log
 tmp
 *~
-./gh-pages
+gh-pages
 ./website/build

@@ -119,7 +119,6 @@ $(function() {
   $(document).on('keydown', e => {
     if (e.keyCode === 27) {
       modal.remove();
-      trolledFavicon();
     }
   });
 });

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="368px" height="368px" viewBox="0 0 368 368" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>flexbox_illustration</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="130.032269%" y1="133.046875%" x2="-16.8002717%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#1F1A37" offset="0%"></stop>
+            <stop stop-color="#3E366A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="76.542575%" y1="-15.5777928%" x2="76.5425742%" y2="148.978728%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-9.67306386%" y1="132.182617%" x2="134.0107%" y2="-16.1181641%" id="linearGradient-3">
+            <stop stop-color="#00AEFF" offset="0%"></stop>
+            <stop stop-color="#3369E7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flexbox_illustration">
+            <g>
+                <circle id="bg_purple_03" fill="#F7F7FF" cx="184" cy="184" r="184"></circle>
+                <rect id="screen_48484_bg" fill="url(#linearGradient-1)" x="72" y="103" width="224" height="136" rx="4"></rect>
+                <polygon id="reflection_03" fill="url(#linearGradient-2)" style="mix-blend-mode: overlay;" opacity="0.38708107" points="192 103 296 103 296 239 143 239"></polygon>
+                <path d="M84,119 C81.790861,119 80,117.209139 80,115 C80,112.790861 81.790861,111 84,111 C86.209139,111 88,112.790861 88,115 C88,117.209139 86.209139,119 84,119 Z M98,119 C95.790861,119 94,117.209139 94,115 C94,112.790861 95.790861,111 98,111 C100.209139,111 102,112.790861 102,115 C102,117.209139 100.209139,119 98,119 Z M112,119 C109.790861,119 108,117.209139 108,115 C108,112.790861 109.790861,111 112,111 C114.209139,111 116,112.790861 116,115 C116,117.209139 114.209139,119 112,119 Z" id="btns_browser_03" fill="#FFFFFF" style="mix-blend-mode: overlay;" opacity="0.38708107"></path>
+                <ellipse id="floating_thing_03" fill-opacity="0.1" fill="#182359" cx="184.5" cy="271" rx="87.5" ry="8"></ellipse>
+                <path d="M286,226 L82,226 L82,223.99703 C82,223.453036 81.5522847,223 81,223 C80.4438648,223 80,223.446386 80,223.99703 L80,230.00297 C80,230.546964 80.4477153,231 81,231 C81.5561352,231 82,230.553614 82,230.00297 L82,228 L286,228 L286,230.00297 C286,230.546964 286.447715,231 287,231 C287.556135,231 288,230.553614 288,230.00297 L288,223.99703 C288,223.453036 287.552285,223 287,223 C286.443865,223 286,223.446386 286,223.99703 L286,226 Z" id="cota_white_03" fill="#FFFFFF"></path>
+                <rect id="UT303_box_494942" fill-opacity="0.2" fill="#050F2C" x="80" y="131.193548" width="208" height="24" rx="2"></rect>
+                <rect id="4985_box_0494" fill-opacity="0.2" fill="#050F2C" x="80" y="195.193548" width="64" height="24" rx="2"></rect>
+                <rect id="747_box_3994" fill-opacity="0.2" fill="#050F2C" x="224" y="195.193548" width="64" height="24" rx="2"></rect>
+                <rect id="3842_box_384u" fill-opacity="0.2" fill="#050F2C" x="152" y="195.193548" width="64" height="24" rx="2"></rect>
+                <rect id="024e_box_5535r" fill-opacity="0.2" fill="#050F2C" x="80" y="163.193548" width="100" height="24" rx="2"></rect>
+                <rect id="03_box_596" fill-opacity="0.2" fill="#050F2C" x="188" y="163.193548" width="100" height="24" rx="2"></rect>
+                <ellipse id="icon_bg_blue_03" fill="url(#linearGradient-3)" cx="265.269908" cy="102.555892" rx="13.2699085" ry="13.5558923"></ellipse>
+                <path d="M265,100 C265,99 263.685745,98 262.36766,98 C260.124043,98 259,100.110997 259,102.082479 C259,105.341487 264.044851,108.799004 264.663745,109.228049 C264.765106,109.298195 264.882553,109.333333 265,109.333333 C265.117447,109.333333 265.234894,109.298195 265.336255,109.228049 C265.955149,108.799004 271,105.341487 271,102.082479 C271,100.110997 269.875702,98 267.631957,98 C266.314383,98 265,99 265,100 Z" id="heart_algolia_03ef9" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

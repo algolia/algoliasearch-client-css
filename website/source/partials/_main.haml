@@ -12,32 +12,39 @@
     .inline.spacer40
     .col-md-12
       .col-md-4.card
-        %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179933/illus-feat-magic.svg", :alt => ""}/
-        %h3 No JavaScript
+        %a{:href => "#offline"}
+          %figure
+            = inline_svg "illustrations/offline_illustration.svg"
+            .spacer24
+          %h3 Works offline
 
       .col-md-4.card
-        %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179933/illus-feat-magic.svg", :alt => ""}/
-        %h3 Works offline
+        %a{:href => "#nojavascript"}
+          %figure
+            = inline_svg "illustrations/nojs_illustration.svg"
+            .spacer24
+          %h3 No JavaScript
 
       .col-md-4.card
-        %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179933/illus-feat-magic.svg", :alt => ""}/
-        %h3 Flexbox!
+        %a{:href => "#flexbox"}
+          %figure
+            = inline_svg "illustrations/flexbox_illustration.svg"
+            .spacer24
+          %h3 Flexbox!
 
   .spacer120
 
 
 %section.demo.gradient-purple.pos-rel.z-10.h600
   .spacer40.inline
-  .container.hfull
+  .container.hfull.text-center
+    %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-10{:href => "./demo"}
+      Live demo
+      %i.icon.icon-arrow-right
     .col-md-10.col-md-offset-1.pos-abt.hfull.pos-rel
-      = inline_svg "browser.svg", "m100p"
-      %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-abt{:href => "./demo"} Live demo
+      %a{:href => "./demo"}
+        = inline_svg "browser.svg", "m100p"
 
-      .gif-container.pos-abt.m100p.hidden-xs
-        = image_tag "images/screencast.gif", class: 'pos-abt'
 
 %section.features
   .spacer120
@@ -45,10 +52,10 @@
     %header.text-center
       %h2 The power of CSS
     .spacer120
-    .row
+    .row#offline
       .col-md-6.text-center.m100p
         %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179932/illus-feat-faceted.svg", :alt => ""}/
+          = inline_svg "illustrations/offline_illustration.svg"
 
       .col-md-6
         %h3.bold Offline mode
@@ -60,22 +67,26 @@
 
 
     .spacer120
-    .row
-      .col-md-6.text-center.m100p
+    .row#nojavascript
+      .col-md-6.text-center.m100p.visible-xs
         %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179932/illus-feat-faceted.svg", :alt => ""}/
+          = inline_svg "illustrations/nojs_illustration.svg"
 
       .col-md-6
         %h3.bold No JavaScript needed
         %p
-          Stop wasting time wondering if you should put your CSS inside your JS or in a separate file. 
+          Stop wasting time wondering if you should put your CSS inside your JS or in a separate file.
           CSS is so powerful that you won't be needing JavaScript anymore. That's right, we decided to get rid of JavaScript altogether.
+      .col-md-6.text-center.m100p.hidden-xs
+        %figure
+          = inline_svg "illustrations/nojs_illustration.svg"
+
 
     .spacer120
-    .row
+    .row#flexbox
       .col-md-6.text-center.m100p
         %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179932/illus-feat-faceted.svg", :alt => ""}/
+          = inline_svg "illustrations/flexbox_illustration.svg"
 
       .col-md-6
         %h3.bold Flexbox
@@ -94,59 +105,59 @@
     .spacer80
     .col-md-12
       .col-md-6
-        .quote.text-center.red
+        .quote.text-center
           %p
             What was I thinking putting CSS in JS? I see now that building pure-CSS apps is the future!
-          %img{:src => "./images/quotes/vjeux.png", :alt => ""}/
           %small
-            Christopher Chedeau -
+            %img{:src => "./images/quotes/vjeux.png", :alt => ""}/
+             Christopher Chedeau -
             %a{:href => "https://facebook.com"} Facebook
       .col-md-6
-        .quote.text-center.blue
+        .quote.text-center
           %p
             The only thing better than a static website is a static search engine.
-          %img{:src => "./images/quotes/smashing.jpg", :alt => ""}/
           %small
-            Vitaly Friedman -
+            %img{:src => "./images/quotes/smashing.jpg", :alt => ""}/
+             Vitaly Friedman -
             %a{:href => "https://www.smashingmagazine.com/"} SmashingMagazine
 
-      .inline.spacer80
+      .inline.spacer80.hidden-xs
       .col-md-6
-        .quote.text-center.white
+        .quote.text-center
           %p
             Javascript is dead.
-          %img{:src => "./images/quotes/chris.png", :alt => ""}/
           %small
-            Chris Coyier -
+            %img{:src => "./images/quotes/chris.png", :alt => ""}/
+             Chris Coyier -
             %a{:href => "https://css-tricks.com/"} CSS-Tricks
       .col-md-6
-        .quote.text-center.red
+        .quote.text-center
           %p
             This is the best thing that happened since sliced bread.
-          %img{:src => "./images/quotes/porteneuve.jpg", :alt => ""}/
           %small
-            Christophe Porteneuve -
-            %a{:href => "https://twitter.com/porteneuve"} On Twitter
+            %img{:src => "./images/quotes/porteneuve.jpg", :alt => ""}/
+             Christophe Porteneuve -
+            %a{:href => "https://twitter.com/porteneuve"} On Twitter
 
-      .inline.spacer80
+      .inline.spacer80.hidden-xs
       .col-md-6
-        .quote.text-center.white
+        .quote.text-center
           %p
             With Algolia, we can finally deliver an entire search experience inside of your inbox.
-          %img{:src => "./images/quotes/nicolas.jpg", :alt => ""}/
           %small
-            Nicolas Garnier - 
+            %img{:src => "./images/quotes/nicolas.jpg", :alt => ""}/
+             Nicolas Garnier -
             %a{:href => "https://www.mailjet.com/"} Mailjet
       .col-md-6
-        .quote.text-center.blue
+        .quote.text-center
           %p
             Given the success of this project, we’re now eagerly awaiting Algolia’s CSS Popup and CSS Ad Tracking APIs.
-          %img{:src => "./images/quotes/sacha.png", :alt => ""}/
           %small
-            Sacha Greif -
+            %img{:src => "./images/quotes/sacha.png", :alt => ""}/
+             Sacha Greif -
             %a{:href => "http://stateofjs.com/"} State Of Javascript
 
-  .spacer120.inline
+  .spacer120.inline.hidden-xs
 
 
 .cta-free-trial
@@ -156,10 +167,10 @@
         %h3 You read that far? Congrats!
         %p As you might have guessed, this CSS API Client is a joke, but our hosted search API is very real.
 
-        Instant and relevant results from the first keystroke, that's what we do. Want to give it a try? 
+        Instant and relevant results from the first keystroke, that's what we do. Want to give it a try?
         Why not try our forever-free Community plan?
       .col-md-6
         .spacer80
-        %a.btn.btn-static-dark{:href => "users/sign_up"}
+        %a.btn.btn-static-dark{:href => "https://www.algolia.com/users/sign_up"}
           Try our real API for free!
-          %i.icon-arrow-right
+          %i.icon.icon-arrow-right

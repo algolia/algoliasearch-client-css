@@ -17,6 +17,8 @@
  * Demo section
  */
 .demo
+  overflow: hidden
+
   .pos-abt img,
   .m100p svg
     max-width: 980px
@@ -37,13 +39,25 @@
     bottom: 0
     left: 0
 
+    @media (max-width: $screen-md)
+      width: 90%
+      margin: 0 5%
+
+    @media (max-width: $screen-sm)
+      span.m100p svg
+        top: 70%
+
+  .btn
+    margin: auto
+
+
     @media (max-width: $screen-sm)
       width: 100%
 
   .m100p
     display: block
     height: 100%
-    margin: auto
+    margin: 4em auto
     width: 100%
 
   @media (max-width: $screen-sm)
@@ -57,7 +71,6 @@
       transform: translateY(-50%)
 
     .btn
-      top: -160px
       max-width: 80%
       margin: auto
       left: 0
@@ -71,7 +84,6 @@
  */
 .features
   figure
-    background: $titan-white
     display: inline-block
     width: 268px
     height: 268px
@@ -80,8 +92,23 @@
     border-radius: 50%
     line-height: 268px
 
-    img
-      width: 40%
+    img,
+    svg
+      width: 100%
+
+  @media (max-width: $screen-sm)
+    .col-md-6
+      h3
+        text-align: center
+
+  .row[id]:before
+    content: ''
+    display: block
+    position: relative
+    height: 56px
+    top: -56px
+  .row:target
+    animation: lookatmebro 1s ease
 
 /**
  * API Section
@@ -100,3 +127,12 @@
     margin: 0
     border-radius: 50%
     line-height: 128px
+
+
+
+
+@keyframes lookatmebro
+  from
+    background: $purple-heart
+  to
+    background: inherit

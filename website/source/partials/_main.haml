@@ -12,22 +12,25 @@
     .inline.spacer40
     .col-md-12
       .col-md-4.card
-        %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179933/illus-feat-magic.svg", :alt => ""}/
-          .spacer24
-        %h3 No JavaScript
+        %a{:href => "#offline"}
+          %figure
+            = inline_svg "illustrations/offline_illustration.svg"
+            .spacer24
+          %h3 Works offline
 
       .col-md-4.card
-        %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179933/illus-feat-magic.svg", :alt => ""}/
-          .spacer24
-        %h3 Works offline
+        %a{:href => "#nojavascript"}
+          %figure
+            = inline_svg "illustrations/nojs_illustration.svg"
+            .spacer24
+          %h3 No JavaScript
 
       .col-md-4.card
-        %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179933/illus-feat-magic.svg", :alt => ""}/
-          .spacer24
-        %h3 Flexbox!
+        %a{:href => "#flexbox"}
+          %figure
+            = inline_svg "illustrations/flexbox_illustration.svg"
+            .spacer24
+          %h3 Flexbox!
 
   .spacer120
 
@@ -39,7 +42,8 @@
       Live demo
       %i.icon.icon-arrow-right
     .col-md-10.col-md-offset-1.pos-abt.hfull.pos-rel
-      = inline_svg "browser.svg", "m100p"
+      %a{:href => "./demo"}
+        = inline_svg "browser.svg", "m100p"
 
 
 %section.features
@@ -48,10 +52,10 @@
     %header.text-center
       %h2 Packed with features
     .spacer120
-    .row
+    .row#offline
       .col-md-6.text-center.m100p
         %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179932/illus-feat-faceted.svg", :alt => ""}/
+          = inline_svg "illustrations/offline_illustration.svg"
 
       .col-md-6
         %h3.bold Offline mode
@@ -61,21 +65,26 @@
           That's what we call Offline Search!
 
     .spacer120
-    .row
+    .row#nojavascript
+      .col-md-6.text-center.m100p.visible-xs
+        %figure
+          = inline_svg "illustrations/nojs_illustration.svg"
+
       .col-md-6
         %h3.bold No JavaScript needed
         %p
           Stop wasting time wondering if you should put your CSS inside your JS or in a separate file.
           CSS is so powerful that you won't be needing JavaScript anymore. That's right, we decided to get rid of JavaScript altogether.
-      .col-md-6.text-center.m100p
+      .col-md-6.text-center.m100p.hidden-xs
         %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179932/illus-feat-faceted.svg", :alt => ""}/
+          = inline_svg "illustrations/nojs_illustration.svg"
+
 
     .spacer120
-    .row
+    .row#flexbox
       .col-md-6.text-center.m100p
         %figure
-          %img{:src => "https://res.cloudinary.com/hilnmyskv/image/upload/v1461179932/illus-feat-faceted.svg", :alt => ""}/
+          = inline_svg "illustrations/flexbox_illustration.svg"
 
       .col-md-6
         %h3.bold Flexbox
@@ -110,7 +119,7 @@
              Vitaly Friedman -
             %a{:href => "https://www.smashingmagazine.com/"} SmashingMagazine
 
-      .inline.spacer80
+      .inline.spacer80.hidden-xs
       .col-md-6
         .quote.text-center
           %p
@@ -128,7 +137,7 @@
              Christophe Porteneuve -
             %a{:href => "https://twitter.com/porteneuve"} On Twitter
 
-      .inline.spacer80
+      .inline.spacer80.hidden-xs
       .col-md-6
         .quote.text-center
           %p
@@ -146,7 +155,7 @@
              Sacha Greif -
             %a{:href => "http://stateofjs.com/"} State Of Javascript
 
-  .spacer120.inline
+  .spacer120.inline.hidden-xs
 
 
 .cta-free-trial

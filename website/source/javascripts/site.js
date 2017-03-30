@@ -1,5 +1,5 @@
 // This is where it all goes :)
-// 
+//
 var header = new communityHeader();
 
 
@@ -9,7 +9,8 @@ $(function() {
   modal.classList.add('modal', 'elevation1', 'z-10');
   let modalTemplate = `
   <div class="modal--inner">
-    <a href="#" class="modal--close btn btn-static-secondary" onclick="this.parentNode.parentNode.remove()"><span class="icon icon-cancel"></span></a>
+    <a href="#" class="modal--close btn btn-static-secondary hidden-xs" onclick="this.parentNode.parentNode.remove()"><span class="icon icon-cancel"></span></a>
+    <a href="#" class="modal--close btn btn-static-secondary visible-xs" onclick="this.parentNode.parentNode.remove()">close modal</a>
     <header>
       <h2>Happy April Fools day!</h2>
     </header>

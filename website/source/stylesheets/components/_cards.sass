@@ -3,12 +3,28 @@
   padding: 52px 32px
   background: white
   transition: box-shadow 0.2s ease
+  text-align: center
+  float: left
+
+  a
+    text-decoration: none
 
   h3
     font-size: 20px
     text-transform: uppercase
     color: $bunting
+    opacity: 0
+    transition: opacity 0.2s ease
+
+    @media (max-width: $screen-sm)
+      opacity: 1
+
+  figure svg,
+  figure img
+    max-width: 90%
 
   &:hover
     box-shadow: 0 0 48px rgba(52,105,231, .15)
 
+    h3
+      opacity: 1

@@ -32,7 +32,7 @@ class CSSWriter
 
   # Get the Cloudinary link to an image
   def self.cloudinary(url, fetch: false)
-    base = 'http://res.cloudinary.com/hilnmyskv/image'
+    base = 'https://res.cloudinary.com/hilnmyskv/image'
     unless fetch
       # Our cloudinary account is mappting the /team virtual directory to the
       # asset directory of algolia.com

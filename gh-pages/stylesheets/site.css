@@ -3257,6 +3257,13 @@ h4, .h4 {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
 
+.algc-dropdownroot__widelist li h4 {
+  font-weight: inherit;
+  margin: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit; }
+
 h5, .h5, h6, .h6 {
   margin: 1em 0; }
 
@@ -3264,7 +3271,7 @@ p {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 40px;
-  color: rgba(24, 35, 89, 0.4); }
+  color: rgba(24, 35, 89, 0.6); }
 
 .subtitle-white {
   font-size: 22px;
@@ -3291,54 +3298,63 @@ p {
 /**
  * Demo section
  */
-.demo .pos-abt img,
-.demo .m100p svg {
-  max-width: 980px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto; }
-.demo .pos-abt img {
-  height: auto;
-  max-width: 800px;
-  width: 100%;
-  bottom: 0; }
-.demo .pos-abt {
-  bottom: 0;
-  left: 0; }
+.demo {
+  overflow: hidden; }
+  .demo .pos-abt img,
+  .demo .m100p svg {
+    max-width: 980px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  .demo .pos-abt img {
+    height: auto;
+    max-width: 800px;
+    width: 100%;
+    bottom: 0; }
+  .demo .pos-abt {
+    bottom: 0;
+    left: 0; }
+    @media (max-width: 992px) {
+      .demo .pos-abt {
+        width: 90%;
+        margin: 0 5%; } }
+    @media (max-width: 768px) {
+      .demo .pos-abt span.m100p svg {
+        top: 70%; } }
+  .demo .btn {
+    margin: auto; }
+    @media (max-width: 768px) {
+      .demo .btn {
+        width: 100%; } }
+  .demo .m100p {
+    display: block;
+    height: 100%;
+    margin: 4em auto;
+    width: 100%; }
   @media (max-width: 768px) {
-    .demo .pos-abt {
-      width: 100%; } }
-.demo .m100p {
-  display: block;
-  height: 100%;
-  margin: auto;
-  width: 100%; }
-@media (max-width: 768px) {
-  .demo {
-    height: 300px !important;
-    min-height: 300px !important; }
-    .demo .pos-abt img {
-      max-width: 320px; }
-    .demo .m100p svg {
-      top: 40%;
-      transform: translateY(-50%); }
-    .demo .btn {
-      top: -160px;
-      max-width: 80%;
-      margin: auto;
-      left: 0;
-      right: 0;
-      float: none;
-      display: block; } }
+    .demo {
+      height: 300px !important;
+      min-height: 300px !important; }
+      .demo .pos-abt img {
+        max-width: 320px; }
+      .demo .m100p svg {
+        top: 40%;
+        transform: translateY(-50%); }
+      .demo .btn {
+        max-width: 80%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        float: none;
+        display: block; } }
 
 /**
  * Features section
  */
 .features figure {
-  background: #f7f7ff;
   display: inline-block;
   width: 268px;
   height: 268px;
@@ -3346,8 +3362,20 @@ p {
   margin: 0;
   border-radius: 50%;
   line-height: 268px; }
-  .features figure img {
-    width: 40%; }
+  .features figure img,
+  .features figure svg {
+    width: 100%; }
+@media (max-width: 768px) {
+  .features .col-md-6 h3 {
+    text-align: center; } }
+.features .row[id]:before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 56px;
+  top: -56px; }
+.features .row:target {
+  animation: lookatmebro 1s ease; }
 
 /**
  * API Section
@@ -3365,6 +3393,11 @@ p {
   border-radius: 50%;
   line-height: 128px; }
 
+@keyframes lookatmebro {
+  from {
+    background: #8e43e7; }
+  to {
+    background: inherit; } }
 .btn {
   padding: 0 20px;
   display: inline-block;
@@ -3530,6 +3563,12 @@ p {
     .hero {
       background-size: 140%, cover;
       background-position: left 15% bottom, center center; } }
+  @media (max-width: 768px) {
+    .hero {
+      background-size: 400%, cover;
+      background-position: center bottom, center center; }
+      .hero h1 {
+        font-size: 44px; } }
   .hero:before {
     content: "";
     display: block;
@@ -3630,13 +3669,28 @@ p {
 .card {
   border-radius: 4px;
   padding: 52px 32px;
-  background: white; }
+  background: white;
+  transition: box-shadow 0.2s ease;
+  text-align: center;
+  float: left; }
+  .card a {
+    text-decoration: none; }
   .card h3 {
     font-size: 20px;
     text-transform: uppercase;
-    color: #3369e7; }
+    color: #182359;
+    opacity: 0;
+    transition: opacity 0.2s ease; }
+    @media (max-width: 768px) {
+      .card h3 {
+        opacity: 1; } }
+  .card figure svg,
+  .card figure img {
+    max-width: 90%; }
   .card:hover {
     box-shadow: 0 0 48px rgba(52, 105, 231, 0.15); }
+    .card:hover h3 {
+      opacity: 1; }
 
 .quote {
   max-width: 780px;
@@ -3647,11 +3701,11 @@ p {
     position: relative;
     z-index: 2; }
   .quote small {
-    font-size: 24px;
+    font-size: 18px;
     color: #182359;
     font-weight: 600; }
   .quote img {
-    max-width: 32px;
+    max-width: 24px;
     position: relative;
     border-radius: 50%; }
   .quote:before {
@@ -3665,13 +3719,10 @@ p {
     top: -45px;
     margin: auto;
     z-index: 0;
-    background: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?> <svg width="119px" height="89px" viewBox="0 0 119 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.200000003"> <g id="00" transform="translate(-662.000000, -5829.000000)" fill="%23000"> <path d="M713.408,5878.248 C715.232009,5881.89602 716.144,5885.83198 716.144,5890.056 C716.144,5897.92804 713.552026,5904.40797 708.368,5909.496 C703.183974,5914.58403 696.656039,5917.128 688.784,5917.128 C681.295963,5917.128 674.960026,5914.72802 669.776,5909.928 C664.591974,5905.12798 662,5898.60004 662,5890.344 C662,5883.62397 664.399976,5876.52004 669.2,5869.032 L694.544,5829 L721.904,5829 L705.488,5869.32 C708.944017,5871.62401 711.583991,5874.59998 713.408,5878.248 Z M772.16,5878.248 C773.984009,5881.89602 774.896,5885.83198 774.896,5890.056 C774.896,5897.92804 772.304026,5904.40797 767.12,5909.496 C761.935974,5914.58403 755.408039,5917.128 747.536,5917.128 C740.047963,5917.128 733.712026,5914.72802 728.528,5909.928 C723.343974,5905.12798 720.752,5898.60004 720.752,5890.344 C720.752,5883.62397 723.151976,5876.52004 727.952,5869.032 L753.296,5829 L780.656,5829 L764.24,5869.32 C767.696017,5871.62401 770.335991,5874.59998 772.16,5878.248 Z" id="aacopy-2"></path> </g> </g> </svg>') no-repeat center center/contain; }
-  .quote.white:before {
     background: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?> <svg width="119px" height="89px" viewBox="0 0 119 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1"> <g id="00" transform="translate(-662.000000, -5829.000000)" fill="%23F7F7FF"> <path d="M713.408,5878.248 C715.232009,5881.89602 716.144,5885.83198 716.144,5890.056 C716.144,5897.92804 713.552026,5904.40797 708.368,5909.496 C703.183974,5914.58403 696.656039,5917.128 688.784,5917.128 C681.295963,5917.128 674.960026,5914.72802 669.776,5909.928 C664.591974,5905.12798 662,5898.60004 662,5890.344 C662,5883.62397 664.399976,5876.52004 669.2,5869.032 L694.544,5829 L721.904,5829 L705.488,5869.32 C708.944017,5871.62401 711.583991,5874.59998 713.408,5878.248 Z M772.16,5878.248 C773.984009,5881.89602 774.896,5885.83198 774.896,5890.056 C774.896,5897.92804 772.304026,5904.40797 767.12,5909.496 C761.935974,5914.58403 755.408039,5917.128 747.536,5917.128 C740.047963,5917.128 733.712026,5914.72802 728.528,5909.928 C723.343974,5905.12798 720.752,5898.60004 720.752,5890.344 C720.752,5883.62397 723.151976,5876.52004 727.952,5869.032 L753.296,5829 L780.656,5829 L764.24,5869.32 C767.696017,5871.62401 770.335991,5874.59998 772.16,5878.248 Z" id="aacopy-2"></path> </g> </g> </svg>') no-repeat center center/contain; }
-  .quote.blue:before {
-    background: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?> <svg width="119px" height="89px" viewBox="0 0 119 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.200000003"> <g id="00" transform="translate(-662.000000, -5829.000000)" fill="%2300AEFF"> <path d="M713.408,5878.248 C715.232009,5881.89602 716.144,5885.83198 716.144,5890.056 C716.144,5897.92804 713.552026,5904.40797 708.368,5909.496 C703.183974,5914.58403 696.656039,5917.128 688.784,5917.128 C681.295963,5917.128 674.960026,5914.72802 669.776,5909.928 C664.591974,5905.12798 662,5898.60004 662,5890.344 C662,5883.62397 664.399976,5876.52004 669.2,5869.032 L694.544,5829 L721.904,5829 L705.488,5869.32 C708.944017,5871.62401 711.583991,5874.59998 713.408,5878.248 Z M772.16,5878.248 C773.984009,5881.89602 774.896,5885.83198 774.896,5890.056 C774.896,5897.92804 772.304026,5904.40797 767.12,5909.496 C761.935974,5914.58403 755.408039,5917.128 747.536,5917.128 C740.047963,5917.128 733.712026,5914.72802 728.528,5909.928 C723.343974,5905.12798 720.752,5898.60004 720.752,5890.344 C720.752,5883.62397 723.151976,5876.52004 727.952,5869.032 L753.296,5829 L780.656,5829 L764.24,5869.32 C767.696017,5871.62401 770.335991,5874.59998 772.16,5878.248 Z" id="aacopy-2"></path> </g> </g> </svg>') no-repeat center center/contain; }
-  .quote.red:before {
-    background: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?> <svg width="119px" height="89px" viewBox="0 0 119 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.200000003"> <g id="00" transform="translate(-662.000000, -5829.000000)" fill="%23FF4F81"> <path d="M713.408,5878.248 C715.232009,5881.89602 716.144,5885.83198 716.144,5890.056 C716.144,5897.92804 713.552026,5904.40797 708.368,5909.496 C703.183974,5914.58403 696.656039,5917.128 688.784,5917.128 C681.295963,5917.128 674.960026,5914.72802 669.776,5909.928 C664.591974,5905.12798 662,5898.60004 662,5890.344 C662,5883.62397 664.399976,5876.52004 669.2,5869.032 L694.544,5829 L721.904,5829 L705.488,5869.32 C708.944017,5871.62401 711.583991,5874.59998 713.408,5878.248 Z M772.16,5878.248 C773.984009,5881.89602 774.896,5885.83198 774.896,5890.056 C774.896,5897.92804 772.304026,5904.40797 767.12,5909.496 C761.935974,5914.58403 755.408039,5917.128 747.536,5917.128 C740.047963,5917.128 733.712026,5914.72802 728.528,5909.928 C723.343974,5905.12798 720.752,5898.60004 720.752,5890.344 C720.752,5883.62397 723.151976,5876.52004 727.952,5869.032 L753.296,5829 L780.656,5829 L764.24,5869.32 C767.696017,5871.62401 770.335991,5874.59998 772.16,5878.248 Z" id="aacopy-2"></path> </g> </g> </svg>') no-repeat center center/contain; }
+  @media (max-width: 768px) {
+    .quote {
+      margin-bottom: 8em; } }
 
 /* #222 */
 /* #333 */
@@ -4370,3 +4421,133 @@ p {
 .algc-arrowseparator {
   height: 33px;
   margin-right: 16px; }
+
+@font-face {
+  font-family: 'algolia-website-iconfont';
+  src: url("../fonts/algolia-website-iconfont.eot");
+  src: url("../fonts/algolia-website-iconfont.eot#iefix") format("embedded-opentype"), url("../fonts/algolia-website-iconfont.ttf") format("truetype"), url("../fonts/algolia-website-iconfont.woff") format("woff"), url("../fonts/algolia-website-iconfont.svg#algolia-website-iconfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'algolia-website-iconfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-arrow-right:before {
+  position: relative;
+  top: 2px; }
+
+.icon-logout:before {
+  content: "\e914"; }
+
+.icon-support:before {
+  content: "\e913"; }
+
+.icon-quote-close:before {
+  content: "\e90d"; }
+
+.icon-quote-open:before {
+  content: "\e90e"; }
+
+.icon-arrow-right:before {
+  content: "\e900"; }
+
+.icon-cancel:before {
+  content: "\e901"; }
+
+.icon-caret-down:before {
+  content: "\e902"; }
+
+.icon-check-mark:before {
+  content: "\e903"; }
+
+.icon-dribbble:before {
+  content: "\e904"; }
+
+.icon-facebook:before {
+  content: "\e905"; }
+
+.icon-github:before {
+  content: "\e906"; }
+
+.icon-heart:before {
+  content: "\e907"; }
+
+.icon-infinity:before {
+  content: "\e908"; }
+
+.icon-instagram:before {
+  content: "\e909"; }
+
+.icon-linkedin:before {
+  content: "\e90a"; }
+
+.icon-mail:before {
+  content: "\e90b"; }
+
+.icon-menu:before {
+  content: "\e90c"; }
+
+.icon-search:before {
+  content: "\e90f"; }
+
+.icon-star:before {
+  content: "\e910"; }
+
+.icon-twitter:before {
+  content: "\e911"; }
+
+.icon-youtube:before {
+  content: "\e912"; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 100px auto;
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+  background: #FFF;
+  padding: 1.2em;
+  border-radius: 6px; }
+  .modal--inner {
+    overflow: auto;
+    position: relative;
+    height: 100%; }
+  .modal .api-inte-list {
+    display: flex;
+    flex-flow: row wrap; }
+    .modal .api-inte-list .guide-sm {
+      flex: 20%;
+      margin-bottom: 2em; }
+  .modal--close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding: 16px;
+    line-height: 16px;
+    height: initial;
+    margin: -0.5em;
+    z-index: 10; }
+  @media (max-width: 768px) {
+    .modal {
+      height: 100%;
+      margin: 56px 0 0;
+      border-radius: 0;
+      padding-bottom: 3em; }
+      .modal--close {
+        position: relative;
+        right: 0;
+        margin: 16px 0; } }

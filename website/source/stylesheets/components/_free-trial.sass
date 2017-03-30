@@ -1,15 +1,20 @@
 
 .cta-free-trial
   margin-top: -16px
-  padding: 160px 0
+  padding: 160px 0 80px
   width: 100%
   color: $white
-  background-image: url('../images/algolia-fast-bg.svg')
+  background: $royal-blue
   background-size: cover
   position: relative
 
+  small
+    font-size: 1.2em
+    margin-bottom: 6px
   .container
     z-index: 10
+    width: 100%
+    max-width: 800px
 
   @include diagonal(-6deg, $white, 128px, before)
     top: -64px
@@ -27,14 +32,25 @@
     color: $white
     font-weight: 300
     line-height: 32px
+    margin: 0
   p
     font-size: 18px
     line-height: 28px
     color: $white
     font-weight: $regular
+    padding: 0 5em
+
+    @media (max-width: $screen-md)
+      padding: 0 4em
+
+    @media (max-width: $screen-sm)
+      padding: 0 1em
 
   .btn
     clear: both
+    padding: 18px 30px
+    height: auto
+    line-height: inherit
 
   .spacer24,
   .spacer8

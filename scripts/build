@@ -10,7 +10,7 @@ cd ./website
 yarn upgrade algolia-frontend-components
 node ./buildComponents.js
 middleman build
-mv -fun ./build/* ../gh-pages
+mv -fn ./build/* ../gh-pages
 rm ../gh-pages/images/.keep
 
 # Copying the demo

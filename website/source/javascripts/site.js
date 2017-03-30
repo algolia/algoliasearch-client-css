@@ -87,12 +87,14 @@ $(function() {
       </div>
     </section>
   </div>`;
+
   modal.innerHTML = modalTemplate;
   var messages = [
     'Really?',
     'Are you sure?',
     'Ok, one more click...'
   ];
+
   cta.on('click', function(event) {
     event.preventDefault();
 
@@ -105,5 +107,11 @@ $(function() {
     $(this).text(nextMessage);
 
   });
+
+  $(document).on('keydown', e => {
+    if (e.keyCode === 27) {
+      modal.remove()
+    }
+  })
 });
 

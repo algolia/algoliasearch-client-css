@@ -11,38 +11,38 @@
 
     .inline.spacer40
     .col-md-12
-      .col-md-4.card
+      .col-md-4.card.pos-rel.z-100
         %a{:href => "#offline"}
           %figure
             = image_tag "illustrations/offline_illustration.svg"
             .spacer24
           %h3 Works offline
 
-      .col-md-4.card
+      .col-md-4.card.pos-rel.z-100
         %a{:href => "#nojavascript"}
           %figure
             = image_tag "illustrations/nojs_illustration.svg"
             .spacer24
           %h3 No JavaScript
 
-      .col-md-4.card
+      .col-md-4.card.pos-rel.z-100
         %a{:href => "#flexbox"}
           %figure
             = image_tag "illustrations/flexbox_illustration.svg"
             .spacer24
           %h3 Flexbox!
+    .spacer80
 
 
-
-%section.demo.gradient-purple.pos-rel.z-10.h600
+%section.demo.pos-rel.h600
   .spacer40.inline
-  .container.hfull.text-center
-    %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-10{:href => "./demo"}
-      Try it live!
+  .container.hfull.text-center.pos-rel.z-10
+    %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-100{:href => "./demo"}
+      Try it live! 
       %i.icon.icon-arrow-right
     .col-md-10.col-md-offset-1.pos-abt.hfull.pos-rel
       %a{:href => "./demo"}
-        = inline_svg "browser.svg", "m100p"
+        = inline_svg "browser2.svg", "m100p"
 
 
 %section.features
@@ -160,13 +160,13 @@
 .cta-free-trial
   .container
     .row
-      .col-md-6
+      .col-md-6.text-center.m-l-r-auto.pull-none
         %h3 You read that far? Congrats!
+        .spacer16
         %p As you might have guessed, this CSS API Client is a joke, but our hosted search API is very real.
 
-        Instant and relevant results from the first keystroke, that's what we do. Want to give it a try?
-        Why not try our forever-free Community plan?
-      .col-md-6
+        %p Instant and relevant results from the first keystroke, that's what we do. Want to give it a try?
+        %p Why not try our forever-free Community plan?
         .spacer80
         %a.btn.btn-static-dark{:href => "https://www.algolia.com/users/sign_up"}
           Try our real API for free!

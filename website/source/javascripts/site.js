@@ -1,4 +1,6 @@
 // This is where it all goes :)
+// 
+var header = new communityHeader();
 
 $(function() {
   var cta = $('#cta');

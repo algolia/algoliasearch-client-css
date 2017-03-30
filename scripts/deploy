@@ -1,21 +1,5 @@
 #!/usr/bin/env sh
 set -eu
 
-# Creating tmp dir to push to gh-pages branch
-mkdir -p ./gh-pages
-rm -rf ./gh-pages/*
-
-# Building website
-cd ./website
-middleman build
-mv -fun ./build/* ../gh-pages
-rm ../gh-pages/images/.keep
-
-# Copying the demo
-cd ../gh-pages
-mkdir ./demo
-cp -r ../demo/public/* ./demo
-
-cd ../
 rm -rf node_modules/gh-pages/.cache
 gh-pages --dist gh-pages --branch gh-pages

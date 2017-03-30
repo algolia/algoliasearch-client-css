@@ -19,6 +19,7 @@
     "demo-serve": "./scripts/demo/serve",
     "website-serve": "./scripts/website/serve",
     "lint": "./scripts/lint",
+    "build": "./scripts/build",
     "deploy": "./scripts/deploy"
   },
   "devDependencies": {

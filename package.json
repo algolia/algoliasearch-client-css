@@ -10,7 +10,7 @@
   },
   "scripts": {
     "demo-generate-all": "./scripts/demo/generate",
-    "demo-generate-font": "babel-node ./scripts/demo/generate-font.js",
+    "demo-generate-font": "babel-node ./scripts/demo/generate-font.js ./demo/fonts/Raleway-Regular.ttf ./demo/fonts/Raleway-Bold.ttf",
     "demo-generate-css": "./scripts/demo/generate-css",
     "demo-minify": "babel-node ./scripts/demo/minify.js",
     "demo-test": "./scripts/demo/test",

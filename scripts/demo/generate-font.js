@@ -105,10 +105,10 @@ const GenerateFont = {
       const boldGlyphsDirectory = results[1];
       const characters = results[2];
 
-      const outputPath = './demo/public/fonts/Highlight.svg';
+      const outputPath = './demo/public/fonts/Raleway.svg';
       const deferred = Promise.pending();
       const fontStream = svg2font({
-        fontName: 'Highlight',
+        fontName: 'Raleway',
         normalize: true
       });
       fontStream.pipe(fs.createWriteStream(outputPath))
@@ -160,7 +160,7 @@ const GenerateFont = {
       return deferred.promise;
     })
     .then(fontPathSVG => {
-      console.info(`Created new Highlight font ${fontPathSVG}`);
+      console.info(`Created new Raleway font ${fontPathSVG}`);
       return fontPathSVG;
     })
     // Convert to ttf

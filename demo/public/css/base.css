@@ -9,7 +9,7 @@ input[type="radio"] {
 /* Fonts */
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Highlight.ttf') format('truetype');
+  src: url('../fonts/Raleway.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -18,7 +18,6 @@ input[type="radio"] {
 body {
   color: #2e3134;
   background-color: #f5f4f4;
-  font-family: Raleway;
   cursor: default;
   margin: 0;
   background-image: linear-gradient(to bottom right, #4B2E91, #3369E6);
@@ -159,6 +158,7 @@ a {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
   padding: 40px 20px 0 20px;
   border-radius: 4px;
+  font-family: Raleway;
 }
 #h div {
   display: none;
@@ -167,7 +167,6 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 0px;
   background-size: 200px;
-  font-family: 'Raleway';
   padding-top: 220px;
   position: relative;
 }
@@ -178,7 +177,6 @@ a {
   white-space: pre;
   /* Role */
   font-size: .9rem;
-  font-family: 'Raleway';
   letter-spacing: .04rem;
   font-weight: 300;
   color: #182359;

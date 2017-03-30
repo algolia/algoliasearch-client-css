@@ -3,6 +3,7 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
+    <title><%= current_page.data.title || "Algolia CSS API Client" %></title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content=summary_large_image name='twitter:card'>
@@ -19,11 +20,6 @@
     <meta content=1200 property="og:image:width">
     <meta content=500 property="og:image:height">
     <link rel="icon" type="image/png" href="images/favicon.png" />
-
-
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Algolia CSS API Client" %></title>
-
     <%= stylesheet_link_tag "site" %>
   </head>
 

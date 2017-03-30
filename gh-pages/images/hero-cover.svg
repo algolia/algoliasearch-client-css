@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="345px" viewBox="0 0 1440 345" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="GGGDFDFFFDFDFFDFDFFDFDFDFDFDFDFHSHSHSHHSHSHSHSHS">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="VVVDGDGGDGDGD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00" transform="translate(0.000000, -364.000000)" fill="url(#GGGDFDFFFDFDFFDFDFFDFDFDFDFDFDFHSHSHSHHSHSHSHSHS)">
+            <g id="GGDFDRZTTTTSTS">
+                <g id="BBSHHSKS" style="mix-blend-mode: overlay;" transform="translate(-18.000000, 364.000000)">
+                    <polygon id="Path-2-Copy" style="mix-blend-mode: overlay;" points="1524 438 1457 52 672 375.072864"></polygon>
+                    <polygon id="Path-2" style="mix-blend-mode: overlay;" points="783 368 0 52 0 299.072864"></polygon>
+                    <polygon id="Path-2-Copy" style="mix-blend-mode: overlay;" points="978 415 342 0 126 352.072864"></polygon>
+                    <polygon id="Path-2-Copy" style="mix-blend-mode: overlay;" points="1383 465 992 71 476 313"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

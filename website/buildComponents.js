@@ -4,7 +4,7 @@ const algoliaComponents = require('algolia-frontend-components');
 const output = algoliaComponents.communityHeader({
   menu: {
     project: {
-      label: "Algolia CSS Client",
+      label: "Algolia CSS API Client",
       url: "https://community.algolia.com/algoliasearch-client-css/"
     }
   },

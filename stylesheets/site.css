@@ -3450,7 +3450,8 @@ p {
   border: none;
   box-sizing: border-box;
   position: relative;
-  transition: background 0.2s, box-shadow 0.2s; }
+  transition: background 0.2s, box-shadow 0.2s;
+  font-family: Montserrat, arial, sans-serif; }
   .btn:hover, .btn:focus, .btn:active, .btn.active {
     outline: 0 !important;
     box-shadow: none;
@@ -3610,6 +3611,11 @@ p {
       background-position: center bottom, center center; }
       .hero h1 {
         font-size: 44px; } }
+  .hero .btn {
+    padding: 18px 30px;
+    font-weight: bold;
+    height: auto;
+    line-height: inherit; }
   .hero:before {
     content: "";
     display: block;
@@ -3648,7 +3654,7 @@ p {
   padding: 160px 0 80px;
   width: 100%;
   color: white;
-  background: #3369e7;
+  background-image: url("../images/algolia-fast-bg.svg");
   background-size: cover;
   position: relative; }
   .cta-free-trial small {
@@ -3701,7 +3707,8 @@ p {
     clear: both;
     padding: 18px 30px;
     height: auto;
-    line-height: inherit; }
+    line-height: inherit;
+    font-weight: bold; }
   .cta-free-trial .spacer24,
   .cta-free-trial .spacer8 {
     display: inline-block; }
@@ -3901,7 +3908,8 @@ p {
       height: 100%;
       margin: 56px 0 0;
       border-radius: 0;
-      padding-bottom: 3em; }
+      padding-bottom: 3em;
+      max-width: 100%; }
       .modal--close {
         position: relative;
         right: 0;

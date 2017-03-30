@@ -12,6 +12,11 @@
   padding: 1.2em
   border-radius: 6px
 
+  &--inner
+    overflow: auto
+    position: relative
+    height: 100%
+
   .api-inte-list
     display: flex
     flex-flow: row wrap
@@ -29,6 +34,7 @@
     line-height: 16px
     height: initial
     margin: -0.5em
+    z-index: 10
 
 
 
@@ -36,7 +42,6 @@
     height: 100%
     margin: 56px 0 0
     border-radius: 0
-    overflow: scroll
     padding-bottom: 3em
 
     &--close

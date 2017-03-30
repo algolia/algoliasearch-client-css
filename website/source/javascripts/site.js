@@ -8,9 +8,9 @@ $(function() {
   var modal = document.createElement('div');
   modal.classList.add('modal', 'elevation1', 'z-10');
   let modalTemplate = `
+  <a href="#" class="modal--close btn btn-static-secondary hidden-xs" onclick="this.parentNode.remove()"><span class="icon icon-cancel"></span></a>
+  <a href="#" class="modal--close btn btn-static-secondary visible-xs" onclick="this.parentNode.remove()">close modal</a>
   <div class="modal--inner">
-    <a href="#" class="modal--close btn btn-static-secondary hidden-xs" onclick="this.parentNode.parentNode.remove()"><span class="icon icon-cancel"></span></a>
-    <a href="#" class="modal--close btn btn-static-secondary visible-xs" onclick="this.parentNode.parentNode.remove()">close modal</a>
     <header>
       <h2>Happy April Fools day!</h2>
     </header>
@@ -98,6 +98,7 @@ $(function() {
 
     var nextMessage = messages.shift();
     if (!nextMessage) {
+      $(this).text('Download v1.4.17');
       document.body.appendChild(modal)
       return;
     }

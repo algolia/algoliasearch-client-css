@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="368px" height="369px" viewBox="0 0 368 369" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>JDJDJDJD</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1XX" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="JDJDJDJD" fill="#3369E7">
-            <g id="Group-5JHD">
-                <circle id="BBBCHCH" fill-opacity="0.2" cx="184" cy="184.806452" r="184"></circle>
-                <rect id="UUDHSK" fill-opacity="0.2" x="72" y="116" width="224" height="136" rx="4"></rect>
-                <circle id="LSOSPM" fill-opacity="0.2" cx="84" cy="128" r="4"></circle>
-                <circle id="LJSNSG" fill-opacity="0.2" cx="96" cy="128" r="4"></circle>
-                <circle id="VCFDJS" fill-opacity="0.2" cx="108" cy="128" r="4"></circle>
-                <rect id="OIUHJS" fill-opacity="0.2" x="152" y="260.806452" width="64" height="8" rx="2"></rect>
-                <rect id="HDIDLLS" fill-opacity="0.2" x="80" y="140" width="208" height="24" rx="2"></rect>
-                <path d="M286,239 L82,239 L82,236.99703 C82,236.453036 81.5522847,236 81,236 C80.4438648,236 80,236.446386 80,236.99703 L80,243.00297 C80,243.546964 80.4477153,244 81,244 C81.5561352,244 82,243.553614 82,243.00297 L82,241 L286,241 L286,243.00297 C286,243.546964 286.447715,244 287,244 C287.556135,244 288,243.553614 288,243.00297 L288,236.99703 C288,236.453036 287.552285,236 287,236 C286.443865,236 286,236.446386 286,236.99703 L286,239 Z" id="CVBNGS"></path>
-                <rect id="HDIDLLS-Copy-3" fill-opacity="0.2" x="80" y="204" width="64" height="24" rx="2"></rect>
-                <rect id="HDIDLLS-Copy-4" fill-opacity="0.2" x="224" y="204" width="64" height="24" rx="2"></rect>
-                <rect id="HDIDLLS-Copy-5" fill-opacity="0.2" x="152" y="204" width="64" height="24" rx="2"></rect>
-                <g id="Group-3UYTH" transform="translate(80.000000, 172.000000)" fill-opacity="0.2">
-                    <rect id="HDIDLLS-Copy" x="0" y="0" width="100" height="24" rx="2"></rect>
-                    <rect id="HDIDLLS-Copy-2" x="108" y="0" width="100" height="24" rx="2"></rect>
+    <defs>
+        <linearGradient x1="130.032269%" y1="133.046875%" x2="-16.8002717%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#1F1A37" offset="0%"></stop>
+            <stop stop-color="#3E366A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="76.542575%" y1="-15.5777928%" x2="76.5425742%" y2="148.978728%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.2343089%" y1="-9.22874415%" x2="81.1261232%" y2="104.898352%" id="linearGradient-3">
+            <stop stop-color="#B84592" offset="0%"></stop>
+            <stop stop-color="#FF4F81" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="FGHJK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flexbox_illustration">
+            <circle id="DFGHJKLM" fill="#F7F7FF" cx="184" cy="184" r="184"></circle>
+            <g id="AZERTYUI" transform="translate(72.000000, 103.000000)">
+                <rect id="VSJNDBBS" fill="url(#linearGradient-1)" x="0" y="0" width="224" height="136" rx="4"></rect>
+                <polygon id="VSJNDBBS" fill="url(#linearGradient-2)" style="mix-blend-mode: overlay;" opacity="0.38708107" points="120 0 224 0 224 136 71 136"></polygon>
+                <circle id="Oval-3OIUYGH" fill="#FFFFFF" style="mix-blend-mode: overlay;" opacity="0.38708107" cx="12" cy="12" r="4"></circle>
+                <circle id="Oval-3OIUYGH" fill="#FFFFFF" style="mix-blend-mode: overlay;" opacity="0.38708107" cx="26" cy="12" r="4"></circle>
+                <circle id="Oval-3OIUYGH" fill="#FFFFFF" style="mix-blend-mode: overlay;" opacity="0.38708107" cx="40" cy="12" r="4"></circle>
+            </g>
+            <ellipse id="FGHJKLM" fill-opacity="0.1" fill="#182359" cx="184.5" cy="271" rx="87.5" ry="8"></ellipse>
+            <g id="VBLKJHGFBNLM" transform="translate(80.000000, 131.000000)">
+                <rect id="VSJNDBBS-4" fill-opacity="0.2" fill="#050F2C" x="0" y="0.193548387" width="208" height="24" rx="2"></rect>
+                <path d="M206,95 L2,95 L2,92.9970301 C2,92.4530363 1.55228475,92 1,92 C0.443864822,92 0,92.4463856 0,92.9970301 L0,99.0029699 C0,99.5469637 0.44771525,100 1,100 C1.55613518,100 2,99.5536144 2,99.0029699 L2,97 L206,97 L206,99.0029699 C206,99.5469637 206.447715,100 207,100 C207.556135,100 208,99.5536144 208,99.0029699 L208,92.9970301 C208,92.4530363 207.552285,92 207,92 C206.443865,92 206,92.4463856 206,92.9970301 L206,95 Z" id="Combined-Shape" fill="#FF4F81"></path>
+                <rect id="VSJNDBBS-4-Copy-3" fill-opacity="0.2" fill="#050F2C" x="0" y="64.1935484" width="64" height="24" rx="2"></rect>
+                <rect id="VSJNDBBS-4-Copy-4" fill-opacity="0.2" fill="#050F2C" x="144" y="64.1935484" width="64" height="24" rx="2"></rect>
+                <rect id="VSJNDBBS-4-Copy-5" fill-opacity="0.2" fill="#050F2C" x="72" y="64.1935484" width="64" height="24" rx="2"></rect>
+                <g id="AZERTYUI" transform="translate(0.000000, 32.193548)" fill="#050F2C" fill-opacity="0.2">
+                    <rect id="VSJNDBBS-4-Copy" x="0" y="0" width="100" height="24" rx="2"></rect>
+                    <rect id="VSJNDBBS-4-Copy-2" x="108" y="0" width="100" height="24" rx="2"></rect>
                 </g>
             </g>
+            <g id="CVBN" transform="translate(252.000000, 89.000000)" fill="url(#linearGradient-3)">
+                <ellipse id="Oval" cx="13.2699085" cy="13.5558923" rx="13.2699085" ry="13.5558923"></ellipse>
+            </g>
+            <path d="M265,100 C265,99 263.685745,98 262.36766,98 C260.124043,98 259,100.110997 259,102.082479 C259,105.341487 264.044851,108.799004 264.663745,109.228049 C264.765106,109.298195 264.882553,109.333333 265,109.333333 C265.117447,109.333333 265.234894,109.298195 265.336255,109.228049 C265.955149,108.799004 271,105.341487 271,102.082479 C271,100.110997 269.875702,98 267.631957,98 C266.314383,98 265,99 265,100 Z" id="icons/icon-heart" fill="#FFFFFF"></path>
         </g>
     </g>
 </svg>

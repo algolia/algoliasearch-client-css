@@ -5,9 +5,10 @@ set -eu
 mkdir -p ./gh-pages
 rm -rf ./gh-pages/*
 
+yarn upgrade algolia-frontend-components
+
 # Building website
 cd ./website
-yarn upgrade algolia-frontend-components
 node ./buildComponents.js
 middleman build
 mv -fn ./build/* ../gh-pages

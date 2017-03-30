@@ -13,21 +13,43 @@
       width: 100%
       margin: 0 auto 1em
 
+  @include diagonal(-6deg, white, 200px, after)
+    bottom: -80px
+    left: 0
+    z-index: 11
+    @media (max-width: $screen-sm)
+      display: none
+
+
 /**
  * Demo section
  */
 .demo
   overflow: hidden
+  height: 740px
+  background-image: url('../images/triangle-background.svg'), linear-gradient(291deg, #1f1a37, #3e366a)
+  background-repeat: no-repeat
+  background-size: cover, cover
+  background-position: center center, top left
+  background-blend-mode: overlay
 
   .pos-abt img,
   .m100p svg
-    max-width: 980px
+    max-width: 1190px
     height: 100%
-    width: 100%
     position: absolute
-    left: 0
+    left: -110px
     right: 0
-    margin: auto
+    margin: 3em auto
+
+    @media (max-width: $screen-lg)
+      max-width: 980px
+      height: 100%
+      width: 100%
+      position: absolute
+      left: 0
+      right: 0
+      margin: auto
 
   .pos-abt img
     height: auto
@@ -39,6 +61,7 @@
     bottom: 0
     left: 0
 
+
     @media (max-width: $screen-md)
       width: 90%
       margin: 0 5%
@@ -49,6 +72,10 @@
 
   .btn
     margin: auto
+    top: 100px
+    @media (max-width: $screen-sm)
+      top: 0
+      max-width: 140px !important
 
 
     @media (max-width: $screen-sm)

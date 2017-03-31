@@ -37,12 +37,17 @@
 %section.demo.pos-rel.h600
   .spacer40.inline
   .container.hfull.text-center.pos-rel.z-10
+    .spacer80
+    .row
+      .col-md-8.pull-none.m-l-r-auto.m
+        %h2.color-white Try our CSS Search Demo
+        %p.color-white Take a test spin of what is possible with a pure CSS search experience by searching through the team members of Algolia by name or title.
+    .spacer32
     %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-100{:href => "./demo"}
       Try it live! 
       %i.icon.icon-arrow-right
-    .col-md-10.col-md-offset-1.pos-abt.hfull.pos-rel
-      %a{:href => "./demo"}
-        = inline_svg "browser2.svg", "m100p"
+    .col-md-12.col-md-offset-1.hfull.pos-rel
+      = inline_svg "browser.svg"
 
 
 %section.features

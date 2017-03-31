@@ -26,7 +26,7 @@
  */
 .demo
   overflow: hidden
-  height: 740px
+  height: 940px
   background-image: url('../images/triangle-background.svg'), linear-gradient(291deg, #1f1a37, #3e366a)
   background-repeat: no-repeat
   background-size: cover, cover
@@ -34,11 +34,11 @@
   background-blend-mode: overlay
 
   .pos-abt img,
-  .m100p svg
+  svg
     max-width: 1190px
     height: 100%
     position: absolute
-    left: -110px
+    left: -180px
     right: 0
     margin: 3em auto
 
@@ -51,11 +51,8 @@
       right: 0
       margin: auto
 
-  .pos-abt img
-    height: auto
-    max-width: 800px
-    width: 100%
-    bottom: 0
+  .pos-rel svg
+    margin-top: -130px
 
   .pos-abt
     bottom: 0
@@ -72,7 +69,7 @@
 
   .btn
     margin: auto
-    top: 100px
+
     @media (max-width: $screen-sm)
       top: 0
       max-width: 140px !important

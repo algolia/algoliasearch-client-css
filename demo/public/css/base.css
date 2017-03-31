@@ -30,7 +30,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
 h1 {
   font-size: 3rem;
@@ -59,7 +59,7 @@ a {
 /* Search input */
 #i {
   outline: 0;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   border: solid 1px rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, .7);
@@ -80,6 +80,7 @@ a {
   font-size: .9rem;
   text-align: right;
   -webkit-font-smoothing: antialiased;
+  font-family: Montserrat, sans-serif;
   color: rgba(255, 255, 255, 0.6);
   max-width: 800px;
 }

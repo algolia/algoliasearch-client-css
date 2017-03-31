@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+  <title>api/windows</title>
+  <desc>Created with Sketch.</desc>
+  <defs></defs>
+  <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="tools" transform="translate(-774.000000, -207.000000)">
+      <g id="api/windows" transform="translate(774.000000, 207.000000)">
+        <circle id="Oval-148" fill="#FFFFFF" cx="34.5" cy="35.5" r="33.5"></circle>
+        <path d="M35,70 C15.6700338,70 0,54.3299662 0,35 C0,15.6700338 15.6700338,0 35,0 C54.3299662,0 70,15.6700338 70,35 C70,54.3299662 54.3299662,70 35,70 Z M14.243825,19.834491 L14.2583237,33.072756 L30.1223976,32.9824148 L30.1154596,17.6729386 L14.243825,19.834491 Z M30.1078989,34.7463646 L14.255255,34.6435839 L14.2561445,47.8881065 L30.1202184,50.0691832 L30.1078989,34.7463646 Z M32.0319127,17.3901694 L32.0319127,32.9547739 L53.0763828,32.7877052 L53.0763828,14.3187566 L32.0319127,17.3901694 Z M53.081275,34.8904622 L32.0023816,34.8560389 L32.0318682,50.3060547 L53.0763383,53.2762434 L53.081275,34.8904622 Z" id="objc" fill="#00ADEF"></path>
+      </g>
+    </g>
+  </g>
+</svg>

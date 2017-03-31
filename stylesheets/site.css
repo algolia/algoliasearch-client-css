@@ -3669,19 +3669,16 @@ p {
     display: block;
     position: absolute;
     width: 100%;
-    height: 128px;
+    height: 200px;
     background: white;
     transform: skewY(-6deg);
     z-index: 0;
-    top: -64px;
+    top: -100px;
     left: 0;
     z-index: 0; }
     @media (min-width: 1200px) {
       .cta-free-trial:before {
         transform: skewY(-3deg); } }
-    @media (min-width: 2000px) {
-      .cta-free-trial:before {
-        top: -260px; } }
     @media (max-width: 768px) {
       .cta-free-trial:before {
         display: none; } }
@@ -3749,39 +3746,66 @@ p {
   .card:hover {
     box-shadow: 0 0 48px rgba(52, 105, 231, 0.15); }
 
-.quote {
-  max-width: 780px;
+.quotes {
   margin: auto;
   position: relative;
   margin-bottom: 2em; }
-  .quote p,
-  .quote small {
+  .quotes .tweet-it {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 8px auto;
+    z-index: 10;
+    width: auto;
+    max-width: 120px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    will-change: opacity, transform; }
+    .quotes .tweet-it.one-line {
+      margin: -16px auto; }
+  .quotes .quote {
+    transition: filter 0.2s ease, opacity 0.3s ease, transform 0.2s ease;
+    will-change: filter, opacity, transform; }
+    .quotes .quote p {
+      font-style: italic; }
+    .quotes .quote:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 118px;
+      height: 68px;
+      left: 0;
+      right: 0;
+      top: -45px;
+      margin: auto;
+      z-index: 0;
+      background: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?> <svg width="119px" height="89px" viewBox="0 0 119 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1"> <g id="00" transform="translate(-662.000000, -5829.000000)" fill="%23F7F7FF"> <path d="M713.408,5878.248 C715.232009,5881.89602 716.144,5885.83198 716.144,5890.056 C716.144,5897.92804 713.552026,5904.40797 708.368,5909.496 C703.183974,5914.58403 696.656039,5917.128 688.784,5917.128 C681.295963,5917.128 674.960026,5914.72802 669.776,5909.928 C664.591974,5905.12798 662,5898.60004 662,5890.344 C662,5883.62397 664.399976,5876.52004 669.2,5869.032 L694.544,5829 L721.904,5829 L705.488,5869.32 C708.944017,5871.62401 711.583991,5874.59998 713.408,5878.248 Z M772.16,5878.248 C773.984009,5881.89602 774.896,5885.83198 774.896,5890.056 C774.896,5897.92804 772.304026,5904.40797 767.12,5909.496 C761.935974,5914.58403 755.408039,5917.128 747.536,5917.128 C740.047963,5917.128 733.712026,5914.72802 728.528,5909.928 C723.343974,5905.12798 720.752,5898.60004 720.752,5890.344 C720.752,5883.62397 723.151976,5876.52004 727.952,5869.032 L753.296,5829 L780.656,5829 L764.24,5869.32 C767.696017,5871.62401 770.335991,5874.59998 772.16,5878.248 Z" id="aacopy-2"></path> </g> </g> </svg>') no-repeat center center/contain; }
+  .quotes .col-md-6:hover .quote {
+    filter: blur(4px);
+    opacity: 0.8;
+    transform: scale(0.85); }
+  .quotes .col-md-6:hover .tweet-it {
+    opacity: 1;
+    transform: scale(1); }
+  .quotes p,
+  .quotes small {
     position: relative;
     z-index: 2; }
-  .quote small {
+  .quotes small {
     font-size: 18px;
     color: #182359;
     font-weight: 600;
     margin-top: 1em;
     display: block; }
-  .quote img {
+  .quotes img {
     max-width: 24px;
     position: relative;
     border-radius: 50%; }
-  .quote:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 118px;
-    height: 68px;
-    left: 0;
-    right: 0;
-    top: -45px;
-    margin: auto;
-    z-index: 0;
-    background: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?> <svg width="119px" height="89px" viewBox="0 0 119 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1"> <g id="00" transform="translate(-662.000000, -5829.000000)" fill="%23F7F7FF"> <path d="M713.408,5878.248 C715.232009,5881.89602 716.144,5885.83198 716.144,5890.056 C716.144,5897.92804 713.552026,5904.40797 708.368,5909.496 C703.183974,5914.58403 696.656039,5917.128 688.784,5917.128 C681.295963,5917.128 674.960026,5914.72802 669.776,5909.928 C664.591974,5905.12798 662,5898.60004 662,5890.344 C662,5883.62397 664.399976,5876.52004 669.2,5869.032 L694.544,5829 L721.904,5829 L705.488,5869.32 C708.944017,5871.62401 711.583991,5874.59998 713.408,5878.248 Z M772.16,5878.248 C773.984009,5881.89602 774.896,5885.83198 774.896,5890.056 C774.896,5897.92804 772.304026,5904.40797 767.12,5909.496 C761.935974,5914.58403 755.408039,5917.128 747.536,5917.128 C740.047963,5917.128 733.712026,5914.72802 728.528,5909.928 C723.343974,5905.12798 720.752,5898.60004 720.752,5890.344 C720.752,5883.62397 723.151976,5876.52004 727.952,5869.032 L753.296,5829 L780.656,5829 L764.24,5869.32 C767.696017,5871.62401 770.335991,5874.59998 772.16,5878.248 Z" id="aacopy-2"></path> </g> </g> </svg>') no-repeat center center/contain; }
   @media (max-width: 768px) {
-    .quote {
+    .quotes {
       margin-bottom: 8em; } }
 
 @font-face {

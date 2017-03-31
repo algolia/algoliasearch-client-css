@@ -11,13 +11,13 @@ const output = algoliaComponents.communityHeader({
   sideMenu: [
     { name: "Live demo", url: "./demo" },
     { name: "Blog", url: "https://blog.algolia.com/js-is-dead-all-hail-css", target: '_blank' },
-    { name: "Community forum", url: "https://discourse.algolia.com", target: '_blank'},
+    { name: "Community forum", url: "https://discourse.algolia.com/t/css-api-client-released/895", target: '_blank'},
     { image: '<img src="./images/github.svg" />', url: "https://github.com/algolia/algoliasearch-client-css", target: '_blank' }
   ],
   mobileMenu: [
     { name: "Live demo", url: "./demo" },
     { name: "Blog", url: "https://blog.algolia.com/js-is-dead-all-hail-css", target: '_blank' },
-    { name: "Community forum", url: "https://discourse.algolia.com", target: '_blank' },
+    { name: "Community forum", url: "https://discourse.algolia.com/t/css-api-client-released/895", target: '_blank' },
     { image: '<img src="./images/github.svg" />', url: "https://github.com/algolia/algoliasearch-client-css", target: '_blank' }
   ],
   docSearch: null

@@ -36,7 +36,33 @@
     left: 0
     z-index: 0
 
-  .project-logo
+  svg
     max-width: 200px
 
+
+// Hero Illustration
+$timingFunction: 3s ease infinite
+
+
+
+#Layer_3AAAAAAA
+  animation: bounce $timingFunction
+
+ellipse
+  transform-origin: center center
+  -moz-transform-origin: 50% 40%
+  animation: bounceShadow $timingFunction
+  -moz-animation: mozBounceShadow $timingFunction
+
+// Fix svg in FF
+#plan-holder
+  -moz-transform: translateY(10px)
+
+#plan
+  -moz-transform: scale(1.1)
+
+
+@include anim('bounce', 'translateY(0)', 'translateY(-10px)', 'translateY(-10px)')
+@include animEllipse('bounceShadow', 'scale(1) translateY(12px)', 'scale(0.75) translateY(12px) ', 'scale(0.75) translateY(12px) ')
+@include animEllipse('mozBounceShadow', 'scale(1) translateY(16px)', 'scale(0.75) translateY(16px) translateX(-8px) ', 'scale(0.75) translateY(16px) translateX(-8px) ')
 

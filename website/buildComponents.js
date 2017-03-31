@@ -5,18 +5,18 @@ const output = algoliaComponents.communityHeader({
   menu: {
     project: {
       label: "Algolia CSS API Client",
-      url: "https://community.algolia.com/algoliasearch-client-css/"
+      url: "https://www.algolia.com/css"
     }
   },
   sideMenu: [
     { name: "Live demo", url: "./demo" },
-    { name: "Blog", url: "https://blog.algolia.com/introducing-our-css-api-client", target: '_blank' },
+    { name: "Blog", url: "https://blog.algolia.com/js-is-dead-all-hail-css", target: '_blank' },
     { name: "Community forum", url: "https://discourse.algolia.com", target: '_blank'},
     { image: '<img src="./images/github.svg" />', url: "https://github.com/algolia/algoliasearch-client-css", target: '_blank' }
   ],
   mobileMenu: [
     { name: "Live demo", url: "./demo" },
-    { name: "Blog", url: "https://blog.algolia.com/introducing-our-css-api-client", target: '_blank' },
+    { name: "Blog", url: "https://blog.algolia.com/js-is-dead-all-hail-css", target: '_blank' },
     { name: "Community forum", url: "https://discourse.algolia.com", target: '_blank' },
     { image: '<img src="./images/github.svg" />', url: "https://github.com/algolia/algoliasearch-client-css", target: '_blank' }
   ],

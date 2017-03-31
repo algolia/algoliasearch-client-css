@@ -9,3 +9,5 @@ Thank you for your interest in our CSS API Client.
 
 We are still polishing the last details, and will post more technical details
 about its usage soon. Stay tuned.
+
+You can find the official announcement on [our blog](https://blog.algolia.com/js-is-dead-all-hail-css/)

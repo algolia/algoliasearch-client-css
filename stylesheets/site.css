@@ -3394,21 +3394,17 @@ p {
     margin: 4em auto;
     width: 100%; }
   @media (max-width: 768px) {
-    .demo {
-      height: 300px !important;
-      min-height: 300px !important; }
-      .demo .pos-abt img {
-        max-width: 320px; }
-      .demo .m100p svg {
-        top: 40%;
-        transform: translateY(-50%); }
-      .demo .btn {
-        max-width: 80%;
-        margin: auto;
-        left: 0;
-        right: 0;
-        float: none;
-        display: block; } }
+    .demo .browser {
+      height: 240px; }
+    .demo .pos-abt img {
+      max-width: 320px; }
+    .demo .btn {
+      max-width: 80%;
+      margin: auto;
+      left: 0;
+      right: 0;
+      float: none;
+      display: block; } }
 
 /**
  * Features section
@@ -3634,10 +3630,17 @@ p {
     font-weight: bold;
     height: auto;
     line-height: inherit; }
-  .hero #Layer_3AAAAAAA {
+  .hero .shadow {
+    width: 160px;
+    height: 10px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    margin: auto;
+    position: relative; }
+  .hero #animsvg {
     animation: bounce 6s ease infinite;
     will-change: transform; }
-  .hero ellipse {
+  .hero .shadow {
     transform-origin: center center;
     -moz-transform-origin: 50% 40%;
     animation: bounceShadow 6s ease infinite;

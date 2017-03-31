@@ -12,23 +12,23 @@
     .inline.spacer40
     .col-md-12
       .col-md-4.card.pos-rel.z-100
-        %a{:href => "#offline"}
+        %a{:href => "#offline", :title => "It even works offline!"}
           %figure
-            = image_tag "illustrations/offline_illustration.svg"
+            = image_tag "illustrations/offline_illustration.svg", alt: "Even works offline"
             .spacer24
           %h3 Works offline
 
       .col-md-4.card.pos-rel.z-100
-        %a{:href => "#nojavascript"}
+        %a{:href => "#nojavascript", :title => "No JavaScript needed"}
           %figure
-            = image_tag "illustrations/nojs_illustration.svg"
+            = image_tag "illustrations/nojs_illustration.svg", alt: "Get rid of JavaScript altogether"
             .spacer24
           %h3 No JavaScript
 
       .col-md-4.card.pos-rel.z-100
-        %a{:href => "#flexbox"}
+        %a{:href => "#flexbox", :title => "And it even has flexboxes"}
           %figure
-            = image_tag "illustrations/flexbox_illustration.svg"
+            = image_tag "illustrations/flexbox_illustration.svg", alt: "Flexbox all the way!"
             .spacer24
           %h3 Flexbox!
     .spacer80
@@ -62,7 +62,7 @@
     .row#offline
       .col-md-6.text-center.m100p
         %figure
-          = image_tag "illustrations/offline_illustration.svg"
+          = image_tag "illustrations/offline_illustration.svg", alt: "It even works offline!"
 
       .col-md-6
         %h3.bold Offline mode
@@ -76,7 +76,7 @@
     .row#nojavascript
       .col-md-6.text-center.m100p.visible-xs
         %figure
-          = image_tag "illustrations/nojs_illustration.svg"
+          = image_tag "illustrations/nojs_illustration.svg", alt: "Get rid of JavaScript altogether"
 
       .col-md-6
         %h3.bold No JavaScript needed
@@ -85,13 +85,13 @@
           CSS is so powerful that you won't be needing JavaScript anymore. That's right, we decided to get rid of JavaScript altogether.
       .col-md-6.text-center.m100p.hidden-xs
         %figure
-          = image_tag "illustrations/nojs_illustration.svg"
+          = image_tag "illustrations/nojs_illustration.svg", alt: "Get rid of JavaScript altogether"
 
 
     .row#flexbox
       .col-md-6.text-center.m100p
         %figure
-          = image_tag "illustrations/flexbox_illustration.svg"
+          = image_tag "illustrations/flexbox_illustration.svg", alt: "Look ma! I have flexbox!"
 
       .col-md-6
         %h3.bold Flexbox
@@ -112,66 +112,66 @@
     .spacer16
     .col-md-12
       .col-md-6
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CWhat%20was%20I%20thinking%20putting%20CSS%20in%20JS%3F%20I%20see%20now%20that%20building%20pure-CSS%20apps%20is%20the%20future!%E2%80%9D%20%40vJeux%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CWhat%20was%20I%20thinking%20putting%20CSS%20in%20JS%3F%20I%20see%20now%20that%20building%20pure-CSS%20apps%20is%20the%20future!%E2%80%9D%20%40vJeux%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet this quote"}
           Tweet it
           %i.icon.icon-twitter
         .quote.text-center
           %p
             What was I thinking putting CSS in JS? I see now that building pure-CSS apps is the future!
         %small.text-center
-          %img{:src => "./images/quotes/vjeux.png", :alt => ""}/
-          %a{:href => "https://twitter.com/Vjeux"} Christopher Chedeau
+          %img{:src => "./images/quotes/vjeux.png", :alt => "Christopher's avatar"}/
+          %a{:href => "https://twitter.com/Vjeux", :title => "Christopher's twitter account"} Christopher Chedeau
           %span - Facebook
       .col-md-6
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CThe%20only%20thing%20better%20than%20a%20static%20website%20is%20a%20static%20search%20engine.%E2%80%9D%20%40smashingmag%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS%0A", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CThe%20only%20thing%20better%20than%20a%20static%20website%20is%20a%20static%20search%20engine.%E2%80%9D%20%40smashingmag%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS%0A", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet this quote"}
           Tweet it
           %i.icon.icon-twitter
         .quote.text-center
           %p
             The only thing better than a static website is a static search engine.
         %small.text-center
-          %img{:src => "./images/quotes/smashing.jpg", :alt => ""}/
-          %a{:href => "https://twitter.com/smashingmag"} Vitaly Friedman
+          %img{:src => "./images/quotes/smashing.jpg", :alt => "Vitaly's avatar"}/
+          %a{:href => "https://twitter.com/smashingmag", :title => "Vitaly's twitter account"} Vitaly Friedman
           %span - SmashingMagazine
 
       .inline.spacer80.hidden-xs
       .col-md-6
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it.one-line{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CJavascript%20is%20dead.%E2%80%9D%20%40chriscoyier%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it.one-line{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CJavascript%20is%20dead.%E2%80%9D%20%40chriscoyier%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet this quote"}
           Tweet it
           %i.icon.icon-twitter
         .quote.text-center
           %p
             Javascript is dead.
         %small.text-center
-          %img{:src => "./images/quotes/chris.png", :alt => ""}/
-          %a{:href => "https://twitter.com/chriscoyier"} Chris Coyier
+          %img{:src => "./images/quotes/chris.png", :alt => "Chris's avatar"}/
+          %a{:href => "https://twitter.com/chriscoyier", :title => "Chris's twitter account"} Chris Coyier
           %span - CSS-Tricks
       .col-md-6
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it.one-line{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CThis%20is%20the%20best%20thing%20that%20happened%20since%20sliced%20bread.%E2%80%9D%20%40porteneuve%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it.one-line{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CThis%20is%20the%20best%20thing%20that%20happened%20since%20sliced%20bread.%E2%80%9D%20%40porteneuve%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet this quote"}
           Tweet it
           %i.icon.icon-twitter
         .quote.text-center
           %p
             This is the best thing that happened since sliced bread.
         %small.text-center
-          %img{:src => "./images/quotes/porteneuve.jpg", :alt => ""}/
-          %a{:href => "https://twitter.com/porteneuve"} Christophe Porteneuve
+          %img{:src => "./images/quotes/porteneuve.jpg", :alt => "Christophe's avatar"}/
+          %a{:href => "https://twitter.com/porteneuve", :title => "Christophe's twitter account"} Christophe Porteneuve
           %span - Delicious Insights
 
       .inline.spacer80.hidden-xs
       .col-md-6
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CWith%20Algolia%2C%20we%20can%20finally%20deliver%20an%20entire%20search%20experience%20inside%20of%20your%20inbox.%E2%80%9D%20%40Nico_g%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS%0A", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it{:href => "https://twitter.com/intent/tweet?text=%E2%80%9CWith%20Algolia%2C%20we%20can%20finally%20deliver%20an%20entire%20search%20experience%20inside%20of%20your%20inbox.%E2%80%9D%20%40Nico_g%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS%0A", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet this quote"}
           Tweet it
           %i.icon.icon-twitter
         .quote.text-center
           %p
             With Algolia, we can finally deliver an entire search experience inside of your inbox.
         %small.text-center
-          %img{:src => "./images/quotes/nicolas.jpg", :alt => ""}/
-          %a{:href => "https://twitter.com/Nico_g"} Nicolas Garnier
+          %img{:src => "./images/quotes/nicolas.jpg", :alt => "Nicolas's avatar"}/
+          %a{:href => "https://twitter.com/Nico_g", :title => "Nicolas's twitter account"} Nicolas Garnier
           %span - Mailjet
       .col-md-6
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it.one-line{:href => "https://twitter.com/intent/tweet?text=%221993-2017%3A%20The%20Era%20of%20JavaScript%20is%20Over.%E2%80%9D%20%40SachaGreif%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.tweet-it.one-line{:href => "https://twitter.com/intent/tweet?text=%221993-2017%3A%20The%20Era%20of%20JavaScript%20is%20Over.%E2%80%9D%20%40SachaGreif%20https%3A%2F%2Fwww.algolia.com%2Fcss%20%23AlgoliaCSS", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet this quote"}
           Tweet it
           %i.icon.icon-twitter
         .quote.text-center
@@ -180,8 +180,8 @@
 
             .spacer32
         %small.text-center
-          %img{:src => "./images/quotes/sacha.png", :alt => ""}/
-          %a{:href => "https://twitter.com/SachaGreif"} Sacha Greif
+          %img{:src => "./images/quotes/sacha.png", :alt => "Sacha's avatar"}/
+          %a{:href => "https://twitter.com/SachaGreif", :title => "Sacha's twitter account"} Sacha Greif
           %span - State Of Javascript
 
   .spacer120.inline.hidden-xs
@@ -198,11 +198,11 @@
           Our CSS API Client is not completely ready just yet...
         %p Why don't you try one of our other API Clients instead?
         .spacer40
-        %a.btn.btn-static-dark.btn-static-shadow-dark{:href => "https://www.algolia.com/users/sign_up?utm_medium=social-owned&utm_source=algoliasearch-css-client&utm_campaign=homepage"}
+        %a.btn.btn-static-dark.btn-static-shadow-dark{:href => "https://www.algolia.com/users/sign_up?utm_medium=social-owned&utm_source=algoliasearch-css-client&utm_campaign=homepage", :title => "Try our free Community plan"}
           Try our forever-free Community plan
           %i.icon.icon-arrow-right
          
-        %a.btn.btn-static-secondary.btn-static-shadow-dark.fill-white.color-algolia-blue{:href => "https://twitter.com/intent/tweet?text=The%20power%20of%20Algolia%20distilled%20into%20a%20single%20.css%20file%20%E2%9A%A1%EF%B8%8F%20via%20%40algolia%20%23algoliaCSS%20www.algolia.com%2Fcss", :target => "blank", :rel => "noopener noreferrer"}
+        %a.btn.btn-static-secondary.btn-static-shadow-dark.fill-white.color-algolia-blue{:href => "https://twitter.com/intent/tweet?text=The%20power%20of%20Algolia%20distilled%20into%20a%20single%20.css%20file%20%E2%9A%A1%EF%B8%8F%20via%20%40algolia%20%23algoliaCSS%20www.algolia.com%2Fcss", :target => "blank", :rel => "noopener noreferrer", :title => "Tweet the love"}
           Tweet the love!
           %i.icon.icon-twitter
 

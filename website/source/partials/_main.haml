@@ -43,14 +43,15 @@
         %h2.color-white Try our CSS Search Demo
         %p.color-white Take a test spin of what is possible with a pure CSS search experience by searching through the team members of Algolia by name or title.
     .spacer32
-    %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-100{:href => "./demo"}
+    %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-100{:href => "./demo", :alt => "Demo time!"}
       Try it live! 
       %i.icon.icon-arrow-right
     .spacer40
     .col-md-12.hfull.pos-rel
       -# = inline_svg "browser.svg"
       .browser
-        =image_tag "images/screencast.gif"
+        %a{:href => "./demo", :alt => "Demo time!"}
+          =image_tag "images/screencast.gif"
 
 
 %section.features

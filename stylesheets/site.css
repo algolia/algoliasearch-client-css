@@ -3327,6 +3327,28 @@ p {
   background-size: cover, cover;
   background-position: center center, top left;
   background-blend-mode: overlay; }
+  .demo .browser {
+    margin: auto;
+    padding: 46px 1px 1px 1px;
+    background: #F7F7FF;
+    height: 100%;
+    border-radius: 8px;
+    max-width: 980px;
+    position: relative; }
+    .demo .browser img {
+      width: 100%; }
+    .demo .browser:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.12);
+      display: block;
+      margin: 16px 1em;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      box-shadow: 30px 0 0 rgba(0, 0, 0, 0.12), 62px 0 0 rgba(0, 0, 0, 0.12); }
   .demo .pos-abt img,
   .demo svg {
     max-width: 1190px;
@@ -3613,12 +3635,14 @@ p {
     height: auto;
     line-height: inherit; }
   .hero #Layer_3AAAAAAA {
-    animation: bounce 3s ease infinite; }
+    animation: bounce 6s ease infinite;
+    will-change: transform; }
   .hero ellipse {
     transform-origin: center center;
     -moz-transform-origin: 50% 40%;
-    animation: bounceShadow 3s ease infinite;
-    -moz-animation: mozBounceShadow 3s ease infinite; }
+    animation: bounceShadow 6s ease infinite;
+    -moz-animation: mozBounceShadow 6s ease infinite;
+    will-change: transform; }
   .hero:before {
     content: "";
     display: block;
@@ -3649,7 +3673,8 @@ p {
     @media (min-width: 1200px) {
       .hero:after {
         transform: skewY(-8deg); } }
-  .hero svg {
+  .hero svg,
+  .hero img {
     max-width: 200px; }
 
 #plan-holder {

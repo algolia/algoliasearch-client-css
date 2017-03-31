@@ -3210,7 +3210,7 @@ sub {
 
 * {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscaled;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
 b, strong {
@@ -3906,7 +3906,8 @@ p {
       right: 0;
       margin: -30px auto;
       z-index: 10;
-      background: url(../images/css-logo-aprilfool.png) no-repeat center center/contain; }
+      background: url(../images/css-logo-aprilfool.png) no-repeat center center/contain;
+      transform: translateX(10px); }
   .the-modal .modal--inner {
     overflow: auto;
     position: relative;
@@ -3938,7 +3939,8 @@ p {
     font-family: Montserrat;
     font-size: 18px;
     line-height: 1.67;
-    text-align: center; }
+    text-align: center;
+    padding: 8px 16px; }
   .the-modal .api-inte-list {
     display: flex;
     flex-flow: row wrap; }
@@ -3971,6 +3973,12 @@ p {
 .algc-mobilemenu img,
 .algc-mobilemenu svg {
   margin: 0.65em 0; }
+
+@media (max-width: 768px) {
+  .algc-navigation__brands .algc-navigation__li--community .algolia-community-logo {
+    max-height: 26px !important;
+    margin-left: -10px !important;
+    margin-top: 4px !important; } }
 
 #footer {
   background: #050f2c;

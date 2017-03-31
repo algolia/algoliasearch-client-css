@@ -3784,7 +3784,8 @@ p {
     .cta-free-trial {
       text-align: center; }
       .cta-free-trial .btn {
-        float: none !important; }
+        float: none !important;
+        margin-bottom: 1em; }
       .cta-free-trial .link {
         float: none !important; } }
 
@@ -3963,6 +3964,9 @@ p {
   overflow: auto;
   top: 0;
   left: 0; }
+  @media (max-width: 768px) {
+    .modal {
+      overflow: inherit; } }
 
 .the-modal {
   position: relative;
@@ -3994,12 +3998,22 @@ p {
       z-index: 10;
       background: url(../images/css-logo-aprilfool.png) no-repeat center center/contain;
       transform: translateX(10px); }
+    @media (max-width: 768px) {
+      .the-modal header {
+        display: none; } }
   .the-modal .modal--inner {
     overflow: auto;
     position: relative;
     z-index: 999;
     height: calc(100% - 245px);
     overflow: auto; }
+    @media (max-width: 768px) {
+      .the-modal .modal--inner {
+        height: 100%;
+        overflow: inherit; } }
+  @media (max-width: 768px) {
+    .the-modal .btn {
+      margin-bottom: 1em; } }
   .the-modal h2 {
     font-family: Montserrat;
     font-size: 32px;
@@ -4044,13 +4058,21 @@ p {
     height: initial;
     margin: -15px 20px;
     z-index: 99999; }
+    @media (max-width: 768px) {
+      .the-modal .modal--close {
+        background-image: linear-gradient(80deg, #00aeff, #3369e7);
+        color: #fff;
+        margin: 1em auto;
+        left: 0;
+        max-width: 90%; } }
   @media (max-width: 768px) {
     .the-modal {
       height: 100%;
       margin: 56px 0 0;
       border-radius: 0;
       padding-bottom: 3em;
-      max-width: 100%; }
+      max-width: 100%;
+      overflow: scroll; }
       .the-modal--close {
         position: relative;
         right: 0;

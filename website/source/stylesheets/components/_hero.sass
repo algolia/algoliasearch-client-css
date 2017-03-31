@@ -25,19 +25,20 @@
     line-height: inherit
 
   // Hero Illustration
-  $timingFunction: 3s ease infinite
+  $timingFunction: 6s ease infinite
 
 
 
   #Layer_3AAAAAAA
     animation: bounce $timingFunction
+    will-change: transform
 
   ellipse
     transform-origin: center center
     -moz-transform-origin: 50% 40%
     animation: bounceShadow $timingFunction
     -moz-animation: mozBounceShadow $timingFunction
-
+    will-change: transform
 
 
 
@@ -51,7 +52,8 @@
     left: 0
     z-index: 0
 
-  svg
+  svg,
+  img
     max-width: 200px
 
 

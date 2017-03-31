@@ -46,8 +46,11 @@
     %a.btn.btn-static-secondary.btn-static-shadow-dark.pos-rel.z-100{:href => "./demo"}
       Try it live! 
       %i.icon.icon-arrow-right
-    .col-md-12.col-md-offset-1.hfull.pos-rel
-      = inline_svg "browser.svg"
+    .spacer40
+    .col-md-12.hfull.pos-rel
+      -# = inline_svg "browser.svg"
+      .browser
+        =image_tag "images/screencast.gif"
 
 
 %section.features

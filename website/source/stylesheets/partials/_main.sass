@@ -33,6 +33,31 @@
   background-position: center center, top left
   background-blend-mode: overlay
 
+  .browser
+    margin: auto
+    padding: 46px 1px 1px 1px
+    background: #F7F7FF
+    height: 100%
+    border-radius: 8px
+    max-width: 980px
+    position: relative
+
+    img
+      width: 100%
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      background: rgba(#000000, 0.12)
+      display: block
+      margin: 16px 1em
+      border-radius: 50%
+      width: 14px
+      height: 14px
+      box-shadow: 30px 0 0 rgba(#000, 0.12), 62px 0 0 rgba(#000, 0.12)
+
   .pos-abt img,
   svg
     max-width: 1190px

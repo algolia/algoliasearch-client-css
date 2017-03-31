@@ -1,8 +1,8 @@
 .modal.elevation1.z-10.hidden#modal
   .the-modal
-    %a.modal--close.btn.btn-static-secondary.hidden-xs{:href => "#"}
+    %a.modal--close.btn.btn-static-secondary.hidden-xs{:href => "#", :title => "Close modal"}
       %span.icon.icon-cancel
-    %a.modal--close.btn.btn-static-secondary.visible-xs{:href => "#"} close modal
+    %a.modal--close.btn.btn-static-secondary.visible-xs{:href => "#", :title => "Close modal"} close modal
     %header.text-center
       .h100
     .modal--inner
@@ -13,9 +13,9 @@
           Our CSS API Client is still in private beta.
           In the meantime, you can use your CSS skills on top of any of our API clients and frameworks
         .text-center
-          %a.btn.btn-static-dark.btn-shadow{:href => "./demo"} Try our CSS Demo
+          %a.btn.btn-static-dark.btn-shadow{:href => "./demo", :title => "Try the live demo"} Try our CSS Demo
            
-          %a.btn.btn-static-dark.btn-shadow{:href => "https://www.algolia.com/users/sign_up?utm_medium=social-owned&utm_source=algoliasearch-css-client&utm_campaign=homepage"} Start Building on Algolia
+          %a.btn.btn-static-dark.btn-shadow{:href => "https://www.algolia.com/users/sign_up?utm_medium=social-owned&utm_source=algoliasearch-css-client&utm_campaign=homepage", :title => "Start building awesome projects with Algolia"} Start Building on Algolia
         .spacer16
 
         .col-md-12.chapter-wrap
@@ -24,44 +24,44 @@
             .spacer32
             .api-inte-list.clearfix
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/php/"}
-                  %img.m-l-r-auto{:alt => "Php", :src => "https://algolia.com/doc/assets/images/languages/php-53888094.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/php/", :title => "PHP API Client"}
+                  %img.m-l-r-auto{:alt => "PHP", :src => "./images/clients/php-53888094.svg"}/
                   %h4.text-ellipsis PHP
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/ruby/"}
-                  %img.m-l-r-auto{:alt => "Ruby", :src => "https://algolia.com/doc/assets/images/languages/ruby-00bdd41f.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/ruby/", :title => "Ruby API Client"}
+                  %img.m-l-r-auto{:alt => "Ruby", :src => "./images/clients/ruby-00bdd41f.svg"}/
                   %h4.text-ellipsis Ruby
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/javascript/"}
-                  %img.m-l-r-auto{:alt => "Javascript", :src => "https://algolia.com/doc/assets/images/languages/javascript-68104683.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/javascript/", :title => "JavaScript API Client"}
+                  %img.m-l-r-auto{:alt => "Javascript", :src => "./images/clients/javascript-68104683.svg"}/
                   %h4.text-ellipsis JavaScript
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/python/"}
-                  %img.m-l-r-auto{:alt => "Python", :src => "https://algolia.com/doc/assets/images/languages/python-dd5a8a8d.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/python/", :title => "Python API Client"}
+                  %img.m-l-r-auto{:alt => "Python", :src => "./images/clients/python-dd5a8a8d.svg"}/
                   %h4.text-ellipsis Python
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/swift/"}
-                  %img.m-l-r-auto{:alt => "Swift", :src => "https://algolia.com/doc/assets/images/languages/swift-4cb5cf0e.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/swift/", :title => "Swift API Client"}
+                  %img.m-l-r-auto{:alt => "Swift", :src => "./images/clients/swift-4cb5cf0e.svg"}/
                   %h4.text-ellipsis iOS
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/android/"}
-                  %img.m-l-r-auto{:alt => "Android", :src => "https://algolia.com/doc/assets/images/languages/android-f03624e7.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/android/", :title => "Android API Client"}
+                  %img.m-l-r-auto{:alt => "Android", :src => "./images/clients/android-f03624e7.svg"}/
                   %h4.text-ellipsis Android
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/csharp/"}
-                  %img.m-l-r-auto{:alt => "Csharp", :src => "https://algolia.com/doc/assets/images/languages/csharp-4075daa3.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/csharp/", :title => "C# API Client"}
+                  %img.m-l-r-auto{:alt => "C#", :src => "./images/clients/csharp-4075daa3.svg"}/
                   %h4.text-ellipsis C#
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/java/"}
-                  %img.m-l-r-auto{:alt => "Java", :src => "https://algolia.com/doc/assets/images/languages/java-65dd222f.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/java/", :title => "Java API Client"}
+                  %img.m-l-r-auto{:alt => "Java", :src => "./images/clients/java-65dd222f.svg"}/
                   %h4.text-ellipsis Java
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/go/"}
-                  %img.m-l-r-auto{:alt => "Go", :src => "https://algolia.com/doc/assets/images/languages/go-5f1359de.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/go/", :title => "Go API Client"}
+                  %img.m-l-r-auto{:alt => "Go", :src => "./images/clients/go-5f1359de.svg"}/
                   %h4.text-ellipsis Go
               %article.guide-sm.text-center
-                %a{:href => "https://algolia.com/doc/api-client/scala/"}
-                  %img.m-l-r-auto{:alt => "Scala", :src => "https://algolia.com/doc/assets/images/languages/scala-bce891cf.svg"}/
+                %a{:href => "https://algolia.com/doc/api-client/scala/", :title => "Scale API Client"}
+                  %img.m-l-r-auto{:alt => "Scala", :src => "./images/clients/scala-bce891cf.svg"}/
                   %h4.text-ellipsis Scala
         .spacer32
 

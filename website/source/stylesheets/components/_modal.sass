@@ -5,6 +5,8 @@
   overflow: auto
   top: 0
   left: 0
+  @media (max-width: $screen-sm)
+    overflow: inherit
 
 .the-modal
   position: relative
@@ -40,12 +42,24 @@
       background: url(../images/css-logo-aprilfool.png)no-repeat center center / contain
       transform: translateX(10px)
 
+    @media (max-width: $screen-sm)
+      display: none
+
+
   .modal--inner
     overflow: auto
     position: relative
     z-index: 999
     height: calc(100% - 245px)
     overflow: auto
+
+    @media (max-width: $screen-sm)
+      height: 100%
+      overflow: inherit
+
+  .btn
+    @media (max-width: $screen-sm)
+      margin-bottom: 1em
 
   h2
     font-family: Montserrat
@@ -98,6 +112,13 @@
     margin: -15px 20px
     z-index: 99999
 
+    @media (max-width: $screen-sm)
+      background-image: linear-gradient(80deg, #00aeff, #3369e7)
+      color: #fff
+      margin: 1em auto
+      left: 0
+      max-width: 90%
+
 
 
   @media (max-width: $screen-sm)
@@ -106,6 +127,7 @@
     border-radius: 0
     padding-bottom: 3em
     max-width: 100%
+    overflow: scroll
 
     &--close
       position: relative

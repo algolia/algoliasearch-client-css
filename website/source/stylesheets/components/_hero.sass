@@ -24,16 +24,24 @@
     height: auto
     line-height: inherit
 
+  .shadow
+    width: 160px
+    height: 10px
+    border-radius: 100%
+    background: rgba(black, 0.3)
+    margin: auto
+    position: relative
+
   // Hero Illustration
   $timingFunction: 6s ease infinite
 
 
 
-  #Layer_3AAAAAAA
+  #animsvg
     animation: bounce $timingFunction
     will-change: transform
 
-  ellipse
+  .shadow
     transform-origin: center center
     -moz-transform-origin: 50% 40%
     animation: bounceShadow $timingFunction

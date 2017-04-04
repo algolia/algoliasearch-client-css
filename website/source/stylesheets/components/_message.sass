@@ -18,3 +18,14 @@
 
 	&:not(.visible)
 		transform: translateY(-80px)
+
+	@media (max-width: $screen-sm)
+		.container
+			margin: 0
+
+		p
+			padding: 0 0.8em
+			font-size: 18px
+
+		&:not(.visible)
+			transform: translateY(-110px)

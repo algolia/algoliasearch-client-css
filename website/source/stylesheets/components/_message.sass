@@ -1,0 +1,20 @@
+.message-holder
+	width: 100%
+	position: fixed
+	top: 56px
+	z-index: 99
+	background: #fff
+	transition: transform 0.2s ease
+	will-change: transform
+	box-shadow: 0 16px 32px 0 rgba($bunting, 0.48)
+
+	span
+		display: inline-block
+
+	p
+		display: inline
+		font-size: 16px
+
+
+	&:not(.visible)
+		transform: translateY(-80px)

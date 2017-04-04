@@ -41,8 +41,18 @@ $(function() {
       }
       cta.text(message);
     },
+
+    displayMessage: function(e) {
+      var message = $('.message-holder');
+      message.addClass('visible')
+    }
   };
 
   cta.on('click', App.onclickCTA);
   $('.modal--close').on('click', App.closeModal);
+
+  setTimeout(function() {
+    console.log('yo')
+    App.displayMessage()
+  }, 2500)
 });

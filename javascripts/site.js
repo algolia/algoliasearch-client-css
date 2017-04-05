@@ -41,8 +41,14 @@ $(function() {
       }
       cta.text(message);
     },
+
+    displayMessage: function() {
+      $('.message-holder').addClass('visible');
+    },
   };
 
   cta.on('click', App.onclickCTA);
   $('.modal--close').on('click', App.closeModal);
+
+  setTimeout(App.displayMessage, 2000);
 });

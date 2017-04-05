@@ -52,9 +52,9 @@ ajv@^4.7.0:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-algolia-frontend-components@^0.0.29:
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/algolia-frontend-components/-/algolia-frontend-components-0.0.29.tgz#313eb28336052c2e25e9e49cfeb419120ceac6e0"
+algolia-frontend-components@^0.0.32:
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/algolia-frontend-components/-/algolia-frontend-components-0.0.32.tgz#440afd7dd4f90620748dac91e7705d99d0188af3"
   dependencies:
     babel-cli "^6.23.0"
     babel-core "^6.23.1"

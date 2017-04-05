@@ -23,7 +23,7 @@
     "deploy": "./scripts/deploy"
   },
   "devDependencies": {
-    "algolia-frontend-components": "^0.0.29",
+    "algolia-frontend-components": "^0.0.32",
     "babel": "^5.8.29",
     "babel-core": "^5.8.29",
     "babel-eslint": "^4.1.6",

@@ -92,7 +92,7 @@
   {
     "short_name": "vvo",
     "name": "Vincent Voyer",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I make the best crêpes in Western Europe.",
     "emoji": "🍴",
     "order": 9,
@@ -102,7 +102,7 @@
   {
     "short_name": "alexandre-stanislawski",
     "name": "Alexandre Stanislawski",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "When I can't make a decision, I toss a coin.",
     "emoji": "💰",
     "order": 10,
@@ -142,7 +142,7 @@
   {
     "short_name": "maxime",
     "name": "Maxime Locqueville",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "You should never ask me anything before lunch.",
     "emoji": "🍔",
     "order": 14,
@@ -152,7 +152,7 @@
   {
     "short_name": "matthieu",
     "name": "Matthieu Dumont",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I can eat a kebab and then a full Chinese menu.",
     "emoji": "🍛",
     "order": 15,
@@ -212,8 +212,9 @@
   {
     "short_name": "gianluca",
     "name": "Gianluca Bargelli",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I destroyed my first computer at the age of 8.",
+    "gravatar_url": "https://gravatar.com/avatar/74b7711f3f1936c9bed8cc949e7e1c26",
     "emoji": "🖥",
     "order": 22,
     "team": "Engineering",
@@ -232,7 +233,7 @@
   {
     "short_name": "alexandremeunier",
     "name": "Alexandre Meunier",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I have been playing guitar since I was 5.",
     "emoji": "🎸",
     "order": 25,
@@ -402,7 +403,7 @@
   {
     "short_name": "baptiste",
     "name": "Baptiste Coquelle",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "In Vietnam, I ate worms and I liked it.",
     "emoji": "🐛",
     "order": 47,

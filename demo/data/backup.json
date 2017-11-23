@@ -92,7 +92,7 @@
   {
     "short_name": "vvo",
     "name": "Vincent Voyer",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I make the best crêpes in Western Europe.",
     "emoji": "🍴",
     "order": 9,
@@ -102,7 +102,7 @@
   {
     "short_name": "alexandre-stanislawski",
     "name": "Alexandre Stanislawski",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "When I can't make a decision, I toss a coin.",
     "emoji": "💰",
     "order": 10,
@@ -112,7 +112,7 @@
   {
     "short_name": "nicolas-2",
     "name": "Nicolas Baissas",
-    "role": "Solutions Engineer",
+    "role": "Product Manager",
     "funny_quote": "I wanted to be a handball player.",
     "emoji": "🏐",
     "order": 11,
@@ -142,7 +142,7 @@
   {
     "short_name": "maxime",
     "name": "Maxime Locqueville",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "You should never ask me anything before lunch.",
     "emoji": "🍔",
     "order": 14,
@@ -152,7 +152,7 @@
   {
     "short_name": "matthieu",
     "name": "Matthieu Dumont",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I can eat a kebab and then a full Chinese menu.",
     "emoji": "🍛",
     "order": 15,
@@ -176,7 +176,7 @@
     "funny_quote": "I used to live in New Zealand and work on a farm where I fed cattle, sorted Macadamia nuts and planted a giant corn maze.",
     "emoji": "🌽",
     "order": 17,
-    "team": "Community",
+    "team": "Developer Relations",
     "objectID": "tim"
   },
   {
@@ -212,8 +212,9 @@
   {
     "short_name": "gianluca",
     "name": "Gianluca Bargelli",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I destroyed my first computer at the age of 8.",
+    "gravatar_url": "https://gravatar.com/avatar/74b7711f3f1936c9bed8cc949e7e1c26",
     "emoji": "🖥",
     "order": 22,
     "team": "Engineering",
@@ -232,7 +233,7 @@
   {
     "short_name": "alexandremeunier",
     "name": "Alexandre Meunier",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "I have been playing guitar since I was 5.",
     "emoji": "🎸",
     "order": 25,
@@ -362,21 +363,21 @@
   {
     "short_name": "lucas-2",
     "name": "Lucas Cerdan",
-    "role": "Product UX Specialist",
+    "role": "Product Manager",
     "funny_quote": "My girlfriend is mad at me for always wearing startup t-shirts.",
     "emoji": "👕",
     "order": 40,
-    "team": "Design",
+    "team": "Customer Success",
     "objectID": "lucas-2"
   },
   {
     "short_name": "raphael",
     "name": "Raphaël Terrier",
-    "role": "Solutions Engineer",
+    "role": "Technical Marketing Manager",
     "funny_quote": "I’ve created a connected device to mix perfect cocktails at home.",
     "emoji": "🍸",
     "order": 41,
-    "team": "Customer Success",
+    "team": "Marketing",
     "objectID": "raphael"
   },
   {
@@ -402,7 +403,7 @@
   {
     "short_name": "baptiste",
     "name": "Baptiste Coquelle",
-    "role": "Full-Stack Software Engineer",
+    "role": "Full-Stack Engineer",
     "funny_quote": "In Vietnam, I ate worms and I liked it.",
     "emoji": "🐛",
     "order": 47,
@@ -446,7 +447,7 @@
     "funny_quote": "I bought a modified electric rickshaw to give people rides at Burning Man.",
     "emoji": "🏍",
     "order": 51,
-    "team": "Community",
+    "team": "Developer Relations",
     "objectID": "josh"
   },
   {
@@ -578,16 +579,6 @@
     "order": 65,
     "team": "Design",
     "objectID": "sebastien"
-  },
-  {
-    "short_name": "paul",
-    "name": "Paul Friesen",
-    "role": "VP of Marketing",
-    "funny_quote": "I'm a Canadian who doesn't know what Canadian bacon is",
-    "emoji": "🇨🇦",
-    "order": 66,
-    "team": "Marketing",
-    "objectID": "paul"
   },
   {
     "short_name": "jonas",
@@ -745,7 +736,7 @@
     "short_name": "julie-reboul",
     "role": "Junior Marketer",
     "order": 84,
-    "team": "Sales",
+    "team": "Marketing",
     "name": "Julie Reboul",
     "gravatar_url": "https://gravatar.com/avatar/5eed08bac5b2e9c0b46293d0cdf2faf6",
     "funny_quote": "I took a selfie with Twitter's previous CEO, and it was fun!",
@@ -756,7 +747,7 @@
     "short_name": "christelle-dexet",
     "role": "Event Marketing Manager",
     "order": 85,
-    "team": "Sales",
+    "team": "Marketing",
     "name": "Christelle Dexet",
     "gravatar_url": "https://gravatar.com/avatar/c23aa2be34d1fc3fb022459797c202f1",
     "funny_quote": "I never really learned to read time on a watch, I have to think about it for a moment.",
@@ -842,7 +833,7 @@
   {
     "short_name": "jason-harris",
     "role": "Developer Advocate",
-    "team": "Community",
+    "team": "Developer Relations",
     "order": 94,
     "name": "Jason Harris",
     "gravatar_url": "https://gravatar.com/avatar/a0afd70a440899174387474bc9573a23",
@@ -905,10 +896,50 @@
     "team": "Marketing",
     "order": 100,
     "name": "Alex Avritch",
-    "gravatar_url": "https://gravatar.com/avatar/a98f295411465162d964fec3e1114912",
+    "gravatar_url": "https://gravatar.com/avatar/154135e911ff04d3f2bccf5988b5fc58",
+    "funny_quote": "My very first aspiration was to own a balloon shop!",
     "objectID": "alex-avritch"
+  },
+  {
+    "short_name": "adanech-getachew",
+    "team": "G&A",
+    "role": "Head of Legal",
+    "order": 101,
+    "name": "Adanech Getachew",
+    "gravatar_url": "https://gravatar.com/avatar/079338de67603cd12d35d4a1416769b1",
+    "objectID": "adanech-getachew"
+  },
+  {
+    "short_name": "eran-chetzroni",
+    "team": "Engineering",
+    "role": "Site Reliability Engineer",
+    "order": 102,
+    "name": "Eran Chetzroni",
+    "gravatar_url": "https://gravatar.com/avatar/981e889b16e26b876ccd24b26a77a75c",
+    "objectID": "eran-chetzroni"
+  },
+  {
+    "short_name": "raphael-daguenet",
+    "team": "Engineering",
+    "role": "Software Engineer",
+    "order": 103,
+    "name": "Raphaël Daguenet",
+    "gravatar_url": "https://gravatar.com/avatar/0fffcb8adb9889614ddd8e73b515b59f",
+    "objectID": "raphael-daguenet"
+  },
+  {
+    "short_name": "nicholas-von-holtermann",
+    "team": "Customer Success",
+    "role": "Solutions Engineer",
+    "order": 104,
+    "name": "Nicholas von Holtermann",
+    "gravatar_url": "https://gravatar.com/avatar/1ab98e9abd6550db8b2e48c2870b14d6",
+    "funny_quote": "I've been on a singing competition TV show in Taiwan!",
+    "emoji": "🎤",
+    "objectID": "nicholas-von-holtermann"
   }
 ]
+
 
 
 

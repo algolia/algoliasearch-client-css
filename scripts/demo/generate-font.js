@@ -1,5 +1,6 @@
 import Promise from 'bluebird';
 import fs from 'fs';
+import path from 'path';
 import glob from 'glob';
 import ttf2svg from 'ttf2svg';
 import svg2ttf from 'svg2ttf';
@@ -33,16 +34,17 @@ const GenerateFont = {
     return Promise.promisify(glob)(pattern);
   },
 
-  readFile(path) {
-    return Promise.promisify(fs.readFile)(path);
+  readFile(filepath) {
+    return Promise.promisify(fs.readFile)(filepath);
   },
 
-  writeFile(path, content) {
-    return Promise.promisify(fs.writeFile)(path, content);
+  writeFile(filepath, content) {
+    return GenerateFont.mkdir(path.dirname(filepath))
+      .then(() => Promise.promisify(fs.writeFile)(filepath, content));
   },
 
-  mkdir(path) {
-    return Promise.promisify(mkdirp)(path);
+  mkdir(filepath) {
+    return Promise.promisify(mkdirp)(filepath);
   },
 
   // Convert a ttf file to an svg one
@@ -109,7 +111,7 @@ const GenerateFont = {
       const deferred = Promise.pending();
       const fontStream = svg2font({
         fontName: 'Raleway',
-        normalize: true
+        normalize: true,
       });
       fontStream.pipe(fs.createWriteStream(outputPath))
                 .on('finish', () => { deferred.resolve(outputPath); })

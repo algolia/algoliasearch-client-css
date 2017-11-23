@@ -68,12 +68,14 @@ class CSSWriter
   end
 
   # Apply facet counts
-  def self.add_facets(css, all_facets, records)
+  def self.add_facets(css, all_facets, records, lookup_table)
     # We start by pre-filling all the labels already in the page with their
     # default names (they won't still have the correct count nor position, this
     # will be handled on a prefix-by-prefix basis afterward).
     # We also remember the radio and label selectors for ease of use afterward
     facet_to_selectors = facet_selectors(all_facets['__EMPTY_QUERY__'])
+    record_to_selector = record_to_selector_hash(lookup_table)
+
     all_facets['__EMPTY_QUERY__'].each do |facet|
       facet_name = facet[:name]
       label_selector = facet_to_selectors[facet_name][:label]
@@ -90,12 +92,13 @@ class CSSWriter
       # When selecting this facet, we hide all results that are not part of this
       # facet.
       facet_attribute = facet[:attribute]
-      records.each.with_index do |record, index|
+      records.each.with_index do |record|
         facet_value = record[facet_attribute]
         next if facet_value == facet_name
         # Using [id] is a trick to increase the specificity without using
         # !important (it uses less characters)
-        css << "#{radio_selector}[id]:checked ~ #h #h#{index} { display: none; }"
+        result_selector = record_to_selector[record['objectID']]
+        css << "#{radio_selector}[id]:checked ~ #h #{result_selector} { display: none; }"
       end
     end
 
@@ -143,8 +146,11 @@ class CSSWriter
     lookup_table['__EMPTY_QUERY__'].each do |entry|
       object_id = entry[:record]['objectID']
 
+      funny_quote = entry[:record]['funny_quote'] || ''
+      funny_quote = funny_quote.strip.gsub("'", '\\\0027')
+
       selector = record_to_selector[object_id]
-      quote = "#{entry[:record]['emoji']}\\A #{entry[:record]['funny_quote']}".gsub("'", '\\\0027 ')
+      quote = "#{entry[:record]['emoji']}\\A #{funny_quote}"
 
       css << "#{selector} { background-image: url(#{entry[:record]['image']}); }"
       css << "#{selector}:after { content: '#{quote}'; }"
@@ -183,18 +189,4 @@ class CSSWriter
 
     css
   end
-
-  # Generate the CSS to display the empty query in a random order
-  # def self.random_empty_query_order(lookup_table)
-  #   record_to_selector = record_to_selector_hash(lookup_table)
-  #   empty_query = lookup_table['__EMPTY_QUERY__'].shuffle
-  #   css = []
-  #
-  #   empty_query.each.with_index do |entry, order|
-  #     hit_selector = record_to_selector[entry[:record]['objectID']]
-  #     css << "#{input('')} ~ #h #{hit_selector} { order: #{order} }"
-  #   end
-  #
-  #   css
-  # end
 end

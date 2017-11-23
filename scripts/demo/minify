@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+# Babelify the file first
+mkdir -p ./demo/tmp/
+babel ./scripts/demo/minify.js --out-file ./demo/tmp/minify.es5.js
+
+# Actually minifying it
+# We have to increase node maximum memory otherwise it might fail with
+# FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of
+# memory
+node \
+  --max-old-space-size=8192 \
+  ./demo/tmp/minify.es5.js \
+  ./demo/public/css/search.css \
+  ./demo/public/css/search.min.css
+
+
+
+

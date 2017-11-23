@@ -6,7 +6,7 @@ module.exports = function(context, req, res) {
   });
 
   var counter = 0;
-  var max = 93;
+  var max = 147;
   var list = [];
   _.times(max, function(i) { list.push(i); });
   list = _.shuffle(list);

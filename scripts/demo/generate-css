@@ -9,7 +9,8 @@ class Generate
     @root = File.join(File.expand_path(File.dirname(__FILE__)), '../..')
     people = JSON.parse(File.open("#{@root}/demo/data/members.json").read)
     @people = people.map do |person|
-      if person.key? 'gravatar_url'
+      gravatar_url = person['gravatar_url']
+      if !gravatar_url.nil?
         image = "#{person['gravatar_url']}%3Fs=300%26&d=https://www.algolia.com/static_assets/images/about-you.jpg"
         person['image'] = CSSWriter.cloudinary(image, fetch: true)
       else
@@ -71,7 +72,7 @@ class Generate
     facets = QueryParser.generate_facets(lookup_table, 'team', @people)
 
     css = CSSWriter.base
-    css = CSSWriter.add_facets(css, facets, @people)
+    css = CSSWriter.add_facets(css, facets, @people, lookup_table)
     css = CSSWriter.add_results(css, lookup_table)
 
     main_css = File.read("#{@root}/demo/public/css/base.css")

@@ -152,8 +152,8 @@ class QueryParser
         next 1 if position_a > position_b
 
         # Sorting by custom ranking
-        ranking_value_a = a[:record][custom_ranking]
-        ranking_value_b = b[:record][custom_ranking]
+        ranking_value_a = a[:record][custom_ranking].to_i
+        ranking_value_b = b[:record][custom_ranking].to_i
         next -1 if ranking_value_a < ranking_value_b
         next 1 if ranking_value_a > ranking_value_b
 

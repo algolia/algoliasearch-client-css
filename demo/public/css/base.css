@@ -56,6 +56,32 @@ a {
   color: #00AEFF;
 }
 
+/* Dropdown message */
+.message-holder {
+	width: 100%;
+	position: absolute;
+  font-family: Montserrat, sans-serif;
+	top: 0px;
+	background: #fff;
+  animation: dropdown 2s;
+	will-change: transform;
+	box-shadow: 0 16px 32px 0 rgba($bunting, 0.48);
+	line-height: 50px;
+}
+@keyframes dropdown {
+  from { opacity: 0; }
+  to { opacity: 1}
+}
+.message-holder .message-container {
+  max-width: 800px;
+  margin: .5rem auto;
+  line-height: 1.5em;
+}
+.message-holder p {
+  display: inline;
+  font-size: 16px;
+}
+
 /* Search input */
 #i {
   outline: 0;
